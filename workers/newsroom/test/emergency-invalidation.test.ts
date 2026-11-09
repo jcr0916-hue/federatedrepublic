@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { setTimeout as delay } from "node:timers/promises";
 import { pairedRuntime, CLIENT, ISSUER, REDIRECT, VERIFIER, type PairedRuntime } from "./candidate-harness.ts";
 import type { IssuerGuard } from "../src/issuer-guard.ts";
 
@@ -48,12 +49,26 @@ describe("internal durable account-wide grant invalidation", () => {
     try {
       const token = await f.tokens();
       const guard = await control(f);
-      // An already expired quota schedules the actual storage cleanup alarm.
-      await guard.admit("introspect", Date.now() - 61_000);
       assert.equal((await guard.invalidateAll(0)).changed, true);
+      // Use a separate guard with no live quota windows, so its actual alarm
+      // reaches cleanup rather than rescheduling around the test login quota.
+      const cleanup = await control(f, "cleanup-only");
+      assert.equal((await cleanup.invalidateAll(0)).changed, true);
+      const past = Date.now() - 61_000;
+      assert.equal((await cleanup.admit("introspect", past)).allowed, true);
+      let cleaned = false;
+      for (let i = 0; i < 30 && !cleaned; i++) {
+        await delay(50);
+        // A backwards timestamp is denied while the old window exists. It is
+        // admitted only after the real alarm removes that window.
+        cleaned = (await cleanup.admit("introspect", past - 1)).allowed;
+      }
+      assert.equal(cleaned, true, "the actual alarm removed the expired quota");
+      assert.equal(await cleanup.currentEpoch(), 1, "quota cleanup must not erase invalidation");
       await f.mf.dispose();
       f = await pairedRuntime({ persistencePath: path });
       assert.equal(await (await control(f)).currentEpoch(), 1);
+      assert.equal(await (await control(f, "cleanup-only")).currentEpoch(), 1);
       assert.equal((await f.rpc(token.access_token, "ping")).status, 401);
       assert.equal((await f.rpc((await f.tokens()).access_token, "ping")).status, 200);
     } finally { await f.mf.dispose(); await rm(path, { recursive: true, force: true }); }
