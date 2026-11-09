@@ -1,0 +1,722 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "kind": "non-secret-readiness-management-snapshot",
+  "parent": {
+    "pr": 314,
+    "head": "420897a5127794dacf11324947bfcf1ca86ef8ce"
+  },
+  "openDependencyChain": [
+    {
+      "pr": 304,
+      "state": "open",
+      "draft": true,
+      "base": "main",
+      "head": "feature/newsroom-chatgpt-oauth",
+      "sha": "9e42c3f78c894fda93837165dea80ebf37fbafb0"
+    },
+    {
+      "pr": 305,
+      "state": "open",
+      "draft": true,
+      "base": "feature/newsroom-chatgpt-oauth",
+      "head": "feature/newsroom-strict-refresh-prototype",
+      "sha": "4fda7e342b70f3ea59b151d89a7e8976572d7f39"
+    },
+    {
+      "pr": 306,
+      "state": "open",
+      "draft": true,
+      "base": "feature/newsroom-strict-refresh-prototype",
+      "head": "fix/newsroom-github-iss-20261107",
+      "sha": "9069f1b47c1a1e6ae92451cd0de5b0f978762279"
+    },
+    {
+      "pr": 307,
+      "state": "open",
+      "draft": true,
+      "base": "fix/newsroom-github-iss-20261107",
+      "head": "fix/newsroom-chatgpt-ui-locales-20261108",
+      "sha": "9e498326ebebff76e9b6ed3e9b54c92f39deef1b"
+    },
+    {
+      "pr": 308,
+      "state": "open",
+      "draft": true,
+      "base": "fix/newsroom-chatgpt-ui-locales-20261108",
+      "head": "fix/newsroom-mcp-server-discover-20261108",
+      "sha": "4553f7295b855315292c18364ca79294480bf744"
+    },
+    {
+      "pr": 309,
+      "state": "open",
+      "draft": true,
+      "base": "fix/newsroom-mcp-server-discover-20261108",
+      "head": "feature/newsroom-readonly-production-gate-20261108",
+      "sha": "afc95cc362f6e25d9c5b60dd9d287b8ea381daf1"
+    },
+    {
+      "pr": 310,
+      "state": "open",
+      "draft": true,
+      "base": "feature/newsroom-readonly-production-gate-20261108",
+      "head": "feature/newsroom-oauth-security-review-20261108",
+      "sha": "9076feb2391ffb4fa8f5fff5efb50e1ef7f4d4e0"
+    },
+    {
+      "pr": 311,
+      "state": "open",
+      "draft": true,
+      "base": "feature/newsroom-oauth-security-review-20261108",
+      "head": "feature/newsroom-ingress-rate-boundary-20261108",
+      "sha": "4f08ffe4f05ecf5f2ab02b00879e5ff35c5e0833"
+    },
+    {
+      "pr": 312,
+      "state": "open",
+      "draft": true,
+      "base": "feature/newsroom-ingress-rate-boundary-20261108",
+      "head": "feature/newsroom-r2-readonly-s3-20261108",
+      "sha": "ff84cbfd8799b7f2d72136fc74c1b72762a776b9"
+    },
+    {
+      "pr": 313,
+      "state": "open",
+      "draft": true,
+      "base": "feature/newsroom-r2-readonly-s3-20261108",
+      "head": "feature/newsroom-s3-resource-integration-20261108",
+      "sha": "dc55fa55aa43cc60451ddabdb5d1f516c970ce28"
+    },
+    {
+      "pr": 314,
+      "state": "open",
+      "draft": true,
+      "base": "feature/newsroom-s3-resource-integration-20261108",
+      "head": "feature/newsroom-infrastructure-completion-20261108",
+      "sha": "420897a5127794dacf11324947bfcf1ca86ef8ce"
+    }
+  ],
+  "cloudflare": {
+    "workers": [
+      {
+        "name": "federated-republic-newsroom",
+        "serviceBindings": [],
+        "bindingNames": [
+          {
+            "name": "KEY_CORINDAL",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_EDITOR",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_FEDERAL",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_KORDA",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_VAREK",
+            "type": "secret_text"
+          },
+          {
+            "name": "NEWSROOM",
+            "type": "r2_bucket"
+          }
+        ],
+        "compatibilityDate": "2026-10-01",
+        "logpush": false
+      },
+      {
+        "name": "newsroom-legacy-isolation-20261108",
+        "serviceBindings": [],
+        "bindingNames": [
+          {
+            "name": "KEY_CORINDAL",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_EDITOR",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_FEDERAL",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_KORDA",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_VAREK",
+            "type": "secret_text"
+          },
+          {
+            "name": "NEWSROOM",
+            "type": "r2_bucket"
+          }
+        ],
+        "compatibilityDate": "2026-10-01",
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "redact_query_string": true,
+          "logs": {
+            "enabled": true,
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": false
+          },
+          "traces": {
+            "enabled": true,
+            "persist": true,
+            "head_sampling_rate": 1
+          }
+        },
+        "logpush": false
+      },
+      {
+        "name": "newsroom-lifecycle-client-acceptance",
+        "serviceBindings": [],
+        "bindingNames": [],
+        "compatibilityDate": "2026-11-08",
+        "logpush": false
+      },
+      {
+        "name": "newsroom-lifecycle-issuer-acceptance",
+        "serviceBindings": [],
+        "bindingNames": [
+          {
+            "name": "ISSUER_AUDIENCE",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_CLIENT_SECRET_SHA256",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_EDITOR_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_GITHUB_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_GITHUB_CLIENT_SECRET",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_GRANTS",
+            "type": "durable_object_namespace"
+          },
+          {
+            "name": "ISSUER_GUARD",
+            "type": "durable_object_namespace"
+          },
+          {
+            "name": "ISSUER_INGRESS_LIMIT",
+            "type": "ratelimit"
+          },
+          {
+            "name": "ISSUER_ORIGIN",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_REDIRECT_URI",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_RESOURCE_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_RESOURCE_SECRET_SHA256",
+            "type": "secret_text"
+          }
+        ],
+        "compatibilityDate": "2026-11-08",
+        "logpush": false
+      },
+      {
+        "name": "newsroom-oauth-isolated-test",
+        "serviceBindings": [],
+        "bindingNames": [
+          {
+            "name": "CHATGPT_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "CHATGPT_REDIRECT_URI",
+            "type": "plain_text"
+          },
+          {
+            "name": "EDITOR_GITHUB_USER_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "GITHUB_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "GITHUB_CLIENT_SECRET",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_CORINDAL",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_EDITOR",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_FEDERAL",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_KORDA",
+            "type": "secret_text"
+          },
+          {
+            "name": "KEY_VAREK",
+            "type": "secret_text"
+          },
+          {
+            "name": "NEWSROOM",
+            "type": "r2_bucket"
+          },
+          {
+            "name": "OAUTH_ISSUER",
+            "type": "plain_text"
+          },
+          {
+            "name": "OAUTH_KV",
+            "type": "kv_namespace"
+          }
+        ],
+        "compatibilityDate": "2026-10-01",
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "redact_query_string": false,
+          "logs": {
+            "enabled": true,
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": true
+          },
+          "traces": {
+            "enabled": false,
+            "persist": true,
+            "head_sampling_rate": 1
+          }
+        },
+        "logpush": false
+      },
+      {
+        "name": "newsroom-s3-issuer-acceptance",
+        "serviceBindings": [],
+        "bindingNames": [
+          {
+            "name": "ISSUER_AUDIENCE",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_CLIENT_SECRET_SHA256",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_EDITOR_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_GITHUB_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_GITHUB_CLIENT_SECRET",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_GRANTS",
+            "type": "durable_object_namespace"
+          },
+          {
+            "name": "ISSUER_GUARD",
+            "type": "durable_object_namespace"
+          },
+          {
+            "name": "ISSUER_INGRESS_LIMIT",
+            "type": "ratelimit"
+          },
+          {
+            "name": "ISSUER_ORIGIN",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_REDIRECT_URI",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_RESOURCE_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_RESOURCE_SECRET_SHA256",
+            "type": "secret_text"
+          }
+        ],
+        "compatibilityDate": "2026-11-08",
+        "logpush": false
+      },
+      {
+        "name": "newsroom-s3-readonly-acceptance",
+        "serviceBindings": [
+          {
+            "name": "ISSUER",
+            "service": "newsroom-s3-issuer-acceptance",
+            "environment": "production"
+          }
+        ],
+        "bindingNames": [
+          {
+            "name": "ISSUER",
+            "type": "service"
+          },
+          {
+            "name": "R2_READ_ACCESS_KEY_ID",
+            "type": "secret_text"
+          },
+          {
+            "name": "R2_READ_BUCKET",
+            "type": "plain_text"
+          },
+          {
+            "name": "R2_READ_ENDPOINT",
+            "type": "plain_text"
+          },
+          {
+            "name": "R2_READ_SECRET_ACCESS_KEY",
+            "type": "secret_text"
+          },
+          {
+            "name": "RESOURCE_AUDIENCE",
+            "type": "plain_text"
+          },
+          {
+            "name": "RESOURCE_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "RESOURCE_INGRESS_LIMIT",
+            "type": "ratelimit"
+          },
+          {
+            "name": "RESOURCE_ISSUER",
+            "type": "plain_text"
+          },
+          {
+            "name": "RESOURCE_VALIDATOR_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "RESOURCE_VALIDATOR_SECRET",
+            "type": "secret_text"
+          }
+        ],
+        "compatibilityDate": "2026-11-08",
+        "logpush": false
+      },
+      {
+        "name": "newsroom-strict-issuer-candidate",
+        "serviceBindings": [],
+        "bindingNames": [
+          {
+            "name": "ISSUER_AUDIENCE",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_CLIENT_SECRET_SHA256",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_EDITOR_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_GITHUB_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_GITHUB_CLIENT_SECRET",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_GRANTS",
+            "type": "durable_object_namespace"
+          },
+          {
+            "name": "ISSUER_GUARD",
+            "type": "durable_object_namespace"
+          },
+          {
+            "name": "ISSUER_ORIGIN",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_REDIRECT_URI",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_RESOURCE_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "ISSUER_RESOURCE_SECRET_SHA256",
+            "type": "secret_text"
+          }
+        ],
+        "compatibilityDate": "2026-11-07",
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "redact_query_string": true,
+          "logs": {
+            "enabled": true,
+            "destinations": [],
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": true
+          },
+          "traces": {
+            "enabled": false,
+            "destinations": [],
+            "persist": false,
+            "head_sampling_rate": 1
+          }
+        },
+        "logpush": false
+      },
+      {
+        "name": "newsroom-strict-resource-candidate",
+        "serviceBindings": [
+          {
+            "name": "ISSUER",
+            "service": "newsroom-strict-issuer-candidate",
+            "environment": "production"
+          }
+        ],
+        "bindingNames": [
+          {
+            "name": "ISSUER",
+            "type": "service"
+          },
+          {
+            "name": "NEWSROOM",
+            "type": "r2_bucket"
+          },
+          {
+            "name": "RESOURCE_AUDIENCE",
+            "type": "plain_text"
+          },
+          {
+            "name": "RESOURCE_CLIENT_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "RESOURCE_ISSUER",
+            "type": "plain_text"
+          },
+          {
+            "name": "RESOURCE_VALIDATOR_ID",
+            "type": "plain_text"
+          },
+          {
+            "name": "RESOURCE_VALIDATOR_SECRET",
+            "type": "secret_text"
+          }
+        ],
+        "compatibilityDate": "2026-11-07",
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "redact_query_string": true,
+          "logs": {
+            "enabled": true,
+            "destinations": [],
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": true
+          },
+          "traces": {
+            "enabled": false,
+            "destinations": [],
+            "persist": false,
+            "head_sampling_rate": 1
+          }
+        },
+        "logpush": false
+      },
+      {
+        "name": "recipesage-mcp",
+        "serviceBindings": []
+      }
+    ],
+    "customDomains": []
+  },
+  "initialIngress": [
+    {
+      "name": "federated-republic-newsroom",
+      "subdomain": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "schedules": {
+        "schedules": []
+      }
+    },
+    {
+      "name": "newsroom-oauth-isolated-test",
+      "subdomain": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "schedules": {
+        "schedules": []
+      }
+    },
+    {
+      "name": "newsroom-strict-issuer-candidate",
+      "subdomain": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "schedules": {
+        "schedules": []
+      }
+    },
+    {
+      "name": "newsroom-strict-resource-candidate",
+      "subdomain": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "schedules": {
+        "schedules": []
+      }
+    },
+    {
+      "name": "newsroom-s3-issuer-acceptance",
+      "subdomain": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "schedules": {
+        "schedules": []
+      }
+    },
+    {
+      "name": "newsroom-s3-readonly-acceptance",
+      "subdomain": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "schedules": {
+        "schedules": []
+      }
+    },
+    {
+      "name": "newsroom-lifecycle-issuer-acceptance",
+      "subdomain": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "schedules": {
+        "schedules": []
+      }
+    },
+    {
+      "name": "newsroom-lifecycle-client-acceptance",
+      "subdomain": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "schedules": {
+        "schedules": []
+      }
+    }
+  ],
+  "zones": {
+    "zones": [
+      {
+        "zone": "constitution-lab.fyi",
+        "routes": []
+      },
+      {
+        "zone": "mini-conductor.link",
+        "routes": []
+      },
+      {
+        "zone": "thefederatedrepublic.com",
+        "routes": []
+      },
+      {
+        "zone": "thefederatedrepublic.org",
+        "routes": []
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "per_page": 50,
+      "total_pages": 1,
+      "count": 4,
+      "total_count": 4
+    }
+  },
+  "disposableEndpointClosure": [
+    {
+      "name": "newsroom-lifecycle-issuer-acceptance",
+      "before": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "after": {
+        "enabled": false,
+        "previews_enabled": false
+      }
+    },
+    {
+      "name": "newsroom-lifecycle-client-acceptance",
+      "before": {
+        "enabled": true,
+        "previews_enabled": false
+      },
+      "after": {
+        "enabled": false,
+        "previews_enabled": false
+      }
+    }
+  ],
+  "notEstablished": [
+    "original browser cookie/request history",
+    "hosted current-candidate lifecycle",
+    "hosted emergency containment and regional recovery",
+    "independent external security sign-off"
+  ]
+}
