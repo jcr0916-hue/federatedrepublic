@@ -99,7 +99,8 @@ runtime = new Miniflare(convertV4MiniflareOptions({ workers: [
     ISSUER_CLIENT_ID: CLIENT, ISSUER_CLIENT_SECRET_SHA256: hash(CLIENT_SECRET),
     ISSUER_RESOURCE_ID: VALIDATOR, ISSUER_RESOURCE_SECRET_SHA256: hash(VALIDATOR_SECRET),
     ISSUER_EDITOR_ID: "12345", ISSUER_GITHUB_CLIENT_ID: "synthetic-github-app", ISSUER_GITHUB_CLIENT_SECRET: "synthetic-github-secret",
-  }, durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true },
+  }, ratelimits: { ISSUER_INGRESS_LIMIT: { namespace_id: "10021", simple: { limit: 20000, period: 60 } } },
+  durableObjects: { ISSUER_GRANTS: { className: "IssuerGrant", useSQLite: true },
     ISSUER_GUARD: { className: "IssuerGuard", useSQLite: true } }, outboundService: async request => {
     if (request.url === "https://github.com/login/oauth/access_token") {
       const params = new URLSearchParams(await request.text());
@@ -111,6 +112,7 @@ runtime = new Miniflare(convertV4MiniflareOptions({ workers: [
   { name: "resource", modules: true, script: scripts.resource, compatibilityDate: "2026-10-01", routes: ["127.0.0.1/*"],
     bindings: { RESOURCE_AUDIENCE: resource, RESOURCE_ISSUER: issuer, RESOURCE_CLIENT_ID: CLIENT,
       RESOURCE_VALIDATOR_ID: VALIDATOR, RESOURCE_VALIDATOR_SECRET: VALIDATOR_SECRET },
+    ratelimits: { RESOURCE_INGRESS_LIMIT: { namespace_id: "10022", simple: { limit: 20000, period: 60 } } },
     serviceBindings: { ISSUER: "issuer" }, r2Buckets: ["NEWSROOM"], outboundService: () => new Response(null, { status: 502 }) },
 ] }));
 await runtime.ready;
