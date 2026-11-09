@@ -181,6 +181,10 @@ async function callback(
     : parameters(params, ["state", "code"], ["iss"])) ||
       (params.has("iss") && params.get("iss") !== GITHUB_ISSUER) ||
       (!cancelled && !/^[\x21-\x7e]{1,1024}$/.test(params.get("code")!))) return fail(400, "invalid_callback");
+  // Bound callback floods before grant routing / durable storage RPC.
+  // Browser cookie and CSRF checks remain unchanged.
+  const callbackIngress = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "callback");
+  if (callbackIngress) return callbackIngress;
   const state = await routeBoundCredential(params.get("state")!, "state");
   const session = await browser(request);
   if (!state || !session || state.grantId !== session.grantId) return fail(403, "invalid_browser_session");
@@ -213,6 +217,8 @@ async function callback(
 
 async function consent(request: Request, env: Env, config: Configuration): Promise<Response> {
   if (request.headers.get("Origin") !== config.issuer) return fail(403, "origin_not_allowed");
+  const consentIngress = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT, "consent");
+  if (consentIngress) return consentIngress;
   const params = await form(request);
   if (!parameters(params, ["csrf", "decision"]) || !/^[a-f0-9]{64}$/.test(params.get("csrf")!) ||
       !["approve", "deny"].includes(params.get("decision")!)) return fail(400, "invalid_consent");
@@ -245,6 +251,14 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
   const resourceSide = path === "/introspect";
   if (!(await verifyConfidentialClient(authorization, resourceSide ? config.resourceId : config.clientId,
     resourceSide ? config.resourceSecretHash : config.secretHash))) return fail(401, "invalid_client");
+  // Edge-location budgets protect costly public authenticated token/revoke
+  // operations. Introspection uses a separate service binding and must not
+  // share a public IP bucket. Client authentication precedes admission.
+  if (path === "/token" || path === "/revoke") {
+    const denied = await requireIngressBudget(request, env.ISSUER_INGRESS_LIMIT,
+      path === "/token" ? "token" : "revoke");
+    if (denied) return denied;
+  }
   // A failed client-authentication attempt cannot spend the legitimate client's
   // token, inspection or emergency revocation quota. Edge/source abuse controls
   // are still required, including at the resource's public MCP ingress.
