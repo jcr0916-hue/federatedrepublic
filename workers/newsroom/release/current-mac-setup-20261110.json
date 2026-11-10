@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-11-10T13:35:25.844Z",
+  "sourceCommit": "d7c65bea969be9bebe541a7bb1e069928e12c60c",
+  "macHeadBeforeDocumentation": "b760fe62a6cecd014a1c71a37693080252c0e9f9",
+  "status": "PRIVATE FILE RESTORED / BROWSER ACCEPTANCE INCOMPLETE / PRODUCTION NO-GO",
+  "localRecovery": {
+    "retainedOriginalRecovered": true,
+    "schemaAndDisposableIdentifiersMatch": true,
+    "destinationByteIdentical": true,
+    "fileMode": "0600",
+    "directoryMode": "0700",
+    "gitIgnored": true,
+    "pendingGrantPresentInEitherCheckout": false,
+    "secretsDisplayed": false,
+    "credentialsInvented": false,
+    "credentialRotationPerformed": false
+  },
+  "management": {
+    "readOnly": true,
+    "allFourWorkersDevDisabled": true,
+    "allFourPreviewsDisabled": true,
+    "allSchedulesEmpty": true,
+    "runnerBindings": 0,
+    "issuerGithubBindingsPresent": true,
+    "issuerHasNoMisplacedS3Bindings": true,
+    "resourceS3BindingsPresent": true,
+    "resourceSyntheticBucketMatches": true,
+    "resourceHasNoNativeR2Binding": true,
+    "resourceValidatorSecretBindingPresent": true,
+    "disposableEnvironmentIdentifiersMatch": true,
+    "deployedSecretValuesReadBack": false
+  },
+  "deployedModuleChecks": {
+    "issuer": {
+      "sha256": "ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac",
+      "bytes": 47300,
+      "matchesFrozenSource": true
+    },
+    "resource": {
+      "sha256": "59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9",
+      "bytes": 32127,
+      "matchesFrozenSource": true
+    }
+  },
+  "priorExactHeadCI": {
+    "head": "b760fe62a6cecd014a1c71a37693080252c0e9f9",
+    "oauthRun": 42736231561,
+    "worldRun": 42736231741,
+    "bothCompletedSuccessfully": true
+  },
+  "limitations": [
+    "Binding names/presence do not prove deployed secret values or S3 policy.",
+    "The Mac file was recovered from the retained original; no new runtime authentication or deployed-secret hash readback was performed.",
+    "No receiver, browser consent, token exchange or positive S3 lifecycle ran during recovery.",
+    "No cloud mutation, production/legacy grant/App change, main merge or branch deletion occurred.",
+    "Historical November 9 infrastructure receipts describe their own earlier state; dashboard provisioning was completed afterward."
+  ]
+}
