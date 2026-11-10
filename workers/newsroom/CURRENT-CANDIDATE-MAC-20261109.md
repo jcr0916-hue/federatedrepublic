@@ -12,27 +12,33 @@ No credentials were invented or rotated. This file contains only the confidentia
 
 All four `newsroom-current-{issuer,resource,client,runner}-20261109` workers.dev **and preview** endpoints remain disabled; every schedule is empty; the deny-only runner has zero bindings. No browser test is active. Both deployed module hashes still match frozen #318 `d7c65bea969be9bebe541a7bb1e069928e12c60c`: issuer `ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac`, resource `59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9`. Nonsecret recovery receipt: `release/current-mac-setup-20261110.json`.
 
-## Exact next Mac step — one command
+## Local start-page fix after the first browser attempts
+
+The first attempt found no listener on port 18765. After a receiver was started, the next attempt received local HTTP 400; there was still no replay report or pending-grant marker. All three temporarily opened disposable endpoints were closed immediately and closure read back after each reported error. A requested 12-minute pause then elapsed with ingress closed.
+
+The old receiver consumed its only start on `GET /start`. With fake credentials and no cloud requests, a simulated preview GET returned 302 and the next GET returned 400. This reproduces a possible cause, **not proof of what the user's browser sent**. The revised receiver serves a repeatable local page and begins only after a same-origin, nonce-protected POST from its **Begin authorization** button. Start remains one-use; foreign/duplicate/malformed requests fail closed; Host validation, the fixed issuer/resource/redirect, state, PKCE, callback claim and 600-second lifetime remain intact. Errors now distinguish an expired receiver, wrong local address and already-started authorization. No deployed issuer/resource module or cloud credential changed.
+
+The new loopback-only `acceptance/current-mac-receiver-check.py` passes **28 checks** with synthetic credentials, and CI now runs it without cloud credentials. The isolated Mac script was replaced directly only after these checks passed and the old listener had stopped; the detached worktree remains at its original commit with the receiver and ignore-rule changes locally. Nonsecret attempt/fix receipt: `release/current-receiver-start-fix-20261110.json`. Neither real browser exercise has succeeded.
+
+## Exact next Mac step — one command, services closed
 
 At the existing `federatedrepublic-pr319-acceptance` Terminal prompt, run only:
-
-```sh
-ls -ld .private .private/current-credentials.json
-```
-
-Expect `drwx------` for the directory and `-rw-------` for the file. Only that permissions listing may be shared. Do not display, paste, attach or commit the file's contents. Do not start the receiver or open the issuer yet. After the listing is confirmed, coordinate an **active human consent window** before Work enables only issuer/resource/client with previews off; leave runner disabled. A missing file, unexpected permission or `.private/current-grant-pending.json` means stop this sequence and inspect only the exact task-private paths.
-
-## Browser session — only after the active window is agreed
-
-From the isolated Mac worktree, run one fresh consent exercise:
 
 ```sh
 python3 workers/newsroom/acceptance/current-mac-receiver.py --exercise replay
 ```
 
-Open the printed `http://127.0.0.1:18765/start` in one top-level browser tab. Complete real Turnstile, GitHub approval and newsroom consent promptly, then click **Finish authorization on this Mac** at the HTTPS relay. Never copy callback URLs, authorization codes, cookies or token files into chat. The receiver uses only this task's mode-0600 file, not old home-directory lifecycle credentials or tokens. A second separately coordinated fresh invocation with `--exercise revoke` checks voluntary revocation.
+Keep Terminal running and report only its startup message or error. The listener expires after ten minutes; no credential file content, callback URL, code, cookie or token may be shared. If the command reports a pending grant, stop and contain only that disposable grant before another attempt.
 
-The receiver checks issuer/state/PKCE, code exchange, validator introspection, synthetic S3 list/exact noncanonical read, write-tool denial, refresh rotation, spent-refresh replay and family invalidation. It writes only booleans/status categories to `workers/newsroom/release/`. **Neither browser exercise has been executed.** The earlier 16 hosted HTTP preflight checks and real dummy-token rejection are negative checks; they are not positive GitHub/Turnstile/S3 lifecycle proof.
+## Browser session — prepare locally, then coordinate ingress
+
+In the Mac browser where GitHub sign-in will happen, manually type `http://127.0.0.1:18765/start` into the address bar. This must display **Begin authorization**. Opening or previewing that page does not contact the issuer or consume the start. Leave the button unclicked while Work confirms an active human consent window and enables only issuer/resource/client, with previews and runner still disabled.
+
+Once that window is open, click **Begin authorization** once. Complete real Turnstile, GitHub approval and newsroom consent promptly, then click **Finish authorization on this Mac** at the HTTPS relay. A 409 after starting means that receiver has already begun: continue the original authorization tab rather than reopening the start. If the original flow is lost, close ingress and inspect pending-grant status before stopping/restarting the receiver. A new listener means a new state/PKCE and consent attempt; never silently reuse the old flow.
+
+A second separately coordinated fresh invocation with `--exercise revoke` checks voluntary revocation. Use only this task's mode-0600 private file, not old home-directory lifecycle credentials or tokens.
+
+The receiver checks issuer/state/PKCE, code exchange, validator introspection, synthetic S3 list/exact noncanonical read, write-tool denial, refresh rotation, spent-refresh replay and family invalidation. It writes only booleans/status categories to `workers/newsroom/release/`. **The browser attempts have produced no successful lifecycle result.** The earlier 16 hosted HTTP preflight checks and real dummy-token rejection are negative checks; they are not positive GitHub/Turnstile/S3 lifecycle proof.
 
 An unresolved `.private/current-grant-pending.json` blocks retries. Keep ingress closed and inspect/invalidate only the new isolated client's guard; never delete an uncertainty marker merely to retry. Known raw tokens remain only in that mode-0600 file until cleanup is verified. Successful known-grant revocation removes it after access and refresh are confirmed inactive. Close issuer/resource/client workers.dev and preview ingress immediately at session end or timeout, confirm all schedules empty and runner bindings absent, and revoke/expire only newly created test credentials once no further authorized test needs them.
 

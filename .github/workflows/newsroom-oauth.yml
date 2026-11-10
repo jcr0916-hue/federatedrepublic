@@ -42,6 +42,9 @@ jobs:
         working-directory: workers/newsroom
       - run: npm run typecheck && npm test && npm run build && npm run build:test && npm run build:issuer-candidate && npm run build:resource-candidate && npm run build:resource-s3-candidate && npm run build:hosted-recovery && npm run build:current-acceptance && node acceptance/current-harness-check.mjs
         working-directory: workers/newsroom
+      - name: Check private receiver start without cloud access
+        run: python3 -B acceptance/current-mac-receiver-check.py
+        working-directory: workers/newsroom
       - name: Save validated release bundle for isolated hosted test
         uses: actions/upload-artifact@v4
         with:

@@ -1,4 +1,4 @@
-"""Private loopback receiver for NEW PR318 disposable grants only; no token output.
+"""Private loopback receiver for NEW PR319 disposable grants only; no token output.
 Run from repository root after the documented new App/S3 setup and coordinated ingress.
 Each invocation tests one fresh human browser consent. Repeat once with other exercise.
 """
@@ -14,6 +14,7 @@ AUDIENCE='https://newsroom-current-resource-20261109.jcr0916.workers.dev/mcp'
 REDIRECT='https://newsroom-current-client-20261109.jcr0916.workers.dev/callback'
 CLIENT='newsroom-current-client-20261109'
 VALIDATOR='newsroom-current-validator-20261109'
+PORT=18765
 FIXTURE='submissions/korda/2026-11-09/33333333-3333-4333-8333-333333333333.json'
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,*a,**kw): return None
@@ -50,7 +51,8 @@ def main():
     creds=json.loads(CREDS.read_text())
     if any(creds.get(k)!=v for k,v in {'issuer':ISSUER,'audience':AUDIENCE,'client_id':CLIENT,'validator_id':VALIDATOR,'redirect_uri':REDIRECT}.items()):
         raise SystemExit('Private credentials do not match this NEW disposable environment.')
-    state=secrets.token_urlsafe(32);verifier=secrets.token_urlsafe(48)
+    state=secrets.token_urlsafe(32);verifier=secrets.token_urlsafe(48);start_nonce=secrets.token_urlsafe(32)
+    local_host='127.0.0.1:'+str(PORT);local_origin='http://'+local_host
     challenge=base64.urlsafe_b64encode(hashlib.sha256(verifier.encode()).digest()).decode().rstrip('=')
     query=urllib.parse.urlencode({'response_type':'code','client_id':CLIENT,'redirect_uri':REDIRECT,'scope':'newsroom:read',
         'resource':AUDIENCE,'state':state,'code_challenge':challenge,'code_challenge_method':'S256'})
@@ -113,13 +115,60 @@ def main():
             target.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2));finished.set()
     class Handler(http.server.BaseHTTPRequestHandler):
         def log_message(self,*a): pass
+        def valid_context(self):
+            if self.headers.get_all('Host')!=[local_host]:
+                self.send_error(400,'Use the exact local receiver address printed in Terminal.');return False
+            if time.monotonic()-born>600:
+                self.send_error(410,'This receiver window has expired. Coordinate ingress closure before retrying.');return False
+            return True
+        def do_POST(self):
+            nonlocal started
+            if not self.valid_context():return
+            if self.path!='/start':self.send_error(400,'Unexpected local start path.');return
+            if self.headers.get_all('Origin')!=[local_origin]:
+                self.send_error(403,'Begin authorization from the local receiver page.');return
+            lengths=self.headers.get_all('Content-Length',[])
+            if self.headers.get('Transfer-Encoding') or len(lengths)!=1 or not lengths[0].isdecimal():
+                self.send_error(400,'Invalid local start request.');return
+            if len(lengths[0])>3:self.send_error(413,'Local start request is too large.');return
+            length=int(lengths[0])
+            if length>512:self.send_error(413,'Local start request is too large.');return
+            if self.headers.get('Content-Type','').split(';',1)[0]!='application/x-www-form-urlencoded':
+                self.send_error(400,'Invalid local start form.');return
+            try:
+                self.connection.settimeout(5)
+                body=self.rfile.read(length)
+                if len(body)!=length:raise ValueError('incomplete form')
+                fields=urllib.parse.parse_qs(body.decode('ascii'),keep_blank_values=True,strict_parsing=True)
+            except (ValueError,UnicodeError,TimeoutError,OSError):
+                self.send_error(400,'Invalid local start form.');return
+            if set(fields)!={'start_nonce'} or len(fields['start_nonce'])!=1:
+                self.send_error(400,'Invalid local start fields.');return
+            if not fields['start_nonce'][0].isascii() or not hmac.compare_digest(fields['start_nonce'][0],start_nonce):
+                self.send_error(403,'This start page does not belong to the running receiver.');return
+            with lock:
+                if started:self.send_error(409,'Authorization already started. Continue in the existing authorization tab.');return
+                started=True
+            self.send_response(303);self.send_header('Location',ISSUER+'/authorize?'+query)
+            self.send_header('Cache-Control','no-store');self.send_header('Referrer-Policy','no-referrer')
+            self.send_header('Content-Length','0');self.end_headers()
         def do_GET(self):
-            nonlocal started, claimed
+            nonlocal claimed
+            if not self.valid_context():return
             u=urllib.parse.urlsplit(self.path)
-            if self.headers.get('Host')!='127.0.0.1:18765' or time.monotonic()-born>600:
-                self.send_error(400);return
-            if u.path=='/start' and not started and not u.query:
-                started=True;self.send_response(302);self.send_header('Location',ISSUER+'/authorize?'+query);self.send_header('Cache-Control','no-store');self.end_headers();return
+            if self.path=='/start':
+                if started:self.send_error(409,'Authorization already started. Continue in the existing authorization tab.');return
+                body=('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Begin disposable newsroom authorization</title><h1>Begin newsroom authorization</h1>
+<p>Keep Terminal running. Continue only when the disposable test window is open.</p>
+<form method="post" action="/start"><input type="hidden" name="start_nonce" value="'''+start_nonce+'''">
+<button type="submit">Begin authorization</button></form>
+<p>Then complete Turnstile, GitHub approval and newsroom consent. Finish using the button that returns to this Mac.</p></html>''').encode()
+                self.send_response(200);self.send_header('Content-Type','text/html; charset=utf-8')
+                self.send_header('Cache-Control','no-store');self.send_header('Referrer-Policy','no-referrer')
+                self.send_header('Content-Security-Policy',"default-src 'none'; form-action 'self' "+ISSUER+"; frame-ancestors 'none'; base-uri 'none'")
+                self.send_header('X-Frame-Options','DENY');self.send_header('X-Content-Type-Options','nosniff')
+                self.send_header('Content-Length',str(len(body)));self.end_headers();self.wfile.write(body);return
             p=urllib.parse.parse_qs(u.query,keep_blank_values=True)
             if u.path!='/callback' or set(p)!={'code','state','iss'} or any(len(v)!=1 for v in p.values()) or not started or finished.is_set() or p['iss'][0]!=ISSUER or not hmac.compare_digest(p['state'][0],state):
                 self.send_error(400);return
@@ -130,8 +179,8 @@ def main():
                 claimed=True
             self.send_response(200);self.send_header('Cache-Control','no-store');self.send_header('Referrer-Policy','no-referrer');self.end_headers()
             exercise(p['code'][0]);self.wfile.write(b'Isolated test finished. Check the private Terminal result; no token values are displayed.')
-    server=http.server.ThreadingHTTPServer(('127.0.0.1',18765),Handler);server.timeout=1
-    print('Open http://127.0.0.1:18765/start in one top-level browser tab. Complete Turnstile, GitHub and consent, then click Finish authorization on this Mac. Do not copy callback URLs into chat.')
+    server=http.server.ThreadingHTTPServer(('127.0.0.1',PORT),Handler);server.timeout=1
+    print('Open '+local_origin+'/start in one top-level browser tab. When Work confirms the test window is open, click Begin authorization. Complete Turnstile, GitHub and consent, then click Finish authorization on this Mac. Do not copy callback URLs into chat.')
     try:
         while not finished.is_set() and time.monotonic()-born<600:server.handle_request()
     finally:server.server_close()
