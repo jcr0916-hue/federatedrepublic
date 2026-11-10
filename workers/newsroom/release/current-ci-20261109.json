@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "head": "6a7715c71b81b3034f6b55332c20cc32bb145411",
+  "nodeVersion": "24.22.2",
+  "oauthRun": 42735805310,
+  "worldRun": 42735804661,
+  "passed": true,
+  "callbackRelayCheck": true,
+  "sevenBuilds": true,
+  "tests": 130,
+  "suites": 29,
+  "failures": 0,
+  "cancelled": 0,
+  "skipped": 0,
+  "oauthJobs": [
+    {
+      "id": 129564617563,
+      "name": "newsroom-changes",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 129564740591,
+      "name": "local-oauth",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 129565087349,
+      "name": "Newsroom readiness gate",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "limitations": [
+    "Clean-install simulated/runtime tests and builds, not real GitHub/Turnstile/S3 browser lifecycle acceptance",
+    "Final evidence-only head checks are recorded in the PR once complete"
+  ]
+}

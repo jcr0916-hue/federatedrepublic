@@ -3,7 +3,7 @@
 **Original branch:** `feature/newsroom-current-acceptance-20261109`  
 **Parent:** draft [#318](https://github.com/jcr0916-hue/federatedrepublic/pull/318), frozen `d7c65bea969be9bebe541a7bb1e069928e12c60c`.  
 **Status:** experimental, unmerged; **INCOMPLETE / NO-GO / NOT APPROVED FOR PRODUCTION**.  
-**Continuation PR:** pending creation; link in PR metadata once assigned.
+**Continuation PR:** draft [#319](https://github.com/jcr0916-hue/federatedrepublic/pull/319).
 
 ## Purpose and scope
 
@@ -15,7 +15,7 @@ Execute the President's explicit permission for **only new isolated disposable**
 - Dedicated managed Turnstile sitekey `0x4AAAAAAF6ssiEhk1gj8QlU`, restricted to the new issuer hostname, secret privately bound to issuer. New R2 bucket `newsroom-current-e2e-20261109`, exactly two synthetic noncanonical fixture/status objects, public bucket domain off. **S3 token creation denied; no successful S3 credential provisioning claimed.**
 - `workers/newsroom/acceptance/current-http-validation.py`: repeatable nonsecret current-source HTTP preflight. `current-hosted-validation.ts` and build script: explicitly synthetic binding-only scheduled test, deny-all HTTP, redacted KV results, bounded cleanup alarm; no hosted pass is claimed for its timed-out attempt.
 - `current-callback-relay.js` and `current-mac-receiver.py`: fixed HTTPS-to-loopback user-click callback, private mode-0600 credentials, exact issuer/state/PKCE, one-use callback claim, real S3 read and refresh/replay/revoke checks, uncertainty lock and verified known-token cleanup. Prepared but not exercised with real browser consent.
-- [Precise Mac handoff](../../../../workers/newsroom/CURRENT-CANDIDATE-MAC-20261109.md). Permanent nonsecret management/source evidence: `release/current-infrastructure-20261109.json`, `release/current-http-validation-20261109.json`, `release/current-stack-20261109.json`.
+- [Precise Mac handoff](../../../../workers/newsroom/CURRENT-CANDIDATE-MAC-20261109.md). Permanent nonsecret management/source evidence: `release/current-infrastructure-20261109.json`, `release/current-http-validation-20261109.json`, `release/current-stack-20261109.json`, `release/current-ci-20261109.json`.
 - Existing issuer/resource/prototype/legacy source files are byte-unchanged. CI gains only the separate disposable runner build; no deployment job or cloud credential is added.
 
 ## Actual results
@@ -24,7 +24,7 @@ Execute the President's explicit permission for **only new isolated disposable**
 - Both newly deployed module bytes were downloaded and independently hashed. Issuer SHA-256 `ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac`; S3 resource `59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9`. Both exactly match builds from frozen #318.
 - **16/16 real hosted HTTP checks PASS**, on the current code in the new Workers: issuer/resource discovery, missing/forged bearer, forged callback, foreign provider issuer, malformed authorize, actual widget page, secure host-only admission cookie, CSP, no-store/no-referrer, backend dummy Turnstile rejection, foreign Origin, unauthenticated token/introspect/revoke denial. GitHub had explicit unusable setup sentinels only to reach these preflight paths; no actual GitHub identity or grant was simulated as real evidence. The dummy GitHub secret was removed after tests so missing real App setup fails closed.
 - Real Siteverify HTTP 200 confirms **the new secret rejects a dummy token as invalid-input-response**, with no invalid-input-secret. No positive solve or Turnstile replay is asserted.
-- Callback relay passes valid-link/header checks plus six malformed/foreign request denials. Typecheck and runner builds pass locally on Node 24.15.0, below supported engines. Supported clean-install continuation CI is pending until the draft is opened; inspect actual exact-head results before integration.
+- Callback relay passes valid-link/header checks plus six malformed/foreign request denials. Typecheck and runner builds pass locally on Node 24.15.0, below supported engines. Supported clean-install continuation source head `6a7715c71b81b3034f6b55332c20cc32bb145411` passes real [OAuth CI 42735805310](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42735805310) on Node **24.22.2**: **130/130 tests, 29 suites, zero failures/cancellations/skips**, typecheck, all **seven builds**, callback relay checks and readiness gate. [World publishing 42735804661](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42735804661) passes. Decoded job log and completed jobs were re-read; receipt is `release/current-ci-20261109.json`. Final evidence-only head checks must also be read in the PR before integration.
 - The management runtime could not call Siteverify directly; a task-local encrypted secret envelope was decrypted in memory for the successful scoped network probe, displaying booleans only. Initial restricted-network HTTP probe failed DNS; approved network-only retry passed all 16. No secrets were printed, committed or put in command arguments.
 
 ## Rejected attempts and cleanup
