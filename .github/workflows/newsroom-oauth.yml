@@ -40,7 +40,7 @@ jobs:
           cache-dependency-path: workers/newsroom/package-lock.json
       - run: npm ci --ignore-scripts
         working-directory: workers/newsroom
-      - run: npm run typecheck && npm test && npm run build && npm run build:test && npm run build:issuer-candidate && npm run build:resource-candidate && npm run build:resource-s3-candidate && npm run build:hosted-recovery
+      - run: npm run typecheck && npm test && npm run build && npm run build:test && npm run build:issuer-candidate && npm run build:resource-candidate && npm run build:resource-s3-candidate && npm run build:hosted-recovery && npm run build:current-acceptance && node acceptance/current-harness-check.mjs
         working-directory: workers/newsroom
       - name: Save validated release bundle for isolated hosted test
         uses: actions/upload-artifact@v4
