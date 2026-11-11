@@ -115,7 +115,8 @@ describe("Editor-only OAuth live newsroom gateway, entirely synthetic and undepl
     } } as unknown as Fetcher });
     const result = await rpc(env, "tools/call", { name: "newsroom_read", arguments: { key: KEY } }, await token());
     assert.equal(result.status, 503);
-    assert.ok(!(await result.text()).includes("SENSITIVE_KEY_INTERNAL_ERROR"));
-    assert.ok(!(await result.text()).includes(EDITOR_KEY));
+    const responseText = await result.text();
+    assert.ok(!responseText.includes("SENSITIVE_KEY_INTERNAL_ERROR"));
+    assert.ok(!responseText.includes(EDITOR_KEY));
   });
 });
