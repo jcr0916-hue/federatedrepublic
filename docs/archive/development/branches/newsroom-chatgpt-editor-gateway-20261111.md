@@ -37,3 +37,7 @@ The President privately installed `ISSUER_GITHUB_CLIENT_SECRET` using the Cloudf
 ## Turnstile secret checkpoint — November 11
 
 Cloudflare read-only verification confirmed `ISSUER_TURNSTILE_SECRET` is present as `secret_text` on `newsroom-editor-isolated-issuer-20261111`, alongside the existing private GitHub OAuth secret. Public/preview ingress remains off; no schedules. The managed Turnstile widget sitekey `0x4AAAAAAF9MvR_lOQX9iwsI` exists and is limited to `newsroom-editor-isolated-issuer-20261111.jcr0916.workers.dev`. The `ISSUER_TURNSTILE_SITE_KEY` plain-text Worker binding is **not yet configured**. No secret value was read. Issuer remains incomplete and closed; no hosted auth claimed.
+
+## Turnstile public sitekey verified
+
+Read-only Cloudflare API verification confirmed `ISSUER_TURNSTILE_SITE_KEY` is a `plain_text` binding with exact value `0x4AAAAAAF9MvR_lOQX9iwsI` on the isolated issuer. Both `ISSUER_TURNSTILE_SECRET` and `ISSUER_GITHUB_CLIENT_SECRET` still exist as `secret_text` bindings. Public and preview endpoints remain disabled; schedules empty. The issuer remains closed and unready until separate OAuth client, audience, redirect, grant/guard namespaces, authorization identity and other required bindings are set and tested.
