@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-11T01:22:52.883578+00:00",
+  "status": "LOCAL ORIGIN BUG FIXED / REAL ACCEPTANCE STILL INCOMPLETE",
+  "browser": "Codex in-app browser with synthetic loopback receiver and mock issuer",
+  "before": {
+    "syntheticCredentialsOnly": true,
+    "cloudRequests": false,
+    "postOriginCategory": "null",
+    "postStatus": 403
+  },
+  "after": {
+    "syntheticCredentialsOnly": true,
+    "cloudRequests": false,
+    "postOriginCategory": "matching",
+    "postStatus": 303,
+    "syntheticIssuerReached": true,
+    "crossOriginRefererAbsent": true
+  },
+  "localRegressionChecksPassed": 30,
+  "nullOriginStillRejected": true,
+  "fixturesStopped": true,
+  "macReceiverInstalled": true,
+  "privateCredentialsChanged": false,
+  "realCloudRequestsInBrowserProof": false,
+  "realGitHubTurnstileS3LifecycleResult": false,
+  "allDisposableEndpointsRemainClosed": true,
+  "productionChanged": false,
+  "secretValuesDisplayed": false,
+  "specification": "https://fetch.spec.whatwg.org/#append-a-request-origin-header",
+  "receiverSha256": "75826ccf3b9d1f871d4bda09d25f7eee3e5a3f21670602d0f0284f26a27251ce"
+}

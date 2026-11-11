@@ -165,7 +165,8 @@ def main():
 <button type="submit">Begin authorization</button></form>
 <p>Then complete Turnstile, GitHub approval and newsroom consent. Finish using the button that returns to this Mac.</p></html>''').encode()
                 self.send_response(200);self.send_header('Content-Type','text/html; charset=utf-8')
-                self.send_header('Cache-Control','no-store');self.send_header('Referrer-Policy','no-referrer')
+                # Form navigation needs its real local Origin; the 303 below still strips cross-origin referrers.
+                self.send_header('Cache-Control','no-store');self.send_header('Referrer-Policy','same-origin')
                 self.send_header('Content-Security-Policy',"default-src 'none'; form-action 'self' "+ISSUER+"; frame-ancestors 'none'; base-uri 'none'")
                 self.send_header('X-Frame-Options','DENY');self.send_header('X-Content-Type-Options','nosniff')
                 self.send_header('Content-Length',str(len(body)));self.end_headers();self.wfile.write(body);return

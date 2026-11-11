@@ -20,6 +20,14 @@ The old receiver consumed its only start on `GET /start`. With fake credentials 
 
 The new loopback-only `acceptance/current-mac-receiver-check.py` passes **28 checks** with synthetic credentials, and CI now runs it without cloud credentials. The isolated Mac script was replaced directly only after these checks passed and the old listener had stopped; the detached worktree remains at its original commit with the receiver and ignore-rule changes locally. Nonsecret attempt/fix receipt: `release/current-receiver-start-fix-20261110.json`. Neither real browser exercise has succeeded.
 
+## Browser Origin correction on resumption
+
+The subsequent real-browser 403 was reproduced in the Codex in-app browser using only synthetic credentials and a loopback mock issuer. The start page's `Referrer-Policy: no-referrer` caused HTML form navigation to send `Origin: null`, which the strict receiver correctly rejected with 403. This is defined by the [Fetch Origin-header algorithm](https://fetch.spec.whatwg.org/#append-a-request-origin-header). The earlier manually supplied HTTP headers did not reproduce browser form behavior; the 28 synthetic checks were not proof of this path.
+
+Changed only the local start page to `Referrer-Policy: same-origin`. The outgoing 303 issuer redirect and callback still use `no-referrer`; exact Host/Origin checks, private nonce, one-use start and state/PKCE remain enforced. **Null/missing/foreign origins remain rejected.** A second real browser click now produced matching local Origin and 303, reached the loopback mock issuer and sent no cross-origin Referer. Both temporary synthetic fixtures were stopped. No real credential, cloud request or OAuth grant was used in these browser tests.
+
+Expanded local regression checks to **30**, all passing. The corrected receiver was copied byte-identically to the Mac worktree while its listener was stopped and no pending marker existed; credentials are unchanged. All disposable ingress stayed closed. Current-head CI must be read separately from prior 28-check evidence. Nonsecret proof: `release/current-receiver-origin-fix-20261110.json`. Start a fresh receiver before the next real attempt and verify the local page before coordinating a new active consent window. This corrects the local 403; it is not successful real GitHub/Turnstile/S3 acceptance.
+
 ## Exact next Mac step — one command, services closed
 
 At the existing `federatedrepublic-pr319-acceptance` Terminal prompt, run only:
