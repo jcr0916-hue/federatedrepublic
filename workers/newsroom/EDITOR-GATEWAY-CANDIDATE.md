@@ -16,6 +16,8 @@ The existing live MCP endpoint `https://federated-republic-newsroom.jcr0916.work
 
 ## Verification / unfinished release gates
 
+Real GitHub Actions at implementation head `844e989a8a49ea1c0241e7d28506f0d68cc2d9d5` passed [OAuth CI 43078823821](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/43078823821): **136/136 tests**, typecheck, existing builds and new issuer/gateway bundle builds, readiness gate; [World publishing CI 43078823901](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/43078823901) passed. These are not hosted acceptance or deployment approval.
+
 The new synthetic tests (`test/editor-gateway-candidate.test.ts`) verify metadata/scope, no unauthenticated access, only three tools, exact proxy arguments, rejection of forbidden tools/arguments and missing confirmation, wrong OAuth scope, no secret leak, and failure containment. They mock issuer and live Worker, so **they are not live acceptance**. Build separately using `npm run build:editor-gateway`. Reuse #319 verified issuer lifecycle; its read-only resource acceptance **does not** establish Editor review safety.
 
 Before any live beta gateway deployment:
