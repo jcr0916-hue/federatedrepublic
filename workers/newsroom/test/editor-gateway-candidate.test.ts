@@ -25,7 +25,7 @@ const baseEnv = (overrides: Partial<EditorGatewayEnv> = {}, history: { upstream:
     scope: "newsroom:editor", exp: Math.floor(Date.now()/1000) + 400,
   }); } } as unknown as Fetcher,
   NEWSROOM_UPSTREAM: { async fetch(request: Request) {
-    history.upstream.push(request);
+    history.upstream.push(request.clone());
     const body = await request.json() as { id: number; params: { name: string; arguments: Record<string, unknown> } };
     return Response.json({ jsonrpc: "2.0", id: body.id,
       result: { content: [{ type: "text", text: JSON.stringify({ ok: true, tool: body.params.name }) }],
