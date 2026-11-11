@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "d7c65bea969be9bebe541a7bb1e069928e12c60c",
+  "success": true,
+  "checks": [
+    {
+      "check": "current-issuer-discovery",
+      "pass": true
+    },
+    {
+      "check": "current-resource-discovery",
+      "pass": true
+    },
+    {
+      "check": "missing-bearer-denied",
+      "pass": true
+    },
+    {
+      "check": "forged-bearer-denied",
+      "pass": true
+    },
+    {
+      "check": "forged-callback-denied",
+      "pass": true
+    },
+    {
+      "check": "foreign-provider-issuer-denied",
+      "pass": true
+    },
+    {
+      "check": "incomplete-authorization-denied",
+      "pass": true
+    },
+    {
+      "check": "dedicated-real-widget-present",
+      "pass": true
+    },
+    {
+      "check": "secure-admission-cookie-preserved",
+      "pass": true
+    },
+    {
+      "check": "challenge-csp-preserved",
+      "pass": true
+    },
+    {
+      "check": "no-store-and-no-referrer",
+      "pass": true
+    },
+    {
+      "check": "current-backend-dummy-turnstile-denied",
+      "pass": true
+    },
+    {
+      "check": "foreign-origin-denied",
+      "pass": true
+    },
+    {
+      "check": "unauthenticated-token-denied",
+      "pass": true
+    },
+    {
+      "check": "unauthenticated-introspect-denied",
+      "pass": true
+    },
+    {
+      "check": "unauthenticated-revoke-denied",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "No real GitHub/browser consent",
+    "Dummy-token denial is not positive Turnstile or secret-validity proof",
+    "No successful S3 read or OAuth grant lifecycle in this run"
+  ]
+}

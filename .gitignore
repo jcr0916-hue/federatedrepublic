@@ -10,3 +10,6 @@ _site/
 .world-authoring/
 .constitution-archive.lock/
 .constitution-*
+
+# Private disposable OAuth credentials and unresolved grant state.
+/.private/

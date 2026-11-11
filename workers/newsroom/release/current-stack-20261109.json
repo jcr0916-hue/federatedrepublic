@@ -1,0 +1,137 @@
+[
+  {
+    "number": 304,
+    "head": "feature/newsroom-chatgpt-oauth",
+    "headSha": "9e42c3f78c894fda93837165dea80ebf37fbafb0",
+    "base": "main",
+    "baseSha": "98430167c1c5130b41d329d0b99887c29f35ea4f",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 305,
+    "head": "feature/newsroom-strict-refresh-prototype",
+    "headSha": "4fda7e342b70f3ea59b151d89a7e8976572d7f39",
+    "base": "feature/newsroom-chatgpt-oauth",
+    "baseSha": "9e42c3f78c894fda93837165dea80ebf37fbafb0",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 306,
+    "head": "fix/newsroom-github-iss-20261107",
+    "headSha": "9069f1b47c1a1e6ae92451cd0de5b0f978762279",
+    "base": "feature/newsroom-strict-refresh-prototype",
+    "baseSha": "4fda7e342b70f3ea59b151d89a7e8976572d7f39",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 307,
+    "head": "fix/newsroom-chatgpt-ui-locales-20261108",
+    "headSha": "9e498326ebebff76e9b6ed3e9b54c92f39deef1b",
+    "base": "fix/newsroom-github-iss-20261107",
+    "baseSha": "9069f1b47c1a1e6ae92451cd0de5b0f978762279",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 308,
+    "head": "fix/newsroom-mcp-server-discover-20261108",
+    "headSha": "4553f7295b855315292c18364ca79294480bf744",
+    "base": "fix/newsroom-chatgpt-ui-locales-20261108",
+    "baseSha": "b26673e0c0216e1dfe82625926207f760f2b8f08",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 309,
+    "head": "feature/newsroom-readonly-production-gate-20261108",
+    "headSha": "afc95cc362f6e25d9c5b60dd9d287b8ea381daf1",
+    "base": "fix/newsroom-mcp-server-discover-20261108",
+    "baseSha": "4553f7295b855315292c18364ca79294480bf744",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 310,
+    "head": "feature/newsroom-oauth-security-review-20261108",
+    "headSha": "9076feb2391ffb4fa8f5fff5efb50e1ef7f4d4e0",
+    "base": "feature/newsroom-readonly-production-gate-20261108",
+    "baseSha": "afc95cc362f6e25d9c5b60dd9d287b8ea381daf1",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 311,
+    "head": "feature/newsroom-ingress-rate-boundary-20261108",
+    "headSha": "4f08ffe4f05ecf5f2ab02b00879e5ff35c5e0833",
+    "base": "feature/newsroom-oauth-security-review-20261108",
+    "baseSha": "9076feb2391ffb4fa8f5fff5efb50e1ef7f4d4e0",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 312,
+    "head": "feature/newsroom-r2-readonly-s3-20261108",
+    "headSha": "ff84cbfd8799b7f2d72136fc74c1b72762a776b9",
+    "base": "feature/newsroom-ingress-rate-boundary-20261108",
+    "baseSha": "4f08ffe4f05ecf5f2ab02b00879e5ff35c5e0833",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 313,
+    "head": "feature/newsroom-s3-resource-integration-20261108",
+    "headSha": "dc55fa55aa43cc60451ddabdb5d1f516c970ce28",
+    "base": "feature/newsroom-r2-readonly-s3-20261108",
+    "baseSha": "aaa971852752e8f6da94a57871d37748aafb8ef5",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 314,
+    "head": "feature/newsroom-infrastructure-completion-20261108",
+    "headSha": "420897a5127794dacf11324947bfcf1ca86ef8ce",
+    "base": "feature/newsroom-s3-resource-integration-20261108",
+    "baseSha": "dc55fa55aa43cc60451ddabdb5d1f516c970ce28",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 315,
+    "head": "feature/newsroom-readiness-20261109",
+    "headSha": "b466ecfc81e1efe99b3b57ed584744cd03f82e14",
+    "base": "feature/newsroom-infrastructure-completion-20261108",
+    "baseSha": "420897a5127794dacf11324947bfcf1ca86ef8ce",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 316,
+    "head": "feature/torenthia-newsroom-operations-launch-20261109",
+    "headSha": "80ce22335dcc3dec5b37e9eb2cb1632eef2a378d",
+    "base": "main",
+    "baseSha": "98430167c1c5130b41d329d0b99887c29f35ea4f",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 317,
+    "head": "feature/newsroom-security-completion-20261109",
+    "headSha": "7cab06439c285e92f8d8d6d3bab7bcd8834cf7a5",
+    "base": "feature/newsroom-readiness-20261109",
+    "baseSha": "b466ecfc81e1efe99b3b57ed584744cd03f82e14",
+    "draft": true,
+    "state": "open"
+  },
+  {
+    "number": 318,
+    "head": "feature/newsroom-abuse-recovery-20261109",
+    "headSha": "d7c65bea969be9bebe541a7bb1e069928e12c60c",
+    "base": "feature/newsroom-security-completion-20261109",
+    "baseSha": "7cab06439c285e92f8d8d6d3bab7bcd8834cf7a5",
+    "draft": true,
+    "state": "open"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "d7c65bea969be9bebe541a7bb1e069928e12c60c",
+  "exercise": "cleanup",
+  "success": true,
+  "checks": [
+    {
+      "check": "all-known-new-grants-confirmed-inactive",
+      "pass": true
+    }
+  ],
+  "secretsDisplayed": false,
+  "unresolvedGrant": false
+}

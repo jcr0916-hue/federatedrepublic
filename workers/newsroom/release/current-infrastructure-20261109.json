@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "d7c65bea969be9bebe541a7bb1e069928e12c60c",
+  "status": "INCOMPLETE / NO-GO",
+  "accountId": "5fa1569f8ddb79c8fcf2138a2ae3f090",
+  "snapshot": {
+    "observedAt": "2026-11-10T01:24:51.415Z",
+    "workers": {
+      "newsroom-current-issuer-20261109": {
+        "ingress": {
+          "enabled": false,
+          "previews_enabled": false
+        },
+        "schedules": [],
+        "bindings": [
+          {
+            "name": "ISSUER_ADMISSION_KEY",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_AUDIENCE",
+            "type": "plain_text",
+            "text": "https://newsroom-current-resource-20261109.jcr0916.workers.dev/mcp"
+          },
+          {
+            "name": "ISSUER_CLIENT_ID",
+            "type": "plain_text",
+            "text": "newsroom-current-client-20261109"
+          },
+          {
+            "name": "ISSUER_CLIENT_SECRET_SHA256",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_EDITOR_ID",
+            "type": "plain_text",
+            "text": "279336870"
+          },
+          {
+            "name": "ISSUER_GITHUB_CLIENT_ID",
+            "type": "plain_text",
+            "text": "UNCONFIGURED_NEW_DISPOSABLE_APP_REQUIRED"
+          },
+          {
+            "name": "ISSUER_GRANTS",
+            "type": "durable_object_namespace",
+            "namespace_id": "2bb9f0db46ac4b17bc8732ee73e6a175",
+            "class_name": "IssuerGrant"
+          },
+          {
+            "name": "ISSUER_GUARD",
+            "type": "durable_object_namespace",
+            "namespace_id": "a1d2ab2c55894bf28ef20addb14b6b4a",
+            "class_name": "IssuerGuard"
+          },
+          {
+            "name": "ISSUER_INGRESS_LIMIT",
+            "type": "ratelimit",
+            "namespace_id": "43180901",
+            "simple": {
+              "limit": 120,
+              "period": 60
+            }
+          },
+          {
+            "name": "ISSUER_ORIGIN",
+            "type": "plain_text",
+            "text": "https://newsroom-current-issuer-20261109.jcr0916.workers.dev"
+          },
+          {
+            "name": "ISSUER_REDIRECT_URI",
+            "type": "plain_text",
+            "text": "https://newsroom-current-client-20261109.jcr0916.workers.dev/callback"
+          },
+          {
+            "name": "ISSUER_RESOURCE_ID",
+            "type": "plain_text",
+            "text": "newsroom-current-validator-20261109"
+          },
+          {
+            "name": "ISSUER_RESOURCE_SECRET_SHA256",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_SESSION_KEY",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_TURNSTILE_SECRET",
+            "type": "secret_text"
+          },
+          {
+            "name": "ISSUER_TURNSTILE_SITE_KEY",
+            "type": "plain_text",
+            "text": "0x4AAAAAAF6ssiEhk1gj8QlU"
+          }
+        ],
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "redact_query_string": true,
+          "logs": {
+            "enabled": true,
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": false
+          },
+          "traces": {
+            "enabled": false,
+            "persist": false,
+            "head_sampling_rate": 1
+          }
+        },
+        "logpush": false,
+        "tail_consumers": [],
+        "deployments": [
+          {
+            "id": "f383d2f5-c2d4-409e-9a8a-1d2d17b3d1fb",
+            "source": "api",
+            "strategy": "percentage",
+            "author_email": "jcr0916@gmail.com",
+            "annotations": {
+              "workers/triggered_by": "secret"
+            },
+            "versions": [
+              {
+                "version_id": "e45b8aa1-fb7f-452a-8178-dd7f89c82863",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-11-10T01:23:15.224512Z"
+          }
+        ]
+      },
+      "newsroom-current-resource-20261109": {
+        "ingress": {
+          "enabled": false,
+          "previews_enabled": false
+        },
+        "schedules": [],
+        "bindings": [
+          {
+            "name": "ISSUER",
+            "type": "service",
+            "service": "newsroom-current-issuer-20261109"
+          },
+          {
+            "name": "R2_READ_BUCKET",
+            "type": "plain_text",
+            "text": "newsroom-current-e2e-20261109"
+          },
+          {
+            "name": "R2_READ_ENDPOINT",
+            "type": "plain_text",
+            "text": "https://5fa1569f8ddb79c8fcf2138a2ae3f090.r2.cloudflarestorage.com/"
+          },
+          {
+            "name": "RESOURCE_ADMISSION_KEY",
+            "type": "secret_text"
+          },
+          {
+            "name": "RESOURCE_AUDIENCE",
+            "type": "plain_text",
+            "text": "https://newsroom-current-resource-20261109.jcr0916.workers.dev/mcp"
+          },
+          {
+            "name": "RESOURCE_CLIENT_ID",
+            "type": "plain_text",
+            "text": "newsroom-current-client-20261109"
+          },
+          {
+            "name": "RESOURCE_INGRESS_LIMIT",
+            "type": "ratelimit",
+            "namespace_id": "43180902",
+            "simple": {
+              "limit": 600,
+              "period": 60
+            }
+          },
+          {
+            "name": "RESOURCE_ISSUER",
+            "type": "plain_text",
+            "text": "https://newsroom-current-issuer-20261109.jcr0916.workers.dev"
+          },
+          {
+            "name": "RESOURCE_VALIDATOR_ID",
+            "type": "plain_text",
+            "text": "newsroom-current-validator-20261109"
+          },
+          {
+            "name": "RESOURCE_VALIDATOR_SECRET",
+            "type": "secret_text"
+          }
+        ],
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "redact_query_string": true,
+          "logs": {
+            "enabled": true,
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": false
+          },
+          "traces": {
+            "enabled": false,
+            "persist": false,
+            "head_sampling_rate": 1
+          }
+        },
+        "logpush": false,
+        "tail_consumers": [],
+        "deployments": [
+          {
+            "id": "fce28a01-223c-46e2-b0d6-21c2cf464ac4",
+            "source": "api",
+            "strategy": "percentage",
+            "author_email": "jcr0916@gmail.com",
+            "annotations": {
+              "workers/message": "Automatic deployment on upload.",
+              "workers/triggered_by": "upload"
+            },
+            "versions": [
+              {
+                "version_id": "a74fecb1-5aed-4470-963e-40ed35c7fbec",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-11-10T01:03:59.327368Z"
+          }
+        ]
+      },
+      "newsroom-current-client-20261109": {
+        "ingress": {
+          "enabled": false,
+          "previews_enabled": false
+        },
+        "schedules": [],
+        "bindings": [],
+        "logpush": false,
+        "tail_consumers": [],
+        "deployments": [
+          {
+            "id": "4687f2ff-befc-417f-8631-4bf491809caf",
+            "source": "api",
+            "strategy": "percentage",
+            "author_email": "jcr0916@gmail.com",
+            "annotations": {
+              "workers/message": "Automatic deployment on upload.",
+              "workers/triggered_by": "upload"
+            },
+            "versions": [
+              {
+                "version_id": "f232d3e6-dbee-4847-97b5-3761e4802528",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-11-10T01:19:04.526017Z"
+          }
+        ]
+      },
+      "newsroom-current-runner-20261109": {
+        "ingress": {
+          "enabled": false,
+          "previews_enabled": false
+        },
+        "schedules": [],
+        "bindings": [],
+        "logpush": false,
+        "tail_consumers": [],
+        "deployments": [
+          {
+            "id": "55ba08a4-3e23-4653-ba2b-276ee173f658",
+            "source": "api",
+            "strategy": "percentage",
+            "author_email": "jcr0916@gmail.com",
+            "annotations": {
+              "workers/triggered_by": "secret"
+            },
+            "versions": [
+              {
+                "version_id": "361f855b-eb76-4394-9c06-6332b04b5d5e",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-11-10T01:14:08.905552Z"
+          }
+        ]
+      }
+    },
+    "production": {
+      "deploymentId": "7a53aadb-d87e-46e5-b7b8-831970590373",
+      "versions": [
+        {
+          "version_id": "08a99769-3618-488e-adbd-30a8be38a788",
+          "percentage": 100
+        }
+      ]
+    },
+    "bucketManagedDomain": {
+      "enabled": false,
+      "bucketId": "c32e508157554dc49354a99fecac86d9",
+      "domain": "pub-c32e508157554dc49354a99fecac86d9.r2.dev"
+    },
+    "syntheticObjectList": [
+      {
+        "key": "status/33333333-3333-4333-8333-333333333333.json",
+        "etag": "47b31f610a36f94dde6eafbc73a54f44",
+        "last_modified": "2026-11-10T01:01:15.148Z",
+        "size": 82,
+        "http_metadata": {
+          "contentType": "application/json"
+        },
+        "custom_metadata": {},
+        "storage_class": "Standard"
+      },
+      {
+        "key": "submissions/korda/2026-11-09/33333333-3333-4333-8333-333333333333.json",
+        "etag": "6afcea947f440d9b6c9493ff8929c930",
+        "last_modified": "2026-11-10T01:01:14.571Z",
+        "size": 290,
+        "http_metadata": {
+          "contentType": "application/json"
+        },
+        "custom_metadata": {},
+        "storage_class": "Standard"
+      }
+    ],
+    "bucketCustomDomains": {
+      "domains": []
+    }
+  },
+  "deployedHashes": {
+    "newsroom-current-issuer-20261109": {
+      "moduleSha256": "ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac",
+      "expectedSha256": "ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac",
+      "match": true,
+      "bytes": 47300
+    },
+    "newsroom-current-resource-20261109": {
+      "moduleSha256": "59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9",
+      "expectedSha256": "59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9",
+      "match": true,
+      "bytes": 32127
+    }
+  },
+  "turnstile": {
+    "sitekey": "0x4AAAAAAF6ssiEhk1gj8QlU",
+    "domains": [
+      "newsroom-current-issuer-20261109.jcr0916.workers.dev"
+    ],
+    "secretPrivatelyBound": true,
+    "siteverify": {
+      "http": 200,
+      "validSecretRejectsDummy": true,
+      "secretValuesDisplayed": false
+    },
+    "positiveBrowserValidation": false
+  },
+  "s3": {
+    "bucket": "newsroom-current-e2e-20261109",
+    "credentialCreated": false,
+    "deniedAccountScope": "account-api-tokens.write",
+    "userTokenEndpointSupportsOAuth": false,
+    "fixtureCount": 2
+  },
+  "scheduledAttempt": {
+    "oneDatedInvocation": true,
+    "maximumWindowSeconds": 210,
+    "resultProduced": false,
+    "cronRemoved": true,
+    "runnerBindingsDetached": true
+  },
+  "httpValidation": {
+    "schemaVersion": 1,
+    "sourceCommit": "d7c65bea969be9bebe541a7bb1e069928e12c60c",
+    "success": true,
+    "checks": [
+      {
+        "check": "current-issuer-discovery",
+        "pass": true
+      },
+      {
+        "check": "current-resource-discovery",
+        "pass": true
+      },
+      {
+        "check": "missing-bearer-denied",
+        "pass": true
+      },
+      {
+        "check": "forged-bearer-denied",
+        "pass": true
+      },
+      {
+        "check": "forged-callback-denied",
+        "pass": true
+      },
+      {
+        "check": "foreign-provider-issuer-denied",
+        "pass": true
+      },
+      {
+        "check": "incomplete-authorization-denied",
+        "pass": true
+      },
+      {
+        "check": "dedicated-real-widget-present",
+        "pass": true
+      },
+      {
+        "check": "secure-admission-cookie-preserved",
+        "pass": true
+      },
+      {
+        "check": "challenge-csp-preserved",
+        "pass": true
+      },
+      {
+        "check": "no-store-and-no-referrer",
+        "pass": true
+      },
+      {
+        "check": "current-backend-dummy-turnstile-denied",
+        "pass": true
+      },
+      {
+        "check": "foreign-origin-denied",
+        "pass": true
+      },
+      {
+        "check": "unauthenticated-token-denied",
+        "pass": true
+      },
+      {
+        "check": "unauthenticated-introspect-denied",
+        "pass": true
+      },
+      {
+        "check": "unauthenticated-revoke-denied",
+        "pass": true
+      }
+    ],
+    "limitations": [
+      "No real GitHub/browser consent",
+      "Dummy-token denial is not positive Turnstile or secret-validity proof",
+      "No successful S3 read or OAuth grant lifecycle in this run"
+    ]
+  },
+  "limitations": [
+    "Fresh GitHub OAuth App/secret absent; temporary unusable GitHub secret sentinel removed after preflight so incomplete issuer configuration fails closed; no existing App changed",
+    "No real GitHub/browser OAuth grant lifecycle result on this infrastructure",
+    "No current hosted successful S3 read or S3 policy-denial proof",
+    "Analytics Engine binding rejected until account feature enabled; no account feature changed",
+    "No alert delivery, export privacy canary, regional recovery or independent sign-off"
+  ]
+}

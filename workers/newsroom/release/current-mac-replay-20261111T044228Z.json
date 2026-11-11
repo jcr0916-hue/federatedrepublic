@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "d7c65bea969be9bebe541a7bb1e069928e12c60c",
+  "exercise": "replay",
+  "success": false,
+  "checks": [
+    {
+      "check": "real-browser-code-exchange",
+      "pass": true
+    },
+    {
+      "check": "new-access-active",
+      "pass": true
+    },
+    {
+      "check": "real-s3-list",
+      "pass": true
+    },
+    {
+      "check": "real-s3-exact-noncanonical-read",
+      "pass": true
+    },
+    {
+      "check": "write-tool-denied",
+      "pass": true
+    },
+    {
+      "check": "refresh-rotation",
+      "pass": true
+    },
+    {
+      "check": "predecessor-access-inactive",
+      "pass": true
+    },
+    {
+      "check": "successor-access-active",
+      "pass": true
+    },
+    {
+      "check": "spent-refresh-rejected",
+      "pass": true
+    },
+    {
+      "check": "successor-access-inactive",
+      "pass": true
+    },
+    {
+      "check": "successor-refresh-denied",
+      "pass": true
+    },
+    {
+      "check": "all-known-new-grants-confirmed-inactive",
+      "pass": false
+    }
+  ],
+  "secretsDisplayed": false,
+  "unresolvedGrant": true
+}

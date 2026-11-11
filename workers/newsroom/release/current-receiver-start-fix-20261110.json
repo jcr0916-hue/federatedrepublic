@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-10T14:23:14.953384+00:00",
+  "status": "LOCAL START FIXED / LIVE ACCEPTANCE INCOMPLETE / PRODUCTION NO-GO",
+  "attempts": [
+    {
+      "outcome": "127.0.0.1 connection refused",
+      "listenerFound": false,
+      "replayReportFound": false,
+      "pendingGrantMarkerFound": false,
+      "disposableClosureVerified": true
+    },
+    {
+      "outcome": "Local HTTP 400",
+      "listenerFound": true,
+      "replayReportFound": false,
+      "pendingGrantMarkerFound": false,
+      "disposableClosureVerified": true
+    }
+  ],
+  "pauseMinutes": 12,
+  "priorBehaviorReproduction": {
+    "syntheticCredentialsOnly": true,
+    "cloudRequests": false,
+    "getPreviewThenRepeatStatuses": [
+      302,
+      400
+    ],
+    "userExactCauseEstablished": false
+  },
+  "receiverFix": {
+    "repeatableGetLandingPage": true,
+    "nonceAndOriginProtectedPost": true,
+    "oneUseStartRetained": true,
+    "fixedHostIssuerAudienceRedirectAndPKCERetained": true,
+    "timeoutSeconds": 600,
+    "loopbackChecksPassed": 28,
+    "macScriptInstalledAfterChecks": true,
+    "realPrivateCredentialsChanged": false
+  },
+  "cloud": {
+    "allWorkersDevAndPreviewsDisabled": true,
+    "allSchedulesEmpty": true,
+    "runnerBindings": 0,
+    "issuerResourceRelayCodeChanged": false,
+    "credentialChanges": false,
+    "productionChanged": false
+  },
+  "positiveLiveLifecycleResult": false,
+  "secretValuesDisplayed": false
+}
