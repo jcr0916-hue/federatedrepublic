@@ -41,3 +41,12 @@ Cloudflare read-only verification confirmed `ISSUER_TURNSTILE_SECRET` is present
 ## Turnstile public sitekey verified
 
 Read-only Cloudflare API verification confirmed `ISSUER_TURNSTILE_SITE_KEY` is a `plain_text` binding with exact value `0x4AAAAAAF9MvR_lOQX9iwsI` on the isolated issuer. Both `ISSUER_TURNSTILE_SECRET` and `ISSUER_GITHUB_CLIENT_SECRET` still exist as `secret_text` bindings. Public and preview endpoints remain disabled; schedules empty. The issuer remains closed and unready until separate OAuth client, audience, redirect, grant/guard namespaces, authorization identity and other required bindings are set and tested.
+
+## Approved Editor ID and public OAuth configuration checkpoint
+
+Cloudflare readback confirms `ISSUER_EDITOR_ID=279336870` on the isolated issuer. The existing private GitHub and Turnstile secrets remained installed. Non-secret configuration was added and independently re-read, on the **same isolated test Workers only**:
+
+- Issuer: `ISSUER_ORIGIN=https://newsroom-editor-isolated-issuer-20261111.jcr0916.workers.dev`, `ISSUER_AUDIENCE=https://newsroom-editor-isolated-gateway-20261111.jcr0916.workers.dev/mcp`, `ISSUER_CLIENT_ID=editor-chatgpt-isolated-20261111`, `ISSUER_RESOURCE_ID=editor-validator-isolated-20261111`.
+- Gateway: corresponding `RESOURCE_ISSUER`, `RESOURCE_AUDIENCE`, `RESOURCE_CLIENT_ID`, `RESOURCE_VALIDATOR_ID`, and the exact public identity `NEWSROOM_UPSTREAM_URL=https://federated-republic-newsroom.jcr0916.workers.dev/mcp` (configuration **only**; gateway has **no** upstream service binding or Editor key).
+
+Both Workers still have `workers.dev.enabled=false`, `previews_enabled=false`. No live service binding, no live Editor key, no OAuth client/validator secret pairs, no distinct grant/guard namespaces, no ChatGPT callback address, and no authorization acceptance yet. The upstream URL setting alone does not make an external network call or grant access. No prod or TypingMind changes.
