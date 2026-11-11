@@ -18,6 +18,7 @@ export interface EditorGatewayEnv {
   RESOURCE_INGRESS_LIMIT: IngressRateLimiter;
   NEWSROOM_EDITOR_KEY: string;
   NEWSROOM_UPSTREAM_URL: string;
+  NEWSROOM_UPSTREAM: Fetcher;
 }
 const SCOPE = "newsroom:editor";
 const TOOLS = ["newsroom_list", "newsroom_read", "newsroom_review"] as const;
@@ -40,7 +41,7 @@ function config(env: EditorGatewayEnv) {
         env.RESOURCE_CLIENT_ID === env.RESOURCE_VALIDATOR_ID ||
         !/^[\x21-\x7e]{32,256}$/.test(env.RESOURCE_VALIDATOR_SECRET) ||
         !/^[a-f0-9]{64}$/.test(env.RESOURCE_ADMISSION_KEY) ||
-        env.NEWSROOM_UPSTREAM_URL !== LIVE_MCP ||
+        env.NEWSROOM_UPSTREAM_URL !== LIVE_MCP || !env.NEWSROOM_UPSTREAM ||
         typeof env.NEWSROOM_EDITOR_KEY !== "string" || env.NEWSROOM_EDITOR_KEY.length < 32 ||
         env.NEWSROOM_EDITOR_KEY.length > 1024 || !env.ISSUER || !env.RESOURCE_INGRESS_LIMIT) throw Error();
     return { audience: u.href, origin: u.origin, issuer: issuer.origin,
@@ -127,12 +128,12 @@ async function proxy(env: EditorGatewayEnv, rpc: Record<string, unknown>,
   // destination is validated in config(); redirects are rejected.
   let response: Response;
   try {
-    response = await fetch(LIVE_MCP, { method: "POST", redirect: "manual",
+    response = await env.NEWSROOM_UPSTREAM.fetch(new Request(LIVE_MCP, { method: "POST", redirect: "manual",
       signal: AbortSignal.timeout(8000),
       headers: { "Content-Type": "application/json", Authorization: "Bearer " + env.NEWSROOM_EDITOR_KEY },
       body: JSON.stringify({ jsonrpc: "2.0", id: rpc.id, method: "tools/call",
         params: { name: call.name, arguments: call.arguments } }),
-    });
+    }));
     if (response.status !== 200 || response.headers.get("Content-Type")?.split(";")[0].trim() !== "application/json")
       throw Error();
     const raw = await boundedText(response.body, 65536);
