@@ -10,7 +10,7 @@ The Mac worktree at `~/Documents/GitHub/federatedrepublic-pr319-acceptance` is d
 
 No credentials were invented or rotated. This file contains only the confidential newsroom test client and validator credentials plus their fixed environment identifiers; the new GitHub App secret and S3 key pair stay on their respective Workers. Cloudflare does not return deployed secret values, including the issuer's secret-text hash bindings. Recovery relies on the retained original's provenance and exact private copy, **not** a new claim of runtime authentication or deployed-secret readback.
 
-All four `newsroom-current-{issuer,resource,client,runner}-20261109` workers.dev **and preview** endpoints remain disabled; every schedule is empty; the deny-only runner has zero bindings. No browser test is active. Both deployed module hashes still match frozen #318 `d7c65bea969be9bebe541a7bb1e069928e12c60c`: issuer `ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac`, resource `59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9`. Nonsecret recovery receipt: `release/current-mac-setup-20261110.json`.
+The recovery receipt `release/current-mac-setup-20261110.json` records the original disabled endpoints and both module hashes from frozen #318 `d7c65bea969be9bebe541a7bb1e069928e12c60c`. It remains evidence for that configuration. Before opening a new browser window, check the current disposable deployment recorded in the PR319 description.
 
 ## Local start-page fix after the first browser attempts
 
@@ -28,6 +28,12 @@ Changed only the local start page to `Referrer-Policy: same-origin`. The outgoin
 
 Expanded local regression checks to **30**, all passing. The corrected receiver was copied byte-identically to the Mac worktree while its listener was stopped and no pending marker existed; credentials are unchanged. All disposable ingress stayed closed. Current-head CI must be read separately from prior 28-check evidence. Nonsecret proof: `release/current-receiver-origin-fix-20261110.json`. Start a fresh receiver before the next real attempt and verify the local page before coordinating a new active consent window. This corrects the local 403; it is not successful real GitHub/Turnstile/S3 acceptance.
 
+## Issuer browser check
+
+The issuer form had the same header conflict as the Mac start form. Its `no-referrer` policy caused form navigation to send `Origin: null`, which the exact-origin check rejected before Turnstile validation. The PR319 issuer page now uses `same-origin` so the browser can send the required Origin while keeping referrers on the issuer. The GitHub redirect uses `no-referrer`. The focused synthetic test checks the page policy, null and foreign Origin rejection, successful redirect to GitHub, and one-use challenge proof. [Fetch Origin-header rules](https://fetch.spec.whatwg.org/#append-a-request-origin-header)
+
+This change revises the issuer used for PR319 acceptance. The original #318 issuer hash is `ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac`. The corrected issuer build hash is `1429bba9bc89433b6aa070bcef3251d03722dd696c482b47dbb9f792fc72b47b`. The resource build hash is `59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9`. Use the deployment readback and CI links on [PR319](https://github.com/jcr0916-hue/federatedrepublic/pull/319).
+
 ## Exact next Mac step — one command, services closed
 
 At the existing `federatedrepublic-pr319-acceptance` Terminal prompt, run only:
@@ -42,7 +48,7 @@ Keep Terminal running and report only its startup message or error. The listener
 
 In the Mac browser where GitHub sign-in will happen, manually type `http://127.0.0.1:18765/start` into the address bar. This must display **Begin authorization**. Opening or previewing that page does not contact the issuer or consume the start. Leave the button unclicked while Work confirms an active human consent window and enables only issuer/resource/client, with previews and runner still disabled.
 
-Once that window is open, click **Begin authorization** once. Complete real Turnstile, GitHub approval and newsroom consent promptly, then click **Finish authorization on this Mac** at the HTTPS relay. A 409 after starting means that receiver has already begun: continue the original authorization tab rather than reopening the start. If the original flow is lost, close ingress and inspect pending-grant status before stopping/restarting the receiver. A new listener means a new state/PKCE and consent attempt; never silently reuse the old flow.
+Once that window is open, click **Begin authorization** once. On **Continue to newsroom sign-in**, wait for the Cloudflare box above **Continue** to finish. Select **Verify you are human** if a checkbox appears, then click **Continue**. Complete GitHub approval and newsroom consent, then click **Finish authorization on this Mac** at the HTTPS relay. If the start page reports 409, use the authorization tab where the flow began. If that flow is lost, close ingress and inspect pending-grant status before restarting the receiver. A new listener starts a fresh state/PKCE and consent attempt.
 
 A second separately coordinated fresh invocation with `--exercise revoke` checks voluntary revocation. Use only this task's mode-0600 private file, not old home-directory lifecycle credentials or tokens.
 

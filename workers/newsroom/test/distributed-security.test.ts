@@ -84,6 +84,7 @@ describe("distributed admission, backend costs and recovery boundaries", () => {
     const f = await pairedRuntime();
     try {
       const page = await f.issuer.fetch(ISSUER + "/authorize?" + params());
+      assert.equal(page.headers.get("Referrer-Policy"), "same-origin");
       assert.match(page.headers.get("Content-Security-Policy")!, /form-action 'self' https:\/\/github.com;/);
       const html = await page.text(), proof = /data-cdata="([a-f0-9]{64})"/.exec(html)![1];
       const cookie = page.headers.get("Set-Cookie")!.split(";")[0];
@@ -91,9 +92,15 @@ describe("distributed admission, backend costs and recovery boundaries", () => {
         method: "POST", redirect: "manual", headers: { ...form, Origin: origin, Cookie: cookieValue },
         body: new URLSearchParams({ authorization, "cf-turnstile-response": proof }).toString(),
       });
-      assert.equal((await post(undefined, cookie, "https://foreign.invalid")).status, 403);
+      for (const origin of ["null", "https://foreign.invalid"]) {
+        const denied = await post(undefined, cookie, origin);
+        assert.equal(denied.status, 403);
+        assert.deepEqual(await denied.json(), { error: "origin_not_allowed" });
+      }
       assert.equal((await post(undefined, "")).status, 403);
       const good = await post(); assert.equal(good.status, 302);
+      assert.equal(new URL(good.headers.get("Location")!).origin, "https://github.com");
+      assert.equal(good.headers.get("Referrer-Policy"), "no-referrer");
       assert.equal((await post()).status, 403, "Siteverify proof cannot be replayed");
       const otherPage = await f.issuer.fetch(ISSUER + "/authorize?" + params());
       const otherProof = /data-cdata="([a-f0-9]{64})"/.exec(await otherPage.text())![1];

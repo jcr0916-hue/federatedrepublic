@@ -23,7 +23,8 @@ export async function challengePage(params: URLSearchParams, env: ChallengeConfi
 <form method="post" action="/authorize"><input type="hidden" name="authorization" value="${escape(authorization)}">
 <div class="cf-turnstile" data-sitekey="${env.ISSUER_TURNSTILE_SITE_KEY}" data-action="${ACTION}" data-cdata="${cdata}"></div>
 <button type="submit">Continue</button></form><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script></html>`, {
-    headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Referrer-Policy": "no-referrer",
+    // The form needs its same-origin Origin header. Cross-origin requests still omit Referer.
+    headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Referrer-Policy": "same-origin",
       "X-Content-Type-Options": "nosniff", "Content-Security-Policy": "default-src 'none'; script-src https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'unsafe-inline'; form-action 'self' https://github.com; frame-ancestors 'none'; base-uri 'none'",
       "Set-Cookie": `${COOKIE}=${session}; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=300` },
   });
