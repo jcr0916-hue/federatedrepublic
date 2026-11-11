@@ -59,6 +59,15 @@ jobs:
           path: workers/newsroom/dist/resource-candidate.js
           if-no-files-found: error
           retention-days: 7
+      - name: Save isolated Editor gateway and issuer candidate bundles for hosted acceptance
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsroom-editor-gateway-isolated-bundles
+          path: |
+            workers/newsroom/dist/editor-gateway-candidate.js
+            workers/newsroom/dist/issuer-editor-candidate.js
+          if-no-files-found: error
+          retention-days: 7
       - name: Save unbound issuer candidate for source review only
         uses: actions/upload-artifact@v4
         with:
