@@ -86,18 +86,18 @@ function validatedCall(rpc: Record<string, unknown>): { name: ToolName; argument
         Number(args.limit) > 30)) throw new PolicyError(400, "invalid_arguments");
     if (args.cursor !== undefined && (typeof args.cursor !== "string" || args.cursor.length > 2048))
       throw new PolicyError(400, "invalid_arguments");
-    return { name, arguments: args, cost: 1 + 2 * Number(args.limit ?? 10) };
+    return { name: name as ToolName, arguments: args, cost: 1 + 2 * Number(args.limit ?? 10) };
   }
   if (typeof args.key !== "string" || args.key.length > 300 ||
       !/^submissions\/(federal|korda|varek|corindal)\/\d{4}-\d\d-\d\d\/[a-f\d-]{36}\.json$/.test(args.key))
     throw new PolicyError(400, "invalid_arguments");
-  if (name === "newsroom_read") return { name, arguments: args, cost: 2 };
+  if (name === "newsroom_read") return { name: name as ToolName, arguments: args, cost: 2 };
   if (typeof args.status !== "string" || !STATUSES.has(args.status) ||
       typeof args.note !== "string" || args.note.trim().length === 0 || args.note.length > 2000 ||
       args.confirm !== "CONFIRM_EDITORIAL_WRITE") throw new PolicyError(400, "confirmation_required");
   // confirm is a request-level fail-closed guard, not independent evidence of human
   // authorization: ChatGPT plugin permissions MUST also ask before each write.
-  return { name, arguments: { key: args.key, status: args.status, note: args.note }, cost: 4 };
+  return { name: name as ToolName, arguments: { key: args.key, status: args.status, note: args.note }, cost: 4 };
 }
 async function verifyIssuer(env: EditorGatewayEnv, c: ReturnType<typeof config>, token: string, cost: number) {
   let body: Record<string, unknown>;
