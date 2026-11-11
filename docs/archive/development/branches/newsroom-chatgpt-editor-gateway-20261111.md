@@ -29,3 +29,7 @@ The initial deny-all placeholders have been **replaced** by the exact PR #322 CI
 ## GitHub OAuth test client registration — November 11
 
 The President created a *new* GitHub OAuth App dedicated to this isolated test. Public client ID `Ov23likKblDc3FjfDpqr` was installed on `newsroom-editor-isolated-issuer-20261111` as plain-text binding `ISSUER_GITHUB_CLIENT_ID`. Cloudflare readback confirmed it matches, with `workers.dev` and previews still disabled. The GitHub client secret was **not** received or installed; it must go directly through the issuer's Cloudflare encrypted secret binding, never into chat or git. This is preparatory only, not a successful authorization.
+
+## Isolated OAuth client secret verified
+
+The President privately installed `ISSUER_GITHUB_CLIENT_SECRET` using the Cloudflare Dashboard. A read-only Cloudflare API inspection verified that the isolated issuer now has a `secret_text` binding with that exact name and retains the `ISSUER_GITHUB_CLIENT_ID` plain-text binding. No secret value was read or recorded. The same readback shows `workers.dev.enabled=false`, `previews_enabled=false`, and zero schedules. The issuer remains incomplete and inaccessible; Turnstile, dedicated grants/guards, remaining OAuth configuration and synthetic upstream acceptance are still pending. Do not declare authenticated readiness.
