@@ -10,7 +10,8 @@ const ADMISSION = "a".repeat(64);
 const VALIDATOR_SECRET = "v".repeat(64);
 const EDITOR_KEY = "p".repeat(64);
 const KEY = "submissions/federal/2026-11-11/0adf4937-2af4-48b7-b19c-aa5682d9e5b4.json";
-const baseEnv = (overrides: Partial<EditorGatewayEnv> = {}, history: { upstream: Request[] } = { upstream: [] }): EditorGatewayEnv => ({
+type UpstreamCapture = { url: string; authorization: string | null; body: unknown };
+const baseEnv = (overrides: Partial<EditorGatewayEnv> = {}, history: { upstream: UpstreamCapture[] } = { upstream: [] }): EditorGatewayEnv => ({
   RESOURCE_ADMISSION_KEY: ADMISSION,
   RESOURCE_AUDIENCE: RESOURCE,
   RESOURCE_ISSUER: ISSUER,
@@ -25,7 +26,7 @@ const baseEnv = (overrides: Partial<EditorGatewayEnv> = {}, history: { upstream:
     scope: "newsroom:editor", exp: Math.floor(Date.now()/1000) + 400,
   }); } } as unknown as Fetcher,
   NEWSROOM_UPSTREAM: { async fetch(request: Request) {
-    history.upstream.push(request.clone());
+    history.upstream.push({ url: request.url, authorization: request.headers.get("Authorization"), body: await request.clone().json() });
     const body = await request.json() as { id: number; params: { name: string; arguments: Record<string, unknown> } };
     return Response.json({ jsonrpc: "2.0", id: body.id,
       result: { content: [{ type: "text", text: JSON.stringify({ ok: true, tool: body.params.name }) }],
@@ -64,7 +65,7 @@ describe("Editor-only OAuth live newsroom gateway, entirely synthetic and undepl
     assert.deepEqual(body.result.tools[2].securitySchemes[0].scopes, ["newsroom:editor"]);
   });
   it("never forwards forbidden tools or forged scope/role/argument flags", async () => {
-    const history = { upstream: [] as Request[] }, env = baseEnv({}, history);
+    const history = { upstream: [] as UpstreamCapture[] }, env = baseEnv({}, history);
     const auth = await token();
     for (const name of ["newsroom_submit", "publish", "admin", "delete", "unknown"]) {
       const response = await rpc(env, "tools/call", { name, arguments: {} }, auth);
@@ -80,7 +81,7 @@ describe("Editor-only OAuth live newsroom gateway, entirely synthetic and undepl
     assert.equal(history.upstream.length, 0);
   });
   it("forwards a confirmed review only to the fixed upstream, with Editor key invisible to clients", async () => {
-    const history = { upstream: [] as Request[] }, env = baseEnv({}, history);
+    const history = { upstream: [] as UpstreamCapture[] }, env = baseEnv({}, history);
     const result = await rpc(env, "tools/call", { name: "newsroom_review", arguments: {
       key: KEY, status: "HOLD", note: "Synthetic editorial decision",
       confirm: "CONFIRM_EDITORIAL_WRITE",
@@ -89,8 +90,8 @@ describe("Editor-only OAuth live newsroom gateway, entirely synthetic and undepl
     assert.equal(history.upstream.length, 1);
     const request = history.upstream[0];
     assert.equal(request.url, LIVE);
-    assert.equal(request.headers.get("Authorization"), "Bearer " + EDITOR_KEY);
-    const body = await request.json() as { params: { name: string; arguments: Record<string, unknown> } };
+    assert.equal(request.authorization, "Bearer " + EDITOR_KEY);
+    const body = request.body as { params: { name: string; arguments: Record<string, unknown> } };
     assert.equal(body.params.name, "newsroom_review");
     assert.deepEqual(body.params.arguments, {
       key: KEY, status: "HOLD", note: "Synthetic editorial decision",
@@ -98,7 +99,7 @@ describe("Editor-only OAuth live newsroom gateway, entirely synthetic and undepl
     assert.ok(!(await result.text()).includes(EDITOR_KEY), "no upstream Editor secret in result");
   });
   it("rejects wrong OAuth scope, audience, and missing upstream with no forwarded requests", async () => {
-    const history = { upstream: [] as Request[] };
+    const history = { upstream: [] as UpstreamCapture[] };
     const badIssuer = { async fetch() { return Response.json({
       active: true, iss: ISSUER, aud: RESOURCE, client_id: "editor-chatgpt",
       scope: "newsroom:read", exp: Math.floor(Date.now()/1000) + 400,
