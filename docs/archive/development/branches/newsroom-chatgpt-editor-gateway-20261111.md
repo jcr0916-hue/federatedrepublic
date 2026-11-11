@@ -25,3 +25,7 @@ The initial deny-all placeholders have been **replaced** by the exact PR #322 CI
 **Next:** stage the actual versioned build artifacts and independent synthetic credentials in those two isolated Workers while ingress remains closed; create new nonproduction grant/guard namespaces and a synthetic upstream test service (never the live newsroom Editor key). Audit effective bindings, perform controlled browser OAuth and review confirmation tests on synthetic records, then close ingress and verify grant cleanup. A final production/live-gateway approval is separately required.
 
 **Do not confuse compiled-but-closed isolated Workers with a functioning ChatGPT connection.**
+
+## GitHub OAuth test client registration — November 11
+
+The President created a *new* GitHub OAuth App dedicated to this isolated test. Public client ID `Ov23likKblDc3FjfDpqr` was installed on `newsroom-editor-isolated-issuer-20261111` as plain-text binding `ISSUER_GITHUB_CLIENT_ID`. Cloudflare readback confirmed it matches, with `workers.dev` and previews still disabled. The GitHub client secret was **not** received or installed; it must go directly through the issuer's Cloudflare encrypted secret binding, never into chat or git. This is preparatory only, not a successful authorization.
