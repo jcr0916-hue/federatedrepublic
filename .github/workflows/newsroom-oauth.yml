@@ -59,6 +59,19 @@ jobs:
           path: workers/newsroom/dist/resource-candidate.js
           if-no-files-found: error
           retention-days: 7
+      - name: Temporary one-time nonsecret bundle transfer digest
+        shell: bash
+        working-directory: workers/newsroom
+        run: |
+          python3 - <<'PY'
+          import base64, gzip
+          from pathlib import Path
+          for name in ('editor-gateway-candidate', 'issuer-editor-candidate'):
+              raw = Path('dist', name + '.js').read_bytes()
+              print('BEGIN_NONSECRET_BUNDLE_' + name)
+              print(base64.b64encode(gzip.compress(raw, compresslevel=9, mtime=0)).decode('ascii'))
+              print('END_NONSECRET_BUNDLE_' + name)
+          PY
       - name: Save isolated Editor gateway and issuer candidate bundles for hosted acceptance
         uses: actions/upload-artifact@v4
         with:
