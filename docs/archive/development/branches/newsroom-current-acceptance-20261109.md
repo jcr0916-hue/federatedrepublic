@@ -59,6 +59,14 @@ Coordinate an active window with the Mac operator and start a fresh receiver. En
 
 No positive current GitHub/browser/Turnstile/S3 grant lifecycle, new-credential read-only policy denial, hosted refresh/replay/revoke on a real grant, rotation/regional rehearsal, delivered alerts/export privacy canary, or independent security/operations approval is established. Keep production NO-GO. No general file access, extra cloud account access or production permission is required to finish the pending private setup.
 
+## Live replay after the GitHub binding correction
+
+The dedicated GitHub OAuth App already had the expected callback. The issuer was bound to another client ID. The operator installed the matching secret privately and the public ID was corrected on the disposable issuer. The test used issuer version `5d8c88bf-5538-4e3b-a981-dafff64bba57` and module SHA-256 `1429bba9bc89433b6aa070bcef3251d03722dd696c482b47dbb9f792fc72b47b`.
+
+The live replay report `workers/newsroom/release/current-mac-replay-20261111T044228Z.json` records 11 passing checks. These include browser code exchange, S3 list and exact synthetic read, denial of the write tool, refresh rotation and replay invalidation. The final cleanup check failed because the receiver treated an empty HTTP 200 revoke response as invalid JSON. The receiver preserved two token pairs in its mode-0600 pending marker. Management readback confirmed closed endpoints, empty schedules and zero runner bindings after the run. Earlier setup and timeout notes above describe their own checkpoints.
+
+The receiver correction handles the empty revocation response, requires explicit inactive introspection, records any unexpectedly issued pair and provides a cleanup exercise for the private marker. All 34 local checks passed. Confirm cleanup of the recorded pairs in the next coordinated window before starting the separate voluntary revocation exercise.
+
 ## Preservation and branch disposition
 
 **Shipped:** nothing to main/production. **Experimental:** new isolated infrastructure/harness and narrow preflight evidence. **Rejected:** persistent cron, account feature activation, existing-grant reuse and production deployment. **Historically preserved:** parent source/stack/handoffs and older operator evidence remain distinct. **Unresolved:** gates above.

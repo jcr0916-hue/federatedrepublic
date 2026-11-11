@@ -35,17 +35,28 @@ def send(url,fields=None,basic=None,bearer=None,rpc=None):
     if bearer: headers['Authorization']='Bearer '+bearer
     req=urllib.request.Request(url,data=data,headers=headers)
     try:
-        with OPENER.open(req,timeout=15) as r: return r.status,json.loads(r.read(65536))
+        with OPENER.open(req,timeout=15) as r:
+            body = r.read(65536)
+            if r.status == 200 and url == ISSUER + '/revoke' and not body:
+                return r.status, {}
+            return r.status, json.loads(body)
     except urllib.error.HTTPError as e:
         try: result=json.loads(e.read(65536))
         except Exception: result={}
         return e.code,result
 
+def valid_token_pair(tokens):
+    return isinstance(tokens, dict) and all(
+        isinstance(tokens.get(key), str) and tokens[key]
+        for key in ('access_token', 'refresh_token')
+    )
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--exercise',choices=['replay','revoke'],required=True)
+    parser.add_argument('--exercise',choices=['replay','revoke','cleanup'],required=True)
     args=parser.parse_args()
-    if PENDING.exists(): raise SystemExit('Unresolved prior NEW test grant: keep ingress closed and request containment review before retrying.')
+    if args.exercise != 'cleanup' and PENDING.exists():
+        raise SystemExit('Unresolved prior disposable grant requires cleanup before a fresh browser run.')
     if not CREDS.is_file() or CREDS.is_symlink() or stat.S_IMODE(CREDS.stat().st_mode)!=0o600:
         raise SystemExit('Exact task-private credential file with mode 0600 required.')
     creds=json.loads(CREDS.read_text())
@@ -63,12 +74,60 @@ def main():
         if not ok: raise ValueError(name)
     def active(token):
         s,j=send(ISSUER+'/introspect',{'token':token,'token_type_hint':'access_token'},basic=validator)
-        if s!=200: raise ValueError('validator unavailable')
-        return j.get('active') is True and j.get('aud')==AUDIENCE and j.get('scope')=='newsroom:read'
+        if s != 200 or not isinstance(j, dict) or type(j.get('active')) is not bool:
+            raise ValueError('validator response unavailable')
+        if j['active'] and (j.get('aud') != AUDIENCE or j.get('scope') != 'newsroom:read'):
+            raise ValueError('validator returned a different audience or scope')
+        return j['active']
     def record(tokens):
-        if not all(isinstance(tokens.get(k),str) and tokens[k] for k in ['access_token','refresh_token']): raise ValueError('invalid token response')
+        if not valid_token_pair(tokens):
+            raise ValueError('invalid token response')
         known.append(tokens);save_private(PENDING,{'uncertain':True,'newDisposableOnly':True,'knownTokens':known})
     def refresh(token): return send(ISSUER+'/token',{'grant_type':'refresh_token','refresh_token':token,'resource':AUDIENCE},basic=client)
+    def refresh_denied(token):
+        status, response = refresh(token)
+        if status == 200:
+            record(response)
+        return status == 400 and isinstance(response, dict) and response.get('error') == 'invalid_grant'
+    def revoke(token):
+        return send(ISSUER+'/revoke',{'token':token,'token_type_hint':'refresh_token'},basic=client)[0]
+    def confirm_cleanup():
+        clean = bool(known)
+        for tokens in tuple(known):
+            try:
+                if revoke(tokens['refresh_token']) != 200 or active(tokens['access_token']):
+                    clean = False
+                    continue
+                if not refresh_denied(tokens['refresh_token']):
+                    clean = False
+            except Exception:
+                clean = False
+        return clean
+    def finish_report(clean):
+        checks.append({'check':'all-known-new-grants-confirmed-inactive','pass':clean})
+        if clean:
+            PENDING.unlink(missing_ok=True)
+        report={'schemaVersion':1,'sourceCommit':'d7c65bea969be9bebe541a7bb1e069928e12c60c','exercise':args.exercise,
+            'success':all(c['pass'] for c in checks),'checks':checks,'secretsDisplayed':False,'unresolvedGrant':not clean}
+        target=ROOT/'workers/newsroom/release'/('current-mac-'+args.exercise+'-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime())+'.json')
+        target.write_text(json.dumps(report,indent=2)+'\n')
+        print(json.dumps(report,indent=2))
+        finished.set()
+
+    if args.exercise == 'cleanup':
+        if not PENDING.is_file() or PENDING.is_symlink() or stat.S_IMODE(PENDING.stat().st_mode) != 0o600:
+            raise SystemExit('Cleanup requires the receiver’s mode-0600 pending grant file.')
+        pending = json.loads(PENDING.read_text())
+        tokens = pending.get('knownTokens') if isinstance(pending, dict) else None
+        if not isinstance(tokens, list) or not tokens or not all(map(valid_token_pair, tokens)) or pending.get('newDisposableOnly') is not True:
+            raise SystemExit('The pending file does not identify complete disposable token pairs.')
+        known.extend(tokens)
+        clean = confirm_cleanup()
+        finish_report(clean)
+        if not clean:
+            raise SystemExit(1)
+        return
+
     def rpc(token,name,arguments):
         return send(AUDIENCE,bearer=token,rpc={'jsonrpc':'2.0','id':1,'method':'tools/call','params':{'name':name,'arguments':arguments}})
     def exercise(code):
@@ -92,27 +151,14 @@ def main():
             check('predecessor-access-inactive',not active(a['access_token']))
             check('successor-access-active',active(b['access_token']))
             if args.exercise=='replay':
-                s,j=refresh(a['refresh_token']);check('spent-refresh-rejected',s==400 and j.get('error')=='invalid_grant')
+                check('spent-refresh-rejected',refresh_denied(a['refresh_token']))
             else:
-                s,j=send(ISSUER+'/revoke',{'token':b['refresh_token'],'token_type_hint':'refresh_token'},basic=client)
-                check('voluntary-revocation-accepted',s==200)
+                check('voluntary-revocation-accepted',revoke(b['refresh_token'])==200)
             check('successor-access-inactive',not active(b['access_token']))
-            s,j=refresh(b['refresh_token']);check('successor-refresh-denied',s==400 and j.get('error')=='invalid_grant')
+            check('successor-refresh-denied',refresh_denied(b['refresh_token']))
         except Exception: checks.append({'check':'exercise-failed-redacted','pass':False})
         finally:
-            clean=bool(known)
-            for token in known:
-                try:
-                    s,_=send(ISSUER+'/revoke',{'token':token['refresh_token'],'token_type_hint':'refresh_token'},basic=client)
-                    s2,j=refresh(token['refresh_token'])
-                    clean=clean and s==200 and not active(token['access_token']) and s2==400 and j.get('error')=='invalid_grant'
-                except Exception: clean=False
-            checks.append({'check':'all-known-new-grants-confirmed-inactive','pass':clean})
-            if clean: PENDING.unlink(missing_ok=True)
-            report={'schemaVersion':1,'sourceCommit':'d7c65bea969be9bebe541a7bb1e069928e12c60c','exercise':args.exercise,
-                'success':bool(checks) and all(c['pass'] for c in checks),'checks':checks,'secretsDisplayed':False,'unresolvedGrant':not clean}
-            target=ROOT/'workers/newsroom/release'/('current-mac-'+args.exercise+'-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime())+'.json')
-            target.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2));finished.set()
+            finish_report(confirm_cleanup())
     class Handler(http.server.BaseHTTPRequestHandler):
         def log_message(self,*a): pass
         def valid_context(self):

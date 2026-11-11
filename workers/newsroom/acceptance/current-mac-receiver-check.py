@@ -1,5 +1,8 @@
 """Loopback-only receiver checks with synthetic credentials; no cloud requests."""
+import contextlib
 import http.client
+import importlib.util
+import io
 import json
 from pathlib import Path
 import re
@@ -9,6 +12,7 @@ import sys
 import tempfile
 import time
 import urllib.parse
+from unittest.mock import patch
 
 SOURCE = Path(__file__).with_name('current-mac-receiver.py')
 BOOTSTRAP = '''
@@ -23,6 +27,72 @@ def no_network(*args,**kwargs):raise RuntimeError('Cloud requests are forbidden 
 receiver.send=no_network
 sys.argv=[str(spec.origin),'--exercise','replay'];receiver.main()
 '''
+
+
+def check_cleanup(root, credentials, check):
+    spec = importlib.util.spec_from_file_location('receiver_cleanup_test', SOURCE)
+    receiver = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(receiver)
+
+    class EmptySuccess:
+        status = 200
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            pass
+
+        def read(self, *args):
+            return b''
+
+    with patch.object(receiver.OPENER, 'open', return_value=EmptySuccess()):
+        check(receiver.send(receiver.ISSUER + '/revoke') == (200, {}), 'Empty HTTP 200 must be accepted for revocation')
+        try:
+            receiver.send(receiver.ISSUER + '/introspect')
+        except json.JSONDecodeError:
+            check(True, 'Introspection still requires a JSON response')
+        else:
+            raise AssertionError('Empty introspection must fail closed')
+
+    receiver.ROOT = root / 'cleanup'
+    receiver.PRIVATE = receiver.ROOT / '.private'
+    receiver.PRIVATE.mkdir(mode=0o700, parents=True)
+    receiver.CREDS = receiver.PRIVATE / 'current-credentials.json'
+    receiver.PENDING = receiver.PRIVATE / 'current-grant-pending.json'
+    (receiver.ROOT / 'workers/newsroom/release').mkdir(parents=True)
+    receiver.save_private(receiver.CREDS, credentials)
+    pair = {'access_token': 'synthetic-access', 'refresh_token': 'synthetic-refresh'}
+    successor = {'access_token': 'synthetic-next-access', 'refresh_token': 'synthetic-next-refresh'}
+    marker = {'uncertain': True, 'newDisposableOnly': True, 'knownTokens': [pair]}
+    calls = []
+
+    def closed_grant(url, fields, **kwargs):
+        route = urllib.parse.urlsplit(url).path
+        calls.append(route)
+        if route == '/revoke':
+            return 200, {}
+        if route == '/introspect':
+            return 200, {'active': False}
+        return 400, {'error': 'invalid_grant'}
+
+    receiver.save_private(receiver.PENDING, marker)
+    with patch.object(sys, 'argv', [str(SOURCE), '--exercise', 'cleanup']), contextlib.redirect_stdout(io.StringIO()):
+        with patch.object(receiver, 'send', side_effect=closed_grant):
+            receiver.main()
+        check(calls == ['/revoke', '/introspect', '/token'] and not receiver.PENDING.exists(),
+              'Cleanup clears its marker only after revocation and both inactivity checks')
+
+        receiver.save_private(receiver.PENDING, marker)
+        with patch.object(receiver, 'send', side_effect=[(200, {}), (200, {'active': False}), (200, successor)]):
+            try:
+                receiver.main()
+            except SystemExit as error:
+                saved = json.loads(receiver.PENDING.read_text())
+                check(error.code == 1 and saved['knownTokens'] == [pair, successor],
+                      'An unexpected refresh success preserves both pairs for follow-up')
+            else:
+                raise AssertionError('Unexpected refresh success must leave cleanup unresolved')
 
 
 def main():
@@ -47,6 +117,7 @@ def main():
             'oauth_client_secret': 'SYNTHETIC-LOCAL-CHECK-ONLY-CLIENT-00000000',
             'resource_validator_secret': 'SYNTHETIC-LOCAL-CHECK-ONLY-VALIDATOR-00000',
         }
+        check_cleanup(root, credentials, check)
         path = private / 'current-credentials.json'
         path.write_text(json.dumps(credentials))
         path.chmod(0o600)

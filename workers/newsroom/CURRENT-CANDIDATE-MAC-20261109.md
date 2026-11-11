@@ -34,6 +34,14 @@ The issuer form had the same header conflict as the Mac start form. Its `no-refe
 
 This change revises the issuer used for PR319 acceptance. The original #318 issuer hash is `ba87e19507ca90cd2069d46309a02c2325863cc9f7727be61d860ddc2a30a7ac`. The corrected issuer build hash is `1429bba9bc89433b6aa070bcef3251d03722dd696c482b47dbb9f792fc72b47b`. The resource build hash is `59733af158fe5b8aed45ac9043e17630c89898f250b205debd06dc76dfaef6e9`. Use the deployment readback and CI links on [PR319](https://github.com/jcr0916-hue/federatedrepublic/pull/319).
 
+## Live replay and pending grant cleanup
+
+The corrected GitHub Client ID and the user-supplied matching secret were deployed on the disposable issuer as version `5d8c88bf-5538-4e3b-a981-dafff64bba57`. The live browser run completed Turnstile, GitHub approval, newsroom consent, code exchange, S3 list and exact synthetic read, write-tool denial, refresh rotation and replay rejection. The old and successor access checks and the successor refresh denial passed. The last cleanup check failed because the receiver tried to parse the issuer’s successful empty revocation response as JSON. The original report preserves the 11 passing checks and the cleanup failure. Its source field records the frozen base. The live issuer used PR319’s corrected module and the credential version above. [Replay report](release/current-mac-replay-20261111T044228Z.json)
+
+The revised receiver accepts an empty HTTP 200 at the revoke endpoint. It requires a Boolean introspection result and retains the private pending marker when cleanup cannot confirm inactivity. A refresh probe that unexpectedly succeeds records the returned pair in the same protected marker. The 34 local checks include empty revocation responses and both pending-marker outcomes.
+
+For a pending grant with recorded pairs, use `python3 workers/newsroom/acceptance/current-mac-receiver.py --exercise cleanup` during the next coordinated window with only the disposable issuer open. This rechecks the recorded pairs and clears the marker after revocation, inactive access and refresh denial all succeed. A failed check leaves the marker available for containment. Once cleanup passes, start `--exercise revoke` for a fresh browser consent and voluntary revocation. Open resource and client for that browser run, then close the three endpoints at completion, error or expiry.
+
 ## Exact next Mac step — one command, services closed
 
 At the existing `federatedrepublic-pr319-acceptance` Terminal prompt, run only:
