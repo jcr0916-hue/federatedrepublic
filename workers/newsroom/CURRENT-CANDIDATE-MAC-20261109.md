@@ -1,6 +1,6 @@
 # PR319 disposable acceptance — precise private Mac handoff
 
-**INCOMPLETE / production NO-GO.** Only the new isolated disposable resources below are in scope. Preserve production, older Apps and working grants, existing AWS profiles, canon, chronology, main and all active branches.
+**Live browser exercises and grant cleanup verified. Production release gates remain open.** Only the isolated disposable resources below are in scope. Preserve production, older Apps and working grants, existing AWS profiles, canon, chronology, main and all active branches.
 
 ## Current state — 2026-11-10 credential recovery
 
@@ -42,7 +42,14 @@ The revised receiver accepts an empty HTTP 200 at the revoke endpoint. It requir
 
 For a pending grant with recorded pairs, use `python3 workers/newsroom/acceptance/current-mac-receiver.py --exercise cleanup` during the next coordinated window with only the disposable issuer open. This rechecks the recorded pairs and clears the marker after revocation, inactive access and refresh denial all succeed. A failed check leaves the marker available for containment. Once cleanup passes, start `--exercise revoke` for a fresh browser consent and voluntary revocation. Open resource and client for that browser run, then close the three endpoints at completion, error or expiry.
 
-## Exact next Mac step — one command, services closed
+## Verified cleanup and voluntary revocation
+
+The cleanup exercise confirmed both recorded token pairs from the replay run were inactive and removed the pending marker. The fresh voluntary revocation run then passed all 12 checks, including the real S3 list and synthetic read, write-tool denial, refresh rotation, revocation and final access/refresh inactivity. Both runs used issuer version `5d8c88bf-5538-4e3b-a981-dafff64bba57` with module SHA-256 `1429bba9bc89433b6aa070bcef3251d03722dd696c482b47dbb9f792fc72b47b`. The receiver fix passed 34 local checks and CI at `3c74e523e89b4e7411e4dd1753d3a48b2bc0f29b`.
+
+Management readback confirmed that the four workers.dev endpoints and previews are closed, all schedules are empty and the runner has zero bindings. The Mac receiver stopped and its pending marker is absent. [Cleanup report](release/current-mac-cleanup-20261111T045132Z.json) · [Voluntary revocation report](release/current-mac-revoke-20261111T045310Z.json)
+
+## Starting a future Mac run
+
 
 At the existing `federatedrepublic-pr319-acceptance` Terminal prompt, run only:
 
@@ -60,7 +67,7 @@ Once that window is open, click **Begin authorization** once. On **Continue to n
 
 A second separately coordinated fresh invocation with `--exercise revoke` checks voluntary revocation. Use only this task's mode-0600 private file, not old home-directory lifecycle credentials or tokens.
 
-The receiver checks issuer/state/PKCE, code exchange, validator introspection, synthetic S3 list/exact noncanonical read, write-tool denial, refresh rotation, spent-refresh replay and family invalidation. It writes only booleans/status categories to `workers/newsroom/release/`. **The browser attempts have produced no successful lifecycle result.** The earlier 16 hosted HTTP preflight checks and real dummy-token rejection are negative checks; they are not positive GitHub/Turnstile/S3 lifecycle proof.
+The receiver checks issuer/state/PKCE, code exchange, validator introspection, synthetic S3 list/exact noncanonical read, write-tool denial, refresh rotation, spent-refresh replay and family invalidation. It writes only booleans/status categories to `workers/newsroom/release/`. The live results are recorded above. The earlier 16 hosted HTTP checks and dummy-token rejection remain preflight evidence.
 
 An unresolved `.private/current-grant-pending.json` blocks retries. Keep ingress closed and inspect/invalidate only the new isolated client's guard; never delete an uncertainty marker merely to retry. Known raw tokens remain only in that mode-0600 file until cleanup is verified. Successful known-grant revocation removes it after access and refresh are confirmed inactive. Close issuer/resource/client workers.dev and preview ingress immediately at session end or timeout, confirm all schedules empty and runner bindings absent, and revoke/expire only newly created test credentials once no further authorized test needs them.
 
@@ -70,6 +77,6 @@ Hashes cannot recreate raw secrets. Do not invent a replacement Mac file or reus
 
 ## Preserved limits
 
-Positive Turnstile one-use/replay, real S3 Put/Delete/cross-bucket denial, expiry, credential rotation/regional recovery, delivered alerts/privacy export and independent approval remain open gates. The Cloudflare connection still lacks account-token creation permission; completed dashboard setup resolves the earlier provisioning blocker without expanding that permission. Analytics Engine remains unavailable and was not enabled account-wide.
+Turnstile challenge reuse denial, real S3 Put/Delete/cross-bucket denial, expiry, credential rotation and regional recovery, delivered alerts, privacy export and independent approval remain open release gates. The Cloudflare connection still lacks account-token creation permission; completed dashboard setup resolves the earlier provisioning blocker without expanding that permission. Analytics Engine remains unavailable and was not enabled account-wide.
 
 No merge, production deployment, production credential change, old grant/App revocation, canonical publication, chronology change or branch deletion is authorized. Main, all #304–#318 active heads/bases and independent editorial #316 remain retained. Use only the exact task checkout/private paths; no OneDrive, Apple Music or broad personal-folder search is necessary.

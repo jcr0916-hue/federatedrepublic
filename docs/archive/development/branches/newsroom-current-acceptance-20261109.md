@@ -57,7 +57,7 @@ The issuer challenge page had the same form policy conflict. `no-referrer` sent 
 
 Coordinate an active window with the Mac operator and start a fresh receiver. Enable only issuer/resource/client, with previews off, before the operator clicks **Begin authorization**. The Mac instructions describe the human verification box and **Continue** button. Close ingress at completion, error or expiry. The original credential recovery remains valid for this attempt.
 
-No positive current GitHub/browser/Turnstile/S3 grant lifecycle, new-credential read-only policy denial, hosted refresh/replay/revoke on a real grant, rotation/regional rehearsal, delivered alerts/export privacy canary, or independent security/operations approval is established. Keep production NO-GO. No general file access, extra cloud account access or production permission is required to finish the pending private setup.
+The setup checkpoints above predate the live browser results below. Production release gates include Turnstile challenge reuse denial, S3 policy denials, expiry, rotation and regional recovery, alert delivery, privacy export and independent review.
 
 ## Live replay after the GitHub binding correction
 
@@ -65,7 +65,9 @@ The dedicated GitHub OAuth App already had the expected callback. The issuer was
 
 The live replay report `workers/newsroom/release/current-mac-replay-20261111T044228Z.json` records 11 passing checks. These include browser code exchange, S3 list and exact synthetic read, denial of the write tool, refresh rotation and replay invalidation. The final cleanup check failed because the receiver treated an empty HTTP 200 revoke response as invalid JSON. The receiver preserved two token pairs in its mode-0600 pending marker. Management readback confirmed closed endpoints, empty schedules and zero runner bindings after the run. Earlier setup and timeout notes above describe their own checkpoints.
 
-The receiver correction handles the empty revocation response, requires explicit inactive introspection, records any unexpectedly issued pair and provides a cleanup exercise for the private marker. All 34 local checks passed. Confirm cleanup of the recorded pairs in the next coordinated window before starting the separate voluntary revocation exercise.
+The receiver correction handles the empty revocation response, requires explicit inactive introspection, records any unexpectedly issued pair and provides a cleanup exercise for the private marker. All 34 local checks passed. The cleanup run verified inactivity for both token pairs from the replay run and cleared its marker. The separate voluntary revocation run passed all 12 checks, including live S3 reads and final access and refresh inactivity. [Cleanup report](../../../../workers/newsroom/release/current-mac-cleanup-20261111T045132Z.json) · [Voluntary revocation report](../../../../workers/newsroom/release/current-mac-revoke-20261111T045310Z.json)
+
+Both runs used active issuer deployment `e5a06ff1-49c9-4003-9831-da9a07aec99d`. Closure readback verified all four endpoints and previews closed, schedules empty and runner bindings zero. The receiver stopped with no pending grant marker. The receiver-fix commit passed [Newsroom OAuth checks](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42961702153) and [World publishing checks](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/42961702163).
 
 ## Preservation and branch disposition
 
