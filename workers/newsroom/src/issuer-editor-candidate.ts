@@ -37,7 +37,6 @@ interface Env extends ChallengeConfig {
 }
 interface Configuration extends Omit<GrantBinding, "epoch"> {
   issuer: string;
-  redirectUri: string;
   secretHash: string;
   resourceId: string;
   resourceSecretHash: string;
@@ -46,6 +45,7 @@ interface Configuration extends Omit<GrantBinding, "epoch"> {
 }
 const COOKIE = "__Host-newsroom-issuer";
 const GITHUB_ISSUER = "https://github.com/login/oauth";
+const CHATGPT_REDIRECT_URI = "https://chatgpt.com/connector_platform_oauth_redirect";
 const SCOPE = "newsroom:editor";
 const now = () => Math.floor(Date.now() / 1000);
 const headers = () => new Headers({
@@ -63,10 +63,9 @@ const escape = (value: string) => value.replace(/[&<>"']/g, c => `&#${c.charCode
 function configuration(env: Env): Configuration {
   try {
     const issuer = new URL(env.ISSUER_ORIGIN);
-    const redirect = new URL(env.ISSUER_REDIRECT_URI);
     const audience = new URL(env.ISSUER_AUDIENCE);
     if (issuer.protocol !== "https:" || issuer.origin !== env.ISSUER_ORIGIN ||
-        redirect.protocol !== "https:" || redirect.username || redirect.password || redirect.hash ||
+        env.ISSUER_REDIRECT_URI !== CHATGPT_REDIRECT_URI ||
         audience.protocol !== "https:" || audience.username || audience.password ||
         audience.search || audience.hash || audience.pathname !== "/mcp" ||
         typeof env.ISSUER_CLIENT_ID !== "string" || !/^[A-Za-z0-9_-]{1,100}$/.test(env.ISSUER_CLIENT_ID) ||
@@ -81,8 +80,7 @@ function configuration(env: Env): Configuration {
         typeof env.ISSUER_GITHUB_CLIENT_SECRET !== "string" || !env.ISSUER_GITHUB_CLIENT_SECRET ||
         env.ISSUER_GITHUB_CLIENT_SECRET.length > 4096 || !env.ISSUER_GRANTS || !/^[a-f0-9]{64}$/.test(env.ISSUER_ADMISSION_KEY) ||
         !/^[a-f0-9]{64}$/.test(env.ISSUER_SESSION_KEY) || env.ISSUER_SESSION_KEY === env.ISSUER_ADMISSION_KEY) throw new Error();
-    return { issuer: issuer.origin, redirectUri: env.ISSUER_REDIRECT_URI,
-      audience: env.ISSUER_AUDIENCE, clientId: env.ISSUER_CLIENT_ID,
+    return { issuer: issuer.origin, audience: env.ISSUER_AUDIENCE, clientId: env.ISSUER_CLIENT_ID,
       editorId: env.ISSUER_EDITOR_ID, secretHash: env.ISSUER_CLIENT_SECRET_SHA256,
       resourceId: env.ISSUER_RESOURCE_ID, resourceSecretHash: env.ISSUER_RESOURCE_SECRET_SHA256,
       githubClientId: env.ISSUER_GITHUB_CLIENT_ID, githubClientSecret: env.ISSUER_GITHUB_CLIENT_SECRET };
@@ -116,7 +114,8 @@ function cookie(h: Headers, value: string, clear = false): void {
     "; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=" + (clear ? "0" : "300"));
 }
 function redirect(binding: AuthorizationBinding, key: "code" | "error", value: string, issuer: string): Response {
-  const url = new URL(binding.redirectUri);
+  if (binding.redirectUri !== CHATGPT_REDIRECT_URI) return fail(400, "invalid_authorization_request");
+  const url = new URL(CHATGPT_REDIRECT_URI);
   url.searchParams.set(key, value);
   url.searchParams.set("state", binding.clientState);
   url.searchParams.set("iss", issuer);
@@ -167,7 +166,7 @@ async function authorize(request: Request, env: Env, config: Configuration): Pro
       !parameters(params, ["response_type", "client_id", "redirect_uri", "scope", "resource",
         "state", "code_challenge", "code_challenge_method"], ["ui_locales"]) ||
       params.get("response_type") !== "code" ||
-      params.get("client_id") !== config.clientId || params.get("redirect_uri") !== config.redirectUri ||
+      params.get("client_id") !== config.clientId || params.get("redirect_uri") !== CHATGPT_REDIRECT_URI ||
       params.get("scope") !== SCOPE || params.get("resource") !== config.audience ||
       !/^[\x20-\x7e]{1,1024}$/.test(params.get("state")!) ||
       !/^[A-Za-z0-9_-]{43}$/.test(params.get("code_challenge")!) ||
@@ -186,7 +185,7 @@ async function authorize(request: Request, env: Env, config: Configuration): Pro
   const verifier = mintGrantId();
   if (!(await stub(env, grantId).start({
     binding: { ...await grantBinding(env, config),
-      redirectUri: config.redirectUri, clientState: params.get("state")!, challenge: params.get("code_challenge")! },
+      redirectUri: CHATGPT_REDIRECT_URI, clientState: params.get("state")!, challenge: params.get("code_challenge")! },
     browserHash: await sha256Hex(session), upstreamHash: await sha256Hex(upstream), verifier, now: now(),
   }))) return fail(503, "authorization_unavailable");
   const location = new URL("https://github.com/login/oauth/authorize");
@@ -220,7 +219,7 @@ async function callback(
   const grant = stub(env, state.grantId);
   const claimed = await grant.claimUpstream({ browserHash: session.credentialHash,
     upstreamHash: state.credentialHash, expected: await grantBinding(env, config), now: now() });
-  if (!claimed) return fail(403, "invalid_callback");
+  if (!claimed || claimed.binding.redirectUri !== CHATGPT_REDIRECT_URI) return fail(403, "invalid_callback");
   if (cancelled) return redirect(claimed.binding, "error", "access_denied", config.issuer);
   const editorId = await issuerGitHubIdentity(params.get("code")!, claimed.verifier, config, transport);
   const successorSession = await mintAdmittedCredential(state.grantId, "browser", env.ISSUER_SESSION_KEY, sessionContext(env));
@@ -234,13 +233,13 @@ async function callback(
   h.set("Referrer-Policy", "origin");
   // Browsers may apply form-action to the registered client's final redirect.
   h.set("Content-Security-Policy", "default-src 'none'; form-action 'self' " +
-    new URL(binding.redirectUri).origin + "; frame-ancestors 'none'; base-uri 'none'");
+    new URL(CHATGPT_REDIRECT_URI).origin + "; frame-ancestors 'none'; base-uri 'none'");
   return new Response(`<!doctype html><html lang="en"><meta charset="utf-8"><title>Connect the newsroom</title>
 <h1>Connect ${escape(binding.clientId)} to the newsroom?</h1>
-<p>Signed in as the approved GitHub editor. This connection can list and read newsroom submissions.</p>
-<p>Access returns to <strong>${escape(new URL(binding.redirectUri).host)}</strong>.</p>
+<p>Signed in as the approved GitHub editor. This connection can list and read newsroom submissions and record review decisions and notes.</p>
+<p>Access returns to <strong>${new URL(CHATGPT_REDIRECT_URI).host}</strong>.</p>
 <form method="post" action="/consent"><input type="hidden" name="csrf" value="${csrf}">
-<button name="decision" value="approve">Approve read access</button>
+<button name="decision" value="approve">Approve Editor access</button>
 <button name="decision" value="deny">Cancel</button></form></html>`, { headers: h });
 }
 
@@ -314,9 +313,9 @@ async function clientEndpoint(request: Request, env: Env, config: Configuration)
     if (isCode) {
       if (!/^[A-Za-z0-9._~-]{43,128}$/.test(params.get("code_verifier")!)) return fail(400, "invalid_grant");
       // Also require the current registration, even if configuration changed since consent.
-      if (params.get("redirect_uri") !== config.redirectUri) return fail(400, "invalid_grant");
+      if (params.get("redirect_uri") !== CHATGPT_REDIRECT_URI) return fail(400, "invalid_grant");
       accepted = await grant.exchangeCode({ ...issued, codeHash: routed.credentialHash,
-        challenge: await s256(params.get("code_verifier")!), redirectUri: config.redirectUri });
+        challenge: await s256(params.get("code_verifier")!), redirectUri: CHATGPT_REDIRECT_URI });
     } else accepted = await grant.refresh({ ...issued, presentedHash: routed.credentialHash });
     if (!isCode) securityEvent("issuer", accepted ? "refresh_succeeded" : "refresh_failed", "token", accepted ? 200 : 400);
     if (!accepted) { if (!isCode) observe(env, "refresh_denied", "issuer"); return fail(400, "invalid_grant"); }

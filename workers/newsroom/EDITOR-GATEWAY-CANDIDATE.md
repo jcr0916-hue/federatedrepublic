@@ -1,6 +1,6 @@
 # ChatGPT Central Editor OAuth gateway — isolated engineering candidate
 
-**Status: EXPERIMENTAL / NOT DEPLOYED / NO LIVE CREDENTIALS INSTALLED / NO PRODUCTION APPROVAL.**
+**Status: EXPERIMENTAL / ISOLATED WORKERS CLOSED / PRODUCTION RELEASE PENDING APPROVAL.** The [permanent handoff](../../docs/archive/development/branches/newsroom-chatgpt-editor-gateway-20261111.md) records the hosted and local checkpoints.
 
 ## Problem and smallest integration
 
@@ -14,11 +14,21 @@ The existing live MCP endpoint `https://federated-republic-newsroom.jcr0916.work
 - `newsroom_review` uses a strict key/status/note schema and a `CONFIRM_EDITORIAL_WRITE` string guard. It is marked non-read-only, destructive and non-idempotent. **That guard alone does not prove human consent.** Configure the ChatGPT plugin to *ask before writes* and verify the host confirmation appears before every review write. Refuse live deployment if host confirmation cannot be enforced.
 - No editor action publishes canon. Existing President-only GitHub merge and publication controls remain.
 
+## Isolated storage and ChatGPT callback
+
+The [isolated configuration](release/editor-isolated-configuration.json) records the settings to add to the two named Workers. The issuer owns separate SQLite-backed Durable Object classes `IssuerGrant` (`ISSUER_GRANTS`) and `IssuerGuard` (`ISSUER_GUARD`). During a separately authorized closed deployment, let Cloudflare create both namespaces on that issuer and verify that each class has a distinct namespace ID owned by it. The gateway's `ISSUER` service binding points to the isolated issuer. Check the proposed ingress limiter IDs against the account inventory before applying them. Reconcile the additions with the current settings and inherit each Worker's existing encrypted bindings. Keep public and preview ingress disabled during provisioning. [Cloudflare Durable Object deployment guidance](https://developers.cloudflare.com/cf/wrangler/reference/#convert-durable-object-migrations)
+
+Use a dedicated private ChatGPT connection with the predefined `editor-chatgpt-isolated-20261111` client, `client_secret_basic` and `newsroom:editor`. The issuer accepts the exact `https://chatgpt.com/connector_platform_oauth_redirect` URI in authorization and code exchange. Discovery on both Workers identifies the same issuer, and redirects to ChatGPT include that exact `iss` value and the original state. Compare the URI shown in the new connection's management page before signing in. Verify that the dedicated GitHub OAuth App has the separate callback `https://newsroom-editor-isolated-issuer-20261111.jcr0916.workers.dev/oauth/callback`. [OpenAI callback requirements](https://developers.openai.com/plugins/build/auth#redirect-url)
+
+For hosted acceptance, pair a fresh confidential client secret in the ChatGPT connection settings and store its SHA-256 digest as the issuer's encrypted `ISSUER_CLIENT_SECRET_SHA256` binding. Use a synthetic upstream service binding and synthetic bearer for the isolated gateway. Verify sign-in and the confirmation prompt for each review write during the authorized test window, then verify review readback and revocation before closing ingress.
+
 ## Verification / unfinished release gates
 
 Real GitHub Actions at implementation head `844e989a8a49ea1c0241e7d28506f0d68cc2d9d5` passed [OAuth CI 43078823821](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/43078823821): **136/136 tests**, typecheck, existing builds and new issuer/gateway bundle builds, readiness gate; [World publishing CI 43078823901](https://github.com/jcr0916-hue/federatedrepublic/actions/runs/43078823901) passed. These are not hosted acceptance or deployment approval.
 
 The new synthetic tests (`test/editor-gateway-candidate.test.ts`) verify metadata/scope, no unauthenticated access, only three tools, exact proxy arguments, rejection of forbidden tools/arguments and missing confirmation, wrong OAuth scope, no secret leak, and failure containment. They mock issuer and live Worker, so **they are not live acceptance**. Build separately using `npm run build:editor-gateway`. Reuse #319 verified issuer lifecycle; its read-only resource acceptance **does not** establish Editor review safety.
+
+Run `node --test --import tsx test/editor-isolated-oauth.test.ts` from `workers/newsroom` to exercise both Workers with local SQLite grant/guard storage and simulated Turnstile, GitHub, and newsroom services. The test checks the exact redirect, issuer identification on success and cancellation, code exchange, synthetic review/readback and revoked access. ChatGPT's hosted confirmation prompt requires its own test.
 
 Before any live beta gateway deployment:
 

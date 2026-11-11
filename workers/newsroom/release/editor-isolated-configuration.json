@@ -1,0 +1,44 @@
+{
+  "chatgpt": {
+    "client_id": "editor-chatgpt-isolated-20261111",
+    "token_endpoint_auth_method": "client_secret_basic",
+    "scope": "newsroom:editor"
+  },
+  "issuer": {
+    "name": "newsroom-editor-isolated-issuer-20261111",
+    "compatibility_date": "2026-10-01",
+    "workers_dev": false,
+    "preview_urls": false,
+    "exports": {
+      "IssuerGrant": { "type": "durable-object", "storage": "sqlite" },
+      "IssuerGuard": { "type": "durable-object", "storage": "sqlite" }
+    },
+    "bindings": {
+      "ISSUER_REDIRECT_URI": {
+        "type": "plain_text",
+        "text": "https://chatgpt.com/connector_platform_oauth_redirect"
+      },
+      "ISSUER_GRANTS": { "type": "durable_object_namespace", "class_name": "IssuerGrant" },
+      "ISSUER_GUARD": { "type": "durable_object_namespace", "class_name": "IssuerGuard" },
+      "ISSUER_INGRESS_LIMIT": {
+        "type": "ratelimit",
+        "namespace_id": "43182201",
+        "simple": { "limit": 120, "period": 60 }
+      }
+    }
+  },
+  "gateway": {
+    "name": "newsroom-editor-isolated-gateway-20261111",
+    "compatibility_date": "2026-10-01",
+    "workers_dev": false,
+    "preview_urls": false,
+    "bindings": {
+      "ISSUER": { "type": "service", "service": "newsroom-editor-isolated-issuer-20261111" },
+      "RESOURCE_INGRESS_LIMIT": {
+        "type": "ratelimit",
+        "namespace_id": "43182202",
+        "simple": { "limit": 120, "period": 60 }
+      }
+    }
+  }
+}
