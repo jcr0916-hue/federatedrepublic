@@ -16,6 +16,7 @@ import { observeResponse, securityEvent } from "./security-events.ts";
 import { boundedText, PolicyError, s256 } from "./policy.ts";
 import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-limit.ts";
 import { observe, type PrivacyCounterSink } from "./privacy-telemetry.ts";
+import { EDITOR_SCOPE as SCOPE, editorIssuerMetadata, ISSUER_METADATA_PATH } from "./editor-oauth-metadata.ts";
 
 interface Env extends ChallengeConfig {
   ISSUER_ADMISSION_KEY: string;
@@ -46,7 +47,6 @@ interface Configuration extends Omit<GrantBinding, "epoch"> {
 const COOKIE = "__Host-newsroom-issuer";
 const GITHUB_ISSUER = "https://github.com/login/oauth";
 const CHATGPT_REDIRECT_URI = "https://chatgpt.com/connector_platform_oauth_redirect";
-const SCOPE = "newsroom:editor";
 const now = () => Math.floor(Date.now() / 1000);
 const headers = () => new Headers({
   "Cache-Control": "no-store", Pragma: "no-cache", "Referrer-Policy": "no-referrer",
@@ -367,16 +367,8 @@ export function createIssuerCandidate(dependencies: { githubTransport?: IssuerGi
         if (request.method === "POST" && url.pathname === "/consent") return await consent(request, env, config);
         if (request.method === "POST" && ["/token", "/introspect", "/revoke"].includes(url.pathname))
           return await clientEndpoint(request, env, config);
-        if (request.method === "GET" && url.pathname === "/.well-known/oauth-authorization-server") return json({
-          issuer: config.issuer, authorization_endpoint: config.issuer + "/authorize",
-          token_endpoint: config.issuer + "/token", introspection_endpoint: config.issuer + "/introspect",
-          revocation_endpoint: config.issuer + "/revoke", response_types_supported: ["code"],
-          grant_types_supported: ["authorization_code", "refresh_token"], scopes_supported: [SCOPE],
-          token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post"],
-          introspection_endpoint_auth_methods_supported: ["client_secret_basic"],
-          revocation_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post"],
-          code_challenge_methods_supported: ["S256"], authorization_response_iss_parameter_supported: true,
-        });
+        if (request.method === "GET" && url.pathname === ISSUER_METADATA_PATH)
+          return json(editorIssuerMetadata(config.issuer));
         return fail(404, "not_found");
       } catch (error) {
         if (error instanceof RateLimitError) {

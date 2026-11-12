@@ -6,6 +6,9 @@
 import { accessContext, verifyAccessAdmission } from "./access-admission.ts";
 import { boundedText, PolicyError } from "./policy.ts";
 import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-limit.ts";
+import {
+  EDITOR_SCOPE as SCOPE, editorBearerChallenge, editorResourceMetadata, RESOURCE_METADATA_PATH,
+} from "./editor-oauth-metadata.ts";
 
 export interface EditorGatewayEnv {
   RESOURCE_ADMISSION_KEY: string;
@@ -20,7 +23,6 @@ export interface EditorGatewayEnv {
   NEWSROOM_UPSTREAM_URL: string;
   NEWSROOM_UPSTREAM: Fetcher;
 }
-const SCOPE = "newsroom:editor";
 const TOOLS = ["newsroom_list", "newsroom_read", "newsroom_review"] as const;
 type ToolName = typeof TOOLS[number];
 const STATUSES = new Set(["UNDER_REVIEW", "REVISION_REQUESTED", "ASSIGN", "ACCEPTED", "WATCH", "HOLD", "ARCHIVED", "REJECTED"]);
@@ -45,12 +47,12 @@ function config(env: EditorGatewayEnv) {
         typeof env.NEWSROOM_EDITOR_KEY !== "string" || env.NEWSROOM_EDITOR_KEY.length < 32 ||
         env.NEWSROOM_EDITOR_KEY.length > 1024 || !env.ISSUER || !env.RESOURCE_INGRESS_LIMIT) throw Error();
     return { audience: u.href, origin: u.origin, issuer: issuer.origin,
-      metadata: u.origin + "/.well-known/oauth-protected-resource/mcp" };
+      metadata: u.origin + RESOURCE_METADATA_PATH + "/mcp" };
   } catch { throw new PolicyError(503, "gateway_not_configured"); }
 }
 function unauthorized(metadata: string) {
   const h = cleanHeaders();
-  h.set("WWW-Authenticate", 'Bearer error="invalid_token", resource_metadata="' + metadata + '", scope="' + SCOPE + '"');
+  h.set("WWW-Authenticate", editorBearerChallenge(metadata));
   return json({ error: "invalid_token" }, 401, h);
 }
 const definitions = [
@@ -153,9 +155,8 @@ const handler = {
       if (url.origin !== c.origin) return json({ error: "wrong_origin" }, 421);
       if (url.search) return json({ error: "invalid_request" }, 400);
       if (request.method === "GET" &&
-          ["/.well-known/oauth-protected-resource", "/.well-known/oauth-protected-resource/mcp"].includes(url.pathname))
-        return json({ resource: c.audience, authorization_servers: [c.issuer],
-          scopes_supported: [SCOPE], bearer_methods_supported: ["header"] });
+          [RESOURCE_METADATA_PATH, RESOURCE_METADATA_PATH + "/mcp"].includes(url.pathname))
+        return json(editorResourceMetadata(c.audience, c.issuer));
       if (url.pathname !== "/mcp") return json({ error: "not_found" }, 404);
       if (request.method !== "POST") return json({ error: "method_not_allowed" }, 405);
       const origin = request.headers.get("Origin");
