@@ -226,7 +226,19 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
     const exchange = { grant_type: "authorization_code", code, code_verifier: VERIFIER, resource: AUDIENCE };
     const mismatched = await clientPost("/token", { ...exchange, redirect_uri: CALLBACK + "/" });
     assert.equal(mismatched.status, 400);
-    const token = await clientPost("/token", { ...exchange, redirect_uri: CALLBACK });
+    const tokenFields = { ...exchange, redirect_uri: CALLBACK };
+    for (const headers of [
+      formHeaders,
+      { ...formHeaders, Authorization: basic(chatgpt.client_id, "0".repeat(64)) },
+      { ...formHeaders, Authorization: basic(VALIDATOR, VALIDATOR_SECRET) },
+    ]) {
+      const rejected = await runtime.dispatchFetch(ISSUER + "/token", {
+        method: "POST", headers, body: new URLSearchParams(tokenFields),
+      });
+      assert.equal(rejected.status, 401);
+      assert.deepEqual(await rejected.json(), { error: "invalid_client" });
+    }
+    const token = await clientPost("/token", tokenFields);
     assert.equal(token.status, 200, await token.clone().text());
     const { access_token, scope } = await token.json() as { access_token: string; scope: string };
     assert.equal(scope, chatgpt.scope);
