@@ -5,10 +5,10 @@ import { Miniflare, convertV4MiniflareOptions, type V4WorkerOptions } from "mini
 import configuration from "../release/editor-isolated-configuration.json" with { type: "json" };
 import { basic, challenge, hash } from "./candidate-harness.ts";
 import { ADMISSION_KEY, CHALLENGE_BINDINGS, mockSiteverify, solveChallenge } from "./challenge-fixture.ts";
+import { accessContext, mintAdmittedAccess, verifyAccessAdmission } from "../src/access-admission.ts";
+import { isolatedEditor, stageOneDeadline } from "../src/editor-stage-one.ts";
 
 const { chatgpt, issuer, gateway } = configuration;
-const ISSUER = `https://${issuer.name}.invalid`;
-const AUDIENCE = `https://${gateway.name}.invalid/mcp`;
 const CALLBACK = issuer.bindings.ISSUER_REDIRECT_URI.text;
 const CLIENT_SECRET = "synthetic-only-editor-oauth-client-secret";
 const VALIDATOR = "synthetic-editor-validator";
@@ -16,7 +16,6 @@ const VALIDATOR_SECRET = "synthetic-only-editor-validator-secret";
 const GITHUB_ID = "synthetic-github-app";
 const GITHUB_SECRET = "synthetic-only-github-app-secret";
 const UPSTREAM_KEY = "synthetic-only-editor-upstream-bearer";
-const UPSTREAM_URL = "https://federated-republic-newsroom.jcr0916.workers.dev/mcp";
 const KEY = "submissions/federal/2026-11-11/11111111-1111-4111-8111-111111111111.json";
 const VERIFIER = "synthetic-editor-pkce-0123456789-ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const STATE = "synthetic editor state +/%&=";
@@ -25,9 +24,10 @@ const formHeaders = { "Content-Type": "application/x-www-form-urlencoded" };
 const cookie = (response: { headers: { get(name: string): string | null } }) =>
   response.headers.get("Set-Cookie")!.split(";")[0];
 
-async function bundle(entry: string) {
+async function bundle(entry: string, stageOne: boolean) {
   const result = await build({ entryPoints: [entry], bundle: true, format: "esm", platform: "neutral",
-    target: "es2023", mainFields: ["module", "main"], external: ["cloudflare:workers"], write: false });
+    target: "es2023", mainFields: ["module", "main"], external: ["cloudflare:workers"], write: false,
+    define: { EDITOR_STAGE_ONE_BUILD: String(stageOne) } });
   return result.outputFiles[0].text;
 }
 
@@ -38,8 +38,12 @@ function rateLimit({ namespace_id, simple }: typeof issuer.bindings.ISSUER_INGRE
   return { namespace_id, simple: { limit, period } };
 }
 
-describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)", () => {
+for (const stageOne of [false, true]) describe(stageOne ? "read-only Stage 1 OAuth" : "isolated ChatGPT Editor OAuth candidate", () => {
+  const ISSUER = stageOne ? isolatedEditor.issuer : `https://${issuer.name}.invalid`;
+  const AUDIENCE = stageOne ? isolatedEditor.audience : `https://${gateway.name}.invalid/mcp`;
+  const upstream = stageOne ? isolatedEditor.upstream : "https://federated-republic-newsroom.jcr0916.workers.dev/mcp";
   let runtime: Miniflare;
+  let deadline: number;
   let githubChallenge: string;
   const usedChallenges = new Set<string>();
   const review = { key: KEY, status: "HOLD", note: "Synthetic review only" };
@@ -48,8 +52,10 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
 
   before(async () => {
     const [issuerScript, gatewayScript] = await Promise.all([
-      bundle("src/issuer-editor-candidate.ts"), bundle("src/editor-gateway-candidate.ts"),
+      bundle("src/issuer-editor-candidate.ts", stageOne), bundle("src/editor-gateway-candidate.ts", stageOne),
     ]);
+    deadline = Math.floor(Date.now() / 1000) + 90;
+    const window: Record<string, string> = stageOne ? { EDITOR_STAGE_ONE_EXPIRES_AT: String(deadline * 1000) } : {};
     const { ISSUER_GRANTS, ISSUER_GUARD } = issuer.bindings;
     const durableObjects = Object.fromEntries(Object.entries({ ISSUER_GRANTS, ISSUER_GUARD }).map(([binding, { class_name }]) => {
       const { storage } = issuer.exports[class_name as keyof typeof issuer.exports];
@@ -61,7 +67,7 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
         routes: [`${new URL(ISSUER).hostname}/*`], durableObjects,
         ratelimits: { ISSUER_INGRESS_LIMIT: rateLimit(issuer.bindings.ISSUER_INGRESS_LIMIT) },
         bindings: {
-          ...CHALLENGE_BINDINGS, ISSUER_ADMISSION_KEY: ADMISSION_KEY, ISSUER_ORIGIN: ISSUER,
+          ...CHALLENGE_BINDINGS, ...window, ISSUER_ADMISSION_KEY: ADMISSION_KEY, ISSUER_ORIGIN: ISSUER,
           ISSUER_AUDIENCE: AUDIENCE, ISSUER_CLIENT_ID: chatgpt.client_id, ISSUER_REDIRECT_URI: CALLBACK,
           ISSUER_CLIENT_SECRET_SHA256: hash(CLIENT_SECRET), ISSUER_RESOURCE_ID: VALIDATOR,
           ISSUER_RESOURCE_SECRET_SHA256: hash(VALIDATOR_SECRET), ISSUER_EDITOR_ID: "12345",
@@ -91,20 +97,27 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
         routes: [`${new URL(AUDIENCE).hostname}/*`],
         ratelimits: { RESOURCE_INGRESS_LIMIT: rateLimit(gateway.bindings.RESOURCE_INGRESS_LIMIT) },
         bindings: {
-          RESOURCE_ADMISSION_KEY: ADMISSION_KEY, RESOURCE_AUDIENCE: AUDIENCE, RESOURCE_ISSUER: ISSUER,
+          ...window, RESOURCE_ADMISSION_KEY: ADMISSION_KEY, RESOURCE_AUDIENCE: AUDIENCE, RESOURCE_ISSUER: ISSUER,
           RESOURCE_CLIENT_ID: chatgpt.client_id, RESOURCE_VALIDATOR_ID: VALIDATOR,
-          RESOURCE_VALIDATOR_SECRET: VALIDATOR_SECRET, NEWSROOM_UPSTREAM_URL: UPSTREAM_URL,
+          RESOURCE_VALIDATOR_SECRET: VALIDATOR_SECRET, NEWSROOM_UPSTREAM_URL: upstream,
           NEWSROOM_EDITOR_KEY: UPSTREAM_KEY,
         },
         serviceBindings: {
           ISSUER: gateway.bindings.ISSUER.service,
           NEWSROOM_UPSTREAM: async request => {
             // Miniflare delivers this URL only to the synthetic service binding.
-            assert.equal(request.url, UPSTREAM_URL);
+            assert.equal(request.url, upstream);
             assert.equal(request.headers.get("Authorization"), `Bearer ${UPSTREAM_KEY}`);
             const rpc = await request.json() as { id: number; params: { name: string; arguments: unknown } };
             const { name, arguments: args } = rpc.params;
             upstreamCalls.push(name);
+            if (stageOne) {
+              const data = name === "newsroom_list" ? { keys: [KEY] } : { key: KEY };
+              assert.deepEqual([name, args], name === "newsroom_list"
+                ? ["newsroom_list", { desk: "federal", limit: 1 }] : ["newsroom_read", { key: KEY }]);
+              return Response.json({ jsonrpc: "2.0", id: rpc.id,
+                result: { content: [{ type: "text", text: JSON.stringify(data) }], isError: false } });
+            }
             if (name === "newsroom_review") {
               assert.deepEqual(args, review);
               receipt = review;
@@ -146,10 +159,20 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
     method: "POST", headers: { ...formHeaders, Authorization: basic(chatgpt.client_id, CLIENT_SECRET) },
     body: new URLSearchParams(fields),
   });
-  const call = (token: string, name: string, args: Record<string, string>) => runtime.dispatchFetch(AUDIENCE, {
-    method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-    body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "tools/call", params: { name, arguments: args } }),
+  const rpc = (token: string, method: string, params: Record<string, unknown> = {}, modern = false,
+               headers: Record<string, string> = {}) => runtime.dispatchFetch(AUDIENCE, {
+    method: "POST", headers: {
+      "Content-Type": "application/json", Authorization: `Bearer ${token}`,
+      ...(modern ? { "MCP-Protocol-Version": "2026-07-28", "Mcp-Method": method,
+        ...(typeof params.name === "string" ? { "Mcp-Name": params.name } : {}) } : {}), ...headers,
+    },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params: modern ? { ...params, _meta: {
+      "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+      "io.modelcontextprotocol/clientCapabilities": {},
+    } } : params }),
   });
+  const call = (token: string, name: string, args: Record<string, unknown>, modern = false) =>
+    rpc(token, "tools/call", { name, arguments: args }, modern);
 
   it("stages two issuer-owned SQLite namespaces and keeps both Workers closed", async () => {
     for (const worker of [issuer, gateway]) {
@@ -175,6 +198,7 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
     const auth = await metadata.json() as Record<string, unknown>;
     assert.equal(auth.issuer, ISSUER);
     assert.equal(auth.authorization_response_iss_parameter_supported, true);
+    assert.deepEqual(auth.grant_types_supported, stageOne ? ["authorization_code"] : ["authorization_code", "refresh_token"]);
     assert.deepEqual(auth.code_challenge_methods_supported, ["S256"]);
     assert.ok(Array.isArray(auth.token_endpoint_auth_methods_supported) &&
       auth.token_endpoint_auth_methods_supported.includes(chatgpt.token_endpoint_auth_method));
@@ -203,14 +227,14 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
     assert.equal(params.has("code"), false);
   });
 
-  it("binds the code to the callback and revokes gateway access after a synthetic review", async () => {
+  const approve = async () => {
     const { state, session } = await begin();
     const login = await runtime.dispatchFetch(ISSUER + "/oauth/callback?" + new URLSearchParams({
       state, code: "synthetic-github-code",
     }), { redirect: "manual", headers: { Cookie: session } });
     assert.equal(login.status, 200, await login.clone().text());
     const consent = await login.text();
-    assert.match(consent, /record review decisions and notes/);
+    assert.match(consent, stageOne ? /Approve read-only access/ : /record review decisions and notes/);
     const csrf = consent.match(/name="csrf" value="([a-f0-9]{64})"/)?.[1];
     assert.ok(csrf);
     const approval = await runtime.dispatchFetch(ISSUER + "/consent", {
@@ -223,10 +247,17 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
     assert.ok(code);
     assert.equal(params.has("error"), false);
 
-    const exchange = { grant_type: "authorization_code", code, code_verifier: VERIFIER, resource: AUDIENCE };
-    const mismatched = await clientPost("/token", { ...exchange, redirect_uri: CALLBACK + "/" });
+    return { grant_type: "authorization_code", code, code_verifier: VERIFIER, resource: AUDIENCE, redirect_uri: CALLBACK };
+  };
+
+  it("binds the code to the registered redirect and requires the configured confidential client", async () => {
+    const tokenFields = await approve();
+    const mismatched = await clientPost("/token", { ...tokenFields, redirect_uri: CALLBACK + "/" });
     assert.equal(mismatched.status, 400);
-    const tokenFields = { ...exchange, redirect_uri: CALLBACK };
+    const wrongResource = await clientPost("/token", { ...tokenFields, resource: "https://other.invalid/mcp" });
+    assert.deepEqual(await wrongResource.json(), { error: "invalid_target" });
+    const wrongPkce = await clientPost("/token", { ...tokenFields, code_verifier: "a".repeat(64) });
+    assert.deepEqual(await wrongPkce.json(), { error: "invalid_grant" });
     for (const headers of [
       formHeaders,
       { ...formHeaders, Authorization: basic(chatgpt.client_id, "0".repeat(64)) },
@@ -238,21 +269,121 @@ describe("isolated ChatGPT Editor OAuth (local Workers and synthetic services)",
       assert.equal(rejected.status, 401);
       assert.deepEqual(await rejected.json(), { error: "invalid_client" });
     }
-    const token = await clientPost("/token", tokenFields);
+    const basicHeader = basic(chatgpt.client_id, CLIENT_SECRET);
+    const postToken = (authorization: string | null, fields: Record<string, string> = {}) =>
+      runtime.dispatchFetch(ISSUER + "/token", {
+        method: "POST", headers: authorization ? { ...formHeaders, Authorization: authorization } : formHeaders,
+        body: new URLSearchParams({ ...tokenFields, ...fields }),
+      });
+    const mixed = await postToken(basicHeader, { client_id: chatgpt.client_id, client_secret: CLIENT_SECRET });
+    assert.equal(mixed.status, 400);
+    const differentClient = await postToken(basicHeader, { client_id: "wrong-client" });
+    assert.equal(differentClient.status, 400);
+    const bodyIdOnly = await postToken(null, { client_id: chatgpt.client_id });
+    assert.equal(bodyIdOnly.status, 401);
+    const token = await postToken(basicHeader.replace(/^Basic /, "bAsIc "), stageOne
+      ? { client_id: chatgpt.client_id, scope: chatgpt.scope } : {});
     assert.equal(token.status, 200, await token.clone().text());
-    const { access_token, scope } = await token.json() as { access_token: string; scope: string };
+    const { access_token, scope, refresh_token, expires_in } = await token.json() as {
+      access_token: string; scope: string; refresh_token?: string; expires_in: number;
+    };
     assert.equal(scope, chatgpt.scope);
+    const accessBinding = accessContext(ISSUER, chatgpt.client_id, AUDIENCE);
+    if (stageOne) {
+      assert.equal(refresh_token, undefined);
+      assert.equal(Number(access_token.split(".")[3]), deadline);
+      assert.ok(expires_in > 0 && expires_in <= 90);
+      assert.equal(await verifyAccessAdmission(access_token, ADMISSION_KEY, accessBinding), false);
+      const normalToken = await mintAdmittedAccess("a".repeat(64), ADMISSION_KEY, accessBinding);
+      assert.equal((await rpc(normalToken, "tools/list")).status, 401);
+      assert.equal((await runtime.dispatchFetch(AUDIENCE)).status, 401);
+      const sse = await runtime.dispatchFetch(AUDIENCE, { headers: { Authorization: "Bearer " + access_token } });
+      assert.equal(sse.status, 405);
+      assert.equal(sse.headers.get("Allow"), "POST");
+      const refresh = await clientPost("/token", { grant_type: "refresh_token", refresh_token: "synthetic-unused" });
+      assert.deepEqual(await refresh.json(), { error: "unsupported_grant_type" });
 
-    assert.equal((await call(access_token, "newsroom_review", review)).status, 400);
-    assert.deepEqual(upstreamCalls, []);
-    const write = await call(access_token, "newsroom_review", { ...review, confirm: "CONFIRM_EDITORIAL_WRITE" });
-    assert.equal(write.status, 200, await write.clone().text());
-    const read = await call(access_token, "newsroom_read", { key: KEY });
-    assert.deepEqual(await read.json(), { jsonrpc: "2.0", id: 1, result: { receipt: review } });
+      const legacy = await rpc(access_token, "initialize", { protocolVersion: "2025-11-25" });
+      assert.equal((await legacy.json() as { result: { protocolVersion: string } }).result.protocolVersion, "2025-11-25");
+      const modern = await rpc(access_token, "server/discover", {}, true);
+      assert.deepEqual((await modern.json() as { result: { supportedVersions: string[] } }).result.supportedVersions, ["2026-07-28"]);
+      for (const modern of [false, true]) {
+        const tools = await rpc(access_token, "tools/list", {}, modern);
+        const { result } = await tools.json() as { result: { resultType?: string;
+          tools: { name: string; annotations: { readOnlyHint: boolean } }[] } };
+        assert.equal(result.resultType, modern ? "complete" : undefined);
+        assert.deepEqual(result.tools.map(t => [t.name, t.annotations.readOnlyHint]), [["newsroom_list", true], ["newsroom_read", true]]);
+      }
+      const forbidden = await call(access_token, "newsroom_review", { ...review, confirm: "CONFIRM_EDITORIAL_WRITE" }, true);
+      assert.equal(forbidden.status, 403);
+      const mismatch = await rpc(access_token, "tools/call", { name: "newsroom_read", arguments: { key: KEY } },
+        true, { "Mcp-Name": "newsroom_list" });
+      assert.equal(mismatch.status, 400);
+      assert.deepEqual(upstreamCalls, []);
+      for (const [tool, args, data] of [
+        ["newsroom_list", { desk: "federal", limit: 1 }, { keys: [KEY] }],
+        ["newsroom_read", { key: KEY }, { key: KEY }],
+      ] as const) {
+        const response = await call(access_token, tool, args, true);
+        assert.deepEqual(await response.json(), { jsonrpc: "2.0", id: 1, result: {
+          resultType: "complete", content: [{ type: "text", text: JSON.stringify(data) }], isError: false,
+          _meta: { "io.modelcontextprotocol/serverInfo": { name: "torenthia-isolated-editor-read-only", version: "0.1.0" } },
+        } });
+      }
+      assert.deepEqual(upstreamCalls, ["newsroom_list", "newsroom_read"]);
+    } else {
+      assert.ok(refresh_token);
+      assert.equal((await call(access_token, "newsroom_review", review)).status, 400);
+      assert.deepEqual(upstreamCalls, []);
+      const write = await call(access_token, "newsroom_review", { ...review, confirm: "CONFIRM_EDITORIAL_WRITE" });
+      assert.equal(write.status, 200, await write.clone().text());
+      const read = await call(access_token, "newsroom_read", { key: KEY });
+      assert.deepEqual(await read.json(), { jsonrpc: "2.0", id: 1, result: { receipt: review } });
+      assert.deepEqual(upstreamCalls, ["newsroom_review", "newsroom_read"]);
+    }
 
     assert.equal((await clientPost("/revoke", { token: access_token })).status, 200);
     assert.equal((await call(access_token, "newsroom_read", { key: KEY })).status, 401);
-    assert.equal((await clientPost("/token", { ...exchange, redirect_uri: CALLBACK })).status, 400);
-    assert.deepEqual(upstreamCalls, ["newsroom_review", "newsroom_read"]);
+    assert.equal((await clientPost("/token", tokenFields)).status, 400);
   });
+
+  if (stageOne) it("accepts the registered client using form authentication too", async () => {
+    const tokenFields = await approve();
+    const post = (secret: string) => runtime.dispatchFetch(ISSUER + "/token", {
+      method: "POST", headers: formHeaders,
+      body: new URLSearchParams({ ...tokenFields, client_id: chatgpt.client_id, client_secret: secret }),
+    });
+    const denied = await post("0".repeat(64));
+    assert.deepEqual(await denied.json(), { error: "invalid_client" });
+    const accepted = await post(CLIENT_SECRET);
+    assert.equal(accepted.status, 200);
+  });
+});
+
+it("closes both Stage 1 bundles without a valid window and rejects configuration for other Workers", async () => {
+  const now = Date.now();
+  for (const value of [undefined, "invalid", String(now), String(now + 300_001)]) {
+    assert.equal(stageOneDeadline({ EDITOR_STAGE_ONE_EXPIRES_AT: value }, now), undefined);
+  }
+  assert.equal(stageOneDeadline({ EDITOR_STAGE_ONE_EXPIRES_AT: String(now + 300_000) }, now), Math.floor(now / 1000) + 300);
+  const [issuerScript, gatewayScript] = await Promise.all([
+    bundle("src/issuer-editor-candidate.ts", true), bundle("src/editor-gateway-candidate.ts", true),
+  ]);
+  const fixture = new Miniflare(convertV4MiniflareOptions({ workers: [
+    { name: "issuer-closed", modules: true, script: issuerScript, compatibilityDate: issuer.compatibility_date,
+      routes: [new URL(isolatedEditor.issuer).hostname + "/*"] },
+    { name: "gateway-closed", modules: true, script: gatewayScript, compatibilityDate: gateway.compatibility_date,
+      routes: [new URL(isolatedEditor.audience).hostname + "/*"],
+      bindings: { EDITOR_STAGE_ONE_EXPIRES_AT: String(now - 1000) } },
+    { name: "issuer-wrong-origin", modules: true, script: issuerScript, compatibilityDate: issuer.compatibility_date,
+      routes: ["wrong.invalid/*"], bindings: {
+        EDITOR_STAGE_ONE_EXPIRES_AT: String(now + 60_000), ISSUER_ORIGIN: "https://wrong.invalid",
+        ISSUER_CLIENT_ID: isolatedEditor.clientId, ISSUER_AUDIENCE: isolatedEditor.audience,
+      } },
+  ] }));
+  try {
+    assert.equal((await fixture.dispatchFetch(isolatedEditor.issuer + "/token", { method: "POST" })).status, 404);
+    assert.equal((await fixture.dispatchFetch(isolatedEditor.audience)).status, 404);
+    assert.equal((await fixture.dispatchFetch("https://wrong.invalid/authorize")).status, 404);
+  } finally { await fixture.dispose(); }
 });

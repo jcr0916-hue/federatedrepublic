@@ -1,7 +1,7 @@
 /** UNDEPLOYED ChatGPT Central Editor gateway candidate.
  * Separate OAuth issuer authenticates the single approved Editor identity.
  * This resource holds only a private live-upstream Editor key, and forwards
- * EXACTLY three allowed MCP tools. No GitHub, R2 or agent desk bindings.
+ * three allowed MCP tools in the Editor candidate and two in the Stage 1 build.
  */
 import { accessContext, verifyAccessAdmission } from "./access-admission.ts";
 import { boundedText, PolicyError } from "./policy.ts";
@@ -9,8 +9,10 @@ import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-li
 import {
   EDITOR_SCOPE as SCOPE, editorBearerChallenge, editorResourceMetadata, RESOURCE_METADATA_PATH,
 } from "./editor-oauth-metadata.ts";
+import { editorStageOne, isolatedEditor, stageOneClosed, stageOneContext, stageOneDeadline, stageOneEvent,
+  type StageOneEnv } from "./editor-stage-one.ts";
 
-export interface EditorGatewayEnv {
+export interface EditorGatewayEnv extends StageOneEnv {
   RESOURCE_ADMISSION_KEY: string;
   RESOURCE_AUDIENCE: string;
   RESOURCE_ISSUER: string;
@@ -23,10 +25,15 @@ export interface EditorGatewayEnv {
   NEWSROOM_UPSTREAM_URL: string;
   NEWSROOM_UPSTREAM: Fetcher;
 }
-const TOOLS = ["newsroom_list", "newsroom_read", "newsroom_review"] as const;
-type ToolName = typeof TOOLS[number];
+type ToolName = typeof definitions[number]["name"];
 const STATUSES = new Set(["UNDER_REVIEW", "REVISION_REQUESTED", "ASSIGN", "ACCEPTED", "WATCH", "HOLD", "ARCHIVED", "REJECTED"]);
 const LIVE_MCP = "https://federated-republic-newsroom.jcr0916.workers.dev/mcp";
+const UPSTREAM_MCP = editorStageOne ? isolatedEditor.upstream : LIVE_MCP;
+const MODERN_PROTOCOL = "2026-07-28";
+const PROTOCOL_META = "io.modelcontextprotocol/protocolVersion";
+const LEGACY_PROTOCOLS = ["2025-03-26", "2025-06-18", "2025-11-25"];
+const serverInfo = { name: editorStageOne ? "torenthia-isolated-editor-read-only" : "torenthia-live-editor-gateway", version: "0.1.0" };
+const complete = { resultType: "complete", _meta: { "io.modelcontextprotocol/serverInfo": serverInfo } };
 const cleanHeaders = () => new Headers({
   "Content-Type": "application/json", "Cache-Control": "no-store",
   "X-Content-Type-Options": "nosniff", "Referrer-Policy": "no-referrer",
@@ -43,7 +50,7 @@ function config(env: EditorGatewayEnv) {
         env.RESOURCE_CLIENT_ID === env.RESOURCE_VALIDATOR_ID ||
         !/^[\x21-\x7e]{32,256}$/.test(env.RESOURCE_VALIDATOR_SECRET) ||
         !/^[a-f0-9]{64}$/.test(env.RESOURCE_ADMISSION_KEY) ||
-        env.NEWSROOM_UPSTREAM_URL !== LIVE_MCP || !env.NEWSROOM_UPSTREAM ||
+        env.NEWSROOM_UPSTREAM_URL !== UPSTREAM_MCP || !env.NEWSROOM_UPSTREAM ||
         typeof env.NEWSROOM_EDITOR_KEY !== "string" || env.NEWSROOM_EDITOR_KEY.length < 32 ||
         env.NEWSROOM_EDITOR_KEY.length > 1024 || !env.ISSUER || !env.RESOURCE_INGRESS_LIMIT) throw Error();
     return { audience: u.href, origin: u.origin, issuer: issuer.origin,
@@ -56,10 +63,12 @@ function unauthorized(metadata: string) {
   return json({ error: "invalid_token" }, 401, h);
 }
 const definitions = [
-  { name: "newsroom_list", description: "EDITOR: List unpublished submissions from the live Torenthia newsroom.",
+  { name: "newsroom_list", description: editorStageOne ? "List synthetic submissions from the isolated Torenthia test newsroom."
+      : "EDITOR: List unpublished submissions from the live Torenthia newsroom.",
     inputSchema: { type: "object", properties: { desk: { type: "string" },
       limit: { type: "integer" }, cursor: { type: "string" } } } },
-  { name: "newsroom_read", description: "EDITOR: Read one existing unpublished submission.",
+  { name: "newsroom_read", description: editorStageOne ? "Read one synthetic submission from the isolated Torenthia test newsroom."
+      : "EDITOR: Read one existing unpublished submission.",
     inputSchema: { type: "object", properties: { key: { type: "string" } }, required: ["key"] } },
   { name: "newsroom_review", description: "EDITOR WRITE: Record a status and permanent editorial note. Requires explicit user confirmation before use; never publishes canon.",
     inputSchema: { type: "object", properties: { key: { type: "string" },
@@ -68,13 +77,14 @@ const definitions = [
       confirm: { type: "string", enum: ["CONFIRM_EDITORIAL_WRITE"] } },
       required: ["key", "status", "note", "confirm"] } },
 ] as const;
+const availableTools = editorStageOne ? definitions.filter(tool => tool.name !== "newsroom_review") : definitions;
 
 function validatedCall(rpc: Record<string, unknown>): { name: ToolName; arguments: Record<string, unknown>; cost: number } | null {
   if (rpc.method !== "tools/call") return null;
   const params = rpc.params;
   if (!params || typeof params !== "object" || Array.isArray(params)) throw new PolicyError(400, "invalid_arguments");
   const { name, arguments: raw } = params as { name?: unknown; arguments?: unknown };
-  if (typeof name !== "string" || !TOOLS.includes(name as ToolName))
+  if (typeof name !== "string" || !availableTools.some(tool => tool.name === name))
     throw new PolicyError(403, "tool_not_allowed");
   const args: Record<string, unknown> = raw === undefined ? {} :
     raw && typeof raw === "object" && !Array.isArray(raw) ? raw as Record<string, unknown> :
@@ -125,12 +135,12 @@ async function verifyIssuer(env: EditorGatewayEnv, c: ReturnType<typeof config>,
     Number.isSafeInteger(body.exp) && Number(body.exp) > Date.now()/1000;
 }
 async function proxy(env: EditorGatewayEnv, rpc: Record<string, unknown>,
-                     call: NonNullable<ReturnType<typeof validatedCall>>) {
+                     call: NonNullable<ReturnType<typeof validatedCall>>, modern: boolean) {
   // No browser-accessible request carries NEWSROOM_EDITOR_KEY. The fixed upstream
   // destination is validated in config(); redirects are rejected.
   let response: Response;
   try {
-    response = await env.NEWSROOM_UPSTREAM.fetch(new Request(LIVE_MCP, { method: "POST", redirect: "manual",
+    response = await env.NEWSROOM_UPSTREAM.fetch(new Request(UPSTREAM_MCP, { method: "POST", redirect: "manual",
       signal: AbortSignal.timeout(8000),
       headers: { "Content-Type": "application/json", Authorization: "Bearer " + env.NEWSROOM_EDITOR_KEY },
       body: JSON.stringify({ jsonrpc: "2.0", id: rpc.id, method: "tools/call",
@@ -144,13 +154,40 @@ async function proxy(env: EditorGatewayEnv, rpc: Record<string, unknown>,
     const parsed = value as Record<string, unknown>;
     if (parsed.jsonrpc !== "2.0" || parsed.id !== rpc.id || !parsed.result ||
         typeof parsed.result !== "object" || Array.isArray(parsed.result)) throw Error();
+    if (modern) return json({ jsonrpc: "2.0", id: rpc.id, result: { ...parsed.result, ...complete } });
     return json(parsed);
   } catch { return json({ error: "upstream_unavailable" }, 503); }
+}
+
+function stageOneProtocolError(request: Request, rpc: Record<string, unknown>): Response | null {
+  const params = rpc.params as { name?: unknown; _meta?: Record<string, unknown> } | undefined;
+  const version = request.headers.get("MCP-Protocol-Version");
+  const meta = params?._meta;
+  const bodyVersion = meta?.[PROTOCOL_META];
+  if (bodyVersion === undefined && rpc.method !== "server/discover" &&
+      (version === null || LEGACY_PROTOCOLS.includes(version))) return null;
+  const toolName = request.headers.get("Mcp-Name");
+  if (!version || version !== bodyVersion || request.headers.get("Mcp-Method") !== rpc.method ||
+      (rpc.method === "tools/call" && (toolName === null || toolName !== params?.name))) {
+    return json({ jsonrpc: "2.0", id: rpc.id ?? null, error: { code: -32020, message: "Header mismatch" } }, 400);
+  }
+  if (version !== MODERN_PROTOCOL) return json({ jsonrpc: "2.0", id: rpc.id ?? null,
+    error: { code: -32022, message: "Unsupported protocol version", data: { supported: [MODERN_PROTOCOL], requested: version } },
+  }, 400);
+  const capabilities = meta?.["io.modelcontextprotocol/clientCapabilities"];
+  if (!capabilities || typeof capabilities !== "object" || Array.isArray(capabilities)) {
+    return json({ jsonrpc: "2.0", id: rpc.id ?? null, error: { code: -32602, message: "Invalid params" } }, 400);
+  }
+  return null;
 }
 
 const handler = {
   async fetch(request: Request, env: EditorGatewayEnv): Promise<Response> {
     try {
+      const deadline = editorStageOne ? stageOneDeadline(env) : undefined;
+      if (editorStageOne && (deadline === undefined || env.RESOURCE_ISSUER !== isolatedEditor.issuer ||
+          env.RESOURCE_AUDIENCE !== isolatedEditor.audience || env.RESOURCE_CLIENT_ID !== isolatedEditor.clientId))
+        return stageOneClosed();
       const c = config(env), url = new URL(request.url);
       if (url.origin !== c.origin) return json({ error: "wrong_origin" }, 421);
       if (url.search) return json({ error: "invalid_request" }, 400);
@@ -158,7 +195,8 @@ const handler = {
           [RESOURCE_METADATA_PATH, RESOURCE_METADATA_PATH + "/mcp"].includes(url.pathname))
         return json(editorResourceMetadata(c.audience, c.issuer));
       if (url.pathname !== "/mcp") return json({ error: "not_found" }, 404);
-      if (request.method !== "POST") return json({ error: "method_not_allowed" }, 405);
+      if (request.method !== "POST" && !(editorStageOne && request.method === "GET"))
+        return json({ error: "method_not_allowed" }, 405);
       const origin = request.headers.get("Origin");
       if (origin !== null && origin !== c.origin) return json({ error: "origin_not_allowed" }, 403);
       const bearer = request.headers.get("Authorization");
@@ -166,9 +204,14 @@ const handler = {
         return unauthorized(c.metadata);
       const token = bearer.slice(7);
       if (!await verifyAccessAdmission(token, env.RESOURCE_ADMISSION_KEY,
-            accessContext(c.issuer, env.RESOURCE_CLIENT_ID, c.audience))) return unauthorized(c.metadata);
+            stageOneContext(accessContext(c.issuer, env.RESOURCE_CLIENT_ID, c.audience), deadline))) return unauthorized(c.metadata);
       const denied = await requireIngressBudget(request, env.RESOURCE_INGRESS_LIMIT, "mcp");
       if (denied) return denied;
+      if (request.method === "GET") {
+        const headers = cleanHeaders();
+        headers.set("Allow", "POST");
+        return json({ error: "method_not_allowed" }, 405, headers);
+      }
       if (request.headers.get("Content-Type")?.split(";")[0].trim().toLowerCase() !== "application/json")
         return json({ error: "unsupported_media_type" }, 415);
       let rpc: Record<string, unknown>;
@@ -181,31 +224,51 @@ const handler = {
           !["server/discover", "initialize", "ping", "notifications/initialized",
             "tools/list", "tools/call"].includes(rpc.method))
         return json({ error: "method_not_allowed" }, 403);
+      if (editorStageOne) {
+        const protocolError = stageOneProtocolError(request, rpc);
+        if (protocolError) return protocolError;
+      }
       const call = validatedCall(rpc);
       if (!await verifyIssuer(env, c, token, call?.cost ?? 0)) return unauthorized(c.metadata);
+      if (editorStageOne && stageOneDeadline(env) === undefined) return stageOneClosed();
+      const modern = editorStageOne && request.headers.get("MCP-Protocol-Version") === MODERN_PROTOCOL;
+      const resultFields = modern ? complete : {};
       if (rpc.method === "server/discover") return json({ jsonrpc: "2.0", id: rpc.id,
-        result: { resultType: "complete", supportedVersions: ["2026-07-28"],
-          capabilities: { tools: {} }, ttlMs: 0, cacheScope: "private",
-          _meta: { "io.modelcontextprotocol/serverInfo":
-            { name: "torenthia-live-editor-gateway", version: "0.1.0" } } } });
+        result: { ...complete, supportedVersions: [MODERN_PROTOCOL], capabilities: { tools: {} }, ttlMs: 0, cacheScope: "private" } });
+      const legacy = (rpc.params as { protocolVersion?: string } | undefined)?.protocolVersion;
       if (rpc.method === "initialize") return json({ jsonrpc: "2.0", id: rpc.id,
-        result: { protocolVersion: "2025-03-26", capabilities: { tools: { listChanged: false } },
-          serverInfo: { name: "torenthia-live-editor-gateway", version: "0.1.0" } } });
-      if (rpc.method === "ping") return json({ jsonrpc: "2.0", id: rpc.id, result: {} });
+        result: { protocolVersion: editorStageOne && legacy && LEGACY_PROTOCOLS.includes(legacy) ? legacy : LEGACY_PROTOCOLS[0],
+          capabilities: { tools: { listChanged: false } },
+          serverInfo } });
+      if (rpc.method === "ping") return json({ jsonrpc: "2.0", id: rpc.id, result: resultFields });
       if (rpc.method === "notifications/initialized") return new Response(null, { status: 202 });
-      if (rpc.method === "tools/list") return json({ jsonrpc: "2.0", id: rpc.id,
-        result: { tools: definitions.map(t => ({
-          ...t, securitySchemes: [{ type: "oauth2", scopes: [SCOPE] }],
-          _meta: { securitySchemes: [{ type: "oauth2", scopes: [SCOPE] }] },
-          annotations: { readOnlyHint: t.name !== "newsroom_review",
-            destructiveHint: t.name === "newsroom_review",
-            idempotentHint: t.name !== "newsroom_review", openWorldHint: false },
-        })) } });
-      return await proxy(env, rpc, call!);
+      if (rpc.method === "tools/list") {
+        stageOneEvent("tools_list", 200);
+        return json({ jsonrpc: "2.0", id: rpc.id,
+          result: { ...resultFields, tools: availableTools.map(t => ({
+            ...t, securitySchemes: [{ type: "oauth2", scopes: [SCOPE] }],
+            _meta: { securitySchemes: [{ type: "oauth2", scopes: [SCOPE] }] },
+            annotations: { readOnlyHint: t.name !== "newsroom_review",
+              destructiveHint: t.name === "newsroom_review",
+              idempotentHint: t.name !== "newsroom_review", openWorldHint: false },
+          })) } });
+      }
+      const response = await proxy(env, rpc, call!, modern);
+      if (call?.name === "newsroom_list" || call?.name === "newsroom_read") stageOneEvent(call.name, response.status);
+      return response;
     } catch (e) {
       return json({ error: e instanceof PolicyError ? e.publicCode : "gateway_unavailable" },
         e instanceof PolicyError ? e.status : 503);
     }
   },
 };
-export default handler;
+export default {
+  async fetch(request: Request, env: EditorGatewayEnv): Promise<Response> {
+    const response = await handler.fetch(request, env);
+    if (editorStageOne) {
+      if (stageOneDeadline(env) === undefined) return stageOneClosed();
+      if (new URL(request.url).pathname === "/mcp") stageOneEvent("mcp", response.status);
+    }
+    return response;
+  },
+};

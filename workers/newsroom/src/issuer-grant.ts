@@ -15,6 +15,7 @@ export interface GrantBinding {
   editorId: string;
   audience: string;
   epoch: number;
+  windowExpiresAt?: number;
 }
 export interface AuthorizationBinding extends GrantBinding {
   redirectUri: string;
@@ -52,7 +53,8 @@ interface Grant extends GrantBinding {
 type State = Pending | Code | Grant | { phase: "closed" };
 const bound = (stored: GrantBinding, expected: GrantBinding) =>
   stored.clientId === expected.clientId && stored.editorId === expected.editorId &&
-  stored.audience === expected.audience && Number.isSafeInteger(stored.epoch) &&
+  stored.audience === expected.audience && stored.windowExpiresAt === expected.windowExpiresAt &&
+  Number.isSafeInteger(stored.epoch) &&
   stored.epoch >= 0 && stored.epoch === expected.epoch;
 
 export class IssuerGrant extends DurableObject {
@@ -82,7 +84,9 @@ export class IssuerGrant extends DurableObject {
     binding: AuthorizationBinding; browserHash: string; upstreamHash: string;
     verifier: string; now: number;
   }): Promise<boolean> {
+    const expiresAt = input.binding.windowExpiresAt ?? input.now + 300;
     if (!nowIsValid(input.now) || !Number.isSafeInteger(input.binding.epoch) || input.binding.epoch < 0 ||
+        !nowIsValid(expiresAt) || expiresAt <= input.now || expiresAt > input.now + 300 ||
         !HASH.test(input.browserHash) ||
         !HASH.test(input.upstreamHash) || !HASH.test(input.verifier) ||
         !CHALLENGE.test(input.binding.challenge) || !input.binding.clientState ||
@@ -91,7 +95,7 @@ export class IssuerGrant extends DurableObject {
       if (this.ctx.storage.kv.get(KEY) !== undefined) return false;
       await this.#write({
         phase: "upstream", binding: input.binding, browserHash: input.browserHash,
-        upstreamHash: input.upstreamHash, verifier: input.verifier, expiresAt: input.now + 300,
+        upstreamHash: input.upstreamHash, verifier: input.verifier, expiresAt,
       });
       return true;
     });
@@ -149,7 +153,7 @@ export class IssuerGrant extends DurableObject {
           !bound(state.binding, input.expected)) return null;
       await this.#write(input.approve ? {
         phase: "code", binding: state.binding, codeHash: input.codeHash,
-        expiresAt: input.now + 300,
+        expiresAt: state.binding.windowExpiresAt ?? input.now + 300,
       } : { phase: "closed" });
       return state.binding;
     });
@@ -183,11 +187,13 @@ export class IssuerGrant extends DurableObject {
       this.ctx.storage.kv.put(REDEEMED_CODE, {
         codeHash: input.codeHash, challenge: input.challenge, redirectUri: input.redirectUri,
       } satisfies RedeemedCode);
+      const windowExpiresAt = state.binding.windowExpiresAt;
       await this.#write({
         clientId: input.expected.clientId, editorId: input.expected.editorId,
-        audience: input.expected.audience, epoch: input.expected.epoch, phase: "active", accessHash: input.accessHash,
-        refreshHash: input.refreshHash, accessExpiresAt: input.now + 900,
-        refreshExpiresAt: input.now + 28800, revoked: false,
+        audience: input.expected.audience, epoch: input.expected.epoch, windowExpiresAt,
+        phase: "active", accessHash: input.accessHash, refreshHash: input.refreshHash,
+        accessExpiresAt: windowExpiresAt ?? input.now + 900,
+        refreshExpiresAt: windowExpiresAt ?? input.now + 28800, revoked: false,
       });
       return true;
     });
@@ -202,7 +208,7 @@ export class IssuerGrant extends DurableObject {
         input.presentedHash === input.refreshHash || input.refreshHash === input.accessHash) return false;
     return this.ctx.storage.transaction(async () => {
       const state = this.ctx.storage.kv.get<State>(KEY);
-      if (state?.phase !== "active" || state.revoked || state.refreshExpiresAt <= input.now ||
+      if (state?.phase !== "active" || state.windowExpiresAt !== undefined || state.revoked || state.refreshExpiresAt <= input.now ||
           !bound(state, input.expected)) return false;
       if (state.refreshHash !== input.presentedHash) {
         // Only a digest we actually consumed proves reuse. Revoke the entire

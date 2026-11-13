@@ -68,6 +68,15 @@ jobs:
             workers/newsroom/dist/issuer-editor-candidate.js
           if-no-files-found: error
           retention-days: 7
+      - name: Save expiring read-only Editor Stage 1 bundles
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsroom-editor-stage-one-readonly-bundles
+          path: |
+            workers/newsroom/dist/editor-gateway-stage-one.js
+            workers/newsroom/dist/issuer-editor-stage-one.js
+          if-no-files-found: error
+          retention-days: 7
       - name: Save unbound issuer candidate for source review only
         uses: actions/upload-artifact@v4
         with:
