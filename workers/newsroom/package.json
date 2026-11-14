@@ -15,7 +15,8 @@
     "browser:candidate": "node --import tsx scripts/browser-candidate-harness.ts",
     "build:resource-s3-candidate": "node scripts/build-resource-s3-candidate.mjs",
     "build:hosted-recovery": "node scripts/build-hosted-recovery.mjs",
-    "build:current-acceptance": "node scripts/build-current-acceptance.mjs"
+    "build:current-acceptance": "node scripts/build-current-acceptance.mjs",
+    "build:editor-gateway": "node scripts/build-editor-gateway.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-oauth-provider": "1.2.4"
