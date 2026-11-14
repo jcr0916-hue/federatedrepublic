@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "automationEnabled": false,
+  "dispatchLimits": {
+    "maxAgentsPerSlot": 1,
+    "maxCostCentsPerSlot": 5
+  },
+  "agents": [
+    {
+      "id": "federal",
+      "jurisdiction": "Federal",
+      "inboxDesk": "federal",
+      "workspacePath": "docs/torenthia/agents/federal/workspace",
+      "allowedWrites": ["docs/torenthia/agents/federal/workspace/notes.md"],
+      "enabled": false,
+      "cadence": { "dayUtc": "mon", "hourUtc": 16 },
+      "model": { "providerRef": "litellm", "aliasRefs": ["LITELLM_PRO_MODEL", "LITELLM_FLASH_MODEL"] },
+      "budget": { "maxCalls": 2, "maxInputTokens": 16000, "maxOutputTokens": 4096, "maxSeconds": 120, "maxCostCents": 5 }
+    },
+    {
+      "id": "korda",
+      "jurisdiction": "Korda",
+      "inboxDesk": "korda",
+      "workspacePath": "docs/torenthia/agents/korda/workspace",
+      "allowedWrites": ["docs/torenthia/agents/korda/workspace/notes.md"],
+      "enabled": false,
+      "cadence": { "dayUtc": "tue", "hourUtc": 16 },
+      "model": { "providerRef": "litellm", "aliasRefs": ["LITELLM_PRO_MODEL", "LITELLM_FLASH_MODEL"] },
+      "budget": { "maxCalls": 2, "maxInputTokens": 16000, "maxOutputTokens": 4096, "maxSeconds": 120, "maxCostCents": 5 }
+    },
+    {
+      "id": "varek",
+      "jurisdiction": "Varek",
+      "inboxDesk": "varek",
+      "workspacePath": "docs/torenthia/agents/varek/workspace",
+      "allowedWrites": ["docs/torenthia/agents/varek/workspace/notes.md"],
+      "enabled": false,
+      "cadence": { "dayUtc": "wed", "hourUtc": 16 },
+      "model": { "providerRef": "litellm", "aliasRefs": ["LITELLM_PRO_MODEL", "LITELLM_FLASH_MODEL"] },
+      "budget": { "maxCalls": 2, "maxInputTokens": 16000, "maxOutputTokens": 4096, "maxSeconds": 120, "maxCostCents": 5 }
+    },
+    {
+      "id": "corindal",
+      "jurisdiction": "Corindal",
+      "inboxDesk": "corindal",
+      "workspacePath": "docs/torenthia/agents/corindal/workspace",
+      "allowedWrites": ["docs/torenthia/agents/corindal/workspace/notes.md"],
+      "enabled": false,
+      "cadence": { "dayUtc": "thu", "hourUtc": 16 },
+      "model": { "providerRef": "litellm", "aliasRefs": ["LITELLM_PRO_MODEL", "LITELLM_FLASH_MODEL"] },
+      "budget": { "maxCalls": 2, "maxInputTokens": 16000, "maxOutputTokens": 4096, "maxSeconds": 120, "maxCostCents": 5 }
+    }
+  ]
+}
