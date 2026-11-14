@@ -259,6 +259,7 @@ for (const stageOne of [false, true]) describe(stageOne ? "read-only Stage 1 OAu
   };
 
   if (stageOne) it("replays POST client authentication with fixed, private diagnostics", async () => {
+    assert.equal(chatgpt.token_endpoint_auth_method, "client_secret_post");
     const tokenFields = await approve();
     const schema = "newsroom.editor.stage-one.v1";
     const formWith = (fields: Record<string, string> = {}) => new URLSearchParams({ ...tokenFields, ...fields });
