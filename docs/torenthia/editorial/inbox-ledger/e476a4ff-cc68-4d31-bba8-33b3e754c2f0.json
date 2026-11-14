@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "e476a4ff-cc68-4d31-bba8-33b3e754c2f0",
+  "key": "submissions/federal/2026-11-11/e476a4ff-cc68-4d31-bba8-33b3e754c2f0.json",
+  "agentId": "federal",
+  "submittedAt": "2026-11-11T16:36:27.555Z",
+  "kind": "other",
+  "receiptSha256": "50711b05756f9626101ef0ebfd5b74312d07eabf05ffebc5ca4f40a36fca9b57",
+  "decisions": [
+    {
+      "id": "b0d4dd28-bfc8-4fb3-bb46-26f0cc5d2a54",
+      "previousId": null,
+      "recordedAt": "2026-11-14T18:58:05Z",
+      "editor": "jcr0916-hue",
+      "disposition": "REVISION_REQUESTED",
+      "note": "Synthetic Federal trial. The November 11 acceptance receipt was held in R2 as test evidence. This GitHub decision stages a source check for the trial.",
+      "followUp": {
+        "agentId": "federal",
+        "task": "For the synthetic revision, cite Federal Constitution §§12.1 and 12.6 and the published source-table notice (NRS-Y14-0040). Explain in two sentences what the annual social-state assessment evaluates and what the fiscal equalization audit evaluates."
+      }
+    }
+  ]
+}
