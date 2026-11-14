@@ -1,0 +1,51 @@
+name: Newsroom workspace checks
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/newsroom-workspaces.yml'
+      - 'docs/torenthia/agents/**'
+      - 'docs/torenthia/editorial/**'
+      - 'docs/torenthia/NEWSROOM-OPERATIONS.md'
+      - 'scripts/newsroom/**'
+  workflow_dispatch:
+    inputs:
+      slot_utc:
+        description: UTC timestamp for a dry-run planning slot (ISO 8601)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: newsroom-workspaces-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '24'
+      - run: node --test --test-timeout=10000 scripts/newsroom/*.test.mjs
+      - name: Validate the roster, workspaces and ledger
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if [ -n "$BASE_SHA" ]; then
+            node scripts/newsroom/cli.mjs validate "$BASE_SHA"
+          else
+            node scripts/newsroom/cli.mjs validate
+          fi
+      - name: Preview one slot
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          SLOT_UTC: ${{ inputs.slot_utc }}
+        run: node scripts/newsroom/cli.mjs plan "$SLOT_UTC"
