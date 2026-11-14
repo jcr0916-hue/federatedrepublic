@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { EventEmitter, once } from "node:events";
 import { after, before, describe, it } from "node:test";
 import { build } from "esbuild";
 import { Miniflare, convertV4MiniflareOptions, type V4WorkerOptions } from "miniflare";
@@ -10,7 +11,7 @@ import { isolatedEditor, stageOneDeadline } from "../src/editor-stage-one.ts";
 
 const { chatgpt, issuer, gateway } = configuration;
 const CALLBACK = issuer.bindings.ISSUER_REDIRECT_URI.text;
-const CLIENT_SECRET = "synthetic-only-editor-oauth-client-secret";
+const CLIENT_SECRET = hash("synthetic-only-editor-oauth-client-secret");
 const VALIDATOR = "synthetic-editor-validator";
 const VALIDATOR_SECRET = "synthetic-only-editor-validator-secret";
 const GITHUB_ID = "synthetic-github-app";
@@ -46,6 +47,8 @@ for (const stageOne of [false, true]) describe(stageOne ? "read-only Stage 1 OAu
   let deadline: number;
   let githubChallenge: string;
   const usedChallenges = new Set<string>();
+  const exchanges = new EventEmitter();
+  const clientAuthEvents: unknown[] = [];
   const review = { key: KEY, status: "HOLD", note: "Synthetic review only" };
   const upstreamCalls: string[] = [];
   let receipt: typeof review | undefined;
@@ -130,7 +133,12 @@ for (const stageOne of [false, true]) describe(stageOne ? "read-only Stage 1 OAu
         },
         outboundService: () => assert.fail("Unexpected gateway egress"),
       },
-    ] }));
+    ], handleStructuredLogs({ message }) {
+      if (!message.startsWith('{"schema":"newsroom.editor.stage-one.v1"')) return;
+      const event = JSON.parse(message) as { step: string };
+      if (event.step === "token_client_auth") clientAuthEvents.push(event);
+      if (event.step === "token") exchanges.emit("token", [...clientAuthEvents.splice(0), event]);
+    } }));
   });
   after(async () => { await runtime?.dispose(); });
 
@@ -250,6 +258,89 @@ for (const stageOne of [false, true]) describe(stageOne ? "read-only Stage 1 OAu
     return { grant_type: "authorization_code", code, code_verifier: VERIFIER, resource: AUDIENCE, redirect_uri: CALLBACK };
   };
 
+  if (stageOne) it("replays POST client authentication with fixed, private diagnostics", async () => {
+    const tokenFields = await approve();
+    const schema = "newsroom.editor.stage-one.v1";
+    const formWith = (fields: Record<string, string> = {}) => new URLSearchParams({ ...tokenFields, ...fields });
+    const post = async (body: URLSearchParams | string, headers: Record<string, string> = formHeaders) => {
+      const [response, [events]] = await Promise.all([
+        runtime.dispatchFetch(ISSUER + "/token", { method: "POST", headers, body }),
+        once(exchanges, "token", { signal: AbortSignal.timeout(3000) }),
+      ]);
+      return { response, events };
+    };
+    const validBody = { client_id: chatgpt.client_id, client_secret: CLIENT_SECRET };
+    const onlyId = { client_id: chatgpt.client_id };
+    const form = formWith(onlyId).toString();
+    const basicHeaders = { ...formHeaders, Authorization: basic(chatgpt.client_id, CLIENT_SECRET) };
+    const firstByte = CLIENT_SECRET.charCodeAt(0).toString(16);
+    const scenarios = [
+      { name: "both missing", body: formWith(), method: "missing", reason: "missing_credentials", status: 401 },
+      { name: "ID only", body: formWith(onlyId), method: "post", reason: "missing_secret", status: 401 },
+      { name: "empty secret", body: form + "&client_secret=", method: "post", reason: "missing_secret", status: 401 },
+      { name: "secret only", body: formWith({ client_secret: CLIENT_SECRET }), method: "post",
+        reason: "missing_client_id", status: 401 },
+      { name: "different client", body: formWith({ ...validBody, client_id: "synthetic-other-client" }), method: "post",
+        reason: "client_id_mismatch", status: 401 },
+      { name: "padded client ID", body: formWith({ ...validBody, client_id: chatgpt.client_id + " " }), method: "post",
+        reason: "client_id_mismatch", status: 401 },
+      { name: "short secret", body: formWith({ ...onlyId, client_secret: "synthetic-short" }), method: "post",
+        reason: "invalid_secret_format", status: 401 },
+      { name: "form plus decoded as space", body: form + "&client_secret=+" + CLIENT_SECRET, method: "post",
+        reason: "invalid_secret_format", status: 401 },
+      { name: "line break", body: form + "&client_secret=" + CLIENT_SECRET + "%0A", method: "post",
+        reason: "invalid_secret_format", status: 401 },
+      { name: "wrong secret", body: formWith({ ...onlyId, client_secret: hash("different synthetic secret") }), method: "post",
+        reason: "secret_mismatch", status: 401 },
+      { name: "double encoded secret", body: form + "&client_secret=%25" + firstByte + CLIENT_SECRET.slice(1), method: "post",
+        reason: "secret_mismatch", status: 401 },
+      { name: "duplicate secret", body: formWith(validBody) + "&client%5Fsecret=" + CLIENT_SECRET, method: "unclassified",
+        reason: "duplicate_parameters", status: 400 },
+      { name: "mixed methods", body: formWith(validBody), headers: basicHeaders, method: "multiple",
+        reason: "multiple_methods", status: 400 },
+      { name: "unsupported authorization header", body: formWith(), headers: { ...formHeaders, Authorization: "Bearer synthetic" },
+        method: "unsupported", reason: "invalid_authorization_header", status: 401 },
+      { name: "wrong Basic secret", body: formWith(),
+        headers: { ...formHeaders, Authorization: basic(chatgpt.client_id, hash("wrong synthetic Basic secret")) },
+        method: "basic", reason: "basic_rejected", status: 401 },
+    ];
+    for (const { name, body, headers, method, reason, status } of scenarios) {
+      const { response, events } = await post(body, headers);
+      assert.equal(response.status, status, name);
+      assert.deepEqual(await response.json(), { error: status === 401 ? "invalid_client" : "invalid_request" }, name);
+      assert.deepEqual(events, [
+        { schema, step: "token_client_auth", status, method, reason },
+        { schema, step: "token", status },
+      ], name);
+    }
+
+    for (const [field, value, error] of [
+      ["resource", AUDIENCE + "/", "invalid_target"],
+      ["scope", "newsroom:read", "invalid_scope"],
+      ["redirect_uri", CALLBACK + "/", "invalid_grant"],
+      ["code_verifier", "a".repeat(64), "invalid_grant"],
+    ]) {
+      const { response, events } = await post(formWith({ ...validBody, [field]: value }));
+      assert.equal(response.status, 400, field);
+      assert.deepEqual(await response.json(), { error }, field);
+      assert.deepEqual(events, [
+        { schema, step: "token_client_auth", status: 200, method: "post", reason: "accepted" },
+        { schema, step: "token", status: 400 },
+      ], field);
+    }
+
+    const { response, events } = await post(form + "&client_secret=%" + firstByte + CLIENT_SECRET.slice(1));
+    assert.equal(response.status, 200);
+    const token = await response.json() as { access_token: string; scope: string; refresh_token?: string };
+    assert.ok(token.access_token);
+    assert.equal(token.scope, chatgpt.scope);
+    assert.equal(token.refresh_token, undefined);
+    assert.deepEqual(events, [
+      { schema, step: "token_client_auth", status: 200, method: "post", reason: "accepted" },
+      { schema, step: "token", status: 200 },
+    ]);
+  });
+
   it("binds the code to the registered redirect and requires the configured confidential client", async () => {
     const tokenFields = await approve();
     const mismatched = await clientPost("/token", { ...tokenFields, redirect_uri: CALLBACK + "/" });
@@ -345,18 +436,6 @@ for (const stageOne of [false, true]) describe(stageOne ? "read-only Stage 1 OAu
     assert.equal((await clientPost("/revoke", { token: access_token })).status, 200);
     assert.equal((await call(access_token, "newsroom_read", { key: KEY })).status, 401);
     assert.equal((await clientPost("/token", tokenFields)).status, 400);
-  });
-
-  if (stageOne) it("accepts the registered client using form authentication too", async () => {
-    const tokenFields = await approve();
-    const post = (secret: string) => runtime.dispatchFetch(ISSUER + "/token", {
-      method: "POST", headers: formHeaders,
-      body: new URLSearchParams({ ...tokenFields, client_id: chatgpt.client_id, client_secret: secret }),
-    });
-    const denied = await post("0".repeat(64));
-    assert.deepEqual(await denied.json(), { error: "invalid_client" });
-    const accepted = await post(CLIENT_SECRET);
-    assert.equal(accepted.status, 200);
   });
 });
 

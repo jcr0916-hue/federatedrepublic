@@ -18,8 +18,8 @@ import { requireIngressBudget, type IngressRateLimiter } from "./ingress-rate-li
 import { observe, type PrivacyCounterSink } from "./privacy-telemetry.ts";
 import { EDITOR_SCOPE as SCOPE, editorIssuerMetadata, ISSUER_METADATA_PATH } from "./editor-oauth-metadata.ts";
 import {
-  editorStageOne, isolatedEditor, stageOneClosed, stageOneContext, stageOneDeadline, stageOneEvent,
-  type ClientAuthMethod, type StageOneEnv,
+  editorStageOne, isolatedEditor, stageOneClientAuth, stageOneClosed, stageOneContext, stageOneDeadline,
+  stageOneEvent, type ClientAuthFailure, type ClientAuthMethod, type StageOneEnv,
 } from "./editor-stage-one.ts";
 
 interface Env extends ChallengeConfig, StageOneEnv {
@@ -272,26 +272,34 @@ async function consent(request: Request, env: Env, config: Configuration): Promi
   return redirect(binding, approve ? "code" : "error", approve ? code : "access_denied", config.issuer);
 }
 
+type ClientAuthentication =
+  | { method: "basic" | "post"; authorization: string }
+  | { method: ClientAuthMethod; reason: ClientAuthFailure };
+
 function clientAuthentication(request: Request, params: URLSearchParams, resourceSide: boolean,
-                              clientId: string): { method: ClientAuthMethod; authorization: string | null } {
+                              clientId: string): ClientAuthentication {
   const header = request.headers.get("Authorization");
   if (params.has("client_id") || params.has("client_secret")) {
     if (!header && !resourceSide) {
       const client = params.get("client_id"), secret = params.get("client_secret");
       params.delete("client_id");
       params.delete("client_secret");
-      const valid = client === clientId && secret && /^[\x21-\x7e]{32,256}$/.test(secret);
-      return { method: "post", authorization: valid ? "Basic " + btoa(client + ":" + secret) : null };
+      if (!client) return { method: "post", reason: "missing_client_id" };
+      if (client !== clientId) return { method: "post", reason: "client_id_mismatch" };
+      if (!secret) return { method: "post", reason: "missing_secret" };
+      if (!/^[\x21-\x7e]{32,256}$/.test(secret)) return { method: "post", reason: "invalid_secret_format" };
+      // URLSearchParams has already decoded the form once. Verify those exact bytes via the shared verifier.
+      return { method: "post", authorization: "Basic " + btoa(client + ":" + secret) };
     }
     // Some clients repeat the public client ID alongside Basic credentials.
     // A body secret, an inconsistent ID, or body fields on introspection still fail.
     if (!editorStageOne || resourceSide || params.has("client_secret") || params.get("client_id") !== clientId)
-      return { method: "multiple", authorization: null };
+      return { method: "multiple", reason: "multiple_methods" };
     params.delete("client_id");
   }
-  if (!header) return { method: "missing", authorization: null };
+  if (!header) return { method: "missing", reason: "missing_credentials" };
   const basic = header.length <= 512 && /^Basic +([A-Za-z0-9+/]+={0,2})$/i.exec(header);
-  if (!basic) return { method: "unsupported", authorization: null };
+  if (!basic) return { method: "unsupported", reason: "invalid_authorization_header" };
   // HTTP authentication scheme names are case-insensitive. Pass a canonical header to the verifier.
   return { method: "basic", authorization: "Basic " + basic[1] };
 }
@@ -299,15 +307,24 @@ function clientAuthentication(request: Request, params: URLSearchParams, resourc
 async function clientEndpoint(request: Request, env: Env, config: Configuration, path: string): Promise<Response> {
   const params = await form(request);
   const names = [...params.keys()];
-  if (names.length !== new Set(names).size) return fail(400, "invalid_request");
+  if (names.length !== new Set(names).size) {
+    if (path === "/token") stageOneClientAuth(400, "unclassified", "duplicate_parameters");
+    return fail(400, "invalid_request");
+  }
   const resourceSide = path === "/introspect";
   const clientId = resourceSide ? config.resourceId : config.clientId;
   const auth = clientAuthentication(request, params, resourceSide, clientId);
+  if ("reason" in auth) {
+    const status = auth.method === "multiple" ? 400 : 401;
+    if (path === "/token") stageOneClientAuth(status, auth.method, auth.reason);
+    return status === 400 ? fail(400, "invalid_request") : fail(401, "invalid_client");
+  }
   const authenticated = await verifyConfidentialClient(auth.authorization, clientId,
     resourceSide ? config.resourceSecretHash : config.secretHash);
-  const authStatus = auth.method === "multiple" ? 400 : authenticated ? 200 : 401;
-  if (path === "/token") stageOneEvent("token_client_auth", authStatus, auth.method);
-  if (authStatus === 400) return fail(400, "invalid_request");
+  if (path === "/token") {
+    const reason = authenticated ? "accepted" : auth.method === "post" ? "secret_mismatch" : "basic_rejected";
+    stageOneClientAuth(authenticated ? 200 : 401, auth.method, reason);
+  }
   if (!authenticated) return fail(401, "invalid_client");
   // Edge-location budgets protect costly public authenticated token/revoke
   // operations. Introspection uses a separate service binding and must not

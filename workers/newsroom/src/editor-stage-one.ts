@@ -29,9 +29,23 @@ export function stageOneClosed(): Response {
   return new Response(null, { status: 404, headers: { "Cache-Control": "no-store" } });
 }
 
-export type ClientAuthMethod = "basic" | "post" | "missing" | "unsupported" | "multiple";
-type Step = "token_client_auth" | "token" | "mcp" | "tools_list" | "newsroom_list" | "newsroom_read";
+const clientAuthMethods = ["basic", "post", "missing", "unsupported", "multiple", "unclassified"] as const;
+const clientAuthReasons = [
+  "accepted", "missing_credentials", "missing_client_id", "missing_secret", "client_id_mismatch",
+  "invalid_secret_format", "secret_mismatch", "invalid_authorization_header", "basic_rejected",
+  "multiple_methods", "duplicate_parameters",
+] as const;
+export type ClientAuthMethod = typeof clientAuthMethods[number];
+type ClientAuthReason = typeof clientAuthReasons[number];
+export type ClientAuthFailure = Exclude<ClientAuthReason, "accepted">;
+type Step = "token" | "mcp" | "tools_list" | "newsroom_list" | "newsroom_read";
 
-export function stageOneEvent(step: Step, status: number, method?: ClientAuthMethod): void {
-  if (editorStageOne) console.log(JSON.stringify({ schema: "newsroom.editor.stage-one.v1", step, status, method }));
+export function stageOneEvent(step: Step, status: number): void {
+  if (editorStageOne) console.log(JSON.stringify({ schema: "newsroom.editor.stage-one.v1", step, status }));
+}
+
+export function stageOneClientAuth(status: 200 | 400 | 401, method: ClientAuthMethod, reason: ClientAuthReason): void {
+  if (!editorStageOne || ![200, 400, 401].includes(status) ||
+      !clientAuthMethods.includes(method) || !clientAuthReasons.includes(reason)) return;
+  console.log(JSON.stringify({ schema: "newsroom.editor.stage-one.v1", step: "token_client_auth", status, method, reason }));
 }
