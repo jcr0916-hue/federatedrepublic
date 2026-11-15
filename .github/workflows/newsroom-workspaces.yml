@@ -1,7 +1,6 @@
 name: Newsroom workspace checks
 on:
   pull_request:
-    branches: [main]
     paths:
       - '.github/workflows/newsroom-workspaces.yml'
       - 'docs/torenthia/agents/**'
@@ -24,6 +23,7 @@ concurrency:
 
 jobs:
   check:
+    name: Newsroom workspace check
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -35,6 +35,8 @@ jobs:
         with:
           node-version: '24'
       - run: node --test --test-timeout=10000 scripts/newsroom/*.test.mjs
+      - name: Simulate one Federal assignment and note update
+        run: node scripts/newsroom/federal-dry-run.mjs
       - name: Validate the roster, workspaces and ledger
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
