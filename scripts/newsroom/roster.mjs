@@ -23,7 +23,7 @@ export function isText(value, max) {
     && value.length <= max && value.trim().length > 0;
 }
 
-function isInteger(value, min, max = Number.MAX_SAFE_INTEGER) {
+export function isInteger(value, min, max = Number.MAX_SAFE_INTEGER) {
   return Number.isSafeInteger(value) && value >= min && value <= max;
 }
 

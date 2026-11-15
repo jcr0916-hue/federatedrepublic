@@ -10,7 +10,7 @@ const receiptFields = ["schemaVersion", "id", "key", "desk", "kind", "title", "s
   "sourceRefs", "submittedAt", "status", "nonCanonical"];
 const entryFields = ["schemaVersion", "id", "key", "agentId", "submittedAt", "kind", "receiptSha256"];
 
-function isUuid(value) {
+export function isUuid(value) {
   return typeof value === "string" && uuid.test(value);
 }
 
