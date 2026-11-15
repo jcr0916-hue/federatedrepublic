@@ -1,0 +1,11 @@
+# Branch handoff — Constitution 20 supervised offline drafting composition
+
+- **Branch:** `feature/constitution20-supervised-offline-run-20261115`. Base: draft [#329](https://github.com/jcr0916-hue/federatedrepublic/pull/329), stacked on #328 → #327 → #326 → #325 → #324 → #323.
+- **Purpose:** compose verified desk assignment and bounded approved source evidence into a controlled model drafting request, returning **PROPOSED** text to the Central Editor.
+- **Changes:** `scripts/newsroom/supervised-draft.mjs`, `scripts/newsroom/supervised-draft.test.mjs`, and this handoff. No roster, workflow, secret, site or publishing changes.
+- **Experimental tests:** offline synthetic orchestration invokes the existing Gateway adapter with budget-reservation callback and fake transport; checks exact replay, desk-identity matching, pause, invalid/cross-field evidence, citation instruction, output remains proposed. Four native Node tests added, not yet verified at creation. Existing CI still must pass.
+- **Architecture:** `openDeskJob` must be the verified protected-ref desk reader and `invokeGateway` must be the authenticated, budgeted adapter in a trusted runtime. The test uses synthetic substitutes, so it does **not** prove live identity, durable transaction storage, GitHub writer integration, or Vercel provider results. No automatic publication or R2 submission.
+- **Safety:** source packets must have an immutable 40-hex ref, unique IDs and small reviewed excerpts; no raw private receipt fields. The model receives only public editorial task, receipt/decision IDs and approved evidence. No model or agent receives privileged clients.
+- **Not shipped:** no production deploy or live execution. **Unresolved:** connect trusted key custody, protected-head and grant checks, real atomic reservation store, provider/model choice and pricing, response/content validation, real source packet, supervised staged end-to-end, pause/recovery audit and Ashbridge source/jurisdiction verification.
+- **Rejected:** automatic canon promotion, guessed jurisdiction, blind multi-agent activation, unknown model costs and callbacks with unchecked privileges.
+- **Disposition:** retain while draft and active dependent heads exist; after authorized merge, independently verify branch-retirement conditions in `AGENTS.md`.
