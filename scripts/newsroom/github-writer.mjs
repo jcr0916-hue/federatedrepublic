@@ -31,10 +31,10 @@ function assertReviewRules(rules) {
   const review = rules.some(({ type, parameters }) => type === "pull_request"
     && isInteger(parameters?.required_approving_review_count, 1) && parameters.dismiss_stale_reviews_on_push === true);
   const checks = rules.some(({ type, parameters }) => type === "required_status_checks"
-    && parameters?.required_status_checks?.some(({ context }) => context === "Newsroom workspace check"));
+    && parameters?.required_status_checks?.some(({ context }) => context === "World publishing check"));
   check(review && checks && rules.some(({ type }) => type === "non_fast_forward")
     && rules.some(({ type }) => type === "deletion"),
-  "Main must enforce PR review on the current diff, newsroom CI, and ref protection");
+  "Main must enforce PR review on the current diff, World publishing CI, and ref protection");
 }
 
 export function createGitHubWriter({ installationToken, fetchImpl = fetch }) {

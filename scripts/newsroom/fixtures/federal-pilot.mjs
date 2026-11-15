@@ -55,7 +55,7 @@ export function createFederalFixture() {
     base: { name: "main", protected: true, commit: { sha: fixtureBase } },
     rules: [
       { type: "pull_request", parameters: { required_approving_review_count: 1, dismiss_stale_reviews_on_push: true } },
-      { type: "required_status_checks", parameters: { required_status_checks: [{ context: "Newsroom workspace check" }] } },
+      { type: "required_status_checks", parameters: { required_status_checks: [{ context: "World publishing check" }] } },
       { type: "non_fast_forward" },
       { type: "deletion" },
     ],

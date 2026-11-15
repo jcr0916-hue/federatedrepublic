@@ -172,6 +172,13 @@ test("an unchanged note is a no-op only at the pinned head", async () => {
   assert.equal(state.writeAttempts.length, 0);
 });
 
+test("refuses to erase the draft's entire review diff", async () => {
+  const { state, grant, openJob, change } = createFederalFixture();
+  const job = await openJob(grant());
+  await assert.rejects(job.saveNotes({ ...change, content: state.notes.get(fixtureBase) }), /leave a change for review/);
+  assert.equal(state.writeAttempts.length, 0);
+});
+
 test("no write starts after the grant expires or protected main moves during preflight", async () => {
   const { state, grant, openJob, change, claims } = createFederalFixture();
   const job = await openJob(grant());

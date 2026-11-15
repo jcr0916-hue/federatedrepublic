@@ -1,6 +1,7 @@
 # Branch handoff — Managed Federal writer and inbox
 
 - **Original branch** `feature/torenthia-federal-managed-writer-20261114`
+- **PR** [Draft #325](https://github.com/jcr0916-hue/federatedrepublic/pull/325)
 - **Base** [Draft #324](https://github.com/jcr0916-hue/federatedrepublic/pull/324) at `ca513f19431af1837aacd8b208da9d713d4c7f16`, stacked on [draft #323](https://github.com/jcr0916-hue/federatedrepublic/pull/323) at `c4da1959bd3fa7d3ce9c7cb42f7096efaf7b9bd0`
 - **Status** Proposed. An authenticated writer and inbox bridge were exercised with synthetic fixtures.
 
@@ -12,8 +13,8 @@
 
 ## Evidence
 
-- All 27 newsroom tests passed locally on Node 24.15.0, including expiry, identity, both switches, inbox identity and hash, file scope, stale refs, draft review state, and replay. The dry run simulated one verified receipt, one notes commit, and one replay. It made zero network requests and zero model calls.
-- The existing validator accepted four workspaces and one editorial ledger entry. The checked-in planner returned zero runs and zero reserved spend. The local World publishing suite passed through site build, discovery and release compatibility. Hosted results are recorded on the writer draft's Checks tab.
+- All 28 newsroom tests passed locally on Node 24.15.0, including expiry, identity, both switches, inbox identity and hash, file scope, stale refs, draft review state, and replay. The dry run simulated one verified receipt, one notes commit, and one replay. It made zero network requests and zero model calls.
+- The existing validator accepted four workspaces and one editorial ledger entry. The checked-in planner returned zero runs and zero reserved spend. The local World publishing suite passed through site build, discovery and release compatibility. [Hosted checks](https://github.com/jcr0916-hue/federatedrepublic/pull/325/checks)
 
 ## Follow-up and preservation
 

@@ -87,8 +87,9 @@ export function createManagedFederalPilot({ github, inbox, jobPublicKey, now = D
 
       const head = await github.readDraftHead(job.pullRequest, job.policyHead);
       await github.checkNotesDiff(job.policyHead, head);
-      await github.readFile(job.policyHead, change.path, maxNotesBytes);
+      const base = await github.readFile(job.policyHead, change.path, maxNotesBytes);
       const current = await github.readFile(head, change.path, maxNotesBytes);
+      check(change.content !== base, "The Federal note must leave a change for review");
 
       async function confirmDraft(expected) {
         check(await github.readDraftHead(job.pullRequest, job.policyHead) === expected, "Federal draft head changed");
