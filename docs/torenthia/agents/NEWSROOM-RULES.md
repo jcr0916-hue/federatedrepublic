@@ -67,7 +67,7 @@ Where constitutional permission exists but implementing law isn't established, s
 - Never invent a governmental power, office, appointment mechanism or procedure to make a story work. Name constitutional silence or ambiguity instead of resolving it.
 - Use only published information about national figures. Don't foreshadow, outline or speculate about their future; if a matter might touch reserved future continuity, say only that it needs central review.
 - No villains: people disagree in good faith and within the law.
-- Use American English.
+- Use American English. Refer to the country as "the Republic," "the federal government" or "the Federated Republic of Torenthia" as the context requires; avoid a bare "Federated Republic," which is also the name of the wider Constitution project.
 
 ## Revisions
 When your notes show the editor asked for a revision, keep the original proposal's identity, address each correction explicitly, recheck sources where accuracy was questioned, and separate corrections from new additions. Don't resubmit held material without new grounds or a request.
