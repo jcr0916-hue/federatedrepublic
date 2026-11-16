@@ -125,7 +125,12 @@ async function callModel(fetchImpl, { token, model, messages, maxTokens, timeout
     });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(`gateway ${res.status}: ${data?.error?.message || 'error'}`);
-    return { text: data?.choices?.[0]?.message?.content || '', usage: data?.usage || null };
+    const choice = data?.choices?.[0] || {};
+    const text = choice.message?.content || '';
+    if (!text.trim()) {
+      throw new Error(`empty reply from ${model} (finish_reason=${choice.finish_reason || 'unknown'}, completion_tokens=${data?.usage?.completion_tokens ?? '?'})`);
+    }
+    return { text, usage: data?.usage || null };
   } finally {
     clearTimeout(timer);
   }
@@ -195,7 +200,7 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
       maxTokens: planner.maxOutputTokens || 3000, deskId: desk.id, timeoutMs: 110000,
     });
     usage.planner = { model: planner.model, ...(r.usage || {}) };
-    plan = extractJson(r.text);
+    try { plan = extractJson(r.text); } catch { throw new Error(`planner reply was not JSON: ${r.text.slice(0, 200)}`); }
     if (plan && plan.skip) return { desk: desk.id, status: 'no-submission', reason: String(plan.reason || '').slice(0, 600), usage };
   }
   const model = desk.model || roster.defaultModel;
@@ -204,7 +209,8 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
     token, model, messages: buildMessages({ ...base, sources: writerSources, plan }), maxTokens, deskId: desk.id, timeoutMs: 150000,
   });
   usage.writer = { model, ...(w.usage || {}) };
-  const proposal = parseProposal(w.text);
+  let proposal;
+  try { proposal = parseProposal(w.text); } catch (e) { throw new Error(`writer: ${e.message}: ${w.text.slice(0, 200)}`); }
   if (proposal.skip) return { desk: desk.id, status: 'no-submission', reason: proposal.reason, usage };
   const receipt = await submitProposal(fetchImpl, { inboxUrl: env.NEWSROOM_URL || DEFAULT_INBOX, key, proposal });
   return { desk: desk.id, status: 'submitted', id: receipt.id, key: receipt.key, title: proposal.title, kind: proposal.kind, usage };

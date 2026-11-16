@@ -3,7 +3,7 @@
   "paused": false,
   "rulesPath": "docs/torenthia/agents/NEWSROOM-RULES.md",
   "defaultModel": "deepseek/deepseek-v4-flash",
-  "maxOutputTokens": 8000,
+  "maxOutputTokens": 16000,
   "maxSourceChars": 360000,
   "sharedSources": [
     "docs/torenthia/STORY-STATUS.md",
@@ -12,7 +12,7 @@
   ],
   "planner": {
     "model": "deepseek/deepseek-v4-pro",
-    "maxOutputTokens": 3000,
+    "maxOutputTokens": 10000,
     "maxSourceChars": 160000,
     "sources": [
       "docs/torenthia/STORY-STATUS.md",
@@ -26,7 +26,10 @@
       "jurisdiction": "Federal",
       "inboxDesk": "federal",
       "enabled": true,
-      "days": ["mon", "thu"],
+      "days": [
+        "mon",
+        "thu"
+      ],
       "briefPath": "docs/torenthia/agents/federal/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/federal/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/federal/NOTES.md",
@@ -38,11 +41,16 @@
       "jurisdiction": "Korda",
       "inboxDesk": "korda",
       "enabled": false,
-      "days": ["tue", "fri"],
+      "days": [
+        "tue",
+        "fri"
+      ],
       "briefPath": "docs/torenthia/agents/korda/setup/01-KORDA-AGENT-INSTRUCTIONS.md",
       "assignmentsPath": "docs/torenthia/agents/korda/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/korda/NOTES.md",
-      "sources": ["docs/torenthia/KORDA-TERRITORIAL-COMPACT.md"]
+      "sources": [
+        "docs/torenthia/KORDA-TERRITORIAL-COMPACT.md"
+      ]
     }
   ]
 }
