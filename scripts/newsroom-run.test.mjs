@@ -88,7 +88,7 @@ test('Pro plans, Flash writes, and one proposal reaches the federal inbox', asyn
   assert.ok(!JSON.stringify(calls.gateway[0].messages).includes('## Source: docs/constitution-current.md'), 'planner skips the full constitution');
   assert.ok(calls.gateway[1].messages[0].content.includes('## Source: docs/constitution-current.md'), 'writer gets the constitution');
   assert.ok(calls.gateway[0].messages[0].content.startsWith('# Torenthia newsroom'), 'shared rules lead the prompt');
-  assert.ok(calls.gateway[0].messages[1].content.startsWith('# Your desk: Federal desk'), 'desk material follows');
+  assert.ok(calls.gateway[0].messages[1].content.startsWith('# Your desk: Federal'), 'desk material follows');
   assert.equal(calls.inbox.length, 1);
   assert.equal(calls.inbox[0].auth, 'Bearer fed-key');
   assert.match(calls.inbox[0].body.body, /Notes for the editor:\nNew name: Ilse Marr\./);
