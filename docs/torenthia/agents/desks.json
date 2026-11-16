@@ -298,7 +298,11 @@
       "assignmentsPath": "docs/torenthia/agents/solara/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/solara/NOTES.md",
       "sources": [
-        "territory-solara.html"
+        "territory-solara.html",
+        "torenthia/nrs/torenthia-nrs-109.html",
+        "torenthia/nrs/torenthia-nrs-110.html",
+        "torenthia/nrs/torenthia-nrs-130.html",
+        "torenthia/news/torenthia-news-134.html"
       ]
     },
     {
