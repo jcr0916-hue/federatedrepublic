@@ -17,7 +17,9 @@ function dueDesks(roster, now, only) {
   const desks = Array.isArray(roster.desks) ? roster.desks : [];
   if (only) return desks.filter((d) => d.id === only && d.enabled);
   const today = DAYS[now.getUTCDay()];
-  return desks.filter((d) => d.enabled && Array.isArray(d.days) && d.days.includes(today));
+  const week = Math.floor(now.getTime() / (7 * 86400000)); // whole weeks since 1970-01-01 (a Thursday)
+  return desks.filter((d) => d.enabled && Array.isArray(d.days) && d.days.includes(today)
+    && (!(d.everyWeeks > 1) || (week + (d.weekOffset || 0)) % d.everyWeeks === 0));
 }
 
 async function loadText(fetchImpl, path, maxChars) {
@@ -32,21 +34,26 @@ async function loadOptional(fetchImpl, path, maxChars) {
   try { return await loadText(fetchImpl, path, maxChars); } catch { return ''; }
 }
 
-function systemPrompt({ desk, rules, brief }) {
-  return [rules.trim(), '', `# Your desk: ${desk.name}`, '', brief.trim()].join('\n');
+// Prompt layout for caching: everything identical across desks (rules, then the
+// shared sources) goes first in the system message; desk-specific material
+// follows in the user message. Providers bill a repeated prefix at cache rates.
+function systemPrompt({ rules, sharedSources = [] }) {
+  const parts = [rules.trim()];
+  for (const s of sharedSources) parts.push('', `## Source: ${s.path}`, s.text.trim());
+  return parts.join('\n');
 }
 
-function contextParts({ assignments, notes, sources, now }) {
-  const parts = [
+function contextParts({ desk, brief, deskSources = [], assignments, notes, now }) {
+  const parts = [`# Your desk: ${desk.name}`, '', brief.trim()];
+  for (const s of deskSources) parts.push('', `## Source: ${s.path}`, s.text.trim());
+  parts.push('',
     `Today (real-world UTC date): ${now.toISOString().slice(0, 10)}. Do not advance the fictional date beyond what the story status shows.`,
     '',
     '## Your open assignments',
     assignments.trim() || '(none)',
     '',
     '## Notes from the editor and from your past runs',
-    notes.trim() || '(none)',
-  ];
-  for (const s of sources) parts.push('', `## Source: ${s.path}`, s.text.trim());
+    notes.trim() || '(none)');
   return parts;
 }
 
@@ -125,7 +132,12 @@ async function callModel(fetchImpl, { token, model, messages, maxTokens, timeout
     });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(`gateway ${res.status}: ${data?.error?.message || 'error'}`);
-    return { text: data?.choices?.[0]?.message?.content || '', usage: data?.usage || null };
+    const choice = data?.choices?.[0] || {};
+    const text = choice.message?.content || '';
+    if (!text.trim()) {
+      throw new Error(`empty reply from ${model} (finish_reason=${choice.finish_reason || 'unknown'}, completion_tokens=${data?.usage?.completion_tokens ?? '?'})`);
+    }
+    return { text, usage: data?.usage || null };
   } finally {
     clearTimeout(timer);
   }
@@ -168,21 +180,21 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
   const brief = await loadText(fetchImpl, desk.briefPath);
   const assignments = await loadOptional(fetchImpl, desk.assignmentsPath, 20000);
   const notes = await loadOptional(fetchImpl, desk.notesPath, 20000);
-  const base = { desk, rules, brief, assignments, notes, now };
-  const writerSources = await load([...(roster.sharedSources || []), ...(desk.sources || [])], limit);
+  const deskSources = await load(desk.sources || [], 80000);
+  const base = { desk, rules, brief, assignments, notes, now, deskSources };
+  const writerSources = await load(roster.sharedSources || [], limit);
   const planner = desk.planner === null ? null : (desk.planner || roster.planner || null);
-  const plannerSources = planner
-    ? await load([...(planner.sources || []), ...(desk.sources || [])], planner.maxSourceChars || 160000)
-    : [];
+  const plannerSources = planner ? await load(planner.sources || [], planner.maxSourceChars || 160000) : [];
   const chars = (m) => m.reduce((n, x) => n + x.content.length, 0);
 
   if (dryRun) {
     return {
       desk: desk.id,
       status: 'dry-run',
-      plannerChars: planner ? chars(buildPlanMessages({ ...base, sources: plannerSources })) : 0,
-      writerChars: chars(buildMessages({ ...base, sources: writerSources, plan: planner ? {} : null })),
+      plannerChars: planner ? chars(buildPlanMessages({ ...base, sharedSources: plannerSources })) : 0,
+      writerChars: chars(buildMessages({ ...base, sharedSources: writerSources, plan: planner ? {} : null })),
       plannerSources: plannerSources.map((s) => s.path),
+      deskSources: deskSources.map((s) => s.path),
       writerSources: writerSources.map((s) => s.path),
     };
   }
@@ -191,20 +203,21 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
   let plan = null;
   if (planner) {
     const r = await callModel(fetchImpl, {
-      token, model: planner.model, messages: buildPlanMessages({ ...base, sources: plannerSources }),
+      token, model: planner.model, messages: buildPlanMessages({ ...base, sharedSources: plannerSources }),
       maxTokens: planner.maxOutputTokens || 3000, deskId: desk.id, timeoutMs: 110000,
     });
     usage.planner = { model: planner.model, ...(r.usage || {}) };
-    plan = extractJson(r.text);
+    try { plan = extractJson(r.text); } catch { throw new Error(`planner reply was not JSON: ${r.text.slice(0, 200)}`); }
     if (plan && plan.skip) return { desk: desk.id, status: 'no-submission', reason: String(plan.reason || '').slice(0, 600), usage };
   }
   const model = desk.model || roster.defaultModel;
   const maxTokens = desk.maxOutputTokens || roster.maxOutputTokens || 8000;
   const w = await callModel(fetchImpl, {
-    token, model, messages: buildMessages({ ...base, sources: writerSources, plan }), maxTokens, deskId: desk.id, timeoutMs: 150000,
+    token, model, messages: buildMessages({ ...base, sharedSources: writerSources, plan }), maxTokens, deskId: desk.id, timeoutMs: 150000,
   });
   usage.writer = { model, ...(w.usage || {}) };
-  const proposal = parseProposal(w.text);
+  let proposal;
+  try { proposal = parseProposal(w.text); } catch (e) { throw new Error(`writer: ${e.message}: ${w.text.slice(0, 200)}`); }
   if (proposal.skip) return { desk: desk.id, status: 'no-submission', reason: proposal.reason, usage };
   const receipt = await submitProposal(fetchImpl, { inboxUrl: env.NEWSROOM_URL || DEFAULT_INBOX, key, proposal });
   return { desk: desk.id, status: 'submitted', id: receipt.id, key: receipt.key, title: proposal.title, kind: proposal.kind, usage };
