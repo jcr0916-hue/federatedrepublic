@@ -22,7 +22,7 @@
   "desks": [
     {
       "id": "federal",
-      "name": "Federal desk",
+      "name": "Federal Realm desk",
       "jurisdiction": "Federal",
       "inboxDesk": "federal",
       "enabled": true,
@@ -37,7 +37,7 @@
     },
     {
       "id": "korda",
-      "name": "Korda Territorial desk",
+      "name": "Korda Realm desk",
       "jurisdiction": "Korda",
       "inboxDesk": "korda",
       "enabled": false,
@@ -45,11 +45,339 @@
         "tue",
         "fri"
       ],
-      "briefPath": "docs/torenthia/agents/korda/setup/01-KORDA-AGENT-INSTRUCTIONS.md",
+      "briefPath": "docs/torenthia/agents/korda/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/korda/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/korda/NOTES.md",
       "sources": [
-        "docs/torenthia/KORDA-TERRITORIAL-COMPACT.md"
+        "docs/torenthia/KORDA-TERRITORIAL-COMPACT.md",
+        "docs/torenthia/agents/korda/setup/05-KORDA-EDITORIAL-CONTEXT.md",
+        "docs/torenthia/agents/korda/setup/04-KORDA-PUBLISHED-REFERENCES.md"
+      ],
+      "everyWeeks": 1
+    },
+    {
+      "id": "arvane",
+      "name": "Arvane State desk",
+      "jurisdiction": "Arvane",
+      "inboxDesk": "arvane",
+      "enabled": false,
+      "days": [
+        "tue"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/arvane/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/arvane/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/arvane/NOTES.md",
+      "sources": [
+        "torenthia-state-arvane.html",
+        "State Constitutions/arvane-state-constitution.md"
+      ]
+    },
+    {
+      "id": "orath",
+      "name": "Orath State desk",
+      "jurisdiction": "Orath",
+      "inboxDesk": "orath",
+      "enabled": false,
+      "days": [
+        "wed"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/orath/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/orath/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/orath/NOTES.md",
+      "sources": [
+        "torenthia-state-orath.html",
+        "State Constitutions/orath-state-constitution.md"
+      ]
+    },
+    {
+      "id": "merath",
+      "name": "Merath State desk",
+      "jurisdiction": "Merath",
+      "inboxDesk": "merath",
+      "enabled": false,
+      "days": [
+        "thu"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 1,
+      "briefPath": "docs/torenthia/agents/merath/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/merath/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/merath/NOTES.md",
+      "sources": [
+        "torenthia-state-merath.html",
+        "State Constitutions/merath-state-constitution.md"
+      ]
+    },
+    {
+      "id": "corindal",
+      "name": "Corindal State desk",
+      "jurisdiction": "Corindal",
+      "inboxDesk": "corindal",
+      "enabled": false,
+      "days": [
+        "fri"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/corindal/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/corindal/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/corindal/NOTES.md",
+      "sources": [
+        "torenthia-state-corindal.html",
+        "State Constitutions/corindal-state-constitution.md"
+      ]
+    },
+    {
+      "id": "varek",
+      "name": "Varek State desk",
+      "jurisdiction": "Varek",
+      "inboxDesk": "varek",
+      "enabled": false,
+      "days": [
+        "sat"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/varek/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/varek/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/varek/NOTES.md",
+      "sources": [
+        "torenthia-state-varek.html",
+        "State Constitutions/varek-state-constitution.md"
+      ]
+    },
+    {
+      "id": "harren",
+      "name": "Harren State desk",
+      "jurisdiction": "Harren",
+      "inboxDesk": "harren",
+      "enabled": false,
+      "days": [
+        "sun"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 1,
+      "briefPath": "docs/torenthia/agents/harren/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/harren/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/harren/NOTES.md",
+      "sources": [
+        "torenthia-state-harren.html",
+        "State Constitutions/harren-state-constitution.md"
+      ]
+    },
+    {
+      "id": "aldenmere",
+      "name": "Aldenmere State desk",
+      "jurisdiction": "Aldenmere",
+      "inboxDesk": "aldenmere",
+      "enabled": false,
+      "days": [
+        "tue"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 1,
+      "briefPath": "docs/torenthia/agents/aldenmere/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/aldenmere/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/aldenmere/NOTES.md",
+      "sources": [
+        "torenthia-state-aldenmere.html",
+        "State Constitutions/aldenmere-state-constitution.md"
+      ]
+    },
+    {
+      "id": "caldenmere",
+      "name": "Caldenmere State desk",
+      "jurisdiction": "Caldenmere",
+      "inboxDesk": "caldenmere",
+      "enabled": false,
+      "days": [
+        "wed"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 1,
+      "briefPath": "docs/torenthia/agents/caldenmere/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/caldenmere/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/caldenmere/NOTES.md",
+      "sources": [
+        "torenthia-state-caldenmere.html",
+        "State Constitutions/caldenmere-state-constitution.md"
+      ]
+    },
+    {
+      "id": "kelvant",
+      "name": "Kelvant State desk",
+      "jurisdiction": "Kelvant",
+      "inboxDesk": "kelvant",
+      "enabled": false,
+      "days": [
+        "thu"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/kelvant/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/kelvant/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/kelvant/NOTES.md",
+      "sources": [
+        "torenthia-state-kelvant.html",
+        "State Constitutions/kelvant-state-constitution.md"
+      ]
+    },
+    {
+      "id": "selvane",
+      "name": "Selvane State desk",
+      "jurisdiction": "Selvane",
+      "inboxDesk": "selvane",
+      "enabled": false,
+      "days": [
+        "fri"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 1,
+      "briefPath": "docs/torenthia/agents/selvane/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/selvane/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/selvane/NOTES.md",
+      "sources": [
+        "torenthia-state-selvane.html",
+        "State Constitutions/selvane-state-constitution.md"
+      ]
+    },
+    {
+      "id": "rhovane",
+      "name": "Rhovane State desk",
+      "jurisdiction": "Rhovane",
+      "inboxDesk": "rhovane",
+      "enabled": false,
+      "days": [
+        "sat"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 1,
+      "briefPath": "docs/torenthia/agents/rhovane/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/rhovane/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/rhovane/NOTES.md",
+      "sources": [
+        "torenthia-state-rhovane.html",
+        "State Constitutions/rhovane-state-constitution.md"
+      ]
+    },
+    {
+      "id": "norvane",
+      "name": "Norvane State desk",
+      "jurisdiction": "Norvane",
+      "inboxDesk": "norvane",
+      "enabled": false,
+      "days": [
+        "sun"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/norvane/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/norvane/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/norvane/NOTES.md",
+      "sources": [
+        "torenthia-state-norvane.html",
+        "State Constitutions/norvane-state-constitution.md"
+      ]
+    },
+    {
+      "id": "solara",
+      "name": "Solara Territory desk",
+      "jurisdiction": "Solara",
+      "inboxDesk": "solara",
+      "enabled": false,
+      "days": [
+        "tue"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/solara/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/solara/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/solara/NOTES.md",
+      "sources": [
+        "territory-solara.html",
+        "torenthia/nrs/torenthia-nrs-109.html",
+        "torenthia/nrs/torenthia-nrs-110.html",
+        "torenthia/nrs/torenthia-nrs-130.html",
+        "torenthia/news/torenthia-news-134.html"
+      ]
+    },
+    {
+      "id": "morantine",
+      "name": "Morantine Territory desk",
+      "jurisdiction": "Morantine",
+      "inboxDesk": "morantine",
+      "enabled": false,
+      "days": [
+        "wed"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/morantine/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/morantine/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/morantine/NOTES.md",
+      "sources": [
+        "territory-morantine.html",
+        "torenthia/dispatches/torenthia-dispatch-sarn.html",
+        "torenthia/nrs/torenthia-nrs-048.html",
+        "torenthia/nrs/torenthia-nrs-120.html",
+        "torenthia/nrs/torenthia-nrs-133.html"
+      ]
+    },
+    {
+      "id": "verdmont",
+      "name": "Verdmont Territory desk",
+      "jurisdiction": "Verdmont",
+      "inboxDesk": "verdmont",
+      "enabled": false,
+      "days": [
+        "thu"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 1,
+      "briefPath": "docs/torenthia/agents/verdmont/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/verdmont/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/verdmont/NOTES.md",
+      "sources": [
+        "torenthia/nrs/torenthia-nrs-117.html"
+      ]
+    },
+    {
+      "id": "monitors",
+      "name": "Monitors desk",
+      "jurisdiction": "Federal institutions",
+      "inboxDesk": "monitors",
+      "enabled": false,
+      "days": [
+        "mon"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 1,
+      "briefPath": "docs/torenthia/agents/monitors/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/monitors/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/monitors/NOTES.md",
+      "sources": []
+    },
+    {
+      "id": "partisan-media",
+      "name": "Partisan Media desk",
+      "jurisdiction": "Republic-wide opinion",
+      "inboxDesk": "partisan-media",
+      "enabled": false,
+      "days": [
+        "fri"
+      ],
+      "everyWeeks": 2,
+      "weekOffset": 0,
+      "briefPath": "docs/torenthia/agents/partisan-media/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/partisan-media/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/partisan-media/NOTES.md",
+      "sources": [
+        "torenthia/news/torenthia-news-135.html",
+        "torenthia/news/torenthia-news-136.html"
       ]
     }
   ]
