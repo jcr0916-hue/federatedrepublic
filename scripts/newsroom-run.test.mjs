@@ -52,6 +52,16 @@ test('roster on main parses and every enabled desk has its files', () => {
   }
 });
 
+test('every roster desk, enabled or not, has its brief, notes, assignments and sources', () => {
+  const roster = JSON.parse(fs.readFileSync(core.ROSTER_PATH, 'utf8'));
+  const ids = new Set();
+  for (const d of roster.desks) {
+    assert.ok(!ids.has(d.id), `duplicate desk ${d.id}`); ids.add(d.id);
+    for (const p of [d.briefPath, d.assignmentsPath, d.notesPath, ...d.sources]) assert.ok(fs.existsSync(p), `${d.id}: ${p}`);
+    assert.ok(d.days.length > 0, d.id);
+  }
+});
+
 test('only desks scheduled for today run', () => {
   const roster = { desks: [{ id: 'federal', enabled: true, days: ['mon'] }, { id: 'korda', enabled: false, days: ['mon'] }] };
   assert.deepEqual(core.dueDesks(roster, MONDAY).map((d) => d.id), ['federal']);
