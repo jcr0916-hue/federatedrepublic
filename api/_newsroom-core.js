@@ -1,11 +1,13 @@
 // Torenthia newsroom v1 — scheduled desk runs.
 //
-// Each run: read the desk roster and canon from GitHub `main`, ask one model
+// Each run: read the desk roster and canon from one GitHub `main` commit, ask the models
 // (through Vercel AI Gateway) for one proposal, and file it in the existing
 // Cloudflare newsroom inbox as PROPOSED. Nothing here writes to GitHub or
 // publishes anything. The Central Editor reviews the inbox; John merges.
 
-const REPO_RAW = 'https://raw.githubusercontent.com/jcr0916-hue/federatedrepublic/main/';
+const REPO = 'jcr0916-hue/federatedrepublic';
+const RAW_BASE = `https://raw.githubusercontent.com/${REPO}/`;
+const REPO_RAW = RAW_BASE + 'main/';
 const ROSTER_PATH = 'docs/torenthia/agents/desks.json';
 const DEFAULT_INBOX = 'https://federated-republic-newsroom.jcr0916.workers.dev';
 const GATEWAY_URL = 'https://ai-gateway.vercel.sh/v1/chat/completions';
@@ -22,16 +24,27 @@ function dueDesks(roster, now, only) {
     && (!(d.everyWeeks > 1) || (week + (d.weekOffset || 0)) % d.everyWeeks === 0));
 }
 
-async function loadText(fetchImpl, path, maxChars) {
-  const res = await fetchImpl(REPO_RAW + path);
+// Every file in a run is read at the same commit, so a merge mid-run cannot mix versions.
+async function resolveCommit(fetchImpl) {
+  try {
+    const res = await fetchImpl(`https://api.github.com/repos/${REPO}/commits/main`, {
+      headers: { Accept: 'application/vnd.github.sha', 'User-Agent': 'federatedrepublic-newsroom' },
+    });
+    const sha = res.ok ? (await res.text()).trim() : '';
+    return /^[0-9a-f]{40}$/.test(sha) ? sha : 'main';
+  } catch { return 'main'; }
+}
+
+async function loadText(fetchImpl, path, maxChars, ref = 'main') {
+  const res = await fetchImpl(RAW_BASE + ref + '/' + path);
   if (!res.ok) throw new Error(`could not read ${path} (${res.status})`);
   const text = await res.text();
   return maxChars && text.length > maxChars ? text.slice(0, maxChars) + '\n\n[truncated]' : text;
 }
 
-async function loadOptional(fetchImpl, path, maxChars) {
+async function loadOptional(fetchImpl, path, maxChars, ref) {
   if (!path) return '';
-  try { return await loadText(fetchImpl, path, maxChars); } catch { return ''; }
+  try { return await loadText(fetchImpl, path, maxChars, ref); } catch { return ''; }
 }
 
 // Prompt layout for caching: everything identical across desks (rules, then the
@@ -159,15 +172,25 @@ async function submitProposal(fetchImpl, { inboxUrl, key, proposal }) {
   return data;
 }
 
-// Confirm the desk's inbox key works before any paid model call.
-async function checkInboxKey(fetchImpl, { inboxUrl, key }) {
-  const res = await fetchImpl(inboxUrl.replace(/\/$/, '') + '/v1/list?limit=1', {
-    headers: { Authorization: `Bearer ${key}` },
-  });
-  if (!res.ok) throw new Error(`inbox key check failed (${res.status}); no model was called`);
+// Before any paid call: confirm the desk's inbox key works, and find whether
+// the desk already filed today (Vercel Schedules can deliver a run twice).
+async function filedToday(fetchImpl, { inboxUrl, key, now }) {
+  const day = now.toISOString().slice(0, 10);
+  let cursor = '';
+  for (let page = 0; page < 20; page++) {
+    const url = inboxUrl.replace(/\/$/, '') + '/v1/list?limit=100' + (cursor ? `&cursor=${encodeURIComponent(cursor)}` : '');
+    const res = await fetchImpl(url, { headers: { Authorization: `Bearer ${key}` } });
+    if (!res.ok) throw new Error(`inbox key check failed (${res.status}); no model was called`);
+    const data = await res.json().catch(() => ({}));
+    const hit = (data.items || []).find((i) => String(i.submittedAt || '').startsWith(day));
+    if (hit) return hit;
+    if (!data.more || !data.cursor) return null;
+    cursor = data.cursor;
+  }
+  return null;
 }
 
-async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
+async function runDesk(desk, { roster, env, fetchImpl, now, dryRun, ref = 'main' }) {
   const key = env[`NEWSROOM_KEY_${String(desk.inboxDesk || '').toUpperCase()}`];
   const token = env.AI_GATEWAY_API_KEY || env.VERCEL_OIDC_TOKEN;
   if (!dryRun && !key) return { desk: desk.id, status: 'skipped', reason: 'no inbox key configured' };
@@ -179,7 +202,7 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
     const out = [];
     let used = 0;
     for (const path of paths) {
-      if (!cache.has(path)) cache.set(path, await loadOptional(fetchImpl, path));
+      if (!cache.has(path)) cache.set(path, await loadOptional(fetchImpl, path, undefined, ref));
       let text = cache.get(path);
       if (!text) continue;
       if (used + text.length > max) text = text.slice(0, Math.max(0, max - used)) + '\n\n[truncated]';
@@ -189,10 +212,10 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
     }
     return out;
   };
-  const rules = await loadText(fetchImpl, roster.rulesPath);
-  const brief = await loadText(fetchImpl, desk.briefPath);
-  const assignments = await loadOptional(fetchImpl, desk.assignmentsPath, 20000);
-  const notes = await loadOptional(fetchImpl, desk.notesPath, 20000);
+  const rules = await loadText(fetchImpl, roster.rulesPath, undefined, ref);
+  const brief = await loadText(fetchImpl, desk.briefPath, undefined, ref);
+  const assignments = await loadOptional(fetchImpl, desk.assignmentsPath, 20000, ref);
+  const notes = await loadOptional(fetchImpl, desk.notesPath, 20000, ref);
   const deskSources = await load(desk.sources || [], 80000);
   const base = { desk, rules, brief, assignments, notes, now, deskSources };
   const writerSources = await load(roster.sharedSources || [], limit);
@@ -213,7 +236,8 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
   }
 
   const inboxUrl = env.NEWSROOM_URL || DEFAULT_INBOX;
-  await checkInboxKey(fetchImpl, { inboxUrl, key });
+  const already = await filedToday(fetchImpl, { inboxUrl, key, now });
+  if (already) return { desk: desk.id, status: 'already-filed', id: already.id, reason: 'this desk already filed today' };
   const usage = {};
   let plan = null;
   if (planner) {
@@ -234,18 +258,20 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
   let proposal;
   try { proposal = parseProposal(w.text); } catch (e) { throw new Error(`writer: ${e.message}: ${w.text.slice(0, 200)}`); }
   if (proposal.skip) return { desk: desk.id, status: 'no-submission', reason: proposal.reason, usage };
+  if (ref !== 'main') proposal.sourceRefs = [`commit:${ref}`, ...proposal.sourceRefs].slice(0, 15);
   const receipt = await submitProposal(fetchImpl, { inboxUrl, key, proposal });
   return { desk: desk.id, status: 'submitted', id: receipt.id, key: receipt.key, title: proposal.title, kind: proposal.kind, usage };
 }
 
 async function runNewsroom({ env = process.env, fetchImpl = fetch, now = new Date(), only = '', dryRun = false } = {}) {
-  const roster = JSON.parse(await loadText(fetchImpl, ROSTER_PATH));
-  if (roster.paused) return { paused: true, results: [] };
+  const ref = await resolveCommit(fetchImpl);
+  const roster = JSON.parse(await loadText(fetchImpl, ROSTER_PATH, undefined, ref));
+  if (roster.paused) return { paused: true, commit: ref, results: [] };
   const desks = dueDesks(roster, now, only);
   const results = await Promise.all(desks.map((d) =>
-    runDesk(d, { roster, env, fetchImpl, now, dryRun })
+    runDesk(d, { roster, env, fetchImpl, now, dryRun, ref })
       .catch((e) => ({ desk: d.id, status: 'failed', error: String(e.message || e).slice(0, 300) }))));
-  return { paused: false, date: now.toISOString(), results };
+  return { paused: false, date: now.toISOString(), commit: ref, results };
 }
 
-module.exports = { dueDesks, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
+module.exports = { RAW_BASE, dueDesks, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };

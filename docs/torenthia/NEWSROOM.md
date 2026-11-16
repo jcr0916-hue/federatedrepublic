@@ -10,6 +10,8 @@ Each desk speaks for one jurisdiction or institution. Desks propose; the Central
 4. The draft goes to the existing Cloudflare inbox as `PROPOSED`, under that desk's name.
 5. The Central Editor reviews the inbox, updates each desk's `NOTES.md` and `ASSIGNMENTS.md`, and stages accepted items as a normal draft PR. John merges.
 
+Each run reads every file at one `main` commit, recorded as `commit:<sha>` in the submission's `sourceRefs`. Before any model call, each desk confirms its inbox key works and that it hasn't already filed that day, so a duplicate delivery costs nothing. A run with any failed desk returns an error, so it shows in the schedule's history and error rate. Vercel doesn't retry failed runs.
+
 Nothing runs on anyone's computer. Nothing an agent writes reaches GitHub or the website without the editor and John.
 
 ## Controls

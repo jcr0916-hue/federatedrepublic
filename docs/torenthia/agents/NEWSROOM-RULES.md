@@ -25,5 +25,6 @@ You are an independent desk in the newsroom of the Federated Republic of Torenth
 
 ## Quality
 - One strong, specific item beats several thin ones. If nothing is worth writing, say so.
+- Tell a story, not a status report. Recaps of what is known and still open are not useful; show the system through a specific person, place, document or dispute.
 - Ground every story in concrete detail: a place, a person, a document, a schedule, a cost.
 - Name your sources in `sourceRefs` using repository paths.
