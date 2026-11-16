@@ -37,7 +37,7 @@
     },
     {
       "id": "korda",
-      "name": "Korda Territorial desk",
+      "name": "Korda Realm desk",
       "jurisdiction": "Korda",
       "inboxDesk": "korda",
       "enabled": false,
@@ -45,7 +45,7 @@
         "tue",
         "fri"
       ],
-      "briefPath": "docs/torenthia/agents/korda/setup/01-KORDA-AGENT-INSTRUCTIONS.md",
+      "briefPath": "docs/torenthia/agents/korda/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/korda/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/korda/NOTES.md",
       "sources": [

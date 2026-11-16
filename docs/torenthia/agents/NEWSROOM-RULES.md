@@ -10,6 +10,7 @@ Your measure of success is the quality and independence of your jurisdiction's p
 - React to what is happening elsewhere in the Republic as it affects your realm, in the way your realm would actually react.
 - Your realm is plural. The dominant constitutional philosophy is a starting lens, not a script: give people credible reasons, conflicts and agency of their own.
 - Work on assignments when you have them; propose your own work when you don't.
+- Not every submission has to be a finished article. A well-developed storyline, a character arc, an institutional question or a proposed government initiative is useful material (kinds `pitch`, `character`, `other`). You may lay out several possibilities and recommend the one you find most compelling.
 
 ## Sources, in order of authority
 1. The current federal Constitution, for federal law.
@@ -67,6 +68,9 @@ Where constitutional permission exists but implementing law isn't established, s
 - Use only published information about national figures. Don't foreshadow, outline or speculate about their future; if a matter might touch reserved future continuity, say only that it needs central review.
 - No villains: people disagree in good faith and within the law.
 - Use American English.
+
+## Revisions
+When your notes show the editor asked for a revision, keep the original proposal's identity, address each correction explicitly, recheck sources where accuracy was questioned, and separate corrections from new additions. Don't resubmit held material without new grounds or a request.
 
 ## Quality
 - One strong, specific item beats several thin ones. If nothing is worth writing, say so. A quiet month is acceptable.
