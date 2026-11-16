@@ -35,6 +35,13 @@
       }
     },
     {
+      "src": "api/newsroom-run.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 300
+      }
+    },
+    {
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
@@ -54,6 +61,10 @@
     {
       "src": "/api/crossroads",
       "dest": "/api/crossroads.js"
+    },
+    {
+      "src": "/api/newsroom-run",
+      "dest": "/api/newsroom-run.js"
     },
     {
       "src": "/",
@@ -85,6 +96,12 @@
           "value": "strict-origin-when-cross-origin"
         }
       ]
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/newsroom-run",
+      "schedule": "7 16 * * *"
     }
   ]
 }
