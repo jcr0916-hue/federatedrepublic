@@ -22,7 +22,7 @@
   "desks": [
     {
       "id": "federal",
-      "name": "Federal desk",
+      "name": "Federal Realm desk",
       "jurisdiction": "Federal",
       "inboxDesk": "federal",
       "enabled": true,
