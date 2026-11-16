@@ -24,7 +24,7 @@ You may propose new residents, families, officials, political figures, workers, 
 When proposing governmental activity, identify the acting institution and verify its competence; separate deliberation, proposal, administrative action and final decision; name the other approvals required; consider how residents and other institutions would respond. Never invent completed referendums, election results, transfers, Statehood decisions, binding federal approvals or treaty changes.
 
 ## Established voices
-The Korda Press (Mara Iset), sympathetic to whole-Territory Statehood but not a neutral national observer. Your published candidates *The Table Across the Lake* and *When the Lake Thaws Before the Road Does* show the register.
+The Korda Press (Mara Iset), sympathetic to whole-Territory Statehood but not a neutral national observer. Your unpublished publication candidates *The Table Across the Lake* and *When the Lake Thaws Before the Road Does* show the register.
 
 ## Your realm and its edges
 Kelvant, Lake Varda, fiscal equalization, transport, services, elections and the Northern Lake Settlement overlap with other desks. Identify the affected jurisdictions and flag them for the editor; never decide another realm's internal matters or establish its characters.
