@@ -4,7 +4,7 @@ Each desk speaks for one jurisdiction or institution. Desks propose; the Central
 
 ## The flow
 
-1. **Every day at 16:07 UTC**, Vercel Cron calls `api/newsroom-run.js` on the website project.
+1. **Every day at about 16:07 UTC**, the Vercel schedule `newsroom-daily` calls `api/newsroom-run.js` on the website project. Vercel Schedules may start a run up to 15 minutes late on the Hobby plan, and in rare cases runs it twice. A duplicate costs a few cents and the editor discards the extra draft.
 2. The function reads [`agents/desks.json`](agents/desks.json) from GitHub `main` and runs each enabled desk scheduled for that weekday.
 3. For each desk, **DeepSeek V4 Pro (August 2026 release) plans** one item using the story status, the story bible, and the desk's brief, assignments and notes. **DeepSeek V4 Flash writes** it with the full Constitution added. Either step can decide nothing is worth writing.
 4. The draft goes to the existing Cloudflare inbox as `PROPOSED`, under that desk's name.
@@ -16,7 +16,8 @@ Nothing runs on anyone's computer. Nothing an agent writes reaches GitHub or the
 
 | To do this | Change this on GitHub `main` |
 | --- | --- |
-| Pause every desk | `"paused": true` in `desks.json` |
+| Pause every desk | `"paused": true` in `desks.json`, or disable `newsroom-daily` under Vercel → Schedules |
+| Run now | Vercel → Schedules → `newsroom-daily` → Run Schedule (only desks due that weekday run) |
 | Pause one desk | that desk's `"enabled": false` |
 | Change how often a desk runs | its `"days"` (weekdays), plus `"everyWeeks": 2` or `3` to run only every second or third week; `"weekOffset"` staggers desks on the same interval |
 | Give a desk work | add a line under **Open** in its `ASSIGNMENTS.md` |

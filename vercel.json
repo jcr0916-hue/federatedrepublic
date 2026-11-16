@@ -98,10 +98,11 @@
       ]
     }
   ],
-  "crons": [
-    {
+  "schedules": {
+    "newsroom-daily": {
+      "schedule": "7 16 * * *",
       "path": "/api/newsroom-run",
-      "schedule": "7 16 * * *"
+      "requestMethod": "GET"
     }
-  ]
+  }
 }
