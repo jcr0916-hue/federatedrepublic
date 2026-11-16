@@ -154,6 +154,14 @@ async function submitProposal(fetchImpl, { inboxUrl, key, proposal }) {
   return data;
 }
 
+// Confirm the desk's inbox key works before any paid model call.
+async function checkInboxKey(fetchImpl, { inboxUrl, key }) {
+  const res = await fetchImpl(inboxUrl.replace(/\/$/, '') + '/v1/list?limit=1', {
+    headers: { Authorization: `Bearer ${key}` },
+  });
+  if (!res.ok) throw new Error(`inbox key check failed (${res.status}); no model was called`);
+}
+
 async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
   const key = env[`NEWSROOM_KEY_${String(desk.inboxDesk || '').toUpperCase()}`];
   const token = env.AI_GATEWAY_API_KEY || env.VERCEL_OIDC_TOKEN;
@@ -199,6 +207,8 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
     };
   }
 
+  const inboxUrl = env.NEWSROOM_URL || DEFAULT_INBOX;
+  await checkInboxKey(fetchImpl, { inboxUrl, key });
   const usage = {};
   let plan = null;
   if (planner) {
@@ -219,7 +229,7 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
   let proposal;
   try { proposal = parseProposal(w.text); } catch (e) { throw new Error(`writer: ${e.message}: ${w.text.slice(0, 200)}`); }
   if (proposal.skip) return { desk: desk.id, status: 'no-submission', reason: proposal.reason, usage };
-  const receipt = await submitProposal(fetchImpl, { inboxUrl: env.NEWSROOM_URL || DEFAULT_INBOX, key, proposal });
+  const receipt = await submitProposal(fetchImpl, { inboxUrl, key, proposal });
   return { desk: desk.id, status: 'submitted', id: receipt.id, key: receipt.key, title: proposal.title, kind: proposal.kind, usage };
 }
 

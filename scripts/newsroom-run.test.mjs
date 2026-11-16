@@ -10,7 +10,7 @@ const MONDAY = new Date('2026-11-16T16:07:00Z');
 const TUESDAY = new Date('2026-11-17T16:07:00Z');
 
 // Serve repository files from the working tree in place of raw.githubusercontent.com.
-function fakeFetch({ planReply, writeReply, inboxStatus = 201 } = {}) {
+function fakeFetch({ planReply, writeReply, inboxStatus = 201, keyOk = true } = {}) {
   const calls = { gateway: [], inbox: [], raw: [] };
   const impl = async (url, init = {}) => {
     if (url.startsWith(core.REPO_RAW)) {
@@ -25,6 +25,10 @@ function fakeFetch({ planReply, writeReply, inboxStatus = 201 } = {}) {
       const isPlan = body.messages[1].content.includes('## Your task: plan, do not write');
       const reply = isPlan ? planReply : writeReply;
       return Response.json({ choices: [{ message: { content: JSON.stringify(reply) } }], usage: { prompt_tokens: 10, completion_tokens: 5 } });
+    }
+    if (url.includes('/v1/list')) {
+      calls.check = (calls.check || 0) + 1;
+      return Response.json({ items: [] }, { status: keyOk ? 200 : 401 });
     }
     if (url.endsWith('/v1/submit')) {
       calls.inbox.push({ auth: init.headers.Authorization, body: JSON.parse(init.body) });
@@ -72,6 +76,20 @@ test('Pro plans, Flash writes, and one proposal reaches the federal inbox', asyn
   assert.equal(calls.inbox.length, 1);
   assert.equal(calls.inbox[0].auth, 'Bearer fed-key');
   assert.match(calls.inbox[0].body.body, /Notes for the editor:\nNew name: Ilse Marr\./);
+});
+
+test('a rejected inbox key stops the desk before any model call', async () => {
+  const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, keyOk: false });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  assert.equal(out.results[0].status, 'failed');
+  assert.match(out.results[0].error, /inbox key check failed \(401\)/);
+  assert.equal(calls.gateway.length, 0);
+});
+
+test('vercel.json schedules the run once, as a GET, with no legacy cron', () => {
+  const v = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
+  assert.equal(v.crons, undefined);
+  assert.deepEqual(v.schedules['newsroom-daily'], { schedule: '7 16 * * *', path: '/api/newsroom-run', requestMethod: 'GET' });
 });
 
 test('a planner skip means no writer call and no submission', async () => {
