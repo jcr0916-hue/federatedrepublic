@@ -316,7 +316,9 @@
       "assignmentsPath": "docs/torenthia/agents/morantine/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/morantine/NOTES.md",
       "sources": [
-        "territory-morantine.html"
+        "territory-morantine.html",
+        "torenthia/dispatches/torenthia-dispatch-sarn.html",
+        "torenthia/nrs/torenthia-nrs-048.html"
       ]
     },
     {
