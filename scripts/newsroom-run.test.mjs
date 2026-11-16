@@ -63,10 +63,12 @@ test('Pro plans, Flash writes, and one proposal reaches the federal inbox', asyn
   assert.equal(out.results.length, 1);
   const r = out.results[0];
   assert.equal(r.status, 'submitted');
-  assert.deepEqual(calls.gateway.map((g) => g.model), ['deepseek/deepseek-v4-pro', 'deepseek/deepseek-v4-flash']);
+  assert.deepEqual(calls.gateway.map((g) => g.model), ['deepseek/deepseek-v4-pro-0813', 'deepseek/deepseek-v4-flash']);
   assert.ok(calls.gateway[1].messages[1].content.includes('"workingTitle": "T"'), 'writer receives the plan');
-  assert.ok(!calls.gateway[0].messages[1].content.includes('docs/constitution-current.md'), 'planner skips the full constitution');
-  assert.ok(calls.gateway[1].messages[1].content.includes('## Source: docs/constitution-current.md'), 'writer gets the constitution');
+  assert.ok(!JSON.stringify(calls.gateway[0].messages).includes('## Source: docs/constitution-current.md'), 'planner skips the full constitution');
+  assert.ok(calls.gateway[1].messages[0].content.includes('## Source: docs/constitution-current.md'), 'writer gets the constitution');
+  assert.ok(calls.gateway[0].messages[0].content.startsWith('# Torenthia newsroom'), 'shared rules lead the prompt');
+  assert.ok(calls.gateway[0].messages[1].content.startsWith('# Your desk: Federal desk'), 'desk material follows');
   assert.equal(calls.inbox.length, 1);
   assert.equal(calls.inbox[0].auth, 'Bearer fed-key');
   assert.match(calls.inbox[0].body.body, /Notes for the editor:\nNew name: Ilse Marr\./);
@@ -102,6 +104,23 @@ test('dry run reads sources and calls nothing paid', async () => {
   assert.equal(r.status, 'dry-run');
   assert.equal(calls.gateway.length + calls.inbox.length, 0);
   assert.ok(r.writerChars > r.plannerChars && r.writerChars <= 400000, `writer ${r.writerChars}, planner ${r.plannerChars}`);
+});
+
+test('every-few-weeks desks run only on their week', () => {
+  const desk = { id: 'varek', enabled: true, days: ['mon'], everyWeeks: 3 };
+  const mondays = [0, 1, 2, 3, 4, 5].map((i) => new Date(MONDAY.getTime() + i * 7 * 86400000));
+  const runs = mondays.map((d) => core.dueDesks({ desks: [desk] }, d).length);
+  assert.equal(runs.reduce((a, b) => a + b, 0), 2, `ran ${runs.join(',')}`);
+  const shifted = mondays.map((d) => core.dueDesks({ desks: [{ ...desk, weekOffset: 1 }] }, d).length);
+  assert.notDeepEqual(runs, shifted);
+});
+
+test('two desks share an identical, cacheable system prompt', () => {
+  const common = { rules: 'R', sharedSources: [{ path: 'a.md', text: 'A' }], assignments: '', notes: '', now: MONDAY };
+  const a = core.buildPlanMessages({ ...common, desk: { name: 'Federal desk' }, brief: 'F' });
+  const b = core.buildPlanMessages({ ...common, desk: { name: 'Korda desk' }, brief: 'K' });
+  assert.equal(a[0].content, b[0].content);
+  assert.notEqual(a[1].content, b[1].content);
 });
 
 test('JSON wrapped in a code fence still parses', () => {

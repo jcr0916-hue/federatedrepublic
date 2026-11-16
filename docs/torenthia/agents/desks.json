@@ -11,7 +11,7 @@
     "docs/constitution-current.md"
   ],
   "planner": {
-    "model": "deepseek/deepseek-v4-pro",
+    "model": "deepseek/deepseek-v4-pro-0813",
     "maxOutputTokens": 10000,
     "maxSourceChars": 160000,
     "sources": [
