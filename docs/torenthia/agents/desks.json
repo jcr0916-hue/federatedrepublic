@@ -22,7 +22,7 @@
   "desks": [
     {
       "id": "federal",
-      "name": "Federal desk",
+      "name": "Federal Realm desk",
       "jurisdiction": "Federal",
       "inboxDesk": "federal",
       "enabled": true,
@@ -37,7 +37,7 @@
     },
     {
       "id": "korda",
-      "name": "Korda Territorial desk",
+      "name": "Korda Realm desk",
       "jurisdiction": "Korda",
       "inboxDesk": "korda",
       "enabled": false,
@@ -45,7 +45,7 @@
         "tue",
         "fri"
       ],
-      "briefPath": "docs/torenthia/agents/korda/setup/01-KORDA-AGENT-INSTRUCTIONS.md",
+      "briefPath": "docs/torenthia/agents/korda/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/korda/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/korda/NOTES.md",
       "sources": [
@@ -298,7 +298,11 @@
       "assignmentsPath": "docs/torenthia/agents/solara/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/solara/NOTES.md",
       "sources": [
-        "territory-solara.html"
+        "territory-solara.html",
+        "torenthia/nrs/torenthia-nrs-109.html",
+        "torenthia/nrs/torenthia-nrs-110.html",
+        "torenthia/nrs/torenthia-nrs-130.html",
+        "torenthia/news/torenthia-news-134.html"
       ]
     },
     {
@@ -316,7 +320,11 @@
       "assignmentsPath": "docs/torenthia/agents/morantine/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/morantine/NOTES.md",
       "sources": [
-        "territory-morantine.html"
+        "territory-morantine.html",
+        "torenthia/dispatches/torenthia-dispatch-sarn.html",
+        "torenthia/nrs/torenthia-nrs-048.html",
+        "torenthia/nrs/torenthia-nrs-120.html",
+        "torenthia/nrs/torenthia-nrs-133.html"
       ]
     },
     {
@@ -333,7 +341,9 @@
       "briefPath": "docs/torenthia/agents/verdmont/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/verdmont/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/verdmont/NOTES.md",
-      "sources": []
+      "sources": [
+        "torenthia/nrs/torenthia-nrs-117.html"
+      ]
     },
     {
       "id": "monitors",

@@ -94,7 +94,7 @@ function buildMessages(ctx) {
       'If nothing worthwhile exists, return {"skip": true, "reason": "..."}.');
   }
   parts.push(
-    `${plan ? 'Return' : 'Otherwise return'} only a JSON object with keys: "kind" (one of ${KINDS.join(', ')}), "title", "summary" (1–2 sentences), "body" (the full draft), "sourceRefs" (repo paths you relied on), and "notesForEditor" (new names, open questions, anything the editor must check).`);
+    `${plan ? 'Return' : 'Otherwise return'} only a JSON object with keys: "kind" (one of ${KINDS.join(', ')}), "title", "summary" (1–2 sentences), "body" (the full draft), "sourceRefs" (repo paths you relied on), and "notesForEditor" (a short ledger: established facts with their source paths; new names, places and figures you propose; unresolved points; affected jurisdictions and dependencies; anything the editor must check; your recommendation: USE, HOLD, REVISE or DISCARD).`);
   return [
     { role: 'system', content: system },
     { role: 'user', content: parts.join('\n') },
