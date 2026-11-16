@@ -116,12 +116,20 @@ test('every file in a run is read at one pinned commit, and the commit is record
   assert.equal(calls.inbox[0].body.sourceRefs[0], `commit:${SHA}`);
 });
 
-test('a desk that already filed today is skipped before any model call', async () => {
-  const existing = [{ id: 'x1', submittedAt: '2026-11-16T06:23:21.206Z' }];
+test('a desk that filed within the last six hours is skipped before any model call', async () => {
+  const existing = [{ id: 'x1', submittedAt: '2026-11-16T15:58:00.000Z' }];
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
   const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
   assert.equal(out.results[0].status, 'already-filed');
   assert.equal(calls.gateway.length, 0);
+});
+
+test('an earlier filing on the same UTC day, more than six hours ago, does not block a new run', async () => {
+  const existing = [{ id: 'x2', submittedAt: '2026-11-16T06:23:21.206Z' }];
+  const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  assert.equal(out.results[0].status, 'submitted');
+  assert.equal(calls.inbox.length, 1);
 });
 
 test('a filing from an earlier day does not block today', async () => {
