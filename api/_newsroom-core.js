@@ -173,16 +173,21 @@ async function submitProposal(fetchImpl, { inboxUrl, key, proposal }) {
 }
 
 // Before any paid call: confirm the desk's inbox key works, and find whether
-// the desk already filed today (Vercel Schedules can deliver a run twice).
-async function filedToday(fetchImpl, { inboxUrl, key, now }) {
-  const day = now.toISOString().slice(0, 10);
+// the desk filed within the last few hours. Vercel Schedules can deliver a run
+// twice, minutes apart; a separate run earlier the same day still counts as new.
+const RECENT_MS = 6 * 3600 * 1000;
+async function filedRecently(fetchImpl, { inboxUrl, key, now }) {
+  const since = now.getTime() - RECENT_MS;
   let cursor = '';
   for (let page = 0; page < 20; page++) {
     const url = inboxUrl.replace(/\/$/, '') + '/v1/list?limit=100' + (cursor ? `&cursor=${encodeURIComponent(cursor)}` : '');
     const res = await fetchImpl(url, { headers: { Authorization: `Bearer ${key}` } });
     if (!res.ok) throw new Error(`inbox key check failed (${res.status}); no model was called`);
     const data = await res.json().catch(() => ({}));
-    const hit = (data.items || []).find((i) => String(i.submittedAt || '').startsWith(day));
+    const hit = (data.items || []).find((i) => {
+      const t = Date.parse(i.submittedAt || '');
+      return Number.isFinite(t) && t >= since && t <= now.getTime() + 60000;
+    });
     if (hit) return hit;
     if (!data.more || !data.cursor) return null;
     cursor = data.cursor;
@@ -236,8 +241,8 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun, ref = 'main'
   }
 
   const inboxUrl = env.NEWSROOM_URL || DEFAULT_INBOX;
-  const already = await filedToday(fetchImpl, { inboxUrl, key, now });
-  if (already) return { desk: desk.id, status: 'already-filed', id: already.id, reason: 'this desk already filed today' };
+  const already = await filedRecently(fetchImpl, { inboxUrl, key, now });
+  if (already) return { desk: desk.id, status: 'already-filed', id: already.id, reason: 'this desk filed within the last 6 hours' };
   const usage = {};
   let plan = null;
   if (planner) {
