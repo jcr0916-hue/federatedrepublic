@@ -10,11 +10,17 @@ const MONDAY = new Date('2026-11-16T16:07:00Z');
 const TUESDAY = new Date('2026-11-17T16:07:00Z');
 
 // Serve repository files from the working tree in place of raw.githubusercontent.com.
-function fakeFetch({ planReply, writeReply, inboxStatus = 201, keyOk = true } = {}) {
-  const calls = { gateway: [], inbox: [], raw: [] };
+const SHA = 'a'.repeat(40);
+
+function fakeFetch({ planReply, writeReply, inboxStatus = 201, keyOk = true, existing = [] } = {}) {
+  const calls = { gateway: [], inbox: [], raw: [], refs: new Set() };
   const impl = async (url, init = {}) => {
-    if (url.startsWith(core.REPO_RAW)) {
-      const path = url.slice(core.REPO_RAW.length);
+    if (url.startsWith('https://api.github.com/')) return new Response(SHA, { status: 200 });
+    if (url.startsWith(core.RAW_BASE)) {
+      const rest = url.slice(core.RAW_BASE.length);
+      const ref = rest.slice(0, rest.indexOf('/'));
+      const path = rest.slice(ref.length + 1);
+      calls.refs.add(ref);
       calls.raw.push(path);
       if (!fs.existsSync(path)) return new Response('missing', { status: 404 });
       return new Response(fs.readFileSync(path, 'utf8'), { status: 200 });
@@ -28,7 +34,7 @@ function fakeFetch({ planReply, writeReply, inboxStatus = 201, keyOk = true } = 
     }
     if (url.includes('/v1/list')) {
       calls.check = (calls.check || 0) + 1;
-      return Response.json({ items: [] }, { status: keyOk ? 200 : 401 });
+      return Response.json({ items: existing, more: false, cursor: null }, { status: keyOk ? 200 : 401 });
     }
     if (url.endsWith('/v1/submit')) {
       calls.inbox.push({ auth: init.headers.Authorization, body: JSON.parse(init.body) });
@@ -90,6 +96,36 @@ test('vercel.json schedules the run once, as a GET, with no legacy cron', () => 
   const v = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
   assert.equal(v.crons, undefined);
   assert.deepEqual(v.schedules['newsroom-daily'], { schedule: '7 16 * * *', path: '/api/newsroom-run', requestMethod: 'GET' });
+});
+
+test('every file in a run is read at one pinned commit, and the commit is recorded', async () => {
+  const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  assert.equal(out.commit, SHA);
+  assert.deepEqual([...calls.refs], [SHA]);
+  assert.equal(calls.inbox[0].body.sourceRefs[0], `commit:${SHA}`);
+});
+
+test('a desk that already filed today is skipped before any model call', async () => {
+  const existing = [{ id: 'x1', submittedAt: '2026-11-16T06:23:21.206Z' }];
+  const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  assert.equal(out.results[0].status, 'already-filed');
+  assert.equal(calls.gateway.length, 0);
+});
+
+test('a filing from an earlier day does not block today', async () => {
+  const existing = [{ id: 'x0', submittedAt: '2026-11-13T16:20:00.000Z' }];
+  const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  assert.equal(out.results[0].status, 'submitted');
+  assert.equal(calls.inbox.length, 1);
+});
+
+test('the handler returns 500 when any desk fails and 200 otherwise', async () => {
+  const handlerPath = new URL('../api/newsroom-run.js', import.meta.url).pathname;
+  const src = fs.readFileSync(handlerPath, 'utf8');
+  assert.match(src, /res\.status\(failed\.length \? 500 : 200\)/);
 });
 
 test('a planner skip means no writer call and no submission', async () => {
