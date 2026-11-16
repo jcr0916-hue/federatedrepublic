@@ -138,6 +138,11 @@ async function callModel(fetchImpl, { token, model, messages, maxTokens, timeout
       throw new Error(`empty reply from ${model} (finish_reason=${choice.finish_reason || 'unknown'}, completion_tokens=${data?.usage?.completion_tokens ?? '?'})`);
     }
     return { text, usage: data?.usage || null };
+  } catch (e) {
+    if (e?.name === 'AbortError' || /aborted/i.test(String(e?.message))) {
+      throw new Error(`${model} did not finish within ${Math.round(timeoutMs / 1000)}s`);
+    }
+    throw e;
   } finally {
     clearTimeout(timer);
   }
@@ -214,7 +219,7 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
   if (planner) {
     const r = await callModel(fetchImpl, {
       token, model: planner.model, messages: buildPlanMessages({ ...base, sharedSources: plannerSources }),
-      maxTokens: planner.maxOutputTokens || 3000, deskId: desk.id, timeoutMs: 110000,
+      maxTokens: planner.maxOutputTokens || 3000, deskId: desk.id, timeoutMs: 175000,
     });
     usage.planner = { model: planner.model, ...(r.usage || {}) };
     try { plan = extractJson(r.text); } catch { throw new Error(`planner reply was not JSON: ${r.text.slice(0, 200)}`); }
@@ -223,7 +228,7 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun }) {
   const model = desk.model || roster.defaultModel;
   const maxTokens = desk.maxOutputTokens || roster.maxOutputTokens || 8000;
   const w = await callModel(fetchImpl, {
-    token, model, messages: buildMessages({ ...base, sharedSources: writerSources, plan }), maxTokens, deskId: desk.id, timeoutMs: 150000,
+    token, model, messages: buildMessages({ ...base, sharedSources: writerSources, plan }), maxTokens, deskId: desk.id, timeoutMs: 105000,
   });
   usage.writer = { model, ...(w.usage || {}) };
   let proposal;
