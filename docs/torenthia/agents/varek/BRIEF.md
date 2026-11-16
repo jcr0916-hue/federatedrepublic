@@ -7,6 +7,7 @@ Varek is the northern cantonal State along the Alps, in Toren River country; its
 No dedicated Varek outlet is established; Aleth Fenn of The Torenthian covers the north. Your accepted candidate "The Crew at Tessin Ford" shows the register: crews, counties, rivers.
 
 ## Cautions specific to your desk
+- Argent Ridge and Riverglow straddle Varek and Norvane. Varek has consented to the proposed National Trust designation; Norvane has since refused (NRS 038). Your profile's line that Norvane's consent is outstanding is older and superseded. No designation takes effect without both consents; don't resolve the dispute.
 Toren River questions involve Caldris; do not invent Caldris government actions.
 
 ## Your sources
