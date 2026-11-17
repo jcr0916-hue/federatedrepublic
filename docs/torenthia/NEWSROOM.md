@@ -53,7 +53,7 @@ Once the runner key is configured, no new key is needed: the scheduled function 
 
 ## Editor relay
 
-`api/newsroom-inbox.js` (`/api/newsroom-inbox?op=list|read|review`) passes the Central Editor's list, read and review calls through to the inbox, because the editor's cloud workspace can reach this site but not workers.dev. It holds no key: the caller's `Authorization` header goes to the Worker unchanged, and the Worker accepts only the editor key there. The editor key is kept in Vercel as a Development-only variable `NEWSROOM_EDITOR_KEY`, readable by the editor's Vercel connection and unused by deployments.
+`api/newsroom-inbox.js` lets the Central Editor read the inbox from its cloud workspace, which can't reach workers.dev. It relays only `GET ?op=list` and `GET ?op=read&key=…`, attaching the editor key from `NEWSROOM_EDITOR_KEY` (a Sensitive Production variable) itself. It answers only on `*.vercel.app` hosts, which the project's Deployment Protection (Vercel Authentication, all except custom domains) limits to John's Vercel account; the editor reaches them through the Vercel connector. On thefederatedrepublic.org it returns 404. **If Deployment Protection is ever turned off, delete `NEWSROOM_EDITOR_KEY` in Vercel to close the relay.**
 
 ## Run log
 
