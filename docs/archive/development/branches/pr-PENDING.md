@@ -1,0 +1,19 @@
+# Branch history — newsroom/federal-records-desk
+
+**PR:** PENDING
+
+## Purpose
+John asked that the federal side produce NRS entries regularly, mostly mundane. A dedicated Federal Records desk does that without crowding the Federal Realm desk's stories.
+
+## Shipped in this PR
+- `docs/torenthia/agents/federal-records/BRIEF.md`: one batch of three to five routine federal records per run, in the published record format; federal bodies only; nothing that needs a vote, finding, certification, appointment to a constitutional office or appropriation; no invented statutes; the editor assigns references.
+- `docs/torenthia/agents/federal-records/REGISTER.md`: every federal body that has filed routine records so far, its series and their state (from NRS 043–137), read by the desk as a source each run. The editor updates it as records publish.
+- `ASSIGNMENTS.md`, `NOTES.md` for the desk.
+- `docs/torenthia/agents/desks.json`: `federal-records` enabled Tuesday, Wednesday, Friday.
+- `docs/torenthia/NEWSROOM.md`: the desk, and that routine records don't count toward the daily cap on post-worthy items.
+
+## Verification
+Newsroom tests pass. No runner or Worker change: the shared runner key files for any roster desk.
+
+## Preservation and branch disposition
+Results live on `main` once merged. **Deletion approval:** not granted by this note.
