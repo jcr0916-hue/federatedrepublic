@@ -1,0 +1,18 @@
+# Branch history — newsroom/editor-relay
+
+**PR:** PENDING
+
+## Purpose
+Let the Central Editor review the newsroom inbox from its cloud workspace, which can reach thefederatedrepublic.org but not workers.dev.
+
+## Shipped in this PR
+- `api/newsroom-inbox.js`: a pass-through relay for three editor calls (GET list, GET read, POST review). It holds no key; the caller's bearer token goes to the Worker, which accepts only `KEY_EDITOR` for these routes. Callers without a bearer token are refused before any inbox call.
+- `vercel.json`: build and route for the relay.
+- `scripts/newsroom-inbox-relay.test.mjs` (3 tests), added to `test:newsroom-inbox`.
+- `docs/torenthia/NEWSROOM.md`: Editor relay section.
+
+## Setup (John, 2026-11-16)
+`KEY_EDITOR` on the Worker was rotated. The same value is stored in Vercel as `NEWSROOM_EDITOR_KEY`, Development only (Production variables are forced to Sensitive and can't be read back).
+
+## Preservation and branch disposition
+Results live on `main` once merged. **Deletion approval:** not granted by this note.

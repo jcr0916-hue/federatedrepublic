@@ -51,6 +51,10 @@ Once the runner key is configured, no new key is needed: the scheduled function 
 - `AI_GATEWAY_API_KEY` is already set for the site and is reused.
 - **Runner key (one-time):** deploy `workers/newsroom-inbox/worker.js` to the `federated-republic-newsroom` Worker (Cloudflare → Workers & Pages → Edit code, paste, Deploy), add a `KEY_RUNNER` secret there, and add the same value in Vercel as `NEWSROOM_RUNNER_KEY`. Generate the value with `openssl rand -hex 32 | tr -d '\n'` so there is no trailing newline.
 
+## Editor relay
+
+`api/newsroom-inbox.js` (`/api/newsroom-inbox?op=list|read|review`) passes the Central Editor's list, read and review calls through to the inbox, because the editor's cloud workspace can reach this site but not workers.dev. It holds no key: the caller's `Authorization` header goes to the Worker unchanged, and the Worker accepts only the editor key there. The editor key is kept in Vercel as a Development-only variable `NEWSROOM_EDITOR_KEY`, readable by the editor's Vercel connection and unused by deployments.
+
 ## Run log
 
 Each run logs the desks, their outcomes and their token usage in the Vercel function logs for `/api/newsroom-run`.
