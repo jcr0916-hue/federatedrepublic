@@ -49,3 +49,29 @@ test('on a protected host, attaches the editor key itself and returns the inbox 
   assert.equal(res.code, 200);
   delete process.env.NEWSROOM_EDITOR_KEY;
 });
+
+test('review and purge are relayed as POSTs carrying only their own fields', () => {
+  const r = relay.writeRequest('GET', 'review', { op: 'review', key: 'k', status: 'ARCHIVED', note: 'n', extra: 'x' });
+  assert.match(r.url, /\/v1\/review$/);
+  assert.deepEqual(r.body, { key: 'k', status: 'ARCHIVED', note: 'n' });
+  const p = relay.writeRequest('GET', 'purge', { op: 'purge', key: 'k', etag: 'e', manifest: 'a'.repeat(40) });
+  assert.deepEqual(p.body, { key: 'k', etag: 'e', manifest: 'a'.repeat(40) });
+  assert.equal(relay.writeRequest('GET', 'review', { key: 'k', status: 'ARCHIVED' }), null, 'note required');
+  assert.equal(relay.writeRequest('GET', 'purge', { key: 'k', etag: 'e' }), null, 'manifest required');
+  for (const op of ['submit', 'list', 'read', 'constructor', '__proto__']) assert.equal(relay.writeRequest('GET', op, { key: 'k' }), null, op);
+  assert.equal(relay.writeRequest('POST', 'review', { key: 'k', status: 'A', note: 'n' }), null);
+});
+
+test('a write reaches the Worker as an editor POST', async () => {
+  process.env.NEWSROOM_EDITOR_KEY = 'k';
+  let seen;
+  const res = mockRes();
+  await relay({ method: 'GET', headers: { host: 'federatedrepublic.vercel.app' }, query: { op: 'review', key: 'submissions/a/2026-01-01/x.json', status: 'HOLD', note: 'n' } }, res,
+    async (url, init) => { seen = { url, init }; return { status: 200, text: async () => '{}' }; });
+  assert.match(seen.url, /\/v1\/review$/);
+  assert.equal(seen.init.method, 'POST');
+  assert.equal(seen.init.headers.authorization, 'Bearer k');
+  assert.deepEqual(JSON.parse(seen.init.body), { key: 'submissions/a/2026-01-01/x.json', status: 'HOLD', note: 'n' });
+  assert.equal(res.headers['cache-control'], 'no-store');
+  delete process.env.NEWSROOM_EDITOR_KEY;
+});
