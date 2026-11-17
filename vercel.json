@@ -42,6 +42,13 @@
       }
     },
     {
+      "src": "api/newsroom-inbox.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30
+      }
+    },
+    {
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
@@ -65,6 +72,10 @@
     {
       "src": "/api/newsroom-run",
       "dest": "/api/newsroom-run.js"
+    },
+    {
+      "src": "/api/newsroom-inbox",
+      "dest": "/api/newsroom-inbox.js"
     },
     {
       "src": "/",
