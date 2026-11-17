@@ -35,7 +35,7 @@ Each desk run costs about 3–5 cents at November 2026 Gateway prices. The plann
 - Rules and shared sources lead every prompt, so desks running at the same hour are billed for that shared material at cache rates.
 - Vercel's free $5 of Gateway credit every 30 days covers about 100–150 runs. Buying Gateway credits ends that free grant.
 
-The **Federal Records desk** (`federal-records`) files a batch of three to five routine federal NRS records on Tuesdays, Wednesdays and Fridays, continuing the series in its [`REGISTER.md`](agents/federal-records/REGISTER.md). The editor stages accepted records as `worldMundane` NRS entries and updates the register. Routine records don't count toward the daily cap on post-worthy items.
+The **Federal Records desk** (`federal-records`) files a batch of three to five routine federal NRS records on Tuesdays, Wednesdays and Fridays, continuing the series in its [`REGISTER.md`](agents/federal-records/REGISTER.md). The editor stages accepted records as `worldMundane` NRS entries with no jurisdiction or arc tags, so they stay in the NRS archive and off the front pages, and updates the register. Routine records run in the background: they aren't announced or posted and don't count toward the daily cap. An occasional record may carry a quiet thread toward a possible future storyline; the register tracks them.
 
 Cadence follows the story: the Federal desk reports regularly, desks with a heated storyline report more often, and quiet desks drop to every few weeks.
 

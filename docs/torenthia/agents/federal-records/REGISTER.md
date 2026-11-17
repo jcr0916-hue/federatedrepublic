@@ -43,3 +43,8 @@ Published frontier at last update: nrsSeq **137**, latest reference **NRS-Y14-00
 ## Office of the Civic Consul / Council of Ministers
 - Quarterly ministry reporting calendar under the executive transparency duty (NRS-Y14-0015). *Ministries file on that calendar.*
 - Council of Ministers session summary, Year 14 Month 2: informational budget-calendar review, no decision (NRS-Y14-0046).
+
+## Quiet threads
+Details planted in routine records that might grow into storylines. The editor lists each accepted one here with the record that carries it. Continue an open thread only by small, ordinary steps.
+
+- (none yet)
