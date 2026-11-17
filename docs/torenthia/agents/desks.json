@@ -28,7 +28,6 @@
       "enabled": true,
       "days": [
         "mon",
-        "tue",
         "thu"
       ],
       "briefPath": "docs/torenthia/agents/federal/BRIEF.md",
