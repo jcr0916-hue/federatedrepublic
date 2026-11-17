@@ -16,3 +16,18 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 - **Corrected:** Varek's Counties are governed by elected County Councils (Varek §5.1), not boards. Check the State constitution's names for local bodies.
 - **Cut:** "no federal reporting duty in the ordinary course" was an unsourced legal claim. Don't assert what a body is or isn't obliged to do unless a source says so.
 - **New canon:** Sellen County (Varek, upper Toren tributaries); Renn Alder (county budget officer); Edric Marn (County councillor); Talia Serr (road-maintenance supervisor).
+
+## 2026-11-17 — Pre-schedule backlog (three items)
+
+**"The Tables Before the Ledger" (article `64bf82b0`, Nov 11) — ACCEPTED, edited; news 141.** The proposal behind it (`0adf4937`) is closed as superseded by this draft.
+- **Worked:** a human-scale federal beat built on a real, dry record (NRS 134), with the open equalization review as pressure rather than plot. Good restraint about deadlines and filings.
+- **Corrected:** "The Executive Monitor will review [the budget]" had no basis. §12.2(2) gives the Monetary Authority a post-enactment assessment; the EM's annual §12.1 assessment is about the guarantees, not the budget. Cite the provision that grants each review.
+- **Corrected:** the campaign pressure was misattributed. The civic-domain budget belongs to the Civic Consul; the spring race is for Legat Consul, with no date set. Kept as a general pressure, worded as expected.
+- **Renamed:** Adel Marr → **Adel Weyland**. "Marr" sits too close to Selda Marr (Caldenmere state test) and Edric Marn (news 140). Check surnames against recent publications, not only exact matches.
+- **Cut:** essay closers ("That is the story under the story"). End on the concrete situation.
+- **New canon:** Adel Weyland, career civil servant in the civic-domain budget work; no title, directorate or office established.
+
+**"Two Audits, One Question" (`c1dff01e`, Nov 16) — DISCARD.**
+- It is a constitutional explainer, which the rules ask desks to avoid, and the Republic has run three fiscal-equalization pieces this month.
+- **Errors to avoid:** it says NRS-Y14-0040 "records the correction of the source data"; that record *invites* corrections from State and Territory administrations and corrects nothing. And §12.6 requires the Legislature to *publish a response* to noncompliance findings within a statutory period, which is narrower than "must respond."
+- The §12.1/§12.6 distinction is sound. Use it as background inside a story, not as the story.
