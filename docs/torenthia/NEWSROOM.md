@@ -39,18 +39,17 @@ Cadence follows the story: the Federal desk reports regularly, desks with a heat
 
 ## Adding a desk
 
-1. Add an entry to `desks.json` with `"enabled": false`.
-2. Add `agents/<id>/BRIEF.md` (who the desk is and what it covers), `ASSIGNMENTS.md` and `NOTES.md`.
-3. In Vercel, add `NEWSROOM_KEY_<ID>` with that desk's inbox key.
-4. Set `"enabled": true`.
+1. Add an entry to `desks.json` with `"enabled": false`, plus `agents/<id>/BRIEF.md`, `ASSIGNMENTS.md` and `NOTES.md`.
+2. Set `"enabled": true`.
 
-The inbox currently accepts four desks: Federal, Korda, Varek and Corindal. Other desks need one change to the inbox Worker first.
+Once the runner key is configured, no new key is needed: the scheduled function files for any roster desk with the shared runner key, naming the desk in an `x-newsroom-desk` header. A desk with its own `NEWSROOM_KEY_<ID>` in Vercel uses that key instead (Federal does).
 
 ## One-time setup (Vercel dashboard → federatedrepublic → Settings → Environment Variables, Production)
 
 - `CRON_SECRET`: any random string of 32 or more characters. Vercel sends it with each scheduled call, and every other caller is refused.
 - `NEWSROOM_KEY_FEDERAL`: the Federal desk's inbox key, which is `KEY_FEDERAL` on the Cloudflare Worker `federated-republic-newsroom`.
 - `AI_GATEWAY_API_KEY` is already set for the site and is reused.
+- **Runner key (one-time):** deploy `workers/newsroom-inbox/worker.js` to the `federated-republic-newsroom` Worker (Cloudflare → Workers & Pages → Edit code, paste, Deploy), add a `KEY_RUNNER` secret there, and add the same value in Vercel as `NEWSROOM_RUNNER_KEY`. Generate the value with `openssl rand -hex 32 | tr -d '\n'` so there is no trailing newline.
 
 ## Run log
 

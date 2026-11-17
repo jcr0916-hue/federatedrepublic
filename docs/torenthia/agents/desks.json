@@ -40,7 +40,7 @@
       "name": "Korda Realm desk",
       "jurisdiction": "Korda",
       "inboxDesk": "korda",
-      "enabled": false,
+      "enabled": true,
       "days": [
         "tue",
         "fri"

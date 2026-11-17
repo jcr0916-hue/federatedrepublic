@@ -161,10 +161,10 @@ async function callModel(fetchImpl, { token, model, messages, maxTokens, timeout
   }
 }
 
-async function submitProposal(fetchImpl, { inboxUrl, key, proposal }) {
+async function submitProposal(fetchImpl, { inboxUrl, key, proposal, authHeaders }) {
   const res = await fetchImpl(inboxUrl.replace(/\/$/, '') + '/v1/submit', {
     method: 'POST',
-    headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+    headers: { ...(authHeaders || { Authorization: `Bearer ${key}` }), 'Content-Type': 'application/json' },
     body: JSON.stringify(proposal),
   });
   const data = await res.json().catch(() => ({}));
@@ -176,12 +176,12 @@ async function submitProposal(fetchImpl, { inboxUrl, key, proposal }) {
 // the desk filed within the last few hours. Vercel Schedules can deliver a run
 // twice, minutes apart; a separate run earlier the same day still counts as new.
 const RECENT_MS = 6 * 3600 * 1000;
-async function filedRecently(fetchImpl, { inboxUrl, key, now }) {
+async function filedRecently(fetchImpl, { inboxUrl, key, now, authHeaders }) {
   const since = now.getTime() - RECENT_MS;
   let cursor = '';
   for (let page = 0; page < 20; page++) {
     const url = inboxUrl.replace(/\/$/, '') + '/v1/list?limit=100' + (cursor ? `&cursor=${encodeURIComponent(cursor)}` : '');
-    const res = await fetchImpl(url, { headers: { Authorization: `Bearer ${key}` } });
+    const res = await fetchImpl(url, { headers: authHeaders || { Authorization: `Bearer ${key}` } });
     if (!res.ok) throw new Error(`inbox key check failed (${res.status}); no model was called`);
     const data = await res.json().catch(() => ({}));
     const hit = (data.items || []).find((i) => {
@@ -196,7 +196,11 @@ async function filedRecently(fetchImpl, { inboxUrl, key, now }) {
 }
 
 async function runDesk(desk, { roster, env, fetchImpl, now, dryRun, ref = 'main' }) {
-  const key = env[`NEWSROOM_KEY_${String(desk.inboxDesk || '').toUpperCase()}`];
+  // A desk's own inbox key is used when one is configured. Otherwise the shared
+  // runner key files on the desk's behalf, naming the desk in x-newsroom-desk.
+  const deskKey = env[`NEWSROOM_KEY_${String(desk.inboxDesk || '').toUpperCase().replace(/-/g, '_')}`];
+  const key = deskKey || env.NEWSROOM_RUNNER_KEY;
+  const authHeaders = deskKey ? { Authorization: `Bearer ${deskKey}` } : { Authorization: `Bearer ${key}`, 'x-newsroom-desk': String(desk.inboxDesk || '') };
   const token = env.AI_GATEWAY_API_KEY || env.VERCEL_OIDC_TOKEN;
   if (!dryRun && !key) return { desk: desk.id, status: 'skipped', reason: 'no inbox key configured' };
   if (!dryRun && !token) return { desk: desk.id, status: 'skipped', reason: 'no AI Gateway credential' };
@@ -241,7 +245,7 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun, ref = 'main'
   }
 
   const inboxUrl = env.NEWSROOM_URL || DEFAULT_INBOX;
-  const already = await filedRecently(fetchImpl, { inboxUrl, key, now });
+  const already = await filedRecently(fetchImpl, { inboxUrl, key, now, authHeaders });
   if (already) return { desk: desk.id, status: 'already-filed', id: already.id, reason: 'this desk filed within the last 6 hours' };
   const usage = {};
   let plan = null;
@@ -264,7 +268,7 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun, ref = 'main'
   try { proposal = parseProposal(w.text); } catch (e) { throw new Error(`writer: ${e.message}: ${w.text.slice(0, 200)}`); }
   if (proposal.skip) return { desk: desk.id, status: 'no-submission', reason: proposal.reason, usage };
   if (ref !== 'main') proposal.sourceRefs = [`commit:${ref}`, ...proposal.sourceRefs].slice(0, 15);
-  const receipt = await submitProposal(fetchImpl, { inboxUrl, key, proposal });
+  const receipt = await submitProposal(fetchImpl, { inboxUrl, key, proposal, authHeaders });
   return { desk: desk.id, status: 'submitted', id: receipt.id, key: receipt.key, title: proposal.title, kind: proposal.kind, usage };
 }
 

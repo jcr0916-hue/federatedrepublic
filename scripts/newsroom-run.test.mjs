@@ -34,6 +34,7 @@ function fakeFetch({ planReply, writeReply, inboxStatus = 201, keyOk = true, exi
     }
     if (url.includes('/v1/list')) {
       calls.check = (calls.check || 0) + 1;
+      calls.listHeaders = init.headers;
       return Response.json({ items: existing, more: false, cursor: null }, { status: keyOk ? 200 : 401 });
     }
     if (url.endsWith('/v1/submit')) {
@@ -144,6 +145,21 @@ test('the handler returns 500 when any desk fails and 200 otherwise', async () =
   const handlerPath = new URL('../api/newsroom-run.js', import.meta.url).pathname;
   const src = fs.readFileSync(handlerPath, 'utf8');
   assert.match(src, /res\.status\(failed\.length \? 500 : 200\)/);
+});
+
+test('without a desk key, the runner key files for the desk and names it', async () => {
+  const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
+  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw', NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY });
+  assert.equal(out.results[0].status, 'submitted');
+  assert.equal(calls.inbox[0].auth, 'Bearer run');
+  assert.equal(calls.listHeaders['x-newsroom-desk'], 'federal');
+});
+
+test('a desk key, when configured, takes precedence over the runner key', async () => {
+  const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
+  await core.runNewsroom({ env: { ...env, NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY });
+  assert.equal(calls.inbox[0].auth, 'Bearer fed-key');
+  assert.equal(calls.listHeaders['x-newsroom-desk'], undefined);
 });
 
 test('a planner skip means no writer call and no submission', async () => {
