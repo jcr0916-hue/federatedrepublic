@@ -421,6 +421,46 @@ html,body { background:#e8e2d4; color:var(--text); font-family:'Jost',sans-serif
 .pull-quote p { color:var(--navy); font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-style:italic; line-height:1.6; margin-bottom:0; }
 
 
+/* Newspaper feature layout for newsroom stories that opt in. */
+.article-wrap.news-feature { max-width:760px; padding-top:clamp(5.75rem, 10vw, 7rem); }
+.news-feature .news-masthead {
+  border-bottom:2px solid var(--gold);
+  color:var(--navy);
+  font:600 .75rem/1.4 'JetBrains Mono',monospace;
+  letter-spacing:.12em;
+  margin-bottom:1.25rem;
+  padding-bottom:.65rem;
+  text-transform:uppercase;
+}
+.news-feature .article-headline {
+  font-size:clamp(2.5rem, 6vw, 4rem);
+  line-height:1.02;
+  text-wrap:balance;
+}
+.news-feature .article-deck {
+  color:var(--navy);
+  font-size:clamp(1.25rem, 2.6vw, 1.55rem);
+  line-height:1.4;
+  max-width:58ch;
+}
+.news-feature .news-date {
+  color:var(--text);
+  font:.75rem/1.4 'JetBrains Mono',monospace;
+}
+.news-feature .article-body { max-width:66ch; font-family:Georgia,serif; }
+.news-feature .article-body p { font-size:1.0625rem; line-height:1.8; }
+.news-feature .article-body p:first-child { font-size:1.125rem; }
+.news-feature .news-dateline {
+  color:var(--navy);
+  font:700 .78em/1.4 'Jost',sans-serif;
+  letter-spacing:.045em;
+}
+.news-feature .article-nav { gap:1rem; flex-wrap:wrap; }
+.news-feature .article-nav a { color:var(--navy); text-decoration:underline; }
+@media print {
+  .article-wrap.news-feature { max-width:none; padding:0; }
+}
+
 /* No global img rule existed. news-005 and news-011 (RNN) carry .subject-portrait markup
    with no CSS of their own, so a 1024x1024 portrait rendered at natural size into a 740px
    column. This is the safety net, not a redesign. */
