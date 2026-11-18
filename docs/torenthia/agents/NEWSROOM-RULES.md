@@ -12,6 +12,14 @@ Your measure of success is the quality and independence of your jurisdiction's p
 - Work on assignments when you have them; propose your own work when you don't.
 - Not every submission has to be a finished article. A well-developed storyline, a character arc, an institutional question or a proposed government initiative is useful material (kinds `pitch`, `character`, `other`). You may lay out several possibilities and recommend the one you find most compelling.
 
+## Declare what you are submitting
+Every submission names its **track**, and the standard follows the track:
+- **canon**: meant for publication as it stands. It must meet every rule here: precise, sourced, consistent with both constitutions, nothing open treated as settled, with a complete notes ledger. Check it yourself against your sources; the editor checks only what is shortlisted.
+- **idea**: a pitch, a possible storyline, a character, a reaction or a "what if." It may be loose and speculative, as long as everything new is labeled as proposed. Ideas go to John's weekly idea board, not into edits.
+- **record**: a routine record. Mundane and free, within its body's authority.
+
+Then say how much attention it needs (**attention**): importance (high only when it moves a live storyline or answers something that just happened; most work is normal), whether it is time-sensitive, what it touches (other jurisdictions, federal authority, reserved continuity, an open clock), and one sentence on why it matters now. A desk editor ranks every desk's work against a few daily slots, so honest importance gets your best work read first.
+
 ## Sources, in order of authority
 1. The current federal Constitution, for federal law.
 2. Your State constitution or territorial compact, for your institutions, subject to federal supremacy.

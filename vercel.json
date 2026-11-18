@@ -42,10 +42,24 @@
       }
     },
     {
+      "src": "api/newsroom-triage.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 180
+      }
+    },
+    {
       "src": "api/newsroom-inbox.js",
       "use": "@vercel/node",
       "config": {
         "maxDuration": 30
+      }
+    },
+    {
+      "src": "api/newsroom-ask.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 300
       }
     },
     {
@@ -74,8 +88,16 @@
       "dest": "/api/newsroom-run.js"
     },
     {
+      "src": "/api/newsroom-triage",
+      "dest": "/api/newsroom-triage.js"
+    },
+    {
       "src": "/api/newsroom-inbox",
       "dest": "/api/newsroom-inbox.js"
+    },
+    {
+      "src": "/api/newsroom-ask",
+      "dest": "/api/newsroom-ask.js"
     },
     {
       "src": "/",
@@ -113,6 +135,11 @@
     "newsroom-daily": {
       "schedule": "7 16 * * *",
       "path": "/api/newsroom-run",
+      "requestMethod": "GET"
+    },
+    "newsroom-triage": {
+      "schedule": "37 16 * * *",
+      "path": "/api/newsroom-triage",
       "requestMethod": "GET"
     }
   }

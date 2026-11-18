@@ -9,7 +9,7 @@
     "stats:assets": "node scripts/asset-stats.mjs",
     "test:crossroads": "node --test scripts/crossroads.test.cjs",
     "test:world": "node --test scripts/world.test.mjs",
-    "test:newsroom-run": "node --test scripts/newsroom-run.test.mjs",
+    "test:newsroom-run": "node --test scripts/newsroom-run.test.mjs scripts/newsroom-ask.test.mjs scripts/newsroom-triage.test.mjs",
     "test:newsroom-inbox": "node --test workers/newsroom-inbox/worker.test.mjs scripts/newsroom-inbox-relay.test.mjs",
     "check:discovery": "node scripts/check-discovery.mjs",
     "test:scenarios": "node --test scripts/scenarios.test.mjs",
