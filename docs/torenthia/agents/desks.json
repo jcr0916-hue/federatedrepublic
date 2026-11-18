@@ -135,18 +135,18 @@
       "name": "Corindal State desk",
       "jurisdiction": "Corindal",
       "inboxDesk": "corindal",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "fri"
+        "thu"
       ],
-      "everyWeeks": 2,
-      "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/corindal/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/corindal/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/corindal/NOTES.md",
       "sources": [
+        "docs/torenthia/agents/CORINDAL-AUDIT-RECONSTRUCTION.md",
         "torenthia-state-corindal.html",
-        "State Constitutions/corindal-state-constitution.md"
+        "State Constitutions/corindal-state-constitution.md",
+        "torenthia/news/torenthia-news-118.html"
       ]
     },
     {
@@ -376,9 +376,12 @@
       "assignmentsPath": "docs/torenthia/agents/monitors/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/monitors/NOTES.md",
       "sources": [
+        "docs/torenthia/agents/CORINDAL-AUDIT-RECONSTRUCTION.md",
+        "torenthia-state-corindal.html",
         "torenthia/nrs/torenthia-nrs-122.html",
         "torenthia/nrs/torenthia-nrs-123.html",
-        "torenthia/news/torenthia-news-126.html"
+        "torenthia/news/torenthia-news-126.html",
+        "State Constitutions/corindal-state-constitution.md"
       ]
     },
     {
