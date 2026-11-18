@@ -80,7 +80,7 @@ test('only desks scheduled for today run', () => {
 
 test('Pro plans, Flash writes, and one proposal reaches the federal inbox', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results.length, 1);
   const r = out.results[0];
   assert.equal(r.status, 'submitted');
@@ -97,7 +97,7 @@ test('Pro plans, Flash writes, and one proposal reaches the federal inbox', asyn
 
 test('a rejected inbox key stops the desk before any model call', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, keyOk: false });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'failed');
   assert.match(out.results[0].error, /inbox key check failed \(401\)/);
   assert.equal(calls.gateway.length, 0);
@@ -111,7 +111,7 @@ test('vercel.json schedules the run once, as a GET, with no legacy cron', () => 
 
 test('every file in a run is read at one pinned commit, and the commit is recorded', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.commit, SHA);
   assert.deepEqual([...calls.refs], [SHA]);
   assert.equal(calls.inbox[0].body.sourceRefs[0], `commit:${SHA}`);
@@ -120,7 +120,7 @@ test('every file in a run is read at one pinned commit, and the commit is record
 test('a desk that filed within the last six hours is skipped before any model call', async () => {
   const existing = [{ id: 'x1', submittedAt: '2026-11-16T15:58:00.000Z' }];
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'already-filed');
   assert.equal(calls.gateway.length, 0);
 });
@@ -128,7 +128,7 @@ test('a desk that filed within the last six hours is skipped before any model ca
 test('an earlier filing on the same UTC day, more than six hours ago, does not block a new run', async () => {
   const existing = [{ id: 'x2', submittedAt: '2026-11-16T06:23:21.206Z' }];
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'submitted');
   assert.equal(calls.inbox.length, 1);
 });
@@ -136,7 +136,7 @@ test('an earlier filing on the same UTC day, more than six hours ago, does not b
 test('a filing from an earlier day does not block today', async () => {
   const existing = [{ id: 'x0', submittedAt: '2026-11-13T16:20:00.000Z' }];
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'submitted');
   assert.equal(calls.inbox.length, 1);
 });
@@ -149,7 +149,7 @@ test('the handler returns 500 when any desk fails and 200 otherwise', async () =
 
 test('without a desk key, the runner key files for the desk and names it', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw', NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw', NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'submitted');
   assert.equal(calls.inbox[0].auth, 'Bearer run');
   assert.equal(calls.listHeaders['x-newsroom-desk'], 'federal');
@@ -157,14 +157,14 @@ test('without a desk key, the runner key files for the desk and names it', async
 
 test('a desk key, when configured, takes precedence over the runner key', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  await core.runNewsroom({ env: { ...env, NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY });
+  await core.runNewsroom({ env: { ...env, NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(calls.inbox[0].auth, 'Bearer fed-key');
   assert.equal(calls.listHeaders['x-newsroom-desk'], undefined);
 });
 
 test('a planner skip means no writer call and no submission', async () => {
   const { impl, calls } = fakeFetch({ planReply: { skip: true, reason: 'nothing new' } });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'no-submission');
   assert.equal(calls.gateway.length, 1);
   assert.equal(calls.inbox.length, 0);
@@ -172,14 +172,14 @@ test('a planner skip means no writer call and no submission', async () => {
 
 test('missing inbox key skips the desk before any paid call', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'skipped');
   assert.equal(calls.gateway.length, 0);
 });
 
 test('a bad draft fails that desk without submitting', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: { kind: 'poem', title: 'x', body: 'y' } });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'failed');
   assert.match(out.results[0].error, /invalid kind/);
   assert.equal(calls.inbox.length, 0);
@@ -214,4 +214,53 @@ test('two desks share an identical, cacheable system prompt', () => {
 test('JSON wrapped in a code fence still parses', () => {
   const p = core.parseProposal('```json\n' + JSON.stringify(draft) + '\n```');
   assert.equal(p.title, 'A Federal Story');
+});
+
+test('an open assignment is detected only under ## Open', () => {
+  assert.equal(core.hasOpenAssignment('# A\n\n## Open\n\n- Cover the ferry hearing.\n\n## Done\n'), true);
+  assert.equal(core.hasOpenAssignment('# A\n\n## Open\n\n## Done\n\n- Old work.\n'), false);
+  assert.equal(core.hasOpenAssignment('# A\n\n## Open\n- Last section item.\n'), true);
+  assert.equal(core.hasOpenAssignment(''), false);
+});
+
+test('off-week desks are those on their weekday outside their cadence', () => {
+  const roster = { desks: [
+    { id: 'a', enabled: true, days: ['mon'], everyWeeks: 2, weekOffset: 0 },
+    { id: 'b', enabled: true, days: ['mon'], everyWeeks: 2, weekOffset: 1 },
+    { id: 'c', enabled: true, days: ['mon'] },
+    { id: 'd', enabled: false, days: ['mon'], everyWeeks: 2, weekOffset: 1 },
+  ] };
+  const due = core.dueDesks(roster, MONDAY).map((d) => d.id);
+  const off = core.offWeekDesks(roster, MONDAY).map((d) => d.id);
+  assert.ok(due.includes('c'));
+  assert.equal(due.length + off.length, 3, 'every enabled Monday desk is either due or off-week');
+  assert.ok(!off.includes('c') && !off.includes('d'));
+  assert.deepEqual(core.offWeekDesks(roster, TUESDAY), []);
+});
+
+test('a desk with a records block also gets a records desk on its own schedule and inbox', () => {
+  const roster = { recordsBriefPath: 'docs/torenthia/agents/RECORDS-BRIEF.md', desks: [
+    { id: 'varek', name: 'Varek State desk', jurisdiction: 'Varek', inboxDesk: 'varek', enabled: true, days: ['fri'], everyWeeks: 2,
+      briefPath: 'docs/torenthia/agents/varek/BRIEF.md', sources: ['State Constitutions/varek-state-constitution.md'], records: { days: ['mon'] } },
+    { id: 'federal', name: 'Federal Realm desk', enabled: true, days: ['mon'] },
+  ] };
+  const all = core.withRecordDesks(roster).desks;
+  const r = all.find((d) => d.id === 'varek-records');
+  assert.ok(r);
+  assert.equal(r.inboxDesk, 'varek-records');
+  assert.equal(r.briefPath, 'docs/torenthia/agents/RECORDS-BRIEF.md');
+  assert.deepEqual(r.days, ['mon']);
+  assert.equal(r.everyWeeks, 1);
+  assert.equal(r.notesPath, 'docs/torenthia/agents/varek/RECORDS-NOTES.md');
+  assert.deepEqual(r.sources.slice(0, 2), ['docs/torenthia/agents/varek/BRIEF.md', 'docs/torenthia/agents/varek/RECORDS-REGISTER.md']);
+  assert.ok(/^[a-z][a-z-]{1,29}$/.test(r.inboxDesk), 'inbox name passes the Worker desk pattern');
+  assert.deepEqual(core.dueDesks({ desks: all }, MONDAY).map((d) => d.id).sort(), ['federal', 'varek-records']);
+});
+
+test('every records desk on main has a valid inbox name and the shared records brief', () => {
+  const roster = core.withRecordDesks(JSON.parse(fs.readFileSync(core.ROSTER_PATH, 'utf8')));
+  assert.ok(fs.existsSync(roster.recordsBriefPath));
+  for (const d of roster.desks.filter((x) => x.id.endsWith('-records') && x.briefPath === roster.recordsBriefPath)) {
+    assert.ok(/^[a-z][a-z-]{1,29}$/.test(d.inboxDesk), d.inboxDesk);
+  }
 });
