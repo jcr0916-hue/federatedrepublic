@@ -57,6 +57,10 @@ Once the runner key is configured, no new key is needed: the scheduled function 
 - `AI_GATEWAY_API_KEY` is already set for the site and is reused.
 - **Runner key (one-time):** deploy `workers/newsroom-inbox/worker.js` to the `federated-republic-newsroom` Worker (Cloudflare → Workers & Pages → Edit code, paste, Deploy), add a `KEY_RUNNER` secret there, and add the same value in Vercel as `NEWSROOM_RUNNER_KEY`. Generate the value with `openssl rand -hex 32 | tr -d '\n'` so there is no trailing newline.
 
+## Asking a desk
+
+John can ask any desk a question through the editor: "What's going on in Korda? Who are the major players?" The editor calls `api/newsroom-ask.js` (`GET /api/newsroom-ask?desk=<id>&q=<question>` on the protected `vercel.app` address, through the Vercel connector), and the desk answers in its own voice from its brief, sources, notes and the shared canon, labeling what is established, approved, proposed and open. It uses the planner model. Nothing is filed or published; useful ideas go to the desk's notes or assignments. Records desks (`<id>-records`) can be asked too.
+
 ## Editor relay
 
 `api/newsroom-inbox.js` lets the Central Editor reach the inbox from its cloud workspace, which can't reach workers.dev. It relays `GET ?op=list` and `GET ?op=read&key=…`, plus two editor writes that the Vercel connector can only send as GET: `?op=review&key=…&status=…&note=…` and `?op=purge&key=…&etag=…&manifest=…` (see [Inbox cleanup](#inbox-cleanup)). It forwards each write to the Worker as a POST with only those fields, and attaches the editor key from `NEWSROOM_EDITOR_KEY` (a Sensitive Production variable) itself. It answers only on `*.vercel.app` hosts, which the project's Deployment Protection (Vercel Authentication, all except custom domains) limits to John's Vercel account; the editor reaches them through the Vercel connector. On thefederatedrepublic.org it returns 404. **If Deployment Protection is ever turned off, delete `NEWSROOM_EDITOR_KEY` in Vercel to close the relay.**

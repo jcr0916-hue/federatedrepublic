@@ -333,4 +333,4 @@ async function runNewsroom({ env = process.env, fetchImpl = fetch, now = new Dat
   return { paused: false, date: now.toISOString(), commit: ref, results };
 }
 
-module.exports = { RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
+module.exports = { RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, resolveCommit, loadText, loadOptional, callModel, systemPrompt, contextParts, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
