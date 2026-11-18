@@ -37,6 +37,10 @@ Each desk run costs about 3–5 cents at November 2026 Gateway prices. The plann
 
 The **Federal Records desk** (`federal-records`) files a batch of three to five routine federal NRS records on Tuesdays, Wednesdays and Fridays, continuing the series in its [`REGISTER.md`](agents/federal-records/REGISTER.md). The editor stages accepted records as `worldMundane` NRS entries with no jurisdiction or arc tags, so they stay in the NRS archive and off the front pages, and updates the register. Routine records run in the background: they aren't announced or posted and don't count toward the daily cap. An occasional record may carry a quiet thread toward a possible future storyline; the register tracks them.
 
+Every State and Territory desk also has a **records desk** (`<id>-records`), set by the `records` block on its roster entry. Once a week it files two to four routine entries for that jurisdiction's own record system (the Arvane State Record, the Caldenmere Registry and so on), using the shared [`RECORDS-BRIEF.md`](agents/RECORDS-BRIEF.md) with the desk's own brief and constitution as context. Each jurisdiction may keep a `RECORDS-REGISTER.md`, `RECORDS-NOTES.md` and `RECORDS-ASSIGNMENTS.md` in its folder; the editor creates them as entries publish. Like federal records, these run in the background.
+
+Desks report even when nothing is planned for them: a desk may react to events elsewhere or bring an idea of its own, and the editor banks good material that isn't used right away.
+
 Cadence follows the story: the Federal desk reports regularly, desks with a heated storyline report more often, and quiet desks drop to every few weeks.
 
 ## Adding a desk

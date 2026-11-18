@@ -71,7 +71,12 @@
         "docs/torenthia/agents/korda/setup/05-KORDA-EDITORIAL-CONTEXT.md",
         "docs/torenthia/agents/korda/setup/04-KORDA-PUBLISHED-REFERENCES.md"
       ],
-      "everyWeeks": 1
+      "everyWeeks": 1,
+      "records": {
+        "days": [
+          "thu"
+        ]
+      }
     },
     {
       "id": "arvane",
@@ -90,7 +95,12 @@
       "sources": [
         "torenthia-state-arvane.html",
         "State Constitutions/arvane-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "tue"
+        ]
+      }
     },
     {
       "id": "orath",
@@ -109,7 +119,12 @@
       "sources": [
         "torenthia-state-orath.html",
         "State Constitutions/orath-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "wed"
+        ]
+      }
     },
     {
       "id": "merath",
@@ -120,7 +135,7 @@
       "days": [
         "mon"
       ],
-      "everyWeeks": 3,
+      "everyWeeks": 2,
       "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/merath/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/merath/ASSIGNMENTS.md",
@@ -128,7 +143,12 @@
       "sources": [
         "torenthia-state-merath.html",
         "State Constitutions/merath-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "wed"
+        ]
+      }
     },
     {
       "id": "corindal",
@@ -147,7 +167,12 @@
         "torenthia-state-corindal.html",
         "State Constitutions/corindal-state-constitution.md",
         "torenthia/news/torenthia-news-118.html"
-      ]
+      ],
+      "records": {
+        "days": [
+          "sat"
+        ]
+      }
     },
     {
       "id": "varek",
@@ -166,7 +191,12 @@
       "sources": [
         "torenthia-state-varek.html",
         "State Constitutions/varek-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "mon"
+        ]
+      }
     },
     {
       "id": "harren",
@@ -177,7 +207,7 @@
       "days": [
         "tue"
       ],
-      "everyWeeks": 3,
+      "everyWeeks": 2,
       "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/harren/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/harren/ASSIGNMENTS.md",
@@ -185,7 +215,12 @@
       "sources": [
         "torenthia-state-harren.html",
         "State Constitutions/harren-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "thu"
+        ]
+      }
     },
     {
       "id": "aldenmere",
@@ -196,15 +231,20 @@
       "days": [
         "wed"
       ],
-      "everyWeeks": 3,
-      "weekOffset": 2,
+      "everyWeeks": 2,
+      "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/aldenmere/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/aldenmere/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/aldenmere/NOTES.md",
       "sources": [
         "torenthia-state-aldenmere.html",
         "State Constitutions/aldenmere-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "fri"
+        ]
+      }
     },
     {
       "id": "caldenmere",
@@ -215,7 +255,7 @@
       "days": [
         "thu"
       ],
-      "everyWeeks": 3,
+      "everyWeeks": 2,
       "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/caldenmere/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/caldenmere/ASSIGNMENTS.md",
@@ -223,7 +263,12 @@
       "sources": [
         "torenthia-state-caldenmere.html",
         "State Constitutions/caldenmere-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "sat"
+        ]
+      }
     },
     {
       "id": "kelvant",
@@ -242,7 +287,12 @@
       "sources": [
         "torenthia-state-kelvant.html",
         "State Constitutions/kelvant-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "wed"
+        ]
+      }
     },
     {
       "id": "selvane",
@@ -261,7 +311,12 @@
       "sources": [
         "torenthia-state-selvane.html",
         "State Constitutions/selvane-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "tue"
+        ]
+      }
     },
     {
       "id": "rhovane",
@@ -272,7 +327,7 @@
       "days": [
         "fri"
       ],
-      "everyWeeks": 3,
+      "everyWeeks": 2,
       "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/rhovane/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/rhovane/ASSIGNMENTS.md",
@@ -280,7 +335,12 @@
       "sources": [
         "torenthia-state-rhovane.html",
         "State Constitutions/rhovane-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "mon"
+        ]
+      }
     },
     {
       "id": "norvane",
@@ -299,7 +359,12 @@
       "sources": [
         "torenthia-state-norvane.html",
         "State Constitutions/norvane-state-constitution.md"
-      ]
+      ],
+      "records": {
+        "days": [
+          "tue"
+        ]
+      }
     },
     {
       "id": "solara",
@@ -321,7 +386,12 @@
         "torenthia/nrs/torenthia-nrs-110.html",
         "torenthia/nrs/torenthia-nrs-130.html",
         "torenthia/news/torenthia-news-134.html"
-      ]
+      ],
+      "records": {
+        "days": [
+          "thu"
+        ]
+      }
     },
     {
       "id": "morantine",
@@ -343,7 +413,12 @@
         "torenthia/nrs/torenthia-nrs-048.html",
         "torenthia/nrs/torenthia-nrs-120.html",
         "torenthia/nrs/torenthia-nrs-133.html"
-      ]
+      ],
+      "records": {
+        "days": [
+          "fri"
+        ]
+      }
     },
     {
       "id": "verdmont",
@@ -354,14 +429,19 @@
       "days": [
         "sun"
       ],
-      "everyWeeks": 3,
-      "weekOffset": 2,
+      "everyWeeks": 2,
+      "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/verdmont/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/verdmont/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/verdmont/NOTES.md",
       "sources": [
         "torenthia/nrs/torenthia-nrs-117.html"
-      ]
+      ],
+      "records": {
+        "days": [
+          "tue"
+        ]
+      }
     },
     {
       "id": "monitors",
@@ -404,5 +484,6 @@
         "torenthia/news/torenthia-news-131.html"
       ]
     }
-  ]
+  ],
+  "recordsBriefPath": "docs/torenthia/agents/RECORDS-BRIEF.md"
 }

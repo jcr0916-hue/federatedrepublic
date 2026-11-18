@@ -237,3 +237,30 @@ test('off-week desks are those on their weekday outside their cadence', () => {
   assert.ok(!off.includes('c') && !off.includes('d'));
   assert.deepEqual(core.offWeekDesks(roster, TUESDAY), []);
 });
+
+test('a desk with a records block also gets a records desk on its own schedule and inbox', () => {
+  const roster = { recordsBriefPath: 'docs/torenthia/agents/RECORDS-BRIEF.md', desks: [
+    { id: 'varek', name: 'Varek State desk', jurisdiction: 'Varek', inboxDesk: 'varek', enabled: true, days: ['fri'], everyWeeks: 2,
+      briefPath: 'docs/torenthia/agents/varek/BRIEF.md', sources: ['State Constitutions/varek-state-constitution.md'], records: { days: ['mon'] } },
+    { id: 'federal', name: 'Federal Realm desk', enabled: true, days: ['mon'] },
+  ] };
+  const all = core.withRecordDesks(roster).desks;
+  const r = all.find((d) => d.id === 'varek-records');
+  assert.ok(r);
+  assert.equal(r.inboxDesk, 'varek-records');
+  assert.equal(r.briefPath, 'docs/torenthia/agents/RECORDS-BRIEF.md');
+  assert.deepEqual(r.days, ['mon']);
+  assert.equal(r.everyWeeks, 1);
+  assert.equal(r.notesPath, 'docs/torenthia/agents/varek/RECORDS-NOTES.md');
+  assert.deepEqual(r.sources.slice(0, 2), ['docs/torenthia/agents/varek/BRIEF.md', 'docs/torenthia/agents/varek/RECORDS-REGISTER.md']);
+  assert.ok(/^[a-z][a-z-]{1,29}$/.test(r.inboxDesk), 'inbox name passes the Worker desk pattern');
+  assert.deepEqual(core.dueDesks({ desks: all }, MONDAY).map((d) => d.id).sort(), ['federal', 'varek-records']);
+});
+
+test('every records desk on main has a valid inbox name and the shared records brief', () => {
+  const roster = core.withRecordDesks(JSON.parse(fs.readFileSync(core.ROSTER_PATH, 'utf8')));
+  assert.ok(fs.existsSync(roster.recordsBriefPath));
+  for (const d of roster.desks.filter((x) => x.id.endsWith('-records') && x.briefPath === roster.recordsBriefPath)) {
+    assert.ok(/^[a-z][a-z-]{1,29}$/.test(d.inboxDesk), d.inboxDesk);
+  }
+});

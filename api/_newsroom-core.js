@@ -288,9 +288,35 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun, ref = 'main'
   return { desk: desk.id, status: 'submitted', id: receipt.id, key: receipt.key, title: proposal.title, kind: proposal.kind, usage };
 }
 
+// A desk with a "records" block also runs a records desk for its jurisdiction's own record
+// system: id "<id>-records", its own inbox name, the shared records brief, and the desk's
+// brief and sources as context. Its cadence comes from the records block.
+function withRecordDesks(roster) {
+  const desks = Array.isArray(roster.desks) ? roster.desks : [];
+  const extra = desks.filter((d) => d.records && typeof d.records === 'object').map((d) => {
+    const dir = String(d.briefPath || '').replace(/[^/]*$/, '');
+    return {
+      id: `${d.id}-records`,
+      name: `${d.name.replace(/ desk$/, '')} records desk`,
+      jurisdiction: d.jurisdiction,
+      inboxDesk: `${d.inboxDesk || d.id}-records`,
+      enabled: d.enabled && d.records.enabled !== false,
+      days: d.records.days || d.days,
+      everyWeeks: d.records.everyWeeks || 1,
+      weekOffset: d.records.weekOffset || 0,
+      briefPath: roster.recordsBriefPath,
+      assignmentsPath: `${dir}RECORDS-ASSIGNMENTS.md`,
+      notesPath: `${dir}RECORDS-NOTES.md`,
+      sources: [d.briefPath, `${dir}RECORDS-REGISTER.md`, ...(d.sources || [])],
+      ...(d.records.model ? { model: d.records.model } : {}),
+    };
+  });
+  return { ...roster, desks: [...desks, ...extra] };
+}
+
 async function runNewsroom({ env = process.env, fetchImpl = fetch, now = new Date(), only = '', dryRun = false } = {}) {
   const ref = await resolveCommit(fetchImpl);
-  const roster = JSON.parse(await loadText(fetchImpl, ROSTER_PATH, undefined, ref));
+  const roster = withRecordDesks(JSON.parse(await loadText(fetchImpl, ROSTER_PATH, undefined, ref)));
   if (roster.paused) return { paused: true, commit: ref, results: [] };
   const desks = dueDesks(roster, now, only);
   // A tasked desk (an open assignment) runs every week on its days, whatever its cadence.
@@ -307,4 +333,4 @@ async function runNewsroom({ env = process.env, fetchImpl = fetch, now = new Dat
   return { paused: false, date: now.toISOString(), commit: ref, results };
 }
 
-module.exports = { RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
+module.exports = { RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
