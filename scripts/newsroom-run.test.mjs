@@ -80,7 +80,7 @@ test('only desks scheduled for today run', () => {
 
 test('Pro plans, Flash writes, and one proposal reaches the federal inbox', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results.length, 1);
   const r = out.results[0];
   assert.equal(r.status, 'submitted');
@@ -97,7 +97,7 @@ test('Pro plans, Flash writes, and one proposal reaches the federal inbox', asyn
 
 test('a rejected inbox key stops the desk before any model call', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, keyOk: false });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'failed');
   assert.match(out.results[0].error, /inbox key check failed \(401\)/);
   assert.equal(calls.gateway.length, 0);
@@ -111,7 +111,7 @@ test('vercel.json schedules the run once, as a GET, with no legacy cron', () => 
 
 test('every file in a run is read at one pinned commit, and the commit is recorded', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.commit, SHA);
   assert.deepEqual([...calls.refs], [SHA]);
   assert.equal(calls.inbox[0].body.sourceRefs[0], `commit:${SHA}`);
@@ -120,7 +120,7 @@ test('every file in a run is read at one pinned commit, and the commit is record
 test('a desk that filed within the last six hours is skipped before any model call', async () => {
   const existing = [{ id: 'x1', submittedAt: '2026-11-16T15:58:00.000Z' }];
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'already-filed');
   assert.equal(calls.gateway.length, 0);
 });
@@ -128,7 +128,7 @@ test('a desk that filed within the last six hours is skipped before any model ca
 test('an earlier filing on the same UTC day, more than six hours ago, does not block a new run', async () => {
   const existing = [{ id: 'x2', submittedAt: '2026-11-16T06:23:21.206Z' }];
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'submitted');
   assert.equal(calls.inbox.length, 1);
 });
@@ -136,7 +136,7 @@ test('an earlier filing on the same UTC day, more than six hours ago, does not b
 test('a filing from an earlier day does not block today', async () => {
   const existing = [{ id: 'x0', submittedAt: '2026-11-13T16:20:00.000Z' }];
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft, existing });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'submitted');
   assert.equal(calls.inbox.length, 1);
 });
@@ -149,7 +149,7 @@ test('the handler returns 500 when any desk fails and 200 otherwise', async () =
 
 test('without a desk key, the runner key files for the desk and names it', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw', NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw', NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'submitted');
   assert.equal(calls.inbox[0].auth, 'Bearer run');
   assert.equal(calls.listHeaders['x-newsroom-desk'], 'federal');
@@ -157,14 +157,14 @@ test('without a desk key, the runner key files for the desk and names it', async
 
 test('a desk key, when configured, takes precedence over the runner key', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  await core.runNewsroom({ env: { ...env, NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY });
+  await core.runNewsroom({ env: { ...env, NEWSROOM_RUNNER_KEY: 'run' }, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(calls.inbox[0].auth, 'Bearer fed-key');
   assert.equal(calls.listHeaders['x-newsroom-desk'], undefined);
 });
 
 test('a planner skip means no writer call and no submission', async () => {
   const { impl, calls } = fakeFetch({ planReply: { skip: true, reason: 'nothing new' } });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'no-submission');
   assert.equal(calls.gateway.length, 1);
   assert.equal(calls.inbox.length, 0);
@@ -172,14 +172,14 @@ test('a planner skip means no writer call and no submission', async () => {
 
 test('missing inbox key skips the desk before any paid call', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: draft });
-  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env: { AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'skipped');
   assert.equal(calls.gateway.length, 0);
 });
 
 test('a bad draft fails that desk without submitting', async () => {
   const { impl, calls } = fakeFetch({ planReply: plan, writeReply: { kind: 'poem', title: 'x', body: 'y' } });
-  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY });
+  const out = await core.runNewsroom({ env, fetchImpl: impl, now: MONDAY, only: 'federal' });
   assert.equal(out.results[0].status, 'failed');
   assert.match(out.results[0].error, /invalid kind/);
   assert.equal(calls.inbox.length, 0);

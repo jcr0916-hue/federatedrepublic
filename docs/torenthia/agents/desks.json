@@ -230,11 +230,11 @@
       "name": "Kelvant State desk",
       "jurisdiction": "Kelvant",
       "inboxDesk": "kelvant",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "thu"
+        "mon"
       ],
-      "everyWeeks": 2,
+      "everyWeeks": 1,
       "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/kelvant/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/kelvant/ASSIGNMENTS.md",
@@ -287,9 +287,9 @@
       "name": "Norvane State desk",
       "jurisdiction": "Norvane",
       "inboxDesk": "norvane",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "sun"
+        "sat"
       ],
       "everyWeeks": 2,
       "weekOffset": 0,
