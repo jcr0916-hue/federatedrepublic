@@ -368,34 +368,37 @@
       "name": "Monitors desk",
       "jurisdiction": "Federal institutions",
       "inboxDesk": "monitors",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "mon"
+        "sun"
       ],
-      "everyWeeks": 2,
-      "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/monitors/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/monitors/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/monitors/NOTES.md",
-      "sources": []
+      "sources": [
+        "torenthia/nrs/torenthia-nrs-122.html",
+        "torenthia/nrs/torenthia-nrs-123.html",
+        "torenthia/news/torenthia-news-126.html"
+      ]
     },
     {
       "id": "partisan-media",
       "name": "Partisan Media desk",
       "jurisdiction": "Republic-wide opinion",
       "inboxDesk": "partisan-media",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "fri"
+        "wed",
+        "sat"
       ],
-      "everyWeeks": 2,
-      "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/partisan-media/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/partisan-media/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/partisan-media/NOTES.md",
       "sources": [
         "torenthia/news/torenthia-news-135.html",
-        "torenthia/news/torenthia-news-136.html"
+        "torenthia/news/torenthia-news-136.html",
+        "torenthia/news/torenthia-news-123.html",
+        "torenthia/news/torenthia-news-131.html"
       ]
     }
   ]
