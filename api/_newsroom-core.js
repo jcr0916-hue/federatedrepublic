@@ -12,6 +12,7 @@ const ROSTER_PATH = 'docs/torenthia/agents/desks.json';
 const DEFAULT_INBOX = 'https://federated-republic-newsroom.jcr0916.workers.dev';
 const GATEWAY_URL = 'https://ai-gateway.vercel.sh/v1/chat/completions';
 const KINDS = ['pitch', 'article', 'nrs-proposal', 'report', 'character', 'design', 'other'];
+const TRACKS = ['canon', 'idea', 'record'];
 const DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
 function dueDesks(roster, now, only) {
@@ -92,7 +93,7 @@ function buildPlanMessages(ctx) {
   parts.push('', '## Your task: plan, do not write',
     'If an open assignment exists, plan the first one. Otherwise choose one item of your own: a story, an official record proposal, a character, or a pitch.',
     'If nothing worthwhile exists, return {"skip": true, "reason": "..."}.',
-    `Otherwise return only a JSON object with keys: "kind" (one of ${KINDS.join(', ')}), "workingTitle", "angle" (why this matters now, 2–3 sentences), "outline" (array of beats), "facts" (array of established facts to rely on, each with its source path), "newElements" (any new names, places or figures you propose), "cautions" (open clocks and things the writer must not decide).`);
+    `Otherwise return only a JSON object with keys: "kind" (one of ${KINDS.join(', ')}), "workingTitle", "angle" (why this matters now, 2–3 sentences), "outline" (array of beats), "facts" (array of established facts to rely on, each with its source path), "newElements" (any new names, places or figures you propose), "cautions" (open clocks and things the writer must not decide), "track" (one of ${TRACKS.join(', ')}).`);
   return [{ role: 'system', content: systemPrompt(ctx) }, { role: 'user', content: parts.join('\n') }];
 }
 
@@ -110,7 +111,7 @@ function buildMessages(ctx) {
       'If nothing worthwhile exists, return {"skip": true, "reason": "..."}.');
   }
   parts.push(
-    `${plan ? 'Return' : 'Otherwise return'} only a JSON object with keys: "kind" (one of ${KINDS.join(', ')}), "title", "summary" (1–2 sentences), "body" (the full draft), "sourceRefs" (repo paths you relied on), and "notesForEditor" (a short ledger: established facts with their source paths; new names, places and figures you propose; unresolved points; affected jurisdictions and dependencies; anything the editor must check; your recommendation: USE, HOLD, REVISE or DISCARD).`);
+    `${plan ? 'Return' : 'Otherwise return'} only a JSON object with keys: "kind" (one of ${KINDS.join(', ')}), "title", "summary" (1–2 sentences), "body" (the full draft), "sourceRefs" (repo paths you relied on), "notesForEditor" (a short ledger: established facts with their source paths; new names, places and figures you propose; unresolved points; affected jurisdictions and dependencies; anything the editor must check; your recommendation: USE, HOLD, REVISE or DISCARD), "track" (one of ${TRACKS.join(', ')}: see "Declare what you are submitting" in the rules), and "attention" (an object: "importance" high, normal or low; "timeSensitive" true or false; "touches" an array naming any of: other jurisdictions, federal authority, reserved continuity, an open clock; "why" one sentence on why it matters now).`);
   return [
     { role: 'system', content: system },
     { role: 'user', content: parts.join('\n') },
@@ -125,6 +126,22 @@ function extractJson(text) {
   throw new Error('model did not return JSON');
 }
 
+// The desk's own declaration of what it is submitting and how much attention it needs,
+// carried as a short tag at the start of the summary so the inbox list shows it:
+// "[canon · high · timely · touches: federal authority]".
+function attentionTag(kind, p) {
+  let track = String(p.track || '').toLowerCase().trim();
+  if (!TRACKS.includes(track)) track = kind === 'nrs-proposal' ? 'record' : ['pitch', 'character', 'other', 'design'].includes(kind) ? 'idea' : 'canon';
+  const a = p.attention && typeof p.attention === 'object' ? p.attention : {};
+  let importance = String(a.importance || '').toLowerCase().trim();
+  if (!['high', 'normal', 'low'].includes(importance)) importance = track === 'record' ? 'low' : 'normal';
+  const bits = [track, importance];
+  if (a.timeSensitive === true || a.timeSensitive === 'true') bits.push('timely');
+  const touches = (Array.isArray(a.touches) ? a.touches : []).map((x) => String(x).trim()).filter(Boolean).slice(0, 4);
+  if (touches.length) bits.push('touches: ' + touches.join(', ').slice(0, 120));
+  return `[${bits.join(' · ')}]`;
+}
+
 function parseProposal(text) {
   const p = extractJson(text);
   if (p && p.skip) return { skip: true, reason: String(p.reason || '').slice(0, 600) };
@@ -137,13 +154,13 @@ function parseProposal(text) {
   return {
     kind,
     title: title.slice(0, 180),
-    summary: String(p.summary || '').trim().slice(0, 600),
+    summary: (attentionTag(kind, p) + ' ' + String(p.summary || '').trim()).slice(0, 600),
     body: (notes ? `${body}\n\n---\nNotes for the editor:\n${notes}` : body).slice(0, 40000),
     sourceRefs: Array.isArray(p.sourceRefs) ? p.sourceRefs.slice(0, 15).map((x) => String(x).slice(0, 400)) : [],
   };
 }
 
-async function callModel(fetchImpl, { token, model, messages, maxTokens, timeoutMs = 120000, deskId }) {
+async function callModel(fetchImpl, { token, model, messages, maxTokens, timeoutMs = 120000, deskId, json = true }) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
@@ -155,7 +172,7 @@ async function callModel(fetchImpl, { token, model, messages, maxTokens, timeout
         model,
         messages,
         max_tokens: maxTokens,
-        response_format: { type: 'json_object' },
+        ...(json ? { response_format: { type: 'json_object' } } : {}),
         providerOptions: { gateway: { tags: ['site:federated-republic', 'newsroom', `desk:${deskId}`] } },
       }),
     });
@@ -308,6 +325,7 @@ function withRecordDesks(roster) {
       assignmentsPath: `${dir}RECORDS-ASSIGNMENTS.md`,
       notesPath: `${dir}RECORDS-NOTES.md`,
       sources: [d.briefPath, `${dir}RECORDS-REGISTER.md`, ...(d.sources || [])],
+      planner: d.records.planner === undefined ? null : d.records.planner,
       ...(d.records.model ? { model: d.records.model } : {}),
     };
   });
@@ -333,4 +351,4 @@ async function runNewsroom({ env = process.env, fetchImpl = fetch, now = new Dat
   return { paused: false, date: now.toISOString(), commit: ref, results };
 }
 
-module.exports = { RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, resolveCommit, loadText, loadOptional, callModel, systemPrompt, contextParts, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
+module.exports = { TRACKS, attentionTag, filedRecently, submitProposal, DEFAULT_INBOX, RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, resolveCommit, loadText, loadOptional, callModel, systemPrompt, contextParts, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };

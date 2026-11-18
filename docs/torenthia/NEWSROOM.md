@@ -8,7 +8,8 @@ Each desk speaks for one jurisdiction or institution. Desks propose; the Central
 2. The function reads [`agents/desks.json`](agents/desks.json) from GitHub `main` and runs each enabled desk scheduled for that weekday.
 3. For each desk, **DeepSeek V4 Pro (August 2026 release) plans** one item using the story status, the story bible, and the desk's brief, assignments and notes. **DeepSeek V4 Flash writes** it with the full Constitution added. Either step can decide nothing is worth writing.
 4. The draft goes to the existing Cloudflare inbox as `PROPOSED`, under that desk's name.
-5. The Central Editor reviews the inbox, updates each desk's `NOTES.md` and `ASSIGNMENTS.md`, and stages accepted items as a normal draft PR. John merges.
+5. **At about 16:37 UTC, the desk editor sorts the day.** The `newsroom-triage` schedule calls `api/newsroom-triage.js`, where Claude Haiku 5.5 reads each new filing's declared track and attention (the `[canon · high · timely · touches: …]` tag at the start of its summary), a short excerpt of each canon filing, and the story status. It ranks canon filings for the Central Editor's three daily slots (the rest go to bank or back to the desk), routes ideas to the weekly idea board and records through, flags anything that looks wrong at a glance, and files its triage to the inbox as desk `desk-editor`. It needs no canon; the desks have already checked their own work against it. It discards nothing.
+6. **At about 17:05 UTC, the Central Editor reviews.** Starting from the triage, it checks and edits only the shortlisted canon filings and anything flagged, skims routine records, updates each desk's notes, and stages accepted items as draft PRs. On Mondays it also compiles the week's ideas into [`IDEA-BOARD.md`](IDEA-BOARD.md) for John. John merges.
 
 Each run reads every file at one `main` commit, recorded as `commit:<sha>` in the submission's `sourceRefs`. Before any model call, each desk confirms its inbox key works and that it hasn't filed within the last six hours, so a duplicate delivery costs nothing. A run with any failed desk returns an error, so it shows in the schedule's history and error rate. Vercel doesn't retry failed runs.
 
@@ -29,7 +30,7 @@ Each change takes effect at the next run, with no redeploy needed.
 
 ## Cost
 
-Each desk run costs about 3–5 cents at November 2026 Gateway prices. The planner reads about 24,000 tokens and the writer about 67,000.
+Each desk run costs about 3–5 cents at November 2026 Gateway prices; records desks write with Flash alone, at about 1.5 cents a batch, and the desk editor's daily triage costs under a cent. The planner reads about 24,000 tokens and the writer about 67,000.
 
 - The planner uses `deepseek-v4-pro-0813`, which is billed at double rate from 00:00 to 14:00 UTC. Keep the schedule outside that window; it runs at 16:07 UTC.
 - Rules and shared sources lead every prompt, so desks running at the same hour are billed for that shared material at cache rates.

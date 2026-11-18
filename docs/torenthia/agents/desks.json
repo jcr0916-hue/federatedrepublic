@@ -51,7 +51,8 @@
       "notesPath": "docs/torenthia/agents/federal-records/NOTES.md",
       "sources": [
         "docs/torenthia/agents/federal-records/REGISTER.md"
-      ]
+      ],
+      "planner": null
     },
     {
       "id": "korda",
@@ -485,5 +486,14 @@
       ]
     }
   ],
-  "recordsBriefPath": "docs/torenthia/agents/RECORDS-BRIEF.md"
+  "recordsBriefPath": "docs/torenthia/agents/RECORDS-BRIEF.md",
+  "triage": {
+    "model": "anthropic/claude-haiku-5.5",
+    "maxOutputTokens": 6000,
+    "sources": [
+      "docs/torenthia/STORY-STATUS.md"
+    ],
+    "maxSourceChars": 120000,
+    "editorSlots": 3
+  }
 }
