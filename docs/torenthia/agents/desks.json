@@ -36,6 +36,24 @@
       "sources": []
     },
     {
+      "id": "federal-records",
+      "name": "Federal Records desk",
+      "jurisdiction": "Federal",
+      "inboxDesk": "federal-records",
+      "enabled": true,
+      "days": [
+        "tue",
+        "wed",
+        "fri"
+      ],
+      "briefPath": "docs/torenthia/agents/federal-records/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/federal-records/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/federal-records/NOTES.md",
+      "sources": [
+        "docs/torenthia/agents/federal-records/REGISTER.md"
+      ]
+    },
+    {
       "id": "korda",
       "name": "Korda Realm desk",
       "jurisdiction": "Korda",
@@ -310,12 +328,12 @@
       "name": "Morantine Territory desk",
       "jurisdiction": "Morantine",
       "inboxDesk": "morantine",
-      "enabled": false,
+      "enabled": true,
       "days": [
         "wed"
       ],
       "everyWeeks": 2,
-      "weekOffset": 0,
+      "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/morantine/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/morantine/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/morantine/NOTES.md",
