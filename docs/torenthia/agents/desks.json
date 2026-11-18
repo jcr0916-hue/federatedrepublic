@@ -328,12 +328,12 @@
       "name": "Morantine Territory desk",
       "jurisdiction": "Morantine",
       "inboxDesk": "morantine",
-      "enabled": false,
+      "enabled": true,
       "days": [
         "wed"
       ],
       "everyWeeks": 2,
-      "weekOffset": 0,
+      "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/morantine/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/morantine/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/morantine/NOTES.md",
