@@ -22,7 +22,7 @@ Nothing runs on anyone's computer. Nothing an agent writes reaches GitHub or the
 | Run now | Vercel → Schedules → `newsroom-daily` → Run Schedule (only desks due that weekday run) |
 | Pause one desk | that desk's `"enabled": false` |
 | Change how often a desk runs | its `"days"` (weekdays), plus `"everyWeeks": 2` or `3` to run only every second or third week; `"weekOffset"` staggers desks on the same interval |
-| Give a desk work | add a line under **Open** in its `ASSIGNMENTS.md` |
+| Give a desk work | add a line under **Open** in its `ASSIGNMENTS.md`. A desk with an open assignment runs every week on its days, even if its cadence is every second or third week, until the assignment moves to Done |
 | Change models | `defaultModel`, `planner.model`, or a desk's own `model` |
 
 Each change takes effect at the next run, with no redeploy needed.

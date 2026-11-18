@@ -215,3 +215,25 @@ test('JSON wrapped in a code fence still parses', () => {
   const p = core.parseProposal('```json\n' + JSON.stringify(draft) + '\n```');
   assert.equal(p.title, 'A Federal Story');
 });
+
+test('an open assignment is detected only under ## Open', () => {
+  assert.equal(core.hasOpenAssignment('# A\n\n## Open\n\n- Cover the ferry hearing.\n\n## Done\n'), true);
+  assert.equal(core.hasOpenAssignment('# A\n\n## Open\n\n## Done\n\n- Old work.\n'), false);
+  assert.equal(core.hasOpenAssignment('# A\n\n## Open\n- Last section item.\n'), true);
+  assert.equal(core.hasOpenAssignment(''), false);
+});
+
+test('off-week desks are those on their weekday outside their cadence', () => {
+  const roster = { desks: [
+    { id: 'a', enabled: true, days: ['mon'], everyWeeks: 2, weekOffset: 0 },
+    { id: 'b', enabled: true, days: ['mon'], everyWeeks: 2, weekOffset: 1 },
+    { id: 'c', enabled: true, days: ['mon'] },
+    { id: 'd', enabled: false, days: ['mon'], everyWeeks: 2, weekOffset: 1 },
+  ] };
+  const due = core.dueDesks(roster, MONDAY).map((d) => d.id);
+  const off = core.offWeekDesks(roster, MONDAY).map((d) => d.id);
+  assert.ok(due.includes('c'));
+  assert.equal(due.length + off.length, 3, 'every enabled Monday desk is either due or off-week');
+  assert.ok(!off.includes('c') && !off.includes('d'));
+  assert.deepEqual(core.offWeekDesks(roster, TUESDAY), []);
+});

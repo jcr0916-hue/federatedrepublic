@@ -78,12 +78,12 @@
       "name": "Arvane State desk",
       "jurisdiction": "Arvane",
       "inboxDesk": "arvane",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "tue"
+        "sat"
       ],
       "everyWeeks": 2,
-      "weekOffset": 0,
+      "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/arvane/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/arvane/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/arvane/NOTES.md",
@@ -97,12 +97,12 @@
       "name": "Orath State desk",
       "jurisdiction": "Orath",
       "inboxDesk": "orath",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "wed"
+        "mon"
       ],
       "everyWeeks": 2,
-      "weekOffset": 0,
+      "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/orath/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/orath/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/orath/NOTES.md",
@@ -116,12 +116,12 @@
       "name": "Merath State desk",
       "jurisdiction": "Merath",
       "inboxDesk": "merath",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "thu"
+        "mon"
       ],
-      "everyWeeks": 2,
-      "weekOffset": 1,
+      "everyWeeks": 3,
+      "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/merath/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/merath/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/merath/NOTES.md",
@@ -154,12 +154,12 @@
       "name": "Varek State desk",
       "jurisdiction": "Varek",
       "inboxDesk": "varek",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "sat"
+        "fri"
       ],
       "everyWeeks": 2,
-      "weekOffset": 0,
+      "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/varek/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/varek/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/varek/NOTES.md",
@@ -173,11 +173,11 @@
       "name": "Harren State desk",
       "jurisdiction": "Harren",
       "inboxDesk": "harren",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "sun"
+        "tue"
       ],
-      "everyWeeks": 2,
+      "everyWeeks": 3,
       "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/harren/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/harren/ASSIGNMENTS.md",
@@ -192,12 +192,12 @@
       "name": "Aldenmere State desk",
       "jurisdiction": "Aldenmere",
       "inboxDesk": "aldenmere",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "tue"
+        "wed"
       ],
-      "everyWeeks": 2,
-      "weekOffset": 1,
+      "everyWeeks": 3,
+      "weekOffset": 2,
       "briefPath": "docs/torenthia/agents/aldenmere/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/aldenmere/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/aldenmere/NOTES.md",
@@ -211,12 +211,12 @@
       "name": "Caldenmere State desk",
       "jurisdiction": "Caldenmere",
       "inboxDesk": "caldenmere",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "wed"
+        "thu"
       ],
-      "everyWeeks": 2,
-      "weekOffset": 1,
+      "everyWeeks": 3,
+      "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/caldenmere/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/caldenmere/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/caldenmere/NOTES.md",
@@ -249,12 +249,12 @@
       "name": "Selvane State desk",
       "jurisdiction": "Selvane",
       "inboxDesk": "selvane",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "fri"
+        "sun"
       ],
       "everyWeeks": 2,
-      "weekOffset": 1,
+      "weekOffset": 0,
       "briefPath": "docs/torenthia/agents/selvane/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/selvane/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/selvane/NOTES.md",
@@ -268,11 +268,11 @@
       "name": "Rhovane State desk",
       "jurisdiction": "Rhovane",
       "inboxDesk": "rhovane",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "sat"
+        "fri"
       ],
-      "everyWeeks": 2,
+      "everyWeeks": 3,
       "weekOffset": 1,
       "briefPath": "docs/torenthia/agents/rhovane/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/rhovane/ASSIGNMENTS.md",
@@ -306,7 +306,7 @@
       "name": "Solara Territory desk",
       "jurisdiction": "Solara",
       "inboxDesk": "solara",
-      "enabled": false,
+      "enabled": true,
       "days": [
         "tue"
       ],
@@ -350,12 +350,12 @@
       "name": "Verdmont Territory desk",
       "jurisdiction": "Verdmont",
       "inboxDesk": "verdmont",
-      "enabled": false,
+      "enabled": true,
       "days": [
-        "thu"
+        "sun"
       ],
-      "everyWeeks": 2,
-      "weekOffset": 1,
+      "everyWeeks": 3,
+      "weekOffset": 2,
       "briefPath": "docs/torenthia/agents/verdmont/BRIEF.md",
       "assignmentsPath": "docs/torenthia/agents/verdmont/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/verdmont/NOTES.md",

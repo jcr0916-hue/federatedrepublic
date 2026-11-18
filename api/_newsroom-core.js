@@ -24,6 +24,22 @@ function dueDesks(roster, now, only) {
     && (!(d.everyWeeks > 1) || (week + (d.weekOffset || 0)) % d.everyWeeks === 0));
 }
 
+// Desks on their weekday but in an off week of their cadence. They still run if tasked.
+function offWeekDesks(roster, now) {
+  if (!roster || roster.paused) return [];
+  const desks = Array.isArray(roster.desks) ? roster.desks : [];
+  const today = DAYS[now.getUTCDay()];
+  const week = Math.floor(now.getTime() / (7 * 86400000));
+  return desks.filter((d) => d.enabled && Array.isArray(d.days) && d.days.includes(today)
+    && d.everyWeeks > 1 && (week + (d.weekOffset || 0)) % d.everyWeeks !== 0);
+}
+
+// An assignment is open when a list item sits under "## Open" in the desk's ASSIGNMENTS.md.
+function hasOpenAssignment(text) {
+  const m = String(text || '').match(/^## Open[^\n]*\n([\s\S]*?)(?=^## |$(?![\s\S]))/m);
+  return !!m && /^\s*[-*] +\S/m.test(m[1]);
+}
+
 // Every file in a run is read at the same commit, so a merge mid-run cannot mix versions.
 async function resolveCommit(fetchImpl) {
   try {
@@ -277,10 +293,18 @@ async function runNewsroom({ env = process.env, fetchImpl = fetch, now = new Dat
   const roster = JSON.parse(await loadText(fetchImpl, ROSTER_PATH, undefined, ref));
   if (roster.paused) return { paused: true, commit: ref, results: [] };
   const desks = dueDesks(roster, now, only);
+  // A tasked desk (an open assignment) runs every week on its days, whatever its cadence.
+  if (!only) {
+    for (const d of offWeekDesks(roster, now)) {
+      try {
+        if (d.assignmentsPath && hasOpenAssignment(await loadText(fetchImpl, d.assignmentsPath, undefined, ref))) desks.push(d);
+      } catch { /* unreadable assignments: keep the cadence */ }
+    }
+  }
   const results = await Promise.all(desks.map((d) =>
     runDesk(d, { roster, env, fetchImpl, now, dryRun, ref })
       .catch((e) => ({ desk: d.id, status: 'failed', error: String(e.message || e).slice(0, 300) }))));
   return { paused: false, date: now.toISOString(), commit: ref, results };
 }
 
-module.exports = { RAW_BASE, dueDesks, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
+module.exports = { RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
