@@ -1,9 +1,27 @@
 # Idea board
 
-Ideas the desks have proposed: storylines, characters, reactions and "what ifs." The Central Editor compiles the week's ideas here every Monday from the desk editor's triage; John marks what moves forward. A picked idea becomes an assignment for the desk that proposed it, or for the desks that should react.
+Ideas the desks have proposed: storylines, characters, reactions and "what ifs." The desk editor routes them here from each day's triage, the Central Editor puts the week's ideas on the board every Monday, and John decides which move forward.
 
-Marks: **GO** (assign it), **LATER** (keep), **NO** (drop).
+## Where John marks them
 
-## Week of November 23, 2026
+The board is a private phone page: <https://claude.ai/artifact/McG5YjLTR7phxbvWJHbDTC>. Each idea is a card with the desk, a one-line pitch, the story in two or three sentences and the desks that could react. Three buttons, **GO**, **LATER** and **NO**, save at once. Tapping the same button again undoes it. The tabs at the top sort cards by status.
 
-(First board compiles on Monday.)
+- **GO** becomes an assignment on the next daily review: the proposing desk's `ASSIGNMENTS.md` gets an item under `## Open` (and each reacting desk's, when the idea names them), and the card shows "Assigned." A desk with an open assignment runs that week even in an off week of its cadence.
+- **LATER** stays on the board, parked.
+- **NO** stays on the board in the NO tab in case John changes his mind.
+
+## How the Central Editor runs it
+
+The board's data lives in the page's database, collection `ideas`, one document per idea. The Central Editor reads and writes it with the `ArtifactData` tool, using the page's URL above.
+
+Document fields: `week` (the Monday, `YYYY-MM-DD`), `order` (number within the week), `desk` (display name of the proposing desk), `title`, `pitch` (one plain sentence), `story` (two or three sentences, no jargon, no file paths), `react` (desks that could react, may be empty), `status` (`pending`, `go`, `later`, `no`), `decidedAt` (set by the page), `assignedAt` (set by the editor once the assignment exists), `sourceKey` (the inbox key of the filing). Ids look like `w20261123-korda-1`.
+
+- **Mondays:** put the past seven days' idea-board items on the board as `pending`. Delete any document with `example: true` (the first board ships with three sample cards).
+- **Every day:** read the board. For each `go` idea without `assignedAt`, add the assignment, set `assignedAt`, and record it in the log below. Note `later` and `no` decisions in the log once.
+- If the `ArtifactData` tool is unavailable in a run, put the week's ideas in the log below instead and tell John.
+
+## Log
+
+Decisions and assignments, newest first, one line each: date, desk, idea, decision, what was assigned.
+
+(Nothing yet. The first board is Monday, November 23, 2026.)
