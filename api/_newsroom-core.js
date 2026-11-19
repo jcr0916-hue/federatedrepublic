@@ -15,13 +15,21 @@ const KINDS = ['pitch', 'article', 'nrs-proposal', 'report', 'character', 'desig
 const TRACKS = ['canon', 'idea', 'record'];
 const DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
+// A desk with "until": "YYYY-MM-DD" (temporary desks, such as the election tracker) stops
+// running after that UTC day. Without it a desk runs for as long as it is enabled.
+function withinTerm(d, now) {
+  if (!d.until) return true;
+  const end = Date.parse(String(d.until) + 'T23:59:59Z');
+  return Number.isNaN(end) ? true : now.getTime() <= end;
+}
+
 function dueDesks(roster, now, only) {
   if (!roster || roster.paused) return [];
   const desks = Array.isArray(roster.desks) ? roster.desks : [];
-  if (only) return desks.filter((d) => d.id === only && d.enabled);
+  if (only) return desks.filter((d) => d.id === only && d.enabled && withinTerm(d, now));
   const today = DAYS[now.getUTCDay()];
   const week = Math.floor(now.getTime() / (7 * 86400000)); // whole weeks since 1970-01-01 (a Thursday)
-  return desks.filter((d) => d.enabled && Array.isArray(d.days) && d.days.includes(today)
+  return desks.filter((d) => d.enabled && withinTerm(d, now) && Array.isArray(d.days) && d.days.includes(today)
     && (!(d.everyWeeks > 1) || (week + (d.weekOffset || 0)) % d.everyWeeks === 0));
 }
 
@@ -31,7 +39,7 @@ function offWeekDesks(roster, now) {
   const desks = Array.isArray(roster.desks) ? roster.desks : [];
   const today = DAYS[now.getUTCDay()];
   const week = Math.floor(now.getTime() / (7 * 86400000));
-  return desks.filter((d) => d.enabled && Array.isArray(d.days) && d.days.includes(today)
+  return desks.filter((d) => d.enabled && withinTerm(d, now) && Array.isArray(d.days) && d.days.includes(today)
     && d.everyWeeks > 1 && (week + (d.weekOffset || 0)) % d.everyWeeks !== 0);
 }
 
