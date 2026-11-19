@@ -2,7 +2,7 @@
 
 Harren bodies that have filed routine entries to the Harren State Record (Article IX of the State constitution), and their series. The Central Editor updates this when entries are published. Records desk: continue open series in order, and prefer these bodies.
 
-Published frontier at last update: nrsSeq **144**, latest reference **NRS-Y14-0056** (Year 14, Month 2).
+Published frontier at last update: nrsSeq **148**, latest reference **NRS-Y14-0060** (Year 14, Month 2).
 
 ## Harren State Archives (Hadrin)
 - Reading-room winter hours (NRS-Y14-0024). *Seasonal.*
