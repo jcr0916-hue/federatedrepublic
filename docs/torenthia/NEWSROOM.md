@@ -24,6 +24,7 @@ Nothing runs on anyone's computer. Nothing an agent writes reaches GitHub or the
 | Pause one desk | that desk's `"enabled": false` |
 | Change how often a desk runs | its `"days"` (weekdays), plus `"everyWeeks": 2` or `3` to run only every second or third week; `"weekOffset"` staggers desks on the same interval |
 | Give a desk work | add a line under **Open** in its `ASSIGNMENTS.md`. A desk with an open assignment runs every week on its days, even if its cadence is every second or third week, until the assignment moves to Done |
+| End a temporary desk | `"until": "YYYY-MM-DD"` on the desk: it stops running after that UTC day (the election tracker has one) |
 | Change models | `defaultModel`, `planner.model`, or a desk's own `model` |
 
 Each change takes effect at the next run, with no redeploy needed.
@@ -43,6 +44,14 @@ Every State and Territory desk also has a **records desk** (`<id>-records`), set
 Desks report even when nothing is planned for them: a desk may react to events elsewhere or bring an idea of its own, and the editor banks good material that isn't used right away.
 
 Cadence follows the story: the Federal desk reports regularly, desks with a heated storyline report more often, and quiet desks drop to every few weeks.
+
+## Continuity: registry, coverage and trackers
+
+Three pieces keep the cast and the storylines consistent without the Central Editor checking by hand.
+
+- **Cast registry** (`_data/worldRegistry.json`). People, outlets, avoided names, name-collision groups and the live threads. `npm run check:world-registry` (also part of `world:publish-check`) reads records changed on a branch and flags avoided names, a byline at the wrong outlet, an unregistered byline or outlet (with a note when its first name is one letter from an existing one), a bare surname when both members of a collision group appear, and pronouns that contradict a locked pronoun. Every result is a warning; fix the text, or update the registry if it is out of date. `--all` audits every record and `--evidence` prints pronoun counts for review. Pronoun locks were seeded from the published text and are open to John's correction.
+- **Coverage report** (`docs/torenthia/COVERAGE.md`). `npm run world:coverage -- --write` counts the last 20 stories and 40 NRS records by outlet, byline, jurisdiction, arc and thread, how recently each thread's people were named, and flags concentration (over 35% from one outlet or byline) and quiet arcs, jurisdictions and candidates. It is exact, not model-written. The Central Editor regenerates it in any PR that publishes World records, so it is current at merge.
+- **Thread trackers.** A tracker desk keeps a living file for one thread and reports weekly. It files kind `report`; the desk editor's triage lists reports from the desks in `triage.passThroughDesks` first, under `tracker`, without a model call, and the Central Editor reads them directly. The Election Tracker desk (`agents/election-tracker/`, Mondays, until 2027-02-28) keeps `ELECTION-TRACKER.md`, checks the candidates for drift, and recommends beats. Add another thread by adding it to the registry's `threads` and, if it needs a file, a tracker desk; the Central Editor folds each report into the tracker file in the notes PR.
 
 ## Adding a desk
 

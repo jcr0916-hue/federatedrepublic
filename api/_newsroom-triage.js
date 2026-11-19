@@ -74,15 +74,19 @@ function buildTriageMessages({ status, items, slots, now }) {
   return [{ role: 'system', content: system }, { role: 'user', content: user.join('\n') }];
 }
 
-function renderTriage(result, items, now) {
+// Filings from "pass-through" desks (the election tracker and any later thread trackers) are
+// reports for the Central Editor to read, not competing stories. They skip the model and
+// appear first in the triage as route "tracker".
+function renderTriage(result, items, now, direct = []) {
   const byKey = new Map(items.map((i) => [i.key, i]));
   const rows = (Array.isArray(result.items) ? result.items : []).filter((r) => byKey.has(r.key));
   const seen = new Set(rows.map((r) => r.key));
   for (const it of items) if (!seen.has(it.key)) rows.push({ key: it.key, desk: it.desk, title: it.title, track: trackOf(it), route: 'unsorted', flags: ['desk editor did not sort this filing'], line: '' });
-  const order = { editor: 0, bank: 1, return: 2, 'idea-board': 3, records: 4, unsorted: 5 };
+  for (const it of direct) rows.push({ key: it.key, desk: it.desk, title: it.title, track: trackOf(it), route: 'tracker', flags: [], line: String(it.summary || '').slice(0, 200) });
+  const order = { tracker: -1, editor: 0, bank: 1, return: 2, 'idea-board': 3, records: 4, unsorted: 5 };
   rows.sort((a, b) => (order[a.route] ?? 9) - (order[b.route] ?? 9) || (a.rank ?? 99) - (b.rank ?? 99));
-  const out = [`Desk editor triage for ${now.toISOString().slice(0, 10)}: ${items.length} new filings.`, '', String(result.summary || '').trim(), ''];
-  for (const route of ['editor', 'bank', 'return', 'idea-board', 'records', 'unsorted']) {
+  const out = [`Desk editor triage for ${now.toISOString().slice(0, 10)}: ${items.length + direct.length} new filings.`, '', String(result.summary || '').trim(), ''];
+  for (const route of ['tracker', 'editor', 'bank', 'return', 'idea-board', 'records', 'unsorted']) {
     const group = rows.filter((r) => r.route === route);
     if (!group.length) continue;
     out.push(`## ${route}`);
@@ -107,8 +111,11 @@ async function runTriage({ env = process.env, fetchImpl = fetch, now = new Date(
   const ref = await core.resolveCommit(fetchImpl);
   const roster = JSON.parse(await core.loadText(fetchImpl, core.ROSTER_PATH, undefined, ref));
   const cfg = roster.triage || {};
-  const items = await listRecent(fetchImpl, { inboxUrl, editorKey, now });
-  if (!items.length) return { status: 'nothing-new', commit: ref };
+  const all = await listRecent(fetchImpl, { inboxUrl, editorKey, now });
+  const pass = Array.isArray(cfg.passThroughDesks) ? cfg.passThroughDesks : [];
+  const direct = all.filter((it) => pass.includes(it.desk));
+  const items = all.filter((it) => !pass.includes(it.desk));
+  if (!items.length && !direct.length) return { status: 'nothing-new', commit: ref };
 
   // Canon filings get a short excerpt so the desk editor can judge them; ideas and records go by their summaries.
   for (const it of items) {
@@ -120,21 +127,24 @@ async function runTriage({ env = process.env, fetchImpl = fetch, now = new Date(
   for (const path of cfg.sources || ['docs/torenthia/STORY-STATUS.md']) status += (await core.loadOptional(fetchImpl, path, undefined, ref)) || '';
   status = status.slice(0, cfg.maxSourceChars || 120000);
   const messages = buildTriageMessages({ status, items, slots: cfg.editorSlots || 3, now });
-  if (dryRun) return { status: 'dry-run', commit: ref, filings: items.length, chars: messages.reduce((n, m) => n + m.content.length, 0) };
+  if (dryRun) return { status: 'dry-run', commit: ref, filings: items.length, tracker: direct.length, chars: messages.reduce((n, m) => n + m.content.length, 0) };
 
-  const r = await core.callModel(fetchImpl, { token, model: cfg.model || 'anthropic/claude-haiku-5.5', messages, maxTokens: cfg.maxOutputTokens || 6000, timeoutMs: 120000, deskId: TRIAGE_DESK, json: false });
-  let result;
-  try { result = core.extractJson(r.text); } catch { result = { summary: 'The desk editor reply was not JSON; every filing is unsorted.', items: [] }; }
-  const body = renderTriage(result, items, now);
+  let r = { usage: null };
+  let result = { summary: '', items: [] };
+  if (items.length) {
+    r = await core.callModel(fetchImpl, { token, model: cfg.model || 'anthropic/claude-haiku-5.5', messages, maxTokens: cfg.maxOutputTokens || 6000, timeoutMs: 120000, deskId: TRIAGE_DESK, json: false });
+    try { result = core.extractJson(r.text); } catch { result = { summary: 'The desk editor reply was not JSON; every filing is unsorted.', items: [] }; }
+  }
+  const body = renderTriage(result, items, now, direct);
   const proposal = {
     kind: 'report',
     title: `Desk editor triage — ${now.toISOString().slice(0, 10)}`,
-    summary: `[triage] ${items.length} filings sorted for the Central Editor.`,
+    summary: `[triage] ${items.length + direct.length} filings sorted for the Central Editor.`,
     body: body.slice(0, 40000),
     sourceRefs: [`commit:${ref}`, ...(cfg.sources || ['docs/torenthia/STORY-STATUS.md'])],
   };
   const filed = await core.submitProposal(fetchImpl, { inboxUrl, proposal, authHeaders: { Authorization: `Bearer ${runnerKey}`, 'x-newsroom-desk': TRIAGE_DESK } });
-  return { status: 'submitted', commit: ref, filings: items.length, id: filed.id, key: filed.key, usage: r.usage || null };
+  return { status: 'submitted', commit: ref, filings: items.length + direct.length, id: filed.id, key: filed.key, usage: r.usage || null };
 }
 
 module.exports = { runTriage, buildTriageMessages, renderTriage, listRecent, trackOf, isTest, TRIAGE_DESK };

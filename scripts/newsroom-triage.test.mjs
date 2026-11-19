@@ -67,3 +67,35 @@ test('nothing new means no model call', async () => {
   assert.equal(out.status, 'nothing-new');
   assert.equal(calls.gateway.length, 0);
 });
+
+test('tracker reports skip the model and lead the triage', async () => {
+  // The mock model sorts items[0], so the story comes first in the list.
+  const items = [
+    { key: 'submissions/korda/a.json', desk: 'korda', kind: 'article', title: 'Ferry reply', summary: '[canon · high] A written reply.', submittedAt: '2026-11-23T16:10:00Z', status: 'PROPOSED' },
+    { key: 'submissions/election-tracker/r.json', desk: 'election-tracker', kind: 'report', title: 'Election tracker update, Year 14 Month 2', summary: '[record · normal] Candidates unnamed in ten stories.', submittedAt: '2026-11-23T16:09:00Z', status: 'PROPOSED' },
+  ];
+  const { impl, calls } = inbox(items);
+  const out = await tri.runTriage({ env: { NEWSROOM_EDITOR_KEY: 'ed', NEWSROOM_RUNNER_KEY: 'run', AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: new Date('2026-11-23T16:37:00Z') });
+  assert.equal(out.status, 'submitted');
+  assert.equal(out.filings, 2);
+  assert.ok(!calls.gateway[0].messages[1].content.includes('Election tracker update'), 'the model never sees tracker reports');
+  const body = calls.submit[0].body.body;
+  assert.match(body, /## tracker\n- \*\*election-tracker\*\*: Election tracker update, Year 14 Month 2/);
+  assert.ok(body.indexOf('## tracker') < body.indexOf('## editor'), 'tracker reports come first');
+});
+
+test('a day with only tracker reports files a triage without calling the model', async () => {
+  const items = [{ key: 'submissions/election-tracker/r.json', desk: 'election-tracker', kind: 'report', title: 'Election tracker update', summary: '[record · normal] x', submittedAt: '2026-11-23T16:09:00Z', status: 'PROPOSED' }];
+  const { impl, calls } = inbox(items);
+  const out = await tri.runTriage({ env: { NEWSROOM_EDITOR_KEY: 'ed', NEWSROOM_RUNNER_KEY: 'run', AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: new Date('2026-11-23T16:37:00Z') });
+  assert.equal(out.status, 'submitted');
+  assert.equal(calls.gateway.length, 0);
+  assert.match(calls.submit[0].body.body, /## tracker/);
+});
+
+test('the roster names the election tracker as a pass-through desk', () => {
+  const roster = JSON.parse(fs.readFileSync(core.ROSTER_PATH, 'utf8'));
+  assert.ok(roster.triage.passThroughDesks.includes('election-tracker'));
+  const desk = roster.desks.find((d) => d.id === 'election-tracker');
+  assert.ok(desk && desk.enabled && desk.planner === null && /^\d{4}-\d{2}-\d{2}$/.test(desk.until));
+});

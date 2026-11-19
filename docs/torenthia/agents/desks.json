@@ -466,6 +466,27 @@
       ]
     },
     {
+      "id": "election-tracker",
+      "name": "Election Tracker desk",
+      "jurisdiction": "Federal elections (continuity)",
+      "inboxDesk": "election-tracker",
+      "enabled": true,
+      "days": [
+        "mon"
+      ],
+      "until": "2027-02-28",
+      "briefPath": "docs/torenthia/agents/election-tracker/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/election-tracker/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/election-tracker/NOTES.md",
+      "planner": null,
+      "sources": [
+        "docs/torenthia/agents/election-tracker/ELECTION-TRACKER.md",
+        "docs/torenthia/COVERAGE.md",
+        "_data/worldRegistry.json",
+        "docs/torenthia/POLITICAL-CHARACTER-PLANNING.md"
+      ]
+    },
+    {
       "id": "partisan-media",
       "name": "Partisan Media desk",
       "jurisdiction": "Republic-wide opinion",
@@ -494,6 +515,9 @@
       "docs/torenthia/STORY-STATUS.md"
     ],
     "maxSourceChars": 120000,
-    "editorSlots": 3
+    "editorSlots": 3,
+    "passThroughDesks": [
+      "election-tracker"
+    ]
   }
 }

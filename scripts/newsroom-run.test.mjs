@@ -264,3 +264,12 @@ test('every records desk on main has a valid inbox name and the shared records b
     assert.ok(/^[a-z][a-z-]{1,29}$/.test(d.inboxDesk), d.inboxDesk);
   }
 });
+
+test('a desk with an until date stops after that UTC day, including a manual run', () => {
+  const roster = { desks: [{ id: 'election-tracker', enabled: true, days: ['mon'], until: '2026-12-01' }, { id: 'federal', enabled: true, days: ['mon'] }] };
+  const ids = (d, only) => core.dueDesks(roster, d, only).map((x) => x.id);
+  assert.deepEqual(ids(new Date('2026-11-30T16:07:00Z')), ['election-tracker', 'federal']);
+  assert.deepEqual(ids(new Date('2026-12-07T16:07:00Z')), ['federal']);
+  assert.deepEqual(ids(new Date('2026-12-07T16:07:00Z'), 'election-tracker'), []);
+  assert.deepEqual(core.offWeekDesks({ desks: [{ id: 't', enabled: true, days: ['mon'], everyWeeks: 2, until: '2026-11-01' }] }, new Date('2026-11-16T16:07:00Z')).map((x) => x.id), []);
+});
