@@ -31,3 +31,9 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 - It is a constitutional explainer, which the rules ask desks to avoid, and the Republic has run three fiscal-equalization pieces this month.
 - **Errors to avoid:** it says NRS-Y14-0040 "records the correction of the source data"; that record *invites* corrections from State and Territory administrations and corrects nothing. And §12.6 requires the Legislature to *publish a response* to noncompliance findings within a statutory period, which is narrower than "must respond."
 - The §12.1/§12.6 distinction is sound. Use it as background inside a story, not as the story.
+
+## 2026-11-20 — A Worksheet With Four Names, and No Order (idea; inbox `a7260ccf`): GO, assigned
+
+- Filed November 19 as an idea; it reached the idea board as `w20261116-federal-1`, and John marked it GO. Now an open assignment (see `ASSIGNMENTS.md`) to develop it as a canon article.
+- **What works:** one document, two officers who disagree in good faith, and a counter clerk giving the standard answer. That's the election machinery shown through people, not recapped.
+- **Fix in the draft:** "are on the ballot" (they are qualified; no ballot exists); the invented "qualifications and ballot-services section"; Mael Drue's surname (near-match to Halen Druse). Odette Larn and Sia Marell aren't canon until the article is accepted.

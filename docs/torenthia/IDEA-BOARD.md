@@ -24,4 +24,4 @@ Document fields: `week` (the Monday, `YYYY-MM-DD`), `order` (number within the w
 
 Decisions and assignments, newest first, one line each: date, desk, idea, decision, what was assigned.
 
-(Nothing yet. The first board is Monday, November 23, 2026.)
+- 2026-11-20 · Federal desk · A worksheet with four names, and no order (`w20261116-federal-1`) · **GO** · assigned to the Federal desk (canon article, with fixes), Election Tracker (note on publication) and Partisan Media (opinion column after publication).
