@@ -55,10 +55,10 @@
 
     { "id": "reya-solt", "name": "Reya Solt", "role": "Executive Monitor" },
     { "id": "aldric-feyn", "name": "Aldric Feyn", "role": "Legislative Monitor" },
-    { "id": "kessa-vray", "name": "Kessa Vray", "role": "Judicial Monitor; dissented on the Korda remainder-viability finding" },
+    { "id": "kessa-vray", "name": "Kessa Vray", "role": "Judicial Monitor; dissented on the Korda remainder-viability finding", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x3" },
 
     { "id": "dessa-orin", "name": "Dessa Orin", "aliases": ["Orin"], "role": "Korda Assembly delegate; Territories and Fiscal Affairs Committee", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x15, he x0" },
-    { "id": "jalen-mire", "name": "Jalen Mire", "aliases": ["Mire"], "role": "Korda lake-corridor district delegate" },
+    { "id": "jalen-mire", "name": "Jalen Mire", "aliases": ["Mire"], "role": "Korda lake-corridor district delegate", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "scan: he x3" },
     { "id": "tomas-rell", "name": "Tomas Rell", "aliases": ["Rell"], "role": "Korda inland agricultural district delegate" },
     { "id": "bern-calloway", "name": "Bern Calloway", "role": "Inland grain operator; whole-Territory petition signer" },
     { "id": "herbert-sole", "name": "Herbert Sole", "aliases": ["Sole"], "role": "Retired Selvane federal appellate judge; counsel for corridor petitioners. A future Supreme Court nomination is an internal intention, not published." },
@@ -75,14 +75,14 @@
     { "id": "mevra", "name": "Mevra", "role": "Supreme Court justice; first name not established" },
 
     { "id": "kalle-orris", "name": "Kalle Orris", "role": "Varenne Station dockhand, LC-N1 (news 139)", "tier": "minor" },
-    { "id": "vessa-tann", "name": "Vessa Tann", "role": "Upper Lake Road grader operator, LC-N2 (news 139)", "tier": "minor" },
+    { "id": "vessa-tann", "name": "Vessa Tann", "role": "Upper Lake Road grader operator, LC-N2 (news 139)", "tier": "minor", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x2" },
     { "id": "elian-brask", "name": "Elian Brask", "role": "Inland market farmer outside the corridor districts (news 139)", "tier": "minor" },
     { "id": "sorene-vell", "name": "Sorene Vell", "role": "Southern lakefront Territorial Assembly member (news 139)", "tier": "minor" },
     { "id": "renn-alder", "name": "Renn Alder", "role": "Sellen County budget officer, Varek (news 140)", "tier": "minor" },
     { "id": "edric-marn", "name": "Edric Marn", "role": "Sellen County councillor, Varek (news 140)", "tier": "minor" },
     { "id": "talia-serr", "name": "Talia Serr", "role": "Sellen County road-maintenance supervisor, Varek (news 140)", "tier": "minor" },
     { "id": "adel-weyland", "name": "Adel Weyland", "role": "Career civil servant in the civic-domain budget work; no title or office established (news 141)", "tier": "minor" },
-    { "id": "tova-ferrin", "name": "Tova Ferrin", "role": "Survey coordinator, Morantine territorial works office (news 142)", "tier": "minor" }
+    { "id": "tova-ferrin", "name": "Tova Ferrin", "role": "Survey coordinator, Morantine territorial works office (news 142)", "tier": "minor", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x1" }
   ],
   "avoid": [
     { "pattern": "Jorin Sandris", "reason": "Corrected continuity slip: the candidate is Pell Sandris." },
