@@ -49,6 +49,18 @@ The intended package (STORY-STATUS, bundled-ballot guardrail) is Assembly electi
 - **Story calendar:** the vote falls in Year 14 Month 3 under this plan. Months last as long as the story needs; Month 4 stays available if the buildup runs long. Nothing is published as a date until the Panel's notice.
 - **Do not** declare a winner early, advance the fictional date to suit the calendar, or delay a binding in-world deadline for editorial reasons.
 
+## Held for after the election (internal; not canon, not a buildup topic)
+
+Added November 19, 2026 from a conversation between John and the Central Editor. These are seeds for the desks to develop **after the Legat Consul result is certified**. No desk raises them during the buildup, and the Elections Panel's first formal notice does not mention them.
+
+- **Remote voting, as a debate.** The Panel assembles the federal ballot, maintains the National Voting System and its standards (§11.1, §11.2), runs the territory elections and the national Legat Consul election, and certifies results. How a voter casts a ballot is a State question. Remote voting is a post-election debate, not a settled feature.
+- **A public initiative.** Under §13.2, citizens petition for a national remote-voting option. The petition is authenticated through the NVS. Phase Two needs signatures from 10% of eligible voters. The Panel decides whether the proposal meets the constitutional requirements and publishes its reasons to the NRS. The Legislature then has 90 days to enact it, after which the Panel runs a referendum within 90 days. Approval needs 60% of votes cast. An initiative cannot narrow an Article I right, appropriate funds directly or change taxes, and needing appropriations does not make it ineligible.
+- **A Supreme Court case.** The initiative leaves casting methods to the States, while the Panel runs the territories directly, so territory voters could cast remotely while State voters wait on their legislatures. A State voter petitions under §13.2(3) (any person with standing), arguing unequal access and citing §11.2's bar on burdens beyond direct NVS participation. The other side argues that casting methods belong to the States and that a national law can authorize remote voting without requiring it. The Court's ruling is left open for the Central Editor and John to decide.
+- **The coercion question.** Remote voting sits against §11.2's requirement that a voter cannot prove to anyone else how they voted. Every side in the debate should have to deal with it.
+- **Paper plus a check code (an option, not a decision).** One way the physical ballot could work: a marked paper ballot with an encrypted record and a check code the voter looks up on the NRS to confirm their ballot was counted. The code reveals no choices, and the paper serves as the resilience fallback. Nothing in the published record fixes the ballot's form.
+
+**Do not** let any desk, character or institution mention these before certification, publish a ballot form or casting method as fact, or decide how the case comes out.
+
 ## Beats still to build (proposals, not canon)
 
 - The Panel's first formal notice and election calendar, answering the open questions above.
