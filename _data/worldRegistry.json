@@ -24,16 +24,16 @@
   ],
   "deskBylinePattern": "(Desk|Staff|Staff Report)$",
   "people": [
-    { "id": "petra-vend", "name": "Petra Vend", "role": "Main political correspondent; straight reporting", "outlets": ["The Torenthian"] },
+    { "id": "petra-vend", "name": "Petra Vend", "role": "Main political correspondent; straight reporting", "outlets": ["The Torenthian"], "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "portrait; byline scan unreliable" },
     { "id": "dara-voss", "name": "Dara Voss", "role": "Institutional and analytical reporting; moved from The Torenthian to RNN on purpose", "outlets": ["RNN", "The Torenthian"] },
     { "id": "nella-rusk", "name": "Nella Rusk", "role": "Opinion; open supporter of Thoss's party", "outlets": ["The Torenthian"] },
-    { "id": "lenne-akar", "name": "Lenne Akar", "role": "Procedural, factual local reporting", "outlets": ["TNB Caldenmere"] },
-    { "id": "corwin-hale", "name": "Corwin Hale", "role": "Orath and Dorven local angle", "outlets": ["The Dorven Ledger"] },
+    { "id": "lenne-akar", "name": "Lenne Akar", "role": "Procedural, factual local reporting", "outlets": ["TNB Caldenmere"], "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "portrait; she x1" },
+    { "id": "corwin-hale", "name": "Corwin Hale", "role": "Orath and Dorven local angle", "outlets": ["The Dorven Ledger"], "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "portrait; he x2" },
     { "id": "aleth-fenn", "name": "Aleth Fenn", "role": "Northern correspondent; Argent Ridge and Norvane", "outlets": ["The Torenthian"], "note": "Unrelated to Senator Aldous Fenn. Pronouns not locked: the scan counted he x8, she x0, but the surname is shared with Aldous Fenn, so confirm before locking." },
     { "id": "mara-iset", "name": "Mara Iset", "role": "Korda-based voice, sympathetic to whole-Territory statehood", "outlets": ["The Korda Press"] },
     { "id": "yelka-sarn", "name": "Yelka Sarn", "role": "Morantine hardware and feed-store owner; Dispatch", "outlets": ["Dispatch"] },
     { "id": "neris-vann", "name": "Neris Vann", "role": "Calden harbor pilot; Dispatch", "outlets": ["Dispatch"] },
-    { "id": "maren-sollis", "name": "Maren Sollis", "role": "Corindal civics teacher; Dispatch and Show Your Work. Do not invent a second civics teacher.", "outlets": ["Dispatch", "Show Your Work"] },
+    { "id": "maren-sollis", "name": "Maren Sollis", "role": "Corindal civics teacher; Dispatch and Show Your Work. Do not invent a second civics teacher.", "outlets": ["Dispatch", "Show Your Work"], "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "portrait; byline scan unreliable" },
     { "id": "ottoline-pree", "name": "Ottoline Pree", "role": "Weller County (Selvane) deputy registrar; Dispatch", "outlets": ["Dispatch"] },
     { "id": "mira-kael", "name": "Mira Kael", "role": "Byline in The Torenthian", "outlets": ["The Torenthian"] },
     { "id": "yena-corran", "name": "Yena Corran", "role": "Byline in The Torenthian", "outlets": ["The Torenthian"] },
@@ -55,14 +55,14 @@
 
     { "id": "reya-solt", "name": "Reya Solt", "role": "Executive Monitor" },
     { "id": "aldric-feyn", "name": "Aldric Feyn", "role": "Legislative Monitor" },
-    { "id": "kessa-vray", "name": "Kessa Vray", "role": "Judicial Monitor; dissented on the Korda remainder-viability finding" },
+    { "id": "kessa-vray", "name": "Kessa Vray", "role": "Judicial Monitor; dissented on the Korda remainder-viability finding", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x3" },
 
     { "id": "dessa-orin", "name": "Dessa Orin", "aliases": ["Orin"], "role": "Korda Assembly delegate; Territories and Fiscal Affairs Committee", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x15, he x0" },
-    { "id": "jalen-mire", "name": "Jalen Mire", "aliases": ["Mire"], "role": "Korda lake-corridor district delegate" },
-    { "id": "tomas-rell", "name": "Tomas Rell", "aliases": ["Rell"], "role": "Korda inland agricultural district delegate" },
-    { "id": "bern-calloway", "name": "Bern Calloway", "role": "Inland grain operator; whole-Territory petition signer" },
-    { "id": "herbert-sole", "name": "Herbert Sole", "aliases": ["Sole"], "role": "Retired Selvane federal appellate judge; counsel for corridor petitioners. A future Supreme Court nomination is an internal intention, not published." },
-    { "id": "aldous-fenn", "name": "Aldous Fenn", "role": "Caldenmere senator. Unrelated to journalist Aleth Fenn." },
+    { "id": "jalen-mire", "name": "Jalen Mire", "aliases": ["Mire"], "role": "Korda lake-corridor district delegate", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "scan: he x3" },
+    { "id": "tomas-rell", "name": "Tomas Rell", "aliases": ["Rell"], "role": "Korda inland agricultural district delegate", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "John confirmed; he x2" },
+    { "id": "bern-calloway", "name": "Bern Calloway", "role": "Inland grain operator; whole-Territory petition signer", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "John confirmed" },
+    { "id": "herbert-sole", "name": "Herbert Sole", "aliases": ["Sole"], "role": "Retired Selvane federal appellate judge; counsel for corridor petitioners. A future Supreme Court nomination is an internal intention, not published.", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "John confirmed" },
+    { "id": "aldous-fenn", "name": "Aldous Fenn", "role": "Caldenmere senator. Unrelated to journalist Aleth Fenn.", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "John confirmed; he x2" },
 
     { "id": "ola-vrentis", "name": "Ola Vrentis", "aliases": ["Vrentis"], "role": "Supreme Court justice; wrote the Corindal and Korda majorities" },
     { "id": "pael-doran", "name": "Pael Doran", "aliases": ["Doran"], "role": "Supreme Court justice; threshold-first dissenter" },
@@ -75,14 +75,14 @@
     { "id": "mevra", "name": "Mevra", "role": "Supreme Court justice; first name not established" },
 
     { "id": "kalle-orris", "name": "Kalle Orris", "role": "Varenne Station dockhand, LC-N1 (news 139)", "tier": "minor" },
-    { "id": "vessa-tann", "name": "Vessa Tann", "role": "Upper Lake Road grader operator, LC-N2 (news 139)", "tier": "minor" },
+    { "id": "vessa-tann", "name": "Vessa Tann", "role": "Upper Lake Road grader operator, LC-N2 (news 139)", "tier": "minor", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x2" },
     { "id": "elian-brask", "name": "Elian Brask", "role": "Inland market farmer outside the corridor districts (news 139)", "tier": "minor" },
     { "id": "sorene-vell", "name": "Sorene Vell", "role": "Southern lakefront Territorial Assembly member (news 139)", "tier": "minor" },
     { "id": "renn-alder", "name": "Renn Alder", "role": "Sellen County budget officer, Varek (news 140)", "tier": "minor" },
     { "id": "edric-marn", "name": "Edric Marn", "role": "Sellen County councillor, Varek (news 140)", "tier": "minor" },
     { "id": "talia-serr", "name": "Talia Serr", "role": "Sellen County road-maintenance supervisor, Varek (news 140)", "tier": "minor" },
     { "id": "adel-weyland", "name": "Adel Weyland", "role": "Career civil servant in the civic-domain budget work; no title or office established (news 141)", "tier": "minor" },
-    { "id": "tova-ferrin", "name": "Tova Ferrin", "role": "Survey coordinator, Morantine territorial works office (news 142)", "tier": "minor" }
+    { "id": "tova-ferrin", "name": "Tova Ferrin", "role": "Survey coordinator, Morantine territorial works office (news 142)", "tier": "minor", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x1" }
   ],
   "avoid": [
     { "pattern": "Jorin Sandris", "reason": "Corrected continuity slip: the candidate is Pell Sandris." },

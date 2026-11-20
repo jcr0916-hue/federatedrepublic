@@ -73,3 +73,9 @@ test("the real registry is internally consistent", () => {
   for (const p of r.people) if (p.pronounsLocked) assert.ok(["he", "she", "they"].includes(p.pronouns), `${p.name}: locked pronouns are set`);
   for (const a of r.avoid) assert.doesNotThrow(() => new RegExp(a.pattern));
 });
+
+test("a byline line followed by the story's text is not read as pronouns for the reporter", () => {
+  const withVend = { ...reg, people: [...reg.people, { id: "petra-vend", name: "Petra Vend", pronouns: "she", pronounsLocked: true }] };
+  const body = "Petra Vend The Torenthian Verentum Year 13, Month 9 The minister has said little, and he has not explained why. Petra Vend asked, and her question stood.";
+  assert.deepEqual(analyzeRegistry(base, body, withVend), []);
+});
