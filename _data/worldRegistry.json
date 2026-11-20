@@ -62,7 +62,7 @@
     { "id": "tomas-rell", "name": "Tomas Rell", "aliases": ["Rell"], "role": "Korda inland agricultural district delegate", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "John confirmed; he x2" },
     { "id": "bern-calloway", "name": "Bern Calloway", "role": "Inland grain operator; whole-Territory petition signer", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "John confirmed" },
     { "id": "herbert-sole", "name": "Herbert Sole", "aliases": ["Sole"], "role": "Retired Selvane federal appellate judge; counsel for corridor petitioners. A future Supreme Court nomination is an internal intention, not published.", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "John confirmed" },
-    { "id": "aldous-fenn", "name": "Aldous Fenn", "role": "Caldenmere senator. Unrelated to journalist Aleth Fenn." },
+    { "id": "aldous-fenn", "name": "Aldous Fenn", "role": "Caldenmere senator. Unrelated to journalist Aleth Fenn.", "pronouns": "he", "pronounsLocked": true, "pronounEvidence": "John confirmed; he x2" },
 
     { "id": "ola-vrentis", "name": "Ola Vrentis", "aliases": ["Vrentis"], "role": "Supreme Court justice; wrote the Corindal and Korda majorities" },
     { "id": "pael-doran", "name": "Pael Doran", "aliases": ["Doran"], "role": "Supreme Court justice; threshold-first dissenter" },
