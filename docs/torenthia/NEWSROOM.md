@@ -53,6 +53,10 @@ Three pieces keep the cast and the storylines consistent without the Central Edi
 - **Coverage report** (`docs/torenthia/COVERAGE.md`). `npm run world:coverage -- --write` counts the last 20 stories and 40 NRS records by outlet, byline, jurisdiction, arc and thread, how recently each thread's people were named, and flags concentration (over 35% from one outlet or byline) and quiet arcs, jurisdictions and candidates. It is exact, not model-written. The Central Editor regenerates it in any PR that publishes World records, so it is current at merge.
 - **Thread trackers.** A tracker desk keeps a living file for one thread and reports weekly. It files kind `report`; the desk editor's triage lists reports from the desks in `triage.passThroughDesks` first, under `tracker`, without a model call, and the Central Editor reads them directly. The Election Tracker desk (`agents/election-tracker/`, Mondays, until 2027-02-28) keeps `ELECTION-TRACKER.md`, checks the candidates for drift, and recommends beats. The Fiscal Equalization Tracker desk (`agents/fiscal-tracker/`, Wednesdays, until 2027-02-28) keeps `FISCAL-TRACKER.md` for the §12.6 review: it records what is published, tracks the ladder from the correction window to a vote as proposals, and never decides an outcome. Add another thread by adding it to the registry's `threads` and, if it needs a file, a tracker desk; the Central Editor folds each report into the tracker file in the notes PR.
 
+## Story clock
+
+`docs/torenthia/STORY-CLOCK.md` is the Central Editor's master clock: every thread's in-world due date, the real-world calendar, what must finish before the election vote and the decisions John owns. The daily review reads it and updates it when a published record moves a thread; the structured dashboard in `STORY-STATUS.md` stays the source for published facts.
+
 ## Adding a desk
 
 1. Add an entry to `desks.json` with `"enabled": false`, plus `agents/<id>/BRIEF.md`, `ASSIGNMENTS.md` and `NOTES.md`.

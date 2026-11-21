@@ -8,6 +8,7 @@
   "sharedSources": [
     "docs/torenthia/STORY-STATUS.md",
     "docs/torenthia/STORY-BIBLE.md",
+    "docs/torenthia/agents/DESK-CLOCK.md",
     "docs/constitution-current.md"
   ],
   "planner": {
