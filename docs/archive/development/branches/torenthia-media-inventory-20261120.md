@@ -10,3 +10,9 @@
 - **Decisions:** prioritize story-specific illustrations and constitutional explanatory diagrams, reuse existing geography and outlet assets, leave routine NRS entries mostly image-free, prevent fictional images from misrepresenting unestablished official outcomes. Constitution remains central and Torenthia is illustrative.
 - **Unresolved:** master-image rights and dimensions, exact rendered images, responsive layout, optional `worldImage` usage, appropriate reused artwork and actual filenames.
 - **Branch disposition:** retain while PR open. On authorized merge, preserve this handoff in `main` and apply `AGENTS.md` rolling cleanup safeguards; do not delete automatically.
+
+## Follow-on reuse audit on the same PR
+
+- Added `docs/torenthia/MULTIMEDIA-ASSET-REUSE-AUDIT-20261120.md` after inspecting actual shared template rendering and probing seven featured existing asset paths. It documents known source references, confirms three PNGs and one Korda press SVG by blob SHA, notes binary decoding failures for several WebP files and the root-level placement of `verentum-four-founders-card.webp`, and does not claim image bytes or live browser rendering were verified.
+- Concrete improvement candidate: `_includes/related-rail.njk` ignores provided `imageAlt` and marks all media image links `aria-hidden`, even on meaningful geographic images. This needs a separate accessibility review; no UI code changed here.
+- Production queue narrowed to one purposeful waterfront story image, one constitutional budget/equalization explanatory diagram, and a map-based Kessel location treatment before generating additional illustrative art. No tests run for this documentation-only addition.
