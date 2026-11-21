@@ -22,3 +22,9 @@
 - Added `docs/torenthia/MULTIMEDIA-PLACEMENT-AUDIT-20261121.md` documenting image references/usage in Torenthia landing, Record, six State profiles, Korda dossier, selected recent news, and media card templates. Verified mapping of six tour assets, six publisher logos, six flags, maps and prior news examples of inline figure vs metadata-only `worldImage`.
 - **Important limitation:** GitHub connected file fetch cannot enumerate directories; direct git network access and Vercel deployment file tree were unavailable. The master asset catalog remains incomplete. Browser/mobile visual inspection and binary dimensions/quality are not verified, so this document does not overclaim completeness.
 - **Editorial direction clarified by President:** the Constitution is the project; Torenthia serves it, can have distinct visual styles, and imagery must have function. Prioritize existing-asset reuse, appropriate placements, and selective missing visuals. No site/code/canon/media changes made.
+
+## November 21 — media application review
+
+- Added `docs/torenthia/MULTIMEDIA-ASSET-APPLICATION-REVIEW-20261121.md` recording itemized map, logo, place-photo, flag, and article-image references with purpose and reuse recommendations. Sources checked include `atlas.html`, `territory-solara.html`, `territory-morantine.html`, dossiers, State profile template, and published news 067/071.
+- Attempted actual visual inspection, but local git clone failed DNS, binary GitHub connector could not decode images, public image retrieval yielded no pixels, and Vercel deployment files endpoint returned 404. Consequently **rendered visual quality remains unverified**; no false quality judgments were entered. Do not describe asset audit as complete.
+- No changes to site code, assets, canon, agents or deployment. This remains a docs-only draft PR for Presidential review.
