@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "npm run check:state-tests && node scripts/check-world-publishing.mjs && node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy",
+    "annotation-history": "node scripts/build-annotation-history.cjs",
     "sync": "npm run constitution:archive && python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py",
     "check:assets": "node scripts/public-assets.mjs",
     "test:assets": "node --test scripts/public-assets.test.mjs",
@@ -52,7 +53,7 @@
     "test:navigator-fallback-api": "node --test scripts/navigator-fallback-api.test.cjs",
     "test:crossroads-ai-benchmark": "node --test scripts/crossroads-ai-benchmark.test.cjs",
     "test:annotator-ai-benchmark": "node --test scripts/annotator-ai-benchmark.test.cjs",
-    "test:annotator": "node --test scripts/annotator.test.cjs",
+    "test:annotator": "node scripts/build-annotation-history.cjs --check && node --test scripts/annotator.test.cjs",
     "constitution:archive": "python3 -B scripts/constitution-archive.py prepare",
     "test:constitution-archive": "python3 -B scripts/test-constitution-archive.py",
     "check:constitution-archive": "python3 -B scripts/constitution-archive.py check-current",

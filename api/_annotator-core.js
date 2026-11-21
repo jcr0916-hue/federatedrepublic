@@ -2,7 +2,7 @@ const SYSTEM = `You are a source-bound constitutional design analyst for the Fed
 
 Your annotation should cover:
 1. The constitutional principle this provision embodies
-2. The design choice expressed in the current text and its practical effect; do not invent drafting history or rejected alternatives
+2. The design choice expressed in the current text and its practical effect; do not invent drafting history or rejected alternatives. Where the packet's RECORDED DESIGN HISTORY states a reason or a rejected alternative for this provision, report it, attributed to the project's change log with its date label
 3. How this provision connects to or depends on other provisions
 4. What failure mode or abuse this provision is guarding against
 
@@ -20,7 +20,7 @@ The twelve design principles underlying this constitution:
 11. Process Symmetry — materially similar constitutional functions should use materially similar procedures unless a meaningful difference in role, legitimacy, consequence, or risk requires divergence
 12. Procedural Familiarity — constitutional procedures should reuse familiar actors, thresholds, stages, and failure mechanisms unless a meaningful difference requires a new process
 
-These design principles are interpretive lenses, not evidence of drafting intent. You may say that a mechanism structurally aligns with a principle. Do not say the drafters chose, intended, anticipated, deliberately created, or preferred something unless the supplied constitutional text itself establishes that motive.
+These design principles are interpretive lenses, not evidence of drafting intent. You may say that a mechanism structurally aligns with a principle. Do not say the drafters chose, intended, anticipated, deliberately created, or preferred something unless the supplied constitutional text itself establishes that motive or the packet's RECORDED DESIGN HISTORY records it (attribute it to the change log, with its date label).
 
 The application has already performed constitutional retrieval. Treat the supplied SOURCE PACKET as the complete research basis for this annotation. Do not search for or assume rules outside the packet. The target provision is authoritative. Related provisions are exact current constitutional text supplied only because the application found a structural, citation, lexical, or backlink relationship; their presence does not make them controlling.
 
@@ -28,9 +28,10 @@ Distinguish interpretation from explicit requirements; acknowledge ambiguity ins
 
 When comparing procedures, track each mechanism separately. Never transfer a trigger, deadline, duration, override, fallback, repeat-use rule, or consequence from one provision to another because the mechanisms look similar. In particular, distinguish an initial review/action window from the duration or legal effect of an instrument exercised during that window. Do not infer a reason for a procedural difference unless the text states one. Preserve the text's exact scope concepts when describing the guarded failure mode: do not substitute an adjacent concept that changes the rule (for example, do not turn consent into compensation, official capacity into all gifts, or inaction into rejection).
 
-TARGET-FIRST COVERAGE: Before writing, check every numbered subsection or material clause of the TARGET provision. Prioritize its actors, scope limits, thresholds, deadlines, defaults, exceptions, fallbacks, repeat-use rules, and consequences before spending space on related provisions. A related provision is useful only if it clarifies a direct dependency or comparison; do not let related material displace a material target rule.\n\nOUTPUT CONTRACT: Write exactly 3 prose paragraphs with no headings, bullets, numbering, markdown labels, or section titles. Use roughly 350–500 words and never exceed 525 words. Finish the final sentence. If the packet contains more material than fits, omit secondary comparisons before omitting a material target mechanic.`;
+DEFINED TERMS: a related provision labeled \"defining provision of <term>\" is the provision that sets that office's or body's domain, term, or scope, and it may sit in another Article. Use it to explain how the target relies on that term. Say a term is defined elsewhere only when no provision in the packet supplies it, and then name the section only if the target text cites one; never describe a definition as merely presumed when the packet supplies it.\n\nRECORDED DESIGN HISTORY: the packet may include dated entries from the project's own Constitutional History change log that cite the target provision's number. Section numbers in an entry are those in force on its date and may since have moved or been reused; use an entry only when its subject clearly matches the target text, and ignore one that does not. A log entry is evidence of what the change log recorded on that date, not of anything beyond it; do not add motives it does not state. When no entry is supplied, say only that the supplied sources record no rationale for this provision; never say that no explanation exists.\n\nTARGET-FIRST COVERAGE: Before writing, check every numbered subsection or material clause of the TARGET provision. Prioritize its actors, scope limits, thresholds, deadlines, defaults, exceptions, fallbacks, repeat-use rules, and consequences before spending space on related provisions. A related provision is useful only if it clarifies a direct dependency or comparison; do not let related material displace a material target rule.\n\nOUTPUT CONTRACT: Write exactly 3 prose paragraphs with no headings, bullets, numbering, markdown labels, or section titles. Use roughly 350–500 words and never exceed 525 words. Finish the final sentence. If the packet contains more material than fits, omit secondary comparisons before omitting a material target mechanic.`;
 
 let cachedData = null;
+let cachedHistory = null;
 
 const STOP_WORDS = new Set([
   'about','after','again','against','also','among','because','before','being','between',
@@ -43,6 +44,11 @@ const STOP_WORDS = new Set([
 function getConstitutionData() {
   if (!cachedData) cachedData = require('../constitution_data.json');
   return cachedData;
+}
+
+function getAnnotationHistory() {
+  if (!cachedHistory) cachedHistory = require('../annotation-history.json');
+  return cachedHistory;
 }
 
 function extractRefs(text) {
@@ -127,6 +133,85 @@ function formatProvision(prov, label) {
   return `${label} [${prov.num}] ${prov.name}\n${prov.text}`;
 }
 
+
+// Defining-provision lookup. A provision often uses a term (an office or body
+// such as "Legat Consul") whose scope is set by another provision, possibly in
+// another Article. Terms are taken from provision names; the anchor for a term
+// is the provision whose name opens with it ("The Legat Consul — Domain and
+// Term"), else the lowest-numbered unlettered provision naming it.
+let cachedAnchors = null;
+
+function nameTerm(name) {
+  const m = String(name || '').match(/^(?:The\s+)?([A-Z][A-Za-z'’-]*(?:\s+[A-Z][A-Za-z'’-]*)*)/);
+  return m ? m[1].trim() : '';
+}
+
+function sortKey(num) {
+  return String(num).replace(/^§/, '').split('.').map(x => /^\d+$/.test(x) ? x.padStart(3, '0') : x).join('.');
+}
+
+function getTermAnchors(data = getConstitutionData()) {
+  if (data === getConstitutionData() && cachedAnchors) return cachedAnchors;
+  const all = data.flatMap(a => a.provisions.map(p => ({ ...p, article: a.heading })));
+  const anchors = new Map(); // term -> provision
+  const opener = new Map();  // provisions whose name is "<Term> — ..." or "The <Term>"
+  for (const p of all) {
+    const term = nameTerm(p.name);
+    if (term.split(/\s+/).length < 2 && !/^The\s/.test(p.name)) continue;
+    const full = /\s[—-]\s/.test(p.name) || new RegExp(`^(?:The\\s+)?${term}$`).test(p.name);
+    if (full && !opener.has(term)) opener.set(term, p);
+  }
+  for (const [term, p] of opener) anchors.set(term, p);
+  const result = { all, anchors };
+  if (data === getConstitutionData()) cachedAnchors = result;
+  return result;
+}
+
+function definingAnchors(target, data, exclude = new Set(), limit = 2) {
+  const { all, anchors } = getTermAnchors(data);
+  const N = all.length || 1;
+  const scored = [];
+  for (const [term, prov] of anchors) {
+    if (prov.num === target.num || exclude.has(prov.num)) continue;
+    const src = `\\b${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`;
+    const inTarget = (target.text.match(new RegExp(src, 'g')) || []).length;
+    if (!inTarget) continue;
+    const once = new RegExp(src);
+    const df = all.filter(p => once.test(p.text)).length || 1;
+    scored.push({ term, provision: prov, score: inTarget * Math.log(1 + N / df) });
+  }
+  return scored
+    .sort((a, b) => b.score - a.score || sortKey(a.provision.num).localeCompare(sortKey(b.provision.num)))
+    .slice(0, limit);
+}
+
+const HISTORY_LIMIT = 3;
+const HISTORY_CLIP = 1100;
+
+function clipAtSentence(text, max) {
+  const t = String(text || '').trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max);
+  const end = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('; '));
+  return (end > max * 0.5 ? cut.slice(0, end + 1) : cut.replace(/\s+\S*$/, '')) + ' [clipped]';
+}
+
+// Dated change-log entries (annotation-history.json, built from the
+// Constitutional History pages) that cite this exact section number.
+function historyFor(num, limit = HISTORY_LIMIT) {
+  const entries = (getAnnotationHistory().entries || []).filter(e => (e.refs || []).includes(num));
+  return entries
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+    .slice(0, limit);
+}
+
+function formatHistory(entries) {
+  if (!entries.length) return '(none — the supplied sources record no rationale for this provision)';
+  return entries.map((e, i) =>
+    `[LOG ${i + 1}] ${e.label} — ${e.title}\n${clipAtSentence(e.text, HISTORY_CLIP)}`
+  ).join('\n\n');
+}
+
 function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 4) {
   const articles = data.filter((article) => Array.isArray(article.provisions));
   const all = articles.flatMap((article) =>
@@ -157,6 +242,11 @@ function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 4)
 
   // Exact citations from the target are high-confidence relationships.
   for (const ref of extractRefs(target.text)) add(byNum.get(ref), 'explicit citation');
+
+  // Defining provisions for terms the target relies on, across Articles.
+  for (const item of definingAnchors(target, data, seen, 2)) {
+    add(item.provision, `defining provision of "${item.term}"`);
+  }
 
   // Add the most textually similar provisions from the same Article. This
   // captures parallel mechanisms such as §2.3.a and §2.7 without sending the
@@ -205,8 +295,11 @@ function buildContextPacket(num, data = getConstitutionData(), relatedLimit = 4)
     `ARTICLE INDEX — ${target.article} (names only; not authority for mechanics)`,
     articleIndex || '(none)',
     '',
+    'RECORDED DESIGN HISTORY — dated entries from the project\'s own Constitutional History change log that cite this provision\'s number (most recent first). Section numbers are as of each entry\'s date and may since have moved; use an entry only when its subject matches the target text above',
+    formatHistory(historyFor(target.num)),
+    '',
     'PACKET RULE',
-    'The target provision is the controlling subject. Related provisions are included only to illuminate a structural, explicit-citation, or same-article lexical relationship. Downstream backlinks are intentionally excluded because they often distract from the target mechanics. Never transfer a trigger, deadline, duration, override, fallback, repeat-use rule, or consequence from a related provision to the target. The Article index supplies names only and cannot support a claim about mechanics.',
+    'The target provision is the controlling subject. Related provisions are included only to illuminate a structural, explicit-citation, defining-provision, or same-article lexical relationship. Downstream backlinks are intentionally excluded because they often distract from the target mechanics. Never transfer a trigger, deadline, duration, override, fallback, repeat-use rule, or consequence from a related provision to the target. The Article index supplies names only and cannot support a claim about mechanics.',
   ];
 
   return {
@@ -249,6 +342,8 @@ module.exports = {
   targetCoverageCues,
   similarityScore,
   buildContextPacket,
+  historyFor,
+  getAnnotationHistory,
   buildAnnotationUserPrompt,
   annotationContractIssues,
 };

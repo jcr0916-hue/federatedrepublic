@@ -169,3 +169,53 @@ test('Annotator rewrites end-turn output that violates the three-paragraph contr
     delete require.cache[require.resolve('../api/annotate.js')];
   }
 });
+
+test('Packet carries recorded change-log history for a provision the log cites, and none-marker otherwise', () => {
+  const core = require('../api/_annotator-core.js');
+  const history = core.getAnnotationHistory();
+  assert.ok(history.entries.length > 50);
+  const cited = history.entries.filter(e => (e.refs || []).includes('§2.16')).sort((a, b) => b.date.localeCompare(a.date))[0];
+  assert.ok(cited, 'expected the log to cite §2.16');
+  const withLog = core.buildContextPacket('§2.16');
+  assert.match(withLog.packet, /RECORDED DESIGN HISTORY/);
+  assert.match(withLog.packet, /\[LOG 1\]/);
+  assert.match(withLog.packet, new RegExp(cited.title.slice(0, 20).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+
+  const data = core.getConstitutionData();
+  const cites = new Set(history.entries.flatMap(e => e.refs || []));
+  const uncited = data.flatMap(a => a.provisions).find(p => !cites.has(p.num));
+  if (uncited) {
+    const packet = core.buildContextPacket(uncited.num).packet;
+    assert.match(packet, /\(none — the supplied sources record no rationale for this provision\)/);
+    assert.doesNotMatch(packet, /\[LOG 1\]/);
+  }
+});
+
+test('Recorded history excludes corrupted "529" sentences, pre-reorder entries, and raw HTML entities', () => {
+  const { entries, cutoff } = require('../api/_annotator-core.js').getAnnotationHistory();
+  for (const e of entries) {
+    assert.ok(e.date >= cutoff, `${e.id} predates the numbering cutoff`);
+    assert.doesNotMatch(e.text, /\b529\b/, `${e.id} contains the 529 placeholder`);
+    assert.doesNotMatch(`${e.label} ${e.title} ${e.text}`, /&[a-z#0-9]+;/i, `${e.id} has an undecoded entity`);
+  }
+});
+
+test('Packet supplies the defining provision of a term used across Articles (Civic Consul relies on the Legat Consul domain in §2.1)', () => {
+  const core = require('../api/_annotator-core.js');
+  const ctx = core.buildContextPacket('§2.5');
+  const defining = ctx.related.filter(r => /^defining provision of/.test(r.relation));
+  assert.ok(defining.some(r => r.provision.num === '§2.1' && /Legat Consul/.test(r.relation)));
+  assert.match(ctx.packet, /RELATED \d+ — defining provision of "Legat Consul"/);
+  assert.ok(ctx.related.length <= 4);
+  // A cross-Article defining provision is reachable too.
+  const cross = core.buildContextPacket('§3.6').related.find(r => r.provision.num === '§2.1');
+  assert.ok(cross, '§3.6 should pull §2.1 across Articles');
+});
+
+test('System prompt lets the model report recorded history and forbids "defined elsewhere" when the packet supplies the definition', () => {
+  const { SYSTEM } = require('../api/_annotator-core.js');
+  assert.match(SYSTEM, /RECORDED DESIGN HISTORY/);
+  assert.match(SYSTEM, /never say that no explanation exists/i);
+  assert.match(SYSTEM, /DEFINED TERMS/);
+  assert.match(SYSTEM, /never describe a definition as merely presumed/i);
+});
