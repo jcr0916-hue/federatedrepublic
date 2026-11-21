@@ -1,16 +1,9 @@
 // Vercel Serverless Function: Constitutional Annotation
-// Sonnet receives a deterministic constitutional context packet and generates design rationale.
+// Serves the stored annotation for a provision when one matches its current source
+// packet; otherwise Sonnet receives the deterministic packet and generates it live.
 
-const { anthropicMessage } = require('./_ai-transport.js');
-const {
-  SYSTEM,
-  buildContextPacket,
-  buildAnnotationUserPrompt,
-  annotationContractIssues,
-} = require('./_annotator-core.js');
-const { usageTotals, annotatorMetric } = require('./_ai-metrics.js');
-
-const MODEL = process.env.AI_MODEL_ANNOTATE || 'anthropic/claude-sonnet-5';
+const { buildContextPacket } = require('./_annotator-core.js');
+const { lookupStored, generateAnnotation } = require('./_annotator-run.js');
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
@@ -27,76 +20,18 @@ module.exports = async (req, res) => {
   const context = buildContextPacket(num);
   if (!context) return res.status(400).json({ error: 'Unknown provision' });
 
+  const stored = lookupStored(num, context);
+  if (stored) {
+    console.info('[annotate-stored]', { num });
+    return res.status(200).json({ annotation: stored.text, truncated: false, source: 'stored' });
+  }
+
   try {
-    const startedAt = Date.now();
-    const request = (maxTokens, retryReason = null) => anthropicMessage({
-      model: MODEL,
-      max_tokens: maxTokens,
-      temperature: 0,
-      system: SYSTEM,
-      messages: [{
-        role: 'user',
-        content: buildAnnotationUserPrompt(context, retryReason),
-      }],
-      tags: ['feature:annotate', retryReason ? 'role:completion-retry' : 'role:primary', `env:${process.env.VERCEL_ENV || 'local'}`],
-    });
-
-    let { response: upstream, route, model } = await request(1600);
-    console.info('[annotate-ai]', { route, model, attempt: 1 });
-    let data = await upstream.json();
-    const usages = [data.usage || null];
-    let retried = false;
-    let retryKind = null;
-
-    if (upstream.ok && !data.error) {
-      const firstText = (data.content || [])
-        .filter((b) => b.type === 'text')
-        .map((b) => b.text)
-        .join('')
-        .trim();
-      const issues = annotationContractIssues(firstText, data.stop_reason);
-      if (issues.length) {
-        const retryReason = issues.join('; ');
-        retried = true;
-        retryKind = data.stop_reason === 'max_tokens' ? 'max_tokens' : 'output_contract';
-        ({ response: upstream, route, model } = await request(2400, retryReason));
-        console.info('[annotate-ai]', { route, model, attempt: 2, reason: retryReason });
-        data = await upstream.json();
-        usages.push(data.usage || null);
-      }
+    const result = await generateAnnotation(context);
+    if (!result.ok) {
+      return res.status(502).json({ error: 'Upstream error', detail: result.detail });
     }
-
-    if (!upstream.ok || data.error) {
-      return res.status(502).json({
-        error: 'Upstream error',
-        detail: data.error?.message || `status ${upstream.status}`,
-      });
-    }
-
-    const annotation = (data.content || [])
-      .filter((b) => b.type === 'text')
-      .map((b) => b.text)
-      .join('')
-      .trim();
-
-    const truncated = data.stop_reason === 'max_tokens';
-    const usage = usageTotals(...usages);
-    annotatorMetric({
-      model,
-      route,
-      aiCalls: retried ? 2 : 1,
-      durationMs: Date.now() - startedAt,
-      packetChars: context.packet.length,
-      relatedCount: context.related.length,
-      inputTokens: usage.inputTokens,
-      outputTokens: usage.outputTokens,
-      retried,
-      retryKind,
-      stopReason: data.stop_reason || null,
-    });
-
-    return res.status(200).json({ annotation, truncated });
-
+    return res.status(200).json({ annotation: result.annotation, truncated: result.truncated, source: 'live' });
   } catch (err) {
     return res.status(502).json({ error: 'Upstream error', detail: String(err) });
   }
