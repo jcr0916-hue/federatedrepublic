@@ -178,7 +178,7 @@ test('Packet carries recorded change-log history for a provision the log cites, 
   assert.ok(cited, 'expected the log to cite §2.16');
   const withLog = core.buildContextPacket('§2.16');
   assert.match(withLog.packet, /RECORDED DESIGN HISTORY/);
-  assert.match(withLog.packet, /\[LOG 1\]/);
+  assert.match(withLog.packet, /\[HISTORY 1\]/);
   assert.match(withLog.packet, new RegExp(cited.title.slice(0, 20).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
 
   const data = core.getConstitutionData();
@@ -186,8 +186,8 @@ test('Packet carries recorded change-log history for a provision the log cites, 
   const uncited = data.flatMap(a => a.provisions).find(p => !cites.has(p.num));
   if (uncited) {
     const packet = core.buildContextPacket(uncited.num).packet;
-    assert.match(packet, /\(none — the supplied sources record no rationale for this provision\)/);
-    assert.doesNotMatch(packet, /\[LOG 1\]/);
+    assert.match(packet, /RECORDED DESIGN HISTORY[^\n]*\n\(none\)/);
+    assert.doesNotMatch(packet, /\[HISTORY 1\]/);
   }
 });
 
@@ -212,10 +212,13 @@ test('Packet supplies the defining provision of a term used across Articles (Civ
   assert.ok(cross, '§3.6 should pull §2.1 across Articles');
 });
 
-test('System prompt lets the model report recorded history and forbids "defined elsewhere" when the packet supplies the definition', () => {
+test('System prompt uses recorded history and defined terms in plain voice, without narrating sources or absences', () => {
   const { SYSTEM } = require('../api/_annotator-core.js');
   assert.match(SYSTEM, /RECORDED DESIGN HISTORY/);
-  assert.match(SYSTEM, /never say that no explanation exists/i);
   assert.match(SYSTEM, /DEFINED TERMS/);
-  assert.match(SYSTEM, /never describe a definition as merely presumed/i);
+  assert.match(SYSTEM, /VOICE:/);
+  assert.match(SYSTEM, /never refer to the packet, the sources, the change log/i);
+  assert.match(SYSTEM, /do not remark on what the text, the history, or the sources leave unsaid/i);
+  assert.doesNotMatch(SYSTEM, /attributed to the (project's )?change log/i);
+  assert.doesNotMatch(SYSTEM, /record no rationale/i);
 });
