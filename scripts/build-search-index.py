@@ -25,7 +25,7 @@ for article in data:
         entries.append({'id': prov_id(p['num']), 'num': p['num'],
                         'name': p['name'], 'text': p['text']})
 digest = hashlib.sha256(json.dumps(data, ensure_ascii=False, sort_keys=True).encode())
-for extra in ('api/_annotator-core.js', 'annotation-history.json'):
+for extra in ('api/_annotator-core.js', 'api/_annotator-run.js', 'annotation-history.json', 'annotations.json'):
     digest.update(open(extra, 'rb').read())
 revision = digest.hexdigest()[:16]
 out = 'const CONSTITUTION_REVISION = ' + json.dumps(revision) + ';\nconst SEARCH_INDEX = ' + json.dumps(entries, ensure_ascii=False, separators=(',',':')) + ';'
