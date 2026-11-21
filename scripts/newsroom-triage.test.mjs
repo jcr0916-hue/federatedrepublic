@@ -97,6 +97,9 @@ test('the roster names the thread trackers as pass-through desks', () => {
   const roster = JSON.parse(fs.readFileSync(core.ROSTER_PATH, 'utf8'));
   assert.ok(roster.triage.passThroughDesks.includes('election-tracker'));
   assert.ok(roster.triage.passThroughDesks.includes('fiscal-tracker'));
+  assert.ok(roster.triage.passThroughDesks.includes('story-clock'));
+  const clock = roster.desks.find((d) => d.id === 'story-clock');
+  assert.ok(clock && clock.enabled && clock.planner === null && /^\d{4}-\d{2}-\d{2}$/.test(clock.until));
   const fiscal = roster.desks.find((d) => d.id === 'fiscal-tracker');
   assert.ok(fiscal && fiscal.enabled && fiscal.planner === null && /^\d{4}-\d{2}-\d{2}$/.test(fiscal.until));
   const desk = roster.desks.find((d) => d.id === 'election-tracker');

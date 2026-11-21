@@ -8,6 +8,7 @@
   "sharedSources": [
     "docs/torenthia/STORY-STATUS.md",
     "docs/torenthia/STORY-BIBLE.md",
+    "docs/torenthia/agents/DESK-CLOCK.md",
     "docs/constitution-current.md"
   ],
   "planner": {
@@ -509,6 +510,30 @@
       ]
     },
     {
+      "id": "story-clock",
+      "name": "Story Clock desk",
+      "jurisdiction": "Calendar and sequencing (continuity)",
+      "inboxDesk": "story-clock",
+      "enabled": true,
+      "days": [
+        "fri"
+      ],
+      "until": "2027-02-28",
+      "briefPath": "docs/torenthia/agents/story-clock/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/story-clock/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/story-clock/NOTES.md",
+      "planner": null,
+      "sources": [
+        "docs/torenthia/STORY-CLOCK.md",
+        "docs/torenthia/agents/DESK-CLOCK.md",
+        "docs/torenthia/COVERAGE.md",
+        "docs/torenthia/agents/election-tracker/ELECTION-TRACKER.md",
+        "docs/torenthia/agents/fiscal-tracker/FISCAL-TRACKER.md",
+        "_data/worldClocks.json",
+        "docs/torenthia/POLITICAL-CHARACTER-PLANNING.md"
+      ]
+    },
+    {
       "id": "partisan-media",
       "name": "Partisan Media desk",
       "jurisdiction": "Republic-wide opinion",
@@ -540,7 +565,8 @@
     "editorSlots": 3,
     "passThroughDesks": [
       "election-tracker",
-      "fiscal-tracker"
+      "fiscal-tracker",
+      "story-clock"
     ]
   }
 }
