@@ -6,7 +6,7 @@ eyebrow: "Torenthia · Territory profile"
 ---
 {% for s in stats.territories %}{% if s.name == 'Solara' %}<p>Solara is a Western Sea island with a distinct culture and a capital at Ostara. Marisvia disputes its relationship with the Republic. Solara has also submitted a bid to host the seat of government.</p>
 <figure style="max-width:760px;margin:1.5rem auto">
-  <img src="ostara-card.webp" alt="View of Ostara, Solara's capital" width="960" style="display:block;width:100%;height:auto" loading="lazy" decoding="async">
+  <img src="ostara-card.webp" alt="View of Ostara, Solara's capital" style="display:block;width:100%;height:auto" loading="lazy" decoding="async">
   <figcaption style="font-size:.85rem;line-height:1.5;margin-top:.6rem">Ostara, the territorial capital. <a href="republic-at-a-glance.html#solara">Locate Solara on the map</a>.</figcaption>
 </figure><dl class="territory-facts"><dt>Population</dt><dd>{{ s.pop }} million</dd><dt>Federal Assembly</dt><dd>{{ s.assembly }} voting seats</dd><dt>Federal Senate</dt><dd>No representation while a Territory</dd><dt>Current process</dt><dd>{{ s.audit }}</dd></dl><section class="status-panel"><h2>Territory Now</h2><p>{{ s.summary }}</p></section>{% endif %}{% endfor %}{% set relatedRailId = 'solara-related' %}{% set relatedRailEyebrow = 'From this Territory' %}{% set relatedRailTitle = 'Explore Solara' %}{% set relatedRailIntro = 'The key geographic, constitutional, and public-record routes are available here without waiting for the end of the profile.' %}{% set relatedItems = [
 { kicker:'Geography', title:'Locate Solara in the Republic', url:'republic-at-a-glance.html#solara', text:'Open the labeled political map and jurisdiction directory.', cta:'Open the map' },
