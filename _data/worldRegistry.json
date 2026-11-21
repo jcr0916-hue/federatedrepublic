@@ -15,6 +15,7 @@
     { "name": "The Westport Ledger", "kind": "local" },
     { "name": "The Verentum Review", "kind": "opinion" },
     { "name": "The Common Interest", "kind": "opinion" },
+    { "name": "The Meridian Standard", "kind": "opinion" },
     { "name": "The Kellor Courant", "kind": "local" },
     { "name": "The Tessom Chronicle", "kind": "territory" },
     { "name": "Show Your Work", "kind": "feature" },
@@ -43,6 +44,7 @@
     { "id": "maren-vey", "name": "Maren Vey", "role": "Byline in The Westport Ledger", "outlets": ["The Westport Ledger"] },
     { "id": "halen-druse", "name": "Halen Druse", "role": "Opinion; The Verentum Review", "outlets": ["The Verentum Review"] },
     { "id": "ilsa-varn", "name": "Ilsa Varn", "role": "Opinion; The Common Interest", "outlets": ["The Common Interest"] },
+    { "id": "selden-marek", "name": "Selden Marek", "role": "Opinion; The Meridian Standard (right of center)", "outlets": ["The Meridian Standard"] },
     { "id": "maren-dael", "name": "Maren Dael", "role": "Byline in The Kellor Courant", "outlets": ["The Kellor Courant"] },
     { "id": "nellis-dacre", "name": "Nellis Dacre", "role": "Reporter, The Tessom Chronicle (Morantine)", "outlets": ["The Tessom Chronicle"] },
 
