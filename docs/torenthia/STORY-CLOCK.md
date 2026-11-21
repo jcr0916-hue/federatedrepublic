@@ -19,22 +19,22 @@ The Central Editor owns this page. It puts every storyline's in-world due date a
 | 2 | **Election package** | Four Legat Consul candidates qualified. Spring Year 14 window; no date. Ballot-order lot unscheduled; no formal notice. | Elections Panel formal notice (moves the date to Month 3), ballot-order lot, practice ballots, date. | Election Tracker, Federal |
 | 3 | **Executive Monitor succession** | Seven pool members eligible; Speakers' consultation notice (NRS 123); no nominee. Solt's term-end date is unpublished. | Establish the term-end date and the confirmation trigger, then nomination (or the 60-day fallback) and JM disclosure findings. | Federal, Monitors |
 | 4 | **Lake Varda / Valedon accord** | Conference opened in Month 1; no agreed text; Sunderland silent. | Text agreed ad referendum, then Senate ratification (two-thirds). Planned for Month 3, with Carrow's record in the campaign. | Federal, Foreign |
-| 5 | **Argent Ridge** | Housing bill NRS 088 in committee, no disposition (latest action NRS 118). Norvane refused Trust consent. Repeal signature period runs up to eight months from Month 9, Day 12; the calendar convention is unresolved. | Bill outcome and Thoss's reconsideration notice. Keep repeal and Trust protection separate. Background beats only. | Federal, Norvane, Varek |
+| 5 | **Argent Ridge** | Housing bill NRS 088 in committee, no disposition (latest action NRS 118). Norvane refused Trust consent; a Norvane citizen initiative is an open idea for its desk. Repeal signature period runs up to eight months from Month 9, Day 12; the calendar convention is unresolved. | Bill outcome and Thoss's reconsideration notice. Keep repeal and Trust protection separate. Background beats only. | Federal, Norvane, Varek |
 
 ## Running in the background (no election deadline)
 
-- **Korda ratification:** electorate verification open (NRS 091 authenticated LC-N1 to LC-N3); no final electorate, ballot language or date; Kelvant consent, the joint Monitor assessment and Senate ratification still required.
+- **Korda ratification (after the election; a campaign issue before it):** electorate verification open (NRS 091 authenticated LC-N1 to LC-N3); no final electorate, ballot language or date; Kelvant consent, the joint Monitor assessment and Senate ratification still required.
 - **Corindal audit reconstruction:** Round 1 in progress. The Monitors desk files Sundays, the Corindal desk Thursdays. Rounds 2 and 3 follow. John approves the reconciled account.
 - **Elin Thoss:** working support stands at 266 (installation vote was 274). The election changes the arithmetic; only a named successor and an absolute Assembly majority removes her.
 - **Due dates already set:** MA State of the Economy report and the Judicial Pool quarterly return, both no later than Year 14, Month 5.
 - **Quiet or parked:** Toren River low flow, Corindal Industrial Partners (held by design), Supreme Court seat cycle (no seat established), Fair Start petition idea, Maren Sollis (irregular).
 - **Held for after the election:** remote voting debate, §13.2 initiative, Supreme Court case on implementation, coercion question, paper plus check code (see the election tracker).
 
-## Decisions for John (defaults apply if John says nothing)
+## Decided by John (November 21, 2026)
 
-1. **Korda ratification vote:** before, with, or after the election package. *Default:* after. The Elections Panel finishes the electorate determination and sets the date first, so Korda does not compete with the election for attention.
-2. **Executive Monitor confirmation:** the election tracker plans the vote in Month 3, while the older storyline plan (`STORYLINES-Y14.md`) puts it in Month 4. *Default:* Month 3, on the same bundled ballot.
-3. **Argent Ridge repeal endpoint:** the calendar convention (what "next year" means) is unresolved. *Default:* no endpoint date until after the election; the thread stays background.
+1. **Korda ratification vote:** after the election. Korda can be a campaign issue in the meantime. The Elections Panel finishes the electorate determination and sets the date first.
+2. **Executive Monitor confirmation:** it must fit the constitutional timeline. §9.3 sends the nominee to a **national popular vote** at the next federal electoral period (timing set by statute), not to a legislative vote. The legislative part is the nomination: the Assembly and Senate Speakers nominate jointly, in the current session, with the 60-day lottery fallback, and the Judicial Monitor's disclosure findings are published before the vote. Plan: nomination in the current session, confirmation on the bundled ballot.
+3. **Argent Ridge:** Varek consented and Norvane refused. John likes a citizen initiative, possibly at State level, as a Norvane storyline, since designation needs the host State's consent (§18.4). The Norvane desk judges whether and how; the mechanism must come from Norvane's own constitutional process, which the record has not established. No repeal endpoint date until after the election.
 
 ## Slips and watch items
 
@@ -43,6 +43,6 @@ The Central Editor owns this page. It puts every storyline's in-world due date a
 
 ## How this page is kept
 
-The desk-facing version is `docs/torenthia/agents/DESK-CLOCK.md`, which every desk reads each run (it is in the roster's shared sources). It carries in-world timing windows only: no real-world dates, no planned outcomes. The Central Editor keeps the two pages in step. The desks choose how a thread moves; the clock sets when it must reach a decision point.
+The Story Clock desk (Fridays) compares every thread with the calendar and advises; the Central Editor folds its report into these pages. The desk-facing version is `docs/torenthia/agents/DESK-CLOCK.md`, which every desk reads each run (it is in the roster's shared sources). It carries in-world timing windows only: no real-world dates, no planned outcomes. The Central Editor keeps the two pages in step. The desks choose how a thread moves; the clock sets when it must reach a decision point.
 
 The daily review reads this page and updates it in the day's notes PR when a published record moves a thread. The review mentions the clock to John only when a thread slips or a decision above is needed.
