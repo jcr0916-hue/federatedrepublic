@@ -487,6 +487,28 @@
       ]
     },
     {
+      "id": "fiscal-tracker",
+      "name": "Fiscal Equalization Tracker desk",
+      "jurisdiction": "Fiscal equalization review (continuity)",
+      "inboxDesk": "fiscal-tracker",
+      "enabled": true,
+      "days": [
+        "wed"
+      ],
+      "until": "2027-02-28",
+      "briefPath": "docs/torenthia/agents/fiscal-tracker/BRIEF.md",
+      "assignmentsPath": "docs/torenthia/agents/fiscal-tracker/ASSIGNMENTS.md",
+      "notesPath": "docs/torenthia/agents/fiscal-tracker/NOTES.md",
+      "planner": null,
+      "sources": [
+        "docs/torenthia/agents/fiscal-tracker/FISCAL-TRACKER.md",
+        "docs/torenthia/COVERAGE.md",
+        "_data/worldRegistry.json",
+        "docs/torenthia/POLITICAL-CHARACTER-PLANNING.md",
+        "docs/torenthia/STORY-STATUS.md"
+      ]
+    },
+    {
       "id": "partisan-media",
       "name": "Partisan Media desk",
       "jurisdiction": "Republic-wide opinion",
@@ -517,7 +539,8 @@
     "maxSourceChars": 120000,
     "editorSlots": 3,
     "passThroughDesks": [
-      "election-tracker"
+      "election-tracker",
+      "fiscal-tracker"
     ]
   }
 }

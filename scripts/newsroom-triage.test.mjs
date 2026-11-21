@@ -93,9 +93,12 @@ test('a day with only tracker reports files a triage without calling the model',
   assert.match(calls.submit[0].body.body, /## tracker/);
 });
 
-test('the roster names the election tracker as a pass-through desk', () => {
+test('the roster names the thread trackers as pass-through desks', () => {
   const roster = JSON.parse(fs.readFileSync(core.ROSTER_PATH, 'utf8'));
   assert.ok(roster.triage.passThroughDesks.includes('election-tracker'));
+  assert.ok(roster.triage.passThroughDesks.includes('fiscal-tracker'));
+  const fiscal = roster.desks.find((d) => d.id === 'fiscal-tracker');
+  assert.ok(fiscal && fiscal.enabled && fiscal.planner === null && /^\d{4}-\d{2}-\d{2}$/.test(fiscal.until));
   const desk = roster.desks.find((d) => d.id === 'election-tracker');
   assert.ok(desk && desk.enabled && desk.planner === null && /^\d{4}-\d{2}-\d{2}$/.test(desk.until));
 });

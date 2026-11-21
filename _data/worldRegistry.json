@@ -102,7 +102,7 @@
       "tracker": "docs/torenthia/agents/election-tracker/ELECTION-TRACKER.md"
     },
     { "id": "korda", "title": "Korda settlement", "arcs": ["korda"], "people": ["dessa-orin", "jalen-mire", "tomas-rell", "bern-calloway", "herbert-sole"] },
-    { "id": "fiscal-equalization", "title": "Fiscal equalization", "arcs": ["fiscal-equalization"] },
+    { "id": "fiscal-equalization", "title": "Fiscal equalization", "arcs": ["fiscal-equalization"], "tracker": "docs/torenthia/agents/fiscal-tracker/FISCAL-TRACKER.md" },
     { "id": "argent-ridge", "title": "Argent Ridge repeal", "arcs": ["argent-ridge"] },
     { "id": "lake-varda", "title": "Lake Varda conference", "arcs": ["lake-varda"], "people": ["ines-carrow"] }
   ]
