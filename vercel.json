@@ -23,7 +23,21 @@
       "config": {
         "maxDuration": 30,
         "includeFiles": [
-          "constitution_data.json"
+          "constitution_data.json",
+          "annotation-history.json",
+          "annotations.json"
+        ]
+      }
+    },
+    {
+      "src": "api/annotations-generate.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 300,
+        "includeFiles": [
+          "constitution_data.json",
+          "annotation-history.json",
+          "annotations.json"
         ]
       }
     },
@@ -78,6 +92,10 @@
     {
       "src": "/api/annotate",
       "dest": "/api/annotate.js"
+    },
+    {
+      "src": "/api/annotations-generate",
+      "dest": "/api/annotations-generate.js"
     },
     {
       "src": "/api/crossroads",

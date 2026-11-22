@@ -1,6 +1,9 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 
+// Live-generation tests must not be short-circuited by stored annotations.
+process.env.ANNOTATE_STORED = 'off';
+
 test('Annotator uses Sonnet with a deterministic source packet and enough output room', async () => {
   const handler = require('../api/annotate.js');
   const originalFetch = global.fetch;
@@ -221,4 +224,171 @@ test('System prompt uses recorded history and defined terms in plain voice, with
   assert.match(SYSTEM, /do not remark on what the text, the history, or the sources leave unsaid/i);
   assert.doesNotMatch(SYSTEM, /attributed to the (project's )?change log/i);
   assert.doesNotMatch(SYSTEM, /record no rationale/i);
+});
+
+function fakeRes() {
+  return {
+    headers: {},
+    setHeader(k, v) { this.headers[k] = v; },
+    status(n) { this.statusCode = n; return this; },
+    json(v) { this.body = v; return this; },
+    end() { return this; },
+  };
+}
+
+async function withMockedModel(text, fn) {
+  const originalFetch = global.fetch;
+  const originalKey = process.env.ANTHROPIC_API_KEY;
+  const originalGateway = process.env.AI_GATEWAY_API_KEY;
+  const originalOidc = process.env.VERCEL_OIDC_TOKEN;
+  delete process.env.AI_GATEWAY_API_KEY;
+  delete process.env.VERCEL_OIDC_TOKEN;
+  process.env.ANTHROPIC_API_KEY = 'test-only';
+  let calls = 0;
+  global.fetch = async () => {
+    calls++;
+    return { ok: true, status: 200, json: async () => ({ content: [{ type: 'text', text }], stop_reason: 'end_turn' }) };
+  };
+  try {
+    return await fn(() => calls);
+  } finally {
+    global.fetch = originalFetch;
+    if (originalKey === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalKey;
+    if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
+    if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
+  }
+}
+
+const THREE = 'One plain paragraph.\n\nTwo plain paragraphs.\n\nThree plain paragraphs.';
+
+test('Stored annotation is served without a model call while its packet hash matches', async () => {
+  const run = require('../api/_annotator-run.js');
+  const core = require('../api/_annotator-core.js');
+  const handler = require('../api/annotate.js');
+  const hash = run.packetHash(core.buildContextPacket('§2.5'));
+  process.env.ANNOTATE_STORED = 'on';
+  run.setStoreForTests({ entries: { '§2.5': { hash, text: 'Stored text.', model: 'test' } } });
+  try {
+    await withMockedModel(THREE, async (calls) => {
+      const res = fakeRes();
+      await handler({ method: 'POST', body: { num: '§2.5' } }, res);
+      assert.equal(res.statusCode, 200);
+      assert.equal(res.body.annotation, 'Stored text.');
+      assert.equal(res.body.source, 'stored');
+      assert.equal(calls(), 0);
+    });
+  } finally {
+    process.env.ANNOTATE_STORED = 'off';
+    run.setStoreForTests(null);
+  }
+});
+
+test('Stale stored annotation (hash mismatch) and ANNOTATE_STORED=off both fall back to live generation', async () => {
+  const run = require('../api/_annotator-run.js');
+  const handler = require('../api/annotate.js');
+  const core = require('../api/_annotator-core.js');
+  const goodHash = run.packetHash(core.buildContextPacket('§2.5'));
+  try {
+    process.env.ANNOTATE_STORED = 'on';
+    run.setStoreForTests({ entries: { '§2.5': { hash: 'stale-hash-0000', text: 'Old text.' } } });
+    await withMockedModel(THREE, async (calls) => {
+      const res = fakeRes();
+      await handler({ method: 'POST', body: { num: '§2.5' } }, res);
+      assert.equal(res.body.source, 'live');
+      assert.equal(res.body.annotation, THREE);
+      assert.equal(calls(), 1);
+    });
+    run.setStoreForTests({ entries: { '§2.5': { hash: goodHash, text: 'Stored text.' } } });
+    process.env.ANNOTATE_STORED = 'off';
+    await withMockedModel(THREE, async (calls) => {
+      const res = fakeRes();
+      await handler({ method: 'POST', body: { num: '§2.5' } }, res);
+      assert.equal(res.body.source, 'live');
+      assert.equal(calls(), 1);
+    });
+  } finally {
+    process.env.ANNOTATE_STORED = 'off';
+    run.setStoreForTests(null);
+  }
+});
+
+test('Generator endpoint answers only on protected vercel.app hosts and returns hash, lint and text', async () => {
+  const gen = require('../api/annotations-generate.js');
+  const closed = fakeRes();
+  await gen({ method: 'GET', headers: { host: 'thefederatedrepublic.org' }, query: { op: 'status' } }, closed);
+  assert.equal(closed.statusCode, 404);
+
+  const status = fakeRes();
+  await gen({ method: 'GET', headers: { host: 'x.vercel.app' }, query: { op: 'status' } }, status);
+  assert.equal(status.statusCode, 200);
+  assert.equal(status.body.total, 177);
+  assert.equal(status.body.fresh + status.body.staleCount, 177);
+
+  const tooMany = fakeRes();
+  await gen({ method: 'GET', headers: { host: 'x.vercel.app' }, query: { op: 'generate', nums: '1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9' } }, tooMany);
+  assert.equal(tooMany.statusCode, 400);
+
+  await withMockedModel('The packet shows it.\n\nTwo.\n\nThree.', async () => {
+    const res = fakeRes();
+    await gen({ method: 'GET', headers: { host: 'x.vercel.app' }, query: { op: 'generate', nums: '2.5,§2.6' } }, res);
+    assert.equal(res.statusCode, 200);
+    assert.equal(res.body.results.length, 2);
+    const first = res.body.results[0];
+    assert.equal(first.num, '§2.5');
+    assert.match(first.hash, /^[0-9a-f]{16}$/);
+    assert.ok(first.issues.includes('mentions the packet'));
+    assert.equal(first.attempts, 3);
+  });
+
+  // A model that fixes its output on the second attempt is accepted without further retries.
+  const originalFetch = global.fetch;
+  const originalKey = process.env.ANTHROPIC_API_KEY;
+  const originalGateway = process.env.AI_GATEWAY_API_KEY;
+  const originalOidc = process.env.VERCEL_OIDC_TOKEN;
+  delete process.env.AI_GATEWAY_API_KEY;
+  delete process.env.VERCEL_OIDC_TOKEN;
+  process.env.ANTHROPIC_API_KEY = 'test-only';
+  let n = 0;
+  const bodies = [];
+  global.fetch = async (_url, options) => {
+    bodies.push(JSON.parse(options.body));
+    n++;
+    const text = n === 1 ? 'The packet says so.\n\nTwo.\n\nThree.' : 'The Civic Consul holds residual power.\n\nIt relies on §2.1.\n\nIt prevents gaps.';
+    return { ok: true, status: 200, json: async () => ({ content: [{ type: 'text', text }], stop_reason: 'end_turn' }) };
+  };
+  try {
+    const res = fakeRes();
+    await gen({ method: 'GET', headers: { host: 'x.vercel.app' }, query: { op: 'generate', nums: '2.5' } }, res);
+    const r = res.body.results[0];
+    assert.equal(r.attempts, 2);
+    assert.deepEqual(r.issues, []);
+    assert.match(bodies[1].messages[0].content, /REWRITE REQUIRED: mentions the packet/);
+    assert.ok(bodies[1].max_tokens >= 3000);
+  } finally {
+    global.fetch = originalFetch;
+    if (originalKey === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalKey;
+    if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
+    if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
+  }
+});
+
+test('Annotation lint accepts plain three-paragraph prose and rejects source talk, absences, and unknown section numbers', () => {
+  const { annotationLint } = require('../api/_annotator-run.js');
+  const valid = new Set(['§2.5', '§2.1']);
+  assert.deepEqual(annotationLint('The Civic Consul holds residual power (§2.5).\n\nIt relies on §2.1.\n\nIt prevents gaps.', valid).issues, []);
+  const bad = annotationLint('The log entry says so.\n\nThe text does not state why.\n\nSee §9.99.', valid).issues;
+  assert.ok(bad.includes('cites the log') && bad.includes('narrates an absence') && bad.some(i => /unknown provision number §9\.99/.test(i)));
+});
+
+test('Every committed stored annotation passes the quality gate', () => {
+  const store = require('../annotations.json');
+  const { annotationLint } = require('../api/_annotator-run.js');
+  const core = require('../api/_annotator-core.js');
+  const valid = new Set(core.getConstitutionData().flatMap(a => a.provisions.map(p => p.num)));
+  for (const [num, entry] of Object.entries(store.entries || {})) {
+    assert.ok(valid.has(num), `${num} is not a provision`);
+    assert.match(entry.hash, /^[0-9a-f]{16}$/, `${num} hash`);
+    const lint = annotationLint(entry.text, valid);
+    assert.deepEqual(lint.issues, [], `${num}: ${lint.issues.join('; ')}`);
+  }
 });
