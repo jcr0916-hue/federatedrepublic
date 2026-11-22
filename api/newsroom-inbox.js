@@ -9,11 +9,41 @@
 // disposition: key, status, note) and op=purge (remove one approved item: key, etag,
 // manifest). Each write is forwarded as a POST with only those fields; the Worker
 // enforces who may write and every cleanup check.
+// Two batch ops save the editor many connector calls per run: readmany (up to 6 keys, comma-separated)
+// returns the items together, and reviewmany (items = a JSON array of {key,status,note}, up to 25) records
+// each disposition as its own review POST, exactly as op=review would.
 // If Deployment Protection is ever turned off, delete NEWSROOM_EDITOR_KEY to close this.
 
 const DEFAULT_INBOX = 'https://federated-republic-newsroom.jcr0916.workers.dev';
 const OPS = new Set(['list', 'read']);
 const WRITES = { review: ['key', 'status', 'note'], purge: ['key', 'etag', 'manifest'] };
+
+const KEY_RE = /^submissions\/[a-z-]+\/\d{4}-\d\d-\d\d\/[a-f\d-]+\.json$/;
+const MAX_READ = 6;
+const MAX_REVIEW = 25;
+
+function readManyKeys(query) {
+  const keys = String((query || {}).keys || '').split(',').map((k) => k.trim()).filter(Boolean);
+  if (!keys.length || keys.length > MAX_READ || !keys.every((k) => KEY_RE.test(k))) return null;
+  return keys;
+}
+
+function reviewManyItems(query) {
+  let items;
+  try { items = JSON.parse(String((query || {}).items || '')); } catch { return null; }
+  if (!Array.isArray(items) || !items.length || items.length > MAX_REVIEW) return null;
+  const out = [];
+  for (const it of items) {
+    if (!it || typeof it !== 'object') return null;
+    const body = {};
+    for (const k of WRITES.review) {
+      if (typeof it[k] !== 'string' || !it[k]) return null;
+      body[k] = it[k];
+    }
+    out.push(body);
+  }
+  return out;
+}
 
 function protectedHost(host) {
   return /^[a-z0-9-]+\.vercel\.app$/i.test(String(host || '').split(':')[0]);
@@ -48,6 +78,32 @@ async function handler(req, res, fetchImpl = fetch) {
   const q = req.query || {};
   const inbox = process.env.NEWSROOM_URL || DEFAULT_INBOX;
   const op = String(q.op || '');
+  if (req.method === 'GET' && (op === 'readmany' || op === 'reviewmany')) {
+    try {
+      if (op === 'readmany') {
+        const keys = readManyKeys(q);
+        if (!keys) { res.status(400).json({ error: `readmany takes 1–${MAX_READ} comma-separated submission keys` }); return; }
+        const got = await Promise.all(keys.map(async (k) => {
+          const r = await fetchImpl(new URL(`/v1/read?key=${encodeURIComponent(k)}`, inbox).toString(), { headers: { authorization: `Bearer ${key}` } });
+          const text = await r.text();
+          try { return r.status === 200 ? { item: JSON.parse(text) } : { error: { key: k, status: r.status } }; } catch { return { error: { key: k, status: 502 } }; }
+        }));
+        res.status(200).setHeader('content-type', 'application/json').setHeader('cache-control', 'no-store').json({ items: got.filter((g) => g.item).map((g) => g.item), errors: got.filter((g) => g.error).map((g) => g.error) });
+        return;
+      }
+      const items = reviewManyItems(q);
+      if (!items) { res.status(400).json({ error: `reviewmany takes items=[{"key","status","note"}…] (1–${MAX_REVIEW})` }); return; }
+      const results = [];
+      for (const body of items) {
+        const r = await fetchImpl(new URL('/v1/review', inbox).toString(), { method: 'POST', headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' }, body: JSON.stringify(body) });
+        results.push({ key: body.key, status: r.status, ok: r.status >= 200 && r.status < 300 });
+      }
+      res.status(200).setHeader('content-type', 'application/json').setHeader('cache-control', 'no-store').json({ results });
+    } catch (e) {
+      res.status(502).json({ error: 'Inbox unreachable' });
+    }
+    return;
+  }
   const target = relayTarget(req.method, op, q, inbox);
   const write = target ? null : writeRequest(req.method, op, q, inbox);
   if (!target && !write) {
@@ -69,3 +125,5 @@ module.exports = handler;
 module.exports.relayTarget = relayTarget;
 module.exports.writeRequest = writeRequest;
 module.exports.protectedHost = protectedHost;
+module.exports.readManyKeys = readManyKeys;
+module.exports.reviewManyItems = reviewManyItems;

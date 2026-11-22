@@ -25,3 +25,7 @@ Document fields: `week` (the Monday, `YYYY-MM-DD`), `order` (number within the w
 Decisions and assignments, newest first, one line each: date, desk, idea, decision, what was assigned.
 
 - 2026-11-20 · Federal desk · A worksheet with four names, and no order (`w20261116-federal-1`) · **GO** · assigned to the Federal desk (canon article, with fixes), Election Tracker (note on publication) and Partisan Media (opinion column after publication).
+
+## Keeping the board clean
+
+Before adding a card, the Central Editor checks the board for the idea's `sourceKey` (the inbox key of the filing). If a card already carries it, the idea is skipped, whatever its status. A desk that re-pitches the same premise under a new key is noted, not carded again, until its first pitch has an answer. Ideas filed as finished articles are flagged by the desk editor: card the premise, and note that the desk wrote a full draft too early.
