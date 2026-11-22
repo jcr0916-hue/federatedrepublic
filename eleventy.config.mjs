@@ -65,6 +65,8 @@ export default function (eleventyConfig) {
   // One entry per State and Territory with its three newest non-routine records and their real
   // publication times (_data/worldPublished.json). The States map lights a place client-side
   // while its newest record is under LIT_HOURS old, so the page needs no rebuild to fade.
+  // Newest dispatches that are not already shown elsewhere in the section.
+  eleventyConfig.addFilter("voices",(pieces,shown,n)=>{const skip=new Set([...shown].map(p=>p.url));return [...pieces].reverse().filter(p=>p.data.worldKind==="dispatch"&&!skip.has(p.url)).slice(0,n);});
   eleventyConfig.addFilter("areaActivity", pieces=>areaActivity(pieces,readLedger('.')));
   eleventyConfig.addGlobalData("litHours", LIT_HOURS);
   eleventyConfig.addFilter("jsonForScript", v=>JSON.stringify(v).replace(/</g,"\\u003c"));

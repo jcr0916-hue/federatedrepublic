@@ -5,20 +5,24 @@
   form.hidden=false;
   const rows=[...document.querySelectorAll('.archive-item')], more=document.getElementById('archiveMore');let limit=24;
   const names=['q','type','file','place','source'];
-  function restore(){const params=new URLSearchParams(location.search);names.forEach(n=>form.elements[n].value=params.get(n)||'');}
+  // Routine filings (worldMundane) stay out of the default view so news and substantive records lead.
+  // They appear when asked for, when searching, or when the Civic Life type is chosen.
+  const routineBox=form.elements.routine;
+  function restore(){const params=new URLSearchParams(location.search);names.forEach(n=>form.elements[n].value=params.get(n)||'');if(routineBox)routineBox.checked=params.get('routine')==='1';}
   function filter(updateURL){
    const q=form.elements.q.value.toLowerCase().trim(),type=form.elements.type.value,arc=form.elements.file.value,place=form.elements.place.value,source=form.elements.source.value;
-   const matches=rows.filter(r=>(!q||(r.textContent+' '+r.dataset.refs).toLowerCase().includes(q))&&(!type||(type==='civic'?r.dataset.civic==='true':r.dataset.type===type))&&(!arc||r.dataset.files.split('|').includes(arc))&&(!place||r.dataset.places.split('|').includes(place))&&(!source||(source==='TNB'?r.dataset.outlet.startsWith('TNB'):r.dataset.outlet===source)));
+   const showRoutine=!routineBox||routineBox.checked||type==='civic'||!!q;
+   const base=rows.filter(r=>(!q||(r.textContent+' '+r.dataset.refs).toLowerCase().includes(q))&&(!type||(type==='civic'?r.dataset.civic==='true':r.dataset.type===type))&&(!arc||r.dataset.files.split('|').includes(arc))&&(!place||r.dataset.places.split('|').includes(place))&&(!source||(source==='TNB'?r.dataset.outlet.startsWith('TNB'):r.dataset.outlet===source))),matches=showRoutine?base:base.filter(r=>r.dataset.civic!=='true'),hiddenRoutine=base.length-matches.length;
    const visible=new Set(matches.slice(0,limit));rows.forEach(r=>r.hidden=!visible.has(r));
-   document.getElementById('archiveCount').textContent=`${matches.length} matching records · ${Math.min(limit,matches.length)} shown · newest first`;
+   document.getElementById('archiveCount').textContent=`${matches.length} matching records · ${Math.min(limit,matches.length)} shown · newest first`+(hiddenRoutine?` · ${hiddenRoutine} routine filing${hiddenRoutine===1?'':'s'} hidden`:'');
    document.getElementById('archiveEmpty').hidden=matches.length>0;more.hidden=matches.length<=limit;
-   if(updateURL){const params=new URLSearchParams();names.forEach(n=>{if(form.elements[n].value)params.set(n,form.elements[n].value);});history.replaceState(null,'',location.pathname+(params.size?'?'+params:''));}
+   if(updateURL){const params=new URLSearchParams();names.forEach(n=>{if(form.elements[n].value)params.set(n,form.elements[n].value);});if(routineBox?.checked)params.set('routine','1');history.replaceState(null,'',location.pathname+(params.size?'?'+params:''));}
   }
   restore();filter(false);
   const filterDisclosure=document.getElementById('archiveFilterDisclosure');
   if(filterDisclosure && matchMedia('(max-width:600px)').matches){
    const params=new URLSearchParams(location.search);
-   const hasActive=names.some(n=>params.get(n));
+   const hasActive=names.some(n=>params.get(n))||params.get('routine')==='1';
    if(!hasActive) filterDisclosure.open=false;
   }
   form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',()=>{limit=24;filter(true);});
