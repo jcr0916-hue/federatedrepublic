@@ -1823,9 +1823,22 @@
 
       var cacheKey = 'ann-' + CONSTITUTION_REVISION + '-' + num;
 
+      // Stored annotations are written ahead of time and need no notice. The AI Feature
+      // footer appears only for an annotation generated live, which sends the provision
+      // text to the model. Cached live entries carry a leading marker so the footer
+      // returns with them.
+      var LIVE_MARK = '<!--live-->';
+      var noteEl = document.getElementById('annAiNote');
+      function showHtml(html) {
+        var live = html.indexOf(LIVE_MARK) === 0;
+        bodyEl.innerHTML = live ? html.slice(LIVE_MARK.length) : html;
+        if (noteEl) noteEl.style.display = live ? '' : 'none';
+      }
+      if (noteEl) noteEl.style.display = 'none';
+
       // Check in-memory cache first (instant)
       if (annCache[cacheKey]) {
-        bodyEl.innerHTML = annCache[cacheKey];
+        showHtml(annCache[cacheKey]);
         return;
       }
 
@@ -1834,7 +1847,7 @@
         var stored = localStorage.getItem(cacheKey);
         if (stored) {
           annCache[cacheKey] = stored;
-          bodyEl.innerHTML = stored;
+          showHtml(stored);
           return;
         }
       } catch(e) {}
@@ -1849,11 +1862,12 @@
       .then(function(data){
         if (data.annotation) {
           var html = data.annotation.split('\n\n').filter(function(p){return p.trim();}).map(function(p){return '<p>' + p + '</p>';}).join('');
-          bodyEl.innerHTML = html;
+          var tagged = (data.source === 'live' ? LIVE_MARK : '') + html;
+          showHtml(tagged);
           // Only cache complete responses — a truncated one must be regenerated next time.
           if (!data.truncated) {
-            annCache[cacheKey] = html;
-            try { localStorage.setItem(cacheKey, html); } catch(e) {}
+            annCache[cacheKey] = tagged;
+            try { localStorage.setItem(cacheKey, tagged); } catch(e) {}
           }
         } else {
           bodyEl.innerHTML = '<p style="color:var(--muted)">Could not generate annotation. Try again.</p>';
@@ -1931,7 +1945,7 @@
       <div id="annPanelNum" class="ann-panel-num"></div>
       <div id="annPanelName" class="ann-panel-name"></div>
       <div id="annPanelBody" class="ann-panel-body"></div>
-        <div class="ai-note ai-note--panel"><a href="ai-features.html">AI Feature* — how it works &amp; your privacy</a></div>
+        <div class="ai-note ai-note--panel" id="annAiNote" style="display:none"><a href="ai-features.html">AI Feature* — how it works &amp; your privacy</a></div>
     </div>
   </div>
 
