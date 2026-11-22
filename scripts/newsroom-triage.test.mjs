@@ -144,3 +144,16 @@ test('ideas written as finished articles are flagged in code, and canon is read 
   assert.ok(!/Short pitch[^\n]*Filed as a finished article/.test(body));
   assert.ok(calls.gateway[0].messages[1].content.includes('canon-end'), 'canon text beyond the old 2,500-character excerpt reaches the desk editor');
 });
+
+test('assigned working reports from the Monitors and Corindal desks go straight to the editor', async () => {
+  const items = [
+    { key: 'submissions/monitors/m.json', desk: 'monitors', kind: 'report', title: 'Corindal audit record, Round 1', summary: '[idea · normal] Round 1 account.', submittedAt: '2026-11-22T16:10:00Z', status: 'PROPOSED' },
+    { key: 'submissions/monitors/n.json', desk: 'monitors', kind: 'article', title: 'A Monitors column', summary: '[canon · normal] Story.', submittedAt: '2026-11-22T16:11:00Z', status: 'PROPOSED' },
+  ];
+  const { impl, calls } = inbox(items);
+  const out = await tri.runTriage({ env: { NEWSROOM_EDITOR_KEY: 'ed', NEWSROOM_RUNNER_KEY: 'run', AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: new Date('2026-11-22T16:37:00Z') });
+  assert.equal(out.filings, 2);
+  assert.ok(!calls.gateway[0].messages[1].content.includes('Round 1 account'), 'the report never reaches the model');
+  assert.ok(calls.gateway[0].messages[1].content.includes('A Monitors column'), 'other Monitors filings are still sorted');
+  assert.match(calls.submit[0].body.body, /## tracker\n- \*\*monitors\*\*: Corindal audit record, Round 1/);
+});

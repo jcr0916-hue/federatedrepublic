@@ -147,8 +147,12 @@ async function runTriage({ env = process.env, fetchImpl = fetch, now = new Date(
   const since = windowStart(inbox, now);
   const all = newFilings(inbox, since);
   const pass = Array.isArray(cfg.passThroughDesks) ? cfg.passThroughDesks : [];
-  const direct = all.filter((it) => pass.includes(it.desk));
-  const items = all.filter((it) => !pass.includes(it.desk));
+  // Assigned working reports (the joint Corindal audit reconstruction) are for the Central Editor to read
+  // directly; the desk editor once sent one to the idea board. Only filings of kind "report" go direct.
+  const passReports = Array.isArray(cfg.passThroughReports) ? cfg.passThroughReports : [];
+  const goesDirect = (it) => pass.includes(it.desk) || (it.kind === 'report' && passReports.includes(it.desk));
+  const direct = all.filter(goesDirect);
+  const items = all.filter((it) => !goesDirect(it));
   if (!items.length && !direct.length) return { status: 'nothing-new', commit: ref };
 
   // Canon filings are read whole, so the desk editor judges the piece and not a stub. Ideas are read

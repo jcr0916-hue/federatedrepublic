@@ -563,6 +563,7 @@
     ],
     "maxSourceChars": 120000,
     "editorSlots": 3,
+    "passThroughReports": ["monitors", "corindal"],
     "passThroughDesks": [
       "election-tracker",
       "fiscal-tracker",
