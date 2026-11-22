@@ -1,0 +1,29 @@
+{
+  "status": "source-integrated-local-tests-passed",
+  "inspectedRepositoryCommit": "98430167c1c5130b41d329d0b99887c29f35ea4f",
+  "worker": "federated-republic-newsroom",
+  "workerVersion": "08a99769-3618-488e-adbd-30a8be38a788",
+  "deployment": "7a53aadb-d87e-46e5-b7b8-831970590373",
+  "scriptEtag": "0776013786605db1100edd25c58bc9c90f075727d7ef57751e169635ed4ed807",
+  "compatibilityDate": "2026-10-01",
+  "setupNote": {
+    "filename": "federated_republic_newsroom_setup.md",
+    "bytes": 2273,
+    "sha256": "59a77a286bf9aad584e6a19850f46cc72bf283796f8959c86010622504c020ff",
+    "containsWorkerSource": false,
+    "contentsCopied": false
+  },
+  "credentialsCopied": false,
+  "deployedByThisWork": false,
+  "suppliedSource": {
+    "filename": "newsroom-worker.txt",
+    "bytes": 7808,
+    "sha256": "8bd4c7352f6af43e4a6ff265671c7a832c4f37866e40f5f1022a14f45030db3a",
+    "preservedAt": "src/legacy.js",
+    "preservedPrefixBytes": 7808,
+    "integrationChange": "Appended named exports for principal and mcp; original bytes unchanged.",
+    "credentialPreflight": "Parsed authentication literals are known headers and public desk labels. No opaque token literal or common credential/PEM marker found. Five credentials remain environment bindings.",
+    "byteEquivalenceToDeployedModule": "not-established"
+  },
+  "sourceRetrievedThroughCloudflareConnector": false
+}
