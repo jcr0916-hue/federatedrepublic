@@ -92,3 +92,12 @@ The inbox (R2 bucket bound as `NEWSROOM` on the Worker) keeps every submission u
 ## Run log
 
 Each run logs the desks, their outcomes and their token usage in the Vercel function logs for `/api/newsroom-run`.
+
+## Read endpoint for the Central Editor's shell
+
+The Central Editor's workspace reaches thefederatedrepublic.org but not `workers.dev` or `*.vercel.app`, so the protected relay above can only be used through the Vercel connector, which carries every filing through the editor's context. `api/newsroom-read.js` (`/api/newsroom-read`) lets the shell fetch filings as files instead.
+
+- **Read-only.** `?op=list[&desk=…&limit=…&cursor=…]`, `?op=read&key=…` and `?op=readmany&keys=…` (up to 10). No write path: dispositions and purges stay on the protected relay, so the write key never leaves Vercel.
+- **Token.** The caller must send `Authorization: Bearer <NEWSROOM_READ_TOKEN>`. A missing, wrong or unset token (or one shorter than 24 characters) gets the same 404 as any unknown path, and the inbox is not called. The route uses the existing `NEWSROOM_EDITOR_KEY` to reach the Worker. A leaked read token exposes unpublished drafts, never changes anything; rotate it by replacing the Vercel variable and the editor environment's copy.
+- **Setup.** Add `NEWSROOM_READ_TOKEN` (a random string of 32 or more characters; Sensitive, Production) in Vercel, and the same value as a secret in the Central Editor's scheduled-task environment. Redeploy (merge to `main`).
+- **Use.** `NEWSROOM_READ_TOKEN=… npm run newsroom:fetch -- --out <dir> --since <ISO time>` writes each filing to `<dir>/<desk>/<date>-<id8>.json`, with `<id8>.story.txt` beside each article (the story above its notes ledger), and prints one line per filing. `--desk`, `--status` and `--key` narrow it. The draft file is the input the edit log expects.
