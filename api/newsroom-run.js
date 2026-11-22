@@ -4,7 +4,7 @@
 // Optional query: ?desk=<id> runs one enabled desk regardless of day;
 // ?dry=1 builds the prompts without calling the model or the inbox.
 
-const { runNewsroom } = require('./_newsroom-core.js');
+const { runNewsroom, fileRunReport } = require('./_newsroom-core.js');
 
 module.exports = async (req, res) => {
   const secret = process.env.CRON_SECRET;
@@ -19,6 +19,10 @@ module.exports = async (req, res) => {
     const result = await runNewsroom({ only, dryRun });
     const failed = result.results.filter((r) => r.status === 'failed');
     console.log(JSON.stringify({ newsroom: result.results.map(({ desk, status, id, reason, error, usage }) => ({ desk, status, id, reason, error, usage })), commit: result.commit }));
+    // Keep the outcomes (skip reasons included): Vercel's own log lasts an hour. Never let this fail the run.
+    if (!dryRun) {
+      try { await fileRunReport(fetch, { result, now: new Date() }); } catch (e) { console.error('run report not filed', String(e.message || e).slice(0, 200)); }
+    }
     // Any failed desk marks the whole run as an error, so it shows in the schedule's error rate and history.
     res.status(failed.length ? 500 : 200).json(result);
   } catch (e) {

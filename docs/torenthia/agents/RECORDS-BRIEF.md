@@ -35,7 +35,7 @@ Separate entries with a line `=== RECORD ===`. For each one give:
 Do not assign reference numbers; the editor does.
 
 ## Tone
-Entries sound like records: plain, specific, unhurried, no argument. Small concrete details carry the texture. Use names only for officers who sign or are appointed to non-political posts, and list every new name in your notes.
+Entries sound like records: plain, specific, unhurried, no argument. Small concrete details carry the texture. Use names only for officers who sign or are appointed to non-political posts, and list every new name in your notes. A routine return usually needs no named signatory: body and text are enough. Before keeping a name, check the registry for one-letter neighbors; never name a program, unit or fund that a source does not establish.
 
 ## Notes for the editor
 List each entry's filing body (established or new), its series and prior record if it continues one, every new name, and any quiet thread. Recommend USE, HOLD, REVISE or DISCARD per entry.

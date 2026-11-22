@@ -95,12 +95,23 @@ function contextParts({ desk, brief, deskSources = [], assignments, notes, now }
   return parts;
 }
 
+// A desk with an open assignment does not get to find "nothing worthwhile": the editor already decided
+// the work is worth doing. It may skip only when its sources cannot support the assignment, and the reason
+// must name what blocks it, so the editor can repair the assignment. (The Corindal desk filed nothing on
+// its first assignment day and left no reason behind.)
+function skipLine(ctx) {
+  if (hasOpenAssignment(ctx.assignments)) {
+    return 'You have an open assignment, so do the work: the editor has already judged it worth doing. Return {"skip": true, "reason": "..."} only if the sources in this prompt cannot support the assignment, and then make the reason specific: name the source, rule or missing fact that blocks it and say what would unblock it.';
+  }
+  return 'If nothing worthwhile exists, return {"skip": true, "reason": "..."}. Quiet weeks are acceptable; say in the reason what you checked.';
+}
+
 // Step 1 (optional): a stronger model decides what to write and how.
 function buildPlanMessages(ctx) {
   const parts = contextParts(ctx);
   parts.push('', '## Your task: plan, do not write',
     'If an open assignment exists, plan the first one. Otherwise choose one item of your own: a story, an official record proposal, a character, or a pitch.',
-    'If nothing worthwhile exists, return {"skip": true, "reason": "..."}.',
+    skipLine(ctx),
     `Otherwise return only a JSON object with keys: "kind" (one of ${KINDS.join(', ')}), "workingTitle", "angle" (why this matters now, 2–3 sentences), "outline" (array of beats), "facts" (array of established facts to rely on, each with its source path), "newElements" (any new names, places or figures you propose), "cautions" (open clocks and things the writer must not decide), "track" (one of ${TRACKS.join(', ')}).`);
   return [{ role: 'system', content: systemPrompt(ctx) }, { role: 'user', content: parts.join('\n') }];
 }
@@ -116,7 +127,7 @@ function buildMessages(ctx) {
   } else {
     parts.push('', '## Your task',
       'If an open assignment exists, complete the first one. Otherwise propose one item of your own choosing: a story, an official record proposal, a character, or a pitch.',
-      'If nothing worthwhile exists, return {"skip": true, "reason": "..."}.');
+      skipLine(ctx));
   }
   parts.push(
     `${plan ? 'Return' : 'Otherwise return'} only a JSON object with keys: "kind" (one of ${KINDS.join(', ')}), "title", "summary" (1–2 sentences), "body" (the full draft), "sourceRefs" (repo paths you relied on), "notesForEditor" (a short ledger: established facts with their source paths; new names, places and figures you propose; unresolved points; affected jurisdictions and dependencies; anything the editor must check; your recommendation: USE, HOLD, REVISE or DISCARD), "track" (one of ${TRACKS.join(', ')}: see "Declare what you are submitting" in the rules), and "attention" (an object: "importance" high, normal or low; "timeSensitive" true or false; "touches" an array naming any of: other jurisdictions, federal authority, reserved continuity, an open clock; "why" one sentence on why it matters now).`);
@@ -359,4 +370,36 @@ async function runNewsroom({ env = process.env, fetchImpl = fetch, now = new Dat
   return { paused: false, date: now.toISOString(), commit: ref, results };
 }
 
-module.exports = { TRACKS, attentionTag, filedRecently, submitProposal, DEFAULT_INBOX, RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, resolveCommit, loadText, loadOptional, callModel, systemPrompt, contextParts, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
+// The run log on Vercel keeps only an hour, so "why did this desk file nothing?" had no answer
+// two days later. Each scheduled run files one short report from the pseudo-desk "newsroom-run"
+// with every desk's outcome and reason. The triage ignores it; the Central Editor reads it.
+const RUN_DESK = 'newsroom-run';
+
+function renderRunReport(result, now) {
+  const rows = Array.isArray(result.results) ? result.results : [];
+  const tally = {};
+  for (const r of rows) tally[r.status] = (tally[r.status] || 0) + 1;
+  const head = Object.entries(tally).map(([k, v]) => `${v} ${k}`).join(', ') || 'no desks due';
+  const lines = [`Newsroom run for ${now.toISOString().slice(0, 10)}: ${rows.length} desk${rows.length === 1 ? '' : 's'} due (${head}).`, ''];
+  for (const r of [...rows].sort((a, b) => String(a.desk).localeCompare(String(b.desk)))) {
+    const why = String(r.reason || r.error || '').replace(/\s+/g, ' ').slice(0, 500);
+    const tokens = r.usage ? Object.values(r.usage).reduce((n, u) => n + (u && (u.completion_tokens || 0)), 0) : 0;
+    lines.push(`- **${r.desk}**: ${r.status}${r.title ? ` — ${r.title}` : ''}${why ? ` — ${why}` : ''}${tokens ? ` (${tokens} output tokens)` : ''}`);
+  }
+  return lines.join('\n');
+}
+
+async function fileRunReport(fetchImpl, { env = process.env, result, now = new Date() }) {
+  const runnerKey = env.NEWSROOM_RUNNER_KEY;
+  if (!runnerKey || !result || result.paused || !Array.isArray(result.results) || !result.results.length) return null;
+  const proposal = {
+    kind: 'report',
+    title: `Newsroom run — ${now.toISOString().slice(0, 10)}`,
+    summary: `[run] ${result.results.length} desks due; outcomes and skip reasons.`,
+    body: renderRunReport(result, now).slice(0, 20000),
+    sourceRefs: result.commit ? [`commit:${result.commit}`] : [],
+  };
+  return submitProposal(fetchImpl, { inboxUrl: env.NEWSROOM_URL || DEFAULT_INBOX, proposal, authHeaders: { Authorization: `Bearer ${runnerKey}`, 'x-newsroom-desk': RUN_DESK } });
+}
+
+module.exports = { RUN_DESK, renderRunReport, fileRunReport, TRACKS, attentionTag, filedRecently, submitProposal, DEFAULT_INBOX, RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, resolveCommit, loadText, loadOptional, callModel, systemPrompt, contextParts, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };

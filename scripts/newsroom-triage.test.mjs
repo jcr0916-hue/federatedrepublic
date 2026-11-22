@@ -53,7 +53,7 @@ test('the desk editor ranks only new, non-test filings and files its triage', as
   assert.equal(calls.gateway[0].model, 'anthropic/claude-haiku-5.5');
   assert.equal(calls.gateway[0].response_format, undefined);
   const prompt = calls.gateway[0].messages[1].content;
-  assert.ok(prompt.includes('Ferry reply') && prompt.includes('Excerpt:') && !prompt.includes('Old') && !prompt.includes('TEST ONLY'));
+  assert.ok(prompt.includes('Ferry reply') && prompt.includes('Full text:') && !prompt.includes('Old') && !prompt.includes('TEST ONLY'));
   assert.ok(calls.gateway[0].messages[0].content.includes('## Source: docs/torenthia/STORY-STATUS.md'));
   const filed = calls.submit[0];
   assert.equal(filed.headers['x-newsroom-desk'], 'desk-editor');
@@ -104,4 +104,43 @@ test('the roster names the thread trackers as pass-through desks', () => {
   assert.ok(fiscal && fiscal.enabled && fiscal.planner === null && /^\d{4}-\d{2}-\d{2}$/.test(fiscal.until));
   const desk = roster.desks.find((d) => d.id === 'election-tracker');
   assert.ok(desk && desk.enabled && desk.planner === null && /^\d{4}-\d{2}-\d{2}$/.test(desk.until));
+});
+
+test('a filing is sorted once: the next run starts where the last report stopped', async () => {
+  const items = [
+    { key: 'submissions/desk-editor/prev.json', desk: 'desk-editor', kind: 'report', title: 'Desk editor triage — 2026-11-21', summary: '[triage] 7 filings sorted for the Central Editor. [through 2026-11-21T16:37:00.000Z]', submittedAt: '2026-11-21T16:51:00Z', status: 'PROPOSED' },
+    { key: 'submissions/caldenmere-records/before.json', desk: 'caldenmere-records', kind: 'nrs-proposal', title: 'Already sorted', summary: '[record · low] Routine.', submittedAt: '2026-11-21T16:20:00Z', status: 'PROPOSED' },
+    { key: 'submissions/korda/new.json', desk: 'korda', kind: 'article', title: 'Fresh piece', summary: '[canon · high] New.', submittedAt: '2026-11-22T16:09:00Z', status: 'PROPOSED' },
+  ];
+  assert.equal(tri.windowStart(items, new Date('2026-11-22T16:37:00Z')), Date.parse('2026-11-21T16:37:00.000Z'));
+  const { impl, calls } = inbox(items);
+  const out = await tri.runTriage({ env: { NEWSROOM_EDITOR_KEY: 'ed', NEWSROOM_RUNNER_KEY: 'run', AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: new Date('2026-11-22T16:37:00Z') });
+  assert.equal(out.filings, 1);
+  const prompt = calls.gateway[0].messages[1].content;
+  assert.ok(prompt.includes('Fresh piece') && !prompt.includes('Already sorted'));
+  assert.match(calls.submit[0].body.summary, /\[through 2026-11-22T16:37:00\.000Z\]$/, 'the report records when it listed the inbox');
+});
+
+test('an older report without the tag still bounds the window, with slack; a long gap is capped at a week', () => {
+  const now = new Date('2026-11-22T16:37:00Z');
+  const old = [{ desk: 'desk-editor', summary: '[triage] 7 filings sorted.', submittedAt: '2026-11-22T16:51:00Z' }];
+  assert.equal(tri.windowStart(old, now), Date.parse('2026-11-22T16:31:00Z'));
+  assert.equal(tri.windowStart([], now), now.getTime() - 26 * 3600 * 1000);
+  const stale = [{ desk: 'desk-editor', summary: '[triage] x [through 2026-10-01T00:00:00.000Z]', submittedAt: '2026-10-01T00:10:00Z' }];
+  assert.equal(tri.windowStart(stale, now), now.getTime() - 7 * 24 * 3600 * 1000);
+});
+
+test('ideas written as finished articles are flagged in code, and canon is read whole', async () => {
+  const long = 'word '.repeat(900);
+  const items = [
+    { key: 'submissions/norvane/a.json', desk: 'norvane', kind: 'article', title: 'Equalization Ledger', summary: '[idea · normal] Pitch.', submittedAt: '2026-11-19T16:09:00Z', status: 'PROPOSED' },
+    { key: 'submissions/selvane/b.json', desk: 'selvane', kind: 'pitch', title: 'Short pitch', summary: '[idea · normal] Pitch.', submittedAt: '2026-11-19T16:10:00Z', status: 'PROPOSED' },
+    { key: 'submissions/korda/c.json', desk: 'korda', kind: 'article', title: 'Long canon', summary: '[canon · high] Story.', submittedAt: '2026-11-19T16:11:00Z', status: 'PROPOSED' },
+  ];
+  const { impl, calls } = inbox(items, { 'submissions/norvane/a.json': long, 'submissions/selvane/b.json': 'A short pitch of about nine words only.', 'submissions/korda/c.json': 'canon-start ' + 'x'.repeat(9000) + ' canon-end' });
+  await tri.runTriage({ env: { NEWSROOM_EDITOR_KEY: 'ed', NEWSROOM_RUNNER_KEY: 'run', AI_GATEWAY_API_KEY: 'gw' }, fetchImpl: impl, now: NOW });
+  const body = calls.submit[0].body.body;
+  assert.match(body, /Equalization Ledger[^\n]*⚑ Filed as a finished article \(900 words\)/);
+  assert.ok(!/Short pitch[^\n]*Filed as a finished article/.test(body));
+  assert.ok(calls.gateway[0].messages[1].content.includes('canon-end'), 'canon text beyond the old 2,500-character excerpt reaches the desk editor');
 });
