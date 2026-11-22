@@ -46,3 +46,9 @@
 
 - Added `docs/torenthia/MULTIMEDIA-INSTITUTIONS-CITYSCAPES-REVIEW-20261122.md`: checked institutional and place master image paths/byte sizes against existing landing, Record, Republic-at-a-Glance, fiscal dossier, and two State profile source pages. Prioritized *Assembly chamber*, *Senate chamber*, *Council of Ministers meeting room*, Calden/Dorven cityscapes for actual visual inspection and cautioned against misrepresenting institutions, specific incidents or speculative capital plans.
 - Full Git tree now enumerates files, but remote image pixel preview remains blocked: GitHub connector generic fetch refuses non-UTF8 blobs; direct HTTPS to raw GitHub failed DNS. Do not claim visual approval or unreferenced status based solely on indexed search. This review is **documentation only**; no images, pages, canon, merged branches, deploys or automated agents changed.
+
+## November 22 — visual review gallery linked to actual existing media
+
+- Added `docs/torenthia/MULTIMEDIA-IMAGE-GALLERY-20261122.md`, a GitHub-renderable Markdown gallery with **12 direct relative image embeds** from the existing `images/` repository directory: three institutional interiors, six city/capital views, and three speculative Ostara civic future concepts. Paths and binary file existence were verified against the complete Git main tree. These are **the actual existing repository images**, not stock substitutes or generated replacements.
+- Rendering on GitHub client and the actual depicted image content are **not personally verified** due to image-byte access restrictions. The gallery's labels derive from filenames and intentionally avoid stating the underlying artwork is historically/canonically accurate.
+- No site source, image binary, deployment, canon, agent or branch merge changed. PR #363 remains a documentation-only review; next is Presidential visual assessment of actual images via the gallery and selection of worthwhile reuse placements.
