@@ -92,6 +92,24 @@ for(const p of world){
 }
 console.log('Verified narrative Latest feeds and stream-specific Previous/Next links.');
 
+// Torenthia page: three doors, one news section, voices that never repeat the Latest cards.
+{
+ const hub=docs.get('torenthia.html'),hubText=DomUtils.textContent(hub);
+ const doors=DomUtils.findAll(n=>n.attribs?.class==='hub-door',hub.children);
+ assert.deepEqual(doors.map(d=>d.attribs.href),['#republic-now','torenthia-record.html','republic-at-a-glance.html'],'hub: three doors');
+ assert.ok(!hubText.includes('Reporting from the States'),'hub: state reporting folded into the news section');
+ const latestIds=new Set(narrativeWorld(world).slice(-4).map(p=>p.data.worldId));
+ const voices=DomUtils.findOne(n=>n.attribs?.class==='voices',hub.children,true);
+ const voiceIds=DomUtils.findAll(n=>n.name==='a',voices?.children||[]).map(a=>a.attribs.href.replace(/^\//,'').replace(/\.html$/,''));
+ assert.ok(voiceIds.length>0&&voiceIds.every(id=>!latestIds.has(id)&&world.find(p=>p.data.worldId===id)?.data.worldKind==='dispatch'),'hub: voices are dispatches not already in Latest');
+ // The Record: routine filings are marked so the page can tuck them away by default.
+ const rec=docs.get('torenthia-record.html');
+ assert.ok(DomUtils.findOne(n=>n.name==='input'&&n.attribs?.name==='routine',rec.children,true),'record: routine toggle present');
+ const routineRows=DomUtils.findAll(n=>n.attribs?.class==='archive-item'&&n.attribs['data-civic']==='true',rec.children).length;
+ assert.equal(routineRows,world.filter(p=>p.data.worldMundane).length,'record: every routine record is marked');
+ console.log('Verified Torenthia doors, voices, and routine-filing markers on the Record.');
+}
+
 const stateIndex=loadStateTestIndex(),stateDiscovery=docs.get('state-tests.html');
 for(const entry of stateIndex.entries) {
  const doc=docs.get(entry.url.slice(1));

@@ -1114,3 +1114,16 @@ h1.qs-title:focus,h2.section-label:focus{outline:none}
   .state-constitution-toc-mobile a{color:var(--muted);text-decoration:none;font-size:.85rem;padding:.45rem 0;border-top:1px solid var(--rule)}
   .state-constitution-toc-mobile a:hover,.state-constitution-toc-mobile a:focus-visible{color:var(--navy)}
 }
+
+.hub-doors{display:grid;gap:.7rem;margin:1.5rem 0 .4rem}
+.hub-door{display:block;text-decoration:none;color:inherit;border:1px solid #cfc6b0;border-left:4px solid var(--gold2);background:#fbf8ef;padding:.8rem 1rem;transition:background .15s,border-color .15s}
+.hub-door:hover,.hub-door:focus-visible{background:#fff;border-color:var(--navy)}
+.hub-door-kicker{display:block;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#765817}
+.hub-door-title{display:block;font:600 1.45rem/1.2 'Cormorant Garamond',serif;color:var(--navy);margin:.15rem 0}
+.hub-door-text{display:block;font-size:.92rem;line-height:1.5;color:#3d382f}
+.hub-also{font-size:.88rem;margin:.6rem 0 0}.hub-also a{color:#765817;text-underline-offset:4px}
+.voices{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid #d8cfba}
+.voices-list{list-style:none;margin:0;padding:0}.voices-list li{padding:.55rem 0;border-bottom:1px solid #e6dfcd}
+.voices-list a{font:600 1.15rem/1.3 'Cormorant Garamond',serif;color:var(--navy);text-underline-offset:4px}.voices-list .meta{display:block}
+
+.stats-band .sblock h2{font:600 1.5rem/1.2 'Cormorant Garamond',serif;color:#f0e8d8;margin:.2rem 0 .6rem}

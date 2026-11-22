@@ -42,6 +42,13 @@
     .back-link{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;margin-bottom:2rem}
     .back-link:hover{color:var(--navy)}
 
+    .archive-filters .routine-toggle{display:block;font-size:.85rem;line-height:1.5;cursor:pointer;grid-column:1/-1}
+    .archive-filters .routine-toggle input{display:inline-block;min-height:0;width:1.1rem;height:1.1rem;padding:0;margin:0 .45rem 0 0;vertical-align:-.2rem}
+    .archive-filters button[type=reset]{justify-self:start;padding:.5rem 1.4rem}
+    @media(min-width:821px){.archive-filters{grid-template-columns:repeat(4,1fr)}.archive-filters label:first-child{grid-column:1/-1}}
+    .routine-note{color:var(--muted)}
+    .source-rail-disclosure{margin:1rem 0;border:1px solid var(--border);padding:.2rem 1rem}
+    .source-rail-disclosure>summary{cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:.7rem 0}
     @media(max-width:820px){
       main{padding:1.5rem 1rem 4rem}
       .record-hero{padding:1.45rem 1rem 1.25rem}
@@ -63,13 +70,22 @@
     <div class="record-hero-inner">
       <div class="record-eye">The Living World · Through {{ collections.world | worldNewest | worldDateLabel }}</div>
       <h1 class="record-title">The Record</h1>
-      <p class="record-sub">News, official documents, and NRS entries from the Federated Republic of Torenthia. Updated as events develop.</p>
+      <p class="record-sub">News, official notices and court rulings from the Federated Republic of Torenthia. Routine filings are tucked away unless you ask for them.</p>
     </div>
   </div>
 
   <main id="main-content">
     <a href="torenthia.html" class="back-link">← Back to The World</a>
 
+    <details class="archive-filter-disclosure" id="archiveFilterDisclosure" open>
+      <summary>Filter the Record</summary>
+      <form class="archive-filters" id="archiveFilters" role="search" hidden>
+<label>Search the archive<input type="search" name="q" placeholder="Title, person, provision or phrase"></label>
+<label>Document type<select name="type"><option value="">All types</option><option value="news">News</option><option value="nrs">NRS</option><option value="sc">Court</option><option value="dispatch">Dispatch</option><option value="civic">Civic Life / Ordinary Republic</option></select></label>
+<label>Active file<select name="file"><option value="">All files</option>{% for f in currentFiles %}<option value="{{ f.id }}">{{ f.short }}</option>{% endfor %}</select></label>
+<label>Jurisdiction<select name="place"><option value="">All jurisdictions</option>{% for s in stats.states %}<option>{{ s.name }}</option>{% endfor %}{% for s in stats.territories %}<option>{{ s.name }}</option>{% endfor %}</select></label><label>Source<select name="source"><option value="">All sources</option><option>The Torenthian</option><option>RNN</option><option>National Record System</option><option>The Dorven Ledger</option><option>The Korda Press</option><option value="TNB">TNB</option></select></label><label class="routine-toggle"><input type="checkbox" name="routine" value="1"> Include routine filings <span class="routine-note">(pump-station schedules, equipment acceptances, reconciliations)</span></label><button type="reset" class="secondary-action">Clear filters</button></form>
+    </details>
+    <details class="source-rail-disclosure" id="sourceRailDisclosure"><summary>Browse by source</summary>
     <div class="source-identity-rail">
       {% set relatedRailId = 'record-sources' %}
       {% set relatedRailEyebrow = 'Who published it?' %}
@@ -85,14 +101,6 @@
       ] %}
       {% include "related-rail.njk" %}
     </div>
-
-    <details class="archive-filter-disclosure" id="archiveFilterDisclosure" open>
-      <summary>Filter the Record</summary>
-      <form class="archive-filters" id="archiveFilters" role="search" hidden>
-<label>Search the archive<input type="search" name="q" placeholder="Title, person, provision or phrase"></label>
-<label>Document type<select name="type"><option value="">All types</option><option value="news">News</option><option value="nrs">NRS</option><option value="sc">Court</option><option value="dispatch">Dispatch</option><option value="civic">Civic Life / Ordinary Republic</option></select></label>
-<label>Active file<select name="file"><option value="">All files</option>{% for f in currentFiles %}<option value="{{ f.id }}">{{ f.short }}</option>{% endfor %}</select></label>
-<label>Jurisdiction<select name="place"><option value="">All jurisdictions</option>{% for s in stats.states %}<option>{{ s.name }}</option>{% endfor %}{% for s in stats.territories %}<option>{{ s.name }}</option>{% endfor %}</select></label><label>Source<select name="source"><option value="">All sources</option><option>The Torenthian</option><option>RNN</option><option>National Record System</option><option>The Dorven Ledger</option><option>The Korda Press</option><option value="TNB">TNB</option></select></label><button type="reset" class="secondary-action">Clear filters</button></form>
     </details>
 <div class="link-row">{% for f in currentFiles %}<a href="dossier-{{ f.id }}.html">{{ f.short }}</a>{% endfor %}</div>
 <p id="archiveCount" role="status">{{ collections.world | length }} public records · newest first</p>
