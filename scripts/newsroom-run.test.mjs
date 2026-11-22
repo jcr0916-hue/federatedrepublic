@@ -273,3 +273,34 @@ test('a desk with an until date stops after that UTC day, including a manual run
   assert.deepEqual(ids(new Date('2026-12-07T16:07:00Z'), 'election-tracker'), []);
   assert.deepEqual(core.offWeekDesks({ desks: [{ id: 't', enabled: true, days: ['mon'], everyWeeks: 2, until: '2026-11-01' }] }, new Date('2026-11-16T16:07:00Z')).map((x) => x.id), []);
 });
+
+
+test('each run files one report with every desk outcome and skip reason', async () => {
+  const sent = [];
+  const impl = async (url, init = {}) => { sent.push({ url: String(url), headers: init.headers, body: JSON.parse(init.body) }); return Response.json({ id: 'r1', key: 'submissions/newsroom-run/x.json' }); };
+  const result = { paused: false, commit: SHA, results: [
+    { desk: 'corindal', status: 'no-submission', reason: 'Nothing new since the last audit round.', usage: { planner: { completion_tokens: 300 } } },
+    { desk: 'caldenmere', status: 'submitted', title: 'The Crane Operator', usage: { planner: { completion_tokens: 400 }, writer: { completion_tokens: 2500 } } },
+    { desk: 'varek-records', status: 'failed', error: 'planner reply was not JSON' },
+  ] };
+  const out = await core.fileRunReport(impl, { env: { NEWSROOM_RUNNER_KEY: 'run' }, result, now: new Date('2026-11-19T16:07:00Z') });
+  assert.equal(out.id, 'r1');
+  assert.equal(sent[0].headers['x-newsroom-desk'], 'newsroom-run');
+  assert.match(sent[0].body.body, /3 desks due \(1 no-submission, 1 submitted, 1 failed\)/);
+  assert.match(sent[0].body.body, /\*\*corindal\*\*: no-submission — Nothing new since the last audit round\./);
+  assert.match(sent[0].body.body, /\*\*varek-records\*\*: failed — planner reply was not JSON/);
+  assert.equal(await core.fileRunReport(impl, { env: { NEWSROOM_RUNNER_KEY: 'run' }, result: { paused: true, results: [] } }), null);
+  assert.equal(await core.fileRunReport(impl, { env: {}, result }), null);
+});
+
+test('a desk with an open assignment may skip only for a named blocker; others may rest', () => {
+  const desk = { id: 'corindal', name: 'Corindal State desk' };
+  const base = { rules: 'Rules.', brief: 'Brief.', desk, notes: '', now: new Date('2026-11-26T16:07:00Z'), sharedSources: [], deskSources: [] };
+  const tasked = core.buildPlanMessages({ ...base, assignments: '## Open\n\n- **Joint audit history.** Work the round.\n\n## Done\n' })[1].content;
+  assert.match(tasked, /You have an open assignment, so do the work/);
+  assert.doesNotMatch(tasked, /Quiet weeks are acceptable/);
+  const free = core.buildPlanMessages({ ...base, assignments: '## Open\n\n## Done\n' })[1].content;
+  assert.match(free, /Quiet weeks are acceptable/);
+  const writer = core.buildMessages({ ...base, plan: null, assignments: '## Open\n- **Work.**\n' })[1].content;
+  assert.match(writer, /name the source, rule or missing fact that blocks it/);
+});

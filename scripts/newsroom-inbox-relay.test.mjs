@@ -75,3 +75,48 @@ test('a write reaches the Worker as an editor POST', async () => {
   assert.equal(res.headers['cache-control'], 'no-store');
   delete process.env.NEWSROOM_EDITOR_KEY;
 });
+
+test('readmany returns several items in one call; reviewmany records each disposition as its own POST', async () => {
+  process.env.NEWSROOM_EDITOR_KEY = 'k';
+  const k1 = 'submissions/korda/2026-11-17/e2e5a8c9-e51d-4d91-905b-01e499ea0d7a.json';
+  const k2 = 'submissions/federal/2026-11-17/66f5812c-51a2-46ce-a0b4-5e32313648b0.json';
+  const calls = [];
+  const fetchImpl = async (url, init = {}) => {
+    calls.push({ url, method: init.method || 'GET', auth: init.headers.authorization, body: init.body });
+    if (String(url).includes('/v1/read')) return String(url).includes('missing') ? { status: 404, text: async () => '{}' } : { status: 200, text: async () => JSON.stringify({ key: decodeURIComponent(String(url).split('key=')[1]), body: 'B' }) };
+    return { status: 200, text: async () => '{}' };
+  };
+  const read = mockRes();
+  await relay({ method: 'GET', headers: { host: 'federatedrepublic.vercel.app' }, query: { op: 'readmany', keys: `${k1},${k2}` } }, read, fetchImpl);
+  assert.equal(read.code, 200);
+  assert.deepEqual(read.body.items.map((i) => i.key).sort(), [k2, k1].sort());
+  assert.equal(calls.filter((c) => c.url.includes('/v1/read')).length, 2);
+  assert.ok(calls.every((c) => c.auth === 'Bearer k'));
+
+  const bad = mockRes();
+  await relay({ method: 'GET', headers: { host: 'federatedrepublic.vercel.app' }, query: { op: 'readmany', keys: '../../etc/passwd' } }, bad, fetchImpl);
+  assert.equal(bad.code, 400);
+  const tooMany = mockRes();
+  await relay({ method: 'GET', headers: { host: 'federatedrepublic.vercel.app' }, query: { op: 'readmany', keys: Array(7).fill(k1).join(',') } }, tooMany, fetchImpl);
+  assert.equal(tooMany.code, 400);
+
+  calls.length = 0;
+  const rev = mockRes();
+  const items = JSON.stringify([{ key: k1, status: 'ARCHIVED', note: 'Published as news 139.', extra: 'dropped' }, { key: k2, status: 'HOLD', note: 'Held.' }]);
+  await relay({ method: 'GET', headers: { host: 'federatedrepublic.vercel.app' }, query: { op: 'reviewmany', items } }, rev, fetchImpl);
+  assert.equal(rev.code, 200);
+  assert.deepEqual(rev.body.results.map((r) => r.ok), [true, true]);
+  assert.equal(calls.length, 2);
+  assert.deepEqual(JSON.parse(calls[0].body), { key: k1, status: 'ARCHIVED', note: 'Published as news 139.' });
+  assert.equal(calls[0].method, 'POST');
+
+  for (const items2 of ['not json', '[]', JSON.stringify([{ key: k1, status: 'ARCHIVED' }])]) {
+    const r2 = mockRes();
+    await relay({ method: 'GET', headers: { host: 'federatedrepublic.vercel.app' }, query: { op: 'reviewmany', items: items2 } }, r2, fetchImpl);
+    assert.equal(r2.code, 400, items2);
+  }
+  const pub = mockRes();
+  await relay({ method: 'GET', headers: { host: 'thefederatedrepublic.org' }, query: { op: 'readmany', keys: k1 } }, pub, fetchImpl);
+  assert.equal(pub.code, 404);
+  delete process.env.NEWSROOM_EDITOR_KEY;
+});

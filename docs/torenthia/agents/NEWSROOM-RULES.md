@@ -15,7 +15,7 @@ Your measure of success is the quality and independence of your jurisdiction's p
 ## Declare what you are submitting
 Every submission names its **track**, and the standard follows the track:
 - **canon**: meant for publication as it stands. It must meet every rule here: precise, sourced, consistent with both constitutions, nothing open treated as settled, with a complete notes ledger. Check it yourself against your sources; the editor checks only what is shortlisted.
-- **idea**: a pitch, a possible storyline, a character, a reaction or a "what if." It may be loose and speculative, as long as everything new is labeled as proposed. Ideas go to John's weekly idea board, not into edits.
+- **idea**: a pitch, a possible storyline, a character, a reaction or a "what if." It may be loose and speculative, as long as everything new is labeled as proposed. Ideas go to John's weekly idea board, not into edits. **An idea is a short pitch, not a draft:** file it as kind `pitch`, 150–300 words, saying the premise, why now, who is in it, what stays open and which sources it rests on. Do not file a finished article as an idea; if the piece is ready to run, it is canon and must meet every rule here. A pitch that uses an outlet, reporter or person who is not already in `_data/worldRegistry.json` lists each as **proposed**. If John says GO, you write the full piece later from his note.
 - **record**: a routine record. Mundane and free, within its body's authority.
 
 Then say how much attention it needs (**attention**): importance (high only when it moves a live storyline or answers something that just happened; most work is normal), whether it is time-sensitive, what it touches (other jurisdictions, federal authority, reserved continuity, an open clock), and one sentence on why it matters now. A desk editor ranks every desk's work against a few daily slots, so honest importance gets your best work read first.
@@ -76,6 +76,20 @@ Where constitutional permission exists but implementing law isn't established, s
 - Use only published information about national figures. Don't foreshadow, outline or speculate about their future; if a matter might touch reserved future continuity, say only that it needs central review.
 - No villains: people disagree in good faith and within the law.
 - Use American English. Refer to the country as "the Republic," "the federal government" or "the Federated Republic of Torenthia" as the context requires; avoid a bare "Federated Republic," which is also the name of the wider Constitution project.
+
+## What the editor corrected in the first week
+These are real corrections from the first desk week. Check your own draft against each before you submit.
+- **Who a record addresses.** Read the addressee and the author of a record before placing a story or an entry in it. NRS 128 invites State and Territory administrations to submit corrected tables, not counties: a county's correction goes to its State administration, and nothing a county files reaches the Joint Committee directly.
+- **Names of local bodies.** Use the names your own constitution gives: Varek's Counties are governed by County Councils, not boards. Harren's "Registry" is the State's; the federal system is the National Record System.
+- **Where a power comes from.** Cite the provision that grants each review, duty or power. The Executive Monitor does not review a budget (§12.2(2) gives the Monetary Authority a post-enactment assessment). Do not assert that a body is or is not obliged to do something unless a source says so.
+- **Invented machinery.** No programs, offices, units, officers, signatories or procedures that no source establishes ("the State's small-harbor maintenance program," a "ballot-services section"). A routine record needs a body and a text, not a named signatory; if a named officer is truly needed, list it as proposed.
+- **Near-names.** Before you keep any new name, look for its neighbors in `_data/worldRegistry.json` and the published record: one-letter cousins (Marr and Marn, Orrel and Orris, Drue and Druse) and near-duplicate bodies (a "Harbor Authority" beside a Port Authority). The registry's avoided names are off limits.
+- **Open matters.** "Qualified," not "on the ballot," until a ballot exists. Dates are set; results are certified. State "no date has been set," not "certified." No real-world months: use seasons or the Torenthian month.
+- **Byline and outlet.** Every article names its outlet and reporter, spelled the same way throughout and listed in your notes.
+- **Endings.** End on the concrete situation. No essay closers ("that is the story under the story").
+
+## What is new
+Before you file, write one line in your notes: *what is new in the published record since your last piece on this thread, and what does this piece add.* If the answer is "nothing has happened," do not file; "nothing yet" is a valid result. Retelling an open question, recapping the state of the spring elections or fiscal equalization, or reusing the same characters to report that nothing changed has been held every time it was tried. Each new piece needs a development, a new person with a stake, or a new angle on a published fact.
 
 ## Revisions
 When your notes show the editor asked for a revision, keep the original proposal's identity, address each correction explicitly, recheck sources where accuracy was questioned, and separate corrections from new additions. Don't resubmit held material without new grounds or a request.
