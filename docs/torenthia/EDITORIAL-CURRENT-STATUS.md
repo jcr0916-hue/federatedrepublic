@@ -30,7 +30,7 @@
 | Kelvant | **Pre-existing agent; qualification pending verification** | Earlier training materials exist separately; review prior tests before new work |
 | Selvane | **QUALIFIED 2026-11-04 (97, 91, 93)** | [Qualification record](agents/selvane/QUALIFICATION-STATUS-20261104.md); *Quiet Afternoon* remains unpublished with five mandatory corrections |
 | Rhovane | **Agent created; Work packet received; qualification pending** | Seven-file packet; lake public trust and Estate Council override |
-| Norvane | **Agent created; Work packet received; qualification pending** | Seven-file packet; emergency authority, reception rights and Riverglow consent |
+| Norvane | **QUALIFIED 2026-11-04 (97, 89, 93)** | [Qualification record](agents/norvane/QUALIFICATION-STATUS-20261104.md); unpublished market feature needs five edits |
 | Korda (Territory) | **Qualified for supervised editorial operations** — all three trials passed | `agents/korda/QUALIFICATION-STATUS-20261101.md` supersedes incomplete checkpoint in `agents/korda/README.md` |
 | Solara (Territory) | **Qualified 2026-11-03**, tests 01, 02, 03 passed | Compact v0.3 **approved editorial governing reference**, not newly enacted Year 14 NRS law |
 | Morantine (Territory) | **Qualified 2026-11-03**, Tests 01–03 passed (94, 89, 91) | [Qualification record](agents/morantine/QUALIFICATION-STATUS-20261103.md); Compact v0.2 approved as editorial reference, first article needs six copyedits |
