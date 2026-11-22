@@ -28,3 +28,9 @@
 - Added `docs/torenthia/MULTIMEDIA-ASSET-APPLICATION-REVIEW-20261121.md` recording itemized map, logo, place-photo, flag, and article-image references with purpose and reuse recommendations. Sources checked include `atlas.html`, `territory-solara.html`, `territory-morantine.html`, dossiers, State profile template, and published news 067/071.
 - Attempted actual visual inspection, but local git clone failed DNS, binary GitHub connector could not decode images, public image retrieval yielded no pixels, and Vercel deployment files endpoint returned 404. Consequently **rendered visual quality remains unverified**; no false quality judgments were entered. Do not describe asset audit as complete.
 - No changes to site code, assets, canon, agents or deployment. This remains a docs-only draft PR for Presidential review.
+
+## November 21 — portraits, places and institutional image audit
+
+- Added `docs/torenthia/MULTIMEDIA-PORTRAITS-PLACES-INSTITUTIONS-20261121.md`. Read actual news 001, 005, 011, 027, 028, 035, 041, 047, 071 and cited source-search hits for other recurring portraits. Identified recurrent portrait references for Vael, Mak, Carrow, Thoss, event-specific Thoss press scene, existing city/territory landscape usage, and generic map-card metadata; distinguished visible inline figures from merely declared `worldImage` metadata.
+- Read `docs/operations/REGIONAL-MAP.md` verifying provenance, 1536×1024 size and 2,158,954-byte current temporary map, its Gaea replacement plan, dependencies and rollback context. Also read `docs/torenthia/FLAG-DESIGN-REFERENCE-20261101.md` clarifying national flag vs seal.
+- Limits: this remains source-level, not a binary pixel/rights/full-tree/visual render audit. Direct container network to GitHub and production site failed DNS; web API tree inaccessible. No source code, deployed page, assets or canon changed; no build tests applicable to docs-only change. Media additions not authorized.
