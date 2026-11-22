@@ -40,82 +40,25 @@
               <svg id="mapOverlay" style="position:absolute;top:0;left:0" width="1536" height="1024" viewBox="0 0 1536 1024" aria-hidden="true"></svg>
 
               {% for s in statepages %}<a class="state-map-link" href="{{ s.url }}" style="left:{{ s.left }}%;top:{{ s.top }}%" aria-label="Explore {{ s.name }}">{{ s.name }}</a>{% endfor %}
-              <!-- Crisis dots (red) -->
-              <div role="button" tabindex="0" class="dot" data-key="norvane" data-type="crisis" aria-label="Norvane — active crisis" style="top:19.2%;left:76.5%">
-                <div class="dot-core" style="background:#e8185a"></div>
-                <div class="dot-ring" style="border-color:#e8185a"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
-              </div>
-              <div role="button" tabindex="0" class="dot" data-key="rhondel" data-type="crisis" aria-label="Rhondel — active crisis" style="top:59.6%;left:76.8%">
-                <div class="dot-core" style="background:#e8185a"></div>
-                <div class="dot-ring" style="border-color:#e8185a"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#e8185a"></div>
-              </div>
-
-              <!-- Political dots (purple) -->
-              <div role="button" tabindex="0" class="dot" data-key="verentum" data-type="political" aria-label="Verentum — political and electoral activity" style="top:64.3%;left:50.3%">
-                <div class="dot-core" style="background:#7c3aed"></div>
-                <div class="dot-ring" style="border-color:#7c3aed"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
-              </div>
-              <div role="button" tabindex="0" class="dot" data-key="selvane" data-type="political" aria-label="Selvane — political and electoral activity" style="top:57.6%;left:59.1%">
-                <div class="dot-core" style="background:#7c3aed"></div>
-                <div class="dot-ring" style="border-color:#7c3aed"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#7c3aed"></div>
-              </div>
-
-              <!-- Legal dots (blue) -->
-              <div role="button" tabindex="0" class="dot" data-key="corindal" data-type="legal" aria-label="Corindal — constitutional and legal activity" style="top:72.3%;left:45.2%">
-                <div class="dot-core" style="background:#0ea5e9"></div>
-                <div class="dot-ring" style="border-color:#0ea5e9"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
-              </div>
-              <div role="button" tabindex="0" class="dot" data-key="argent-ridge" data-type="legal" aria-label="Argent Ridge — constitutional and legal activity" style="top:22.5%;left:63.5%">
-                <div class="dot-core" style="background:#0ea5e9"></div>
-                <div class="dot-ring" style="border-color:#0ea5e9"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
-              </div>
-              <div role="button" tabindex="0" class="dot" data-key="korda-south" data-type="legal" aria-label="Korda South — constitutional and legal activity" style="top:71.8%;left:76.8%">
-                <div class="dot-core" style="background:#0ea5e9"></div>
-                <div class="dot-ring" style="border-color:#0ea5e9"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#0ea5e9"></div>
-              </div>
-
-              <!-- Diplomatic dots (gold) -->
-              <div role="button" tabindex="0" class="dot" data-key="lake-varda" data-type="diplomatic" aria-label="Lake Varda — diplomatic and foreign-affairs activity" style="top:48.8%;left:87.9%">
-                <div class="dot-core" style="background:#f59e0b"></div>
-                <div class="dot-ring" style="border-color:#f59e0b"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
-              </div>
-              <div role="button" tabindex="0" class="dot" data-key="valedon" data-type="diplomatic" aria-label="Valedon — diplomatic and foreign-affairs activity" style="top:88.4%;left:57.3%">
-                <div class="dot-core" style="background:#f59e0b"></div>
-                <div class="dot-ring" style="border-color:#f59e0b"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
-              </div>
-              <div role="button" tabindex="0" class="dot" data-key="toren-river" data-type="diplomatic" aria-label="Toren River — diplomatic and foreign-affairs activity" style="top:9.5%;left:65.1%">
-                <div class="dot-core" style="background:#f59e0b"></div>
-                <div class="dot-ring" style="border-color:#f59e0b"></div>
-                <div class="dot-ring dot-ring2" style="border-color:#f59e0b"></div>
-              </div>
-
+              {% set areas = collections.world | areaActivity %}
+              {% for a in areas %}<div role="button" tabindex="0" class="area-pt" data-area="{{ a.key }}" style="left:{{ areaPoints[a.name].left }}%;top:{{ areaPoints[a.name].top }}%" aria-label="{{ a.name }}"><span class="area-pt-ring"></span><span class="area-pt-core"></span></div>{% endfor %}
             </div>
           </div>
         </div>
 
         <div class="atlas-sidebar">
           <div class="alerts-panel">
-            <div class="alerts-title">Activity Legend</div>
-            <div class="alert-row"><div style="background:#e8185a;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Active Crisis</strong> — conflict spillover, emergency operations, humanitarian pressure</div></div>
-            <div class="alert-row"><div style="background:#7c3aed;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Political · Electoral</strong> — elections, appointments, governance disputes</div></div>
-            <div class="alert-row"><div style="background:#0ea5e9;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Constitutional · Legal</strong> — SC cases, audits, Article XVI proceedings</div></div>
-            <div class="alert-row"><div style="background:#f59e0b;width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.2rem"></div><div><strong>Diplomatic · Foreign Affairs</strong> — treaties, border tensions, foreign negotiations</div></div>
+            <div class="alerts-title">What is new</div>
+            <div class="alert-row"><span class="area-key area-key--lit" aria-hidden="true"></span><div><strong>Lit</strong> — a story, notice or dispatch about this place was published in the last {{ litHours // 24 }} days</div></div>
+            <div class="alert-row"><span class="area-key" aria-hidden="true"></span><div><strong>Quiet</strong> — nothing new right now; select it for the latest coverage</div></div>
+            <div id="litNow" class="lit-now" aria-live="polite"></div>
           </div>
           <div class="info-panel">
             <div class="info-header">
-              <div class="info-eyebrow" id="infoEye">Activity Inspector</div>
-              <div class="info-title" id="infoTitle">Click any dot</div>
+              <div class="info-eyebrow" id="infoEye">Select a point</div>
+              <div class="info-title" id="infoTitle">States and Territories</div>
             </div>
-            <div class="info-body" id="infoBody" aria-live="polite">Click an activity dot on the map to inspect the situation, constitutional provisions, and current status.</div>
+            <div class="info-body" id="infoBody" aria-live="polite">Each point is a State or Territory. Lit points have coverage from the last {{ litHours // 24 }} days.</div>
           </div>
         </div>
 
@@ -151,52 +94,70 @@
       if(!wrap||!inner) return;
       var scale=wrap.offsetWidth/1536;
       inner.style.transform='scale('+scale+')';
+      inner.style.setProperty('--inv',Math.min(2.6,Math.max(1,0.62/scale)).toFixed(3));
       wrap.style.height=Math.ceil(1024*scale)+'px';
     }
     scaleMap();
     window.addEventListener('resize',scaleMap);
   })();;
 
-  const TYPE_COLORS={crisis:"#e8185a",political:"#7c3aed",legal:"#0ea5e9",diplomatic:"#f59e0b"};
-  // Dot -> relevant World entries, injected from _data/mapdots.js (derived from the collection).
-  const MAPDOTS={
-  {% for key, d in mapdots %}{% if not loop.first %},{% endif %}
-    "{{ key }}":{label:"{{ d.label }}",type:"{{ d.type }}",typeLabel:"{{ d.typeLabel }}",entries:[{% for e in collections.world | mapEntries(key,d) %}{% if not loop.first %},{% endif %}{url:"{{ e.url }}",title:{{ e.title | dump | safe }},date:"{{ e.date }}"}{% endfor %}]}{% endfor %}
-  };
-  let activeDot=null;
-  function selectDot(key){
-    document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
-    const el=document.querySelector('[data-key="'+key+'"]');
-    if(el) el.classList.add("active");
-    activeDot=key;
-    const d=MAPDOTS[key];
-    if(!d) return;
-    const color=TYPE_COLORS[d.type]||"#888";
-    document.getElementById("infoEye").textContent=d.typeLabel;
-    document.getElementById("infoEye").style.color=color;
-    document.getElementById("infoTitle").textContent=d.label;
-    let html='<span style="font-family:\'JetBrains Mono\',monospace;font-size:.62rem;padding:.25rem .5rem;border-radius:2px;display:inline-block;margin-bottom:.75rem;background:'+color+'22;color:'+color+'">'+d.typeLabel+'</span>';
-    if(d.entries.length){
-      html+='<div style="font-family:\'Jost\',sans-serif;font-size:.8rem;color:#8898a8;margin-bottom:.6rem">Latest coverage:</div>';
-      d.entries.forEach(e=>{
-        const ym=e.date.split(".");
-        html+='<a href="'+e.url+'" style="display:block;text-decoration:none;padding:.5rem 0;border-bottom:1px solid #2a3a50">'
-          +'<span style="font-family:\'Cormorant Garamond\',serif;font-size:1.05rem;color:#f0e8d8;font-weight:600;line-height:1.2">'+e.title+'</span>'
-          +'<span style="display:block;font-family:\'JetBrains Mono\',monospace;font-size:.6rem;color:#8898a8;margin-top:.15rem">Year '+parseInt(ym[0])+', Month '+parseInt(ym[1])+' &rarr;</span></a>';
-      });
-      html+='<a href="torenthia-record.html" style="display:inline-block;margin-top:.75rem;font-family:\'JetBrains Mono\',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);text-decoration:none">More on The Record &rarr;</a>';
-    } else {
-      html+='<div style="font-family:\'Jost\',sans-serif;font-size:.85rem;color:#8898a8;line-height:1.5">No entries on the record yet. This place is on the map for stories still to come.</div>';
-    }
-    document.getElementById("infoBody").innerHTML=html;
+  // One point per State and Territory. A point is lit while its newest non-routine record is under
+  // {{ litHours }} hours old, judged in the reader's browser so it fades without a rebuild.
+  const AREAS={{ areas | jsonForScript | safe }};
+  const LIT_MS={{ litHours }}*3600*1000, NOW=Date.now();
+  const KIND={news:'News',nrs:'Official notice',sc:'Court ruling',dispatch:'Dispatch'};
+  const byKey={};
+  function ago(iso){
+    const h=Math.max(0,(NOW-Date.parse(iso))/3600000);
+    if(h<1)return 'just now';
+    if(h<24)return Math.floor(h)+(Math.floor(h)===1?' hour ago':' hours ago');
+    const d=Math.floor(h/24);return d+(d===1?' day ago':' days ago');
   }
-  document.querySelectorAll(".dot").forEach(el=>{
-    const mapLabel=MAPDOTS[el.dataset.key]?.label || el.dataset.key;
-    const typeLabel=MAPDOTS[el.dataset.key]?.typeLabel;
-    el.setAttribute('aria-label',typeLabel ? mapLabel+' — '+typeLabel : mapLabel);
-    el.addEventListener("click",()=>selectDot(el.dataset.key));
-    el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectDot(el.dataset.key);}});
+  function esc(t){const e=document.createElement('span');e.textContent=t;return e.innerHTML;}
+  function fresh(a){return a.items.filter(i=>NOW-Date.parse(i.published)<LIT_MS);}
+  function itemHtml(i,showAgo){
+    const ym=String(i.date).split('.');
+    const when=showAgo?ago(i.published):'Year '+parseInt(ym[0],10)+', Month '+parseInt(ym[1],10);
+    return '<a class="info-item" href="'+i.url+'"><span class="info-item-title">'+esc(i.title)+'</span><span class="info-item-meta">'+esc((KIND[i.kind]||'Record')+(i.outlet?' · '+i.outlet:'')+' · '+when)+'</span></a>';
+  }
+  let active=null;
+  function selectArea(key){
+    const a=byKey[key]; if(!a)return;
+    document.querySelectorAll('.area-pt').forEach(el=>el.classList.toggle('active',el.dataset.area===key));
+    active=key;
+    const f=fresh(a), place=a.name+(a.kind==='Territory'?' Territory':'');
+    document.getElementById('infoEye').textContent=a.kind+(f.length?' · new coverage':'');
+    document.getElementById('infoTitle').textContent=place;
+    let html='';
+    if(f.length){
+      html+='<div class="info-sub">New in the last {{ litHours // 24 }} days</div>'+f.map(i=>itemHtml(i,true)).join('');
+    }else{
+      html+='<div class="info-sub">Nothing new in the last {{ litHours // 24 }} days</div>';
+    }
+    const older=a.items.filter(i=>!f.includes(i));
+    if(older.length)html+='<div class="info-sub">'+(f.length?'Earlier':'Most recent')+'</div>'+older.map(i=>itemHtml(i,false)).join('');
+    html+='<div class="info-links"><a href="torenthia-record.html?place='+encodeURIComponent(a.name)+'">All records for '+esc(a.name)+' &rarr;</a>'+(a.profile?'<a href="'+a.profile+'">'+a.kind+' profile &rarr;</a>':'')+'</div>';
+    document.getElementById('infoBody').innerHTML=html;
+  }
+  const PROFILES={ {% for s in statepages %}{{ s.key }}:"{{ s.url }}",{% endfor %}korda:"dossier-korda.html",solara:"territory-solara.html",morantine:"territory-morantine.html" };
+  const litNames=[];
+  AREAS.forEach(a=>{
+    byKey[a.key]=a; a.profile=PROFILES[a.key]||'';
+    const el=document.querySelector('.area-pt[data-area="'+a.key+'"]'); if(!el)return;
+    const f=fresh(a), name=a.name+(a.kind==='Territory'?' Territory':'');
+    el.classList.toggle('lit',f.length>0);
+    el.setAttribute('aria-label',name+(f.length?' — '+f.length+' new in the last {{ litHours // 24 }} days':' — nothing new'));
+    if(f.length)litNames.push(a);
+    el.addEventListener('click',()=>selectArea(a.key));
+    el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectArea(a.key);}});
   });
+  const litBox=document.getElementById('litNow');
+  if(litBox){
+    litBox.innerHTML=litNames.length
+      ? '<span class="lit-now-label">Lit now</span>'+litNames.map(a=>'<button type="button" data-area="'+a.key+'">'+esc(a.name)+'</button>').join('')
+      : '<span class="lit-now-label">Nothing is lit right now.</span>';
+    litBox.addEventListener('click',e=>{const b=e.target.closest('button[data-area]');if(b)selectArea(b.dataset.area);});
+  }
   </script>
   <script src="nav.js"></script>
 

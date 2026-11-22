@@ -241,7 +241,7 @@ Example:
 worldJurisdictions: ["Korda", "Kelvant"]
 ```
 
-These tags feed record filtering and jurisdiction-related discovery. Use the exact case-sensitive names in `_data/stats.json` (for example, `Korda`, not `korda`). Do not tag incidental mentions.
+These tags feed record filtering, jurisdiction-related discovery and the States map: a place lights for 72 hours after a non-mundane record tags it. Use the exact case-sensitive names in `_data/stats.json` (for example, `Korda`, not `korda`). Do not tag incidental mentions.
 
 ### worldProvisions
 
@@ -442,11 +442,11 @@ On the next successful build/deployment:
 | Homepage and Torenthia Latest | Four latest narrative records (news, dispatch, SC), including mundane pieces; NRS remains in the complete archive. |
 | Complete Record | Every World piece; date/sequence ordering and arc, jurisdiction, outlet, and kind filters derive from metadata. |
 | Dossiers and Republic Now cards | Frozen `seedRecords` union explicit `worldDossiers`, deduplicated and ordered by date/sequence. As-of is the newest date in this core set, not the newest supporting article. Empty dossier timelines fail validation. |
-| Map activity | Up to three newest non-mundane records per map dot. Matches explicit `worldPlaces` keys or dot aliases in title/blurb; `worldJurisdictions` alone does not drive map dots. Check keys/aliases in `_data/mapdots.js`. |
+| Map activity | The States map (Republic at a Glance) has one point per State and Territory. A point is lit for 72 hours after a non-mundane record tagged with that place in `worldJurisdictions` is published, judged in the reader's browser. Publication time comes from `_data/worldPublished.json`. |
 | Jurisdiction discovery | Record links filter exact `worldJurisdictions`; existing State profiles show six newest tagged records and Solara/Morantine profiles show four. Directory summaries and geographic boundaries are editorial. |
 | Related World rails | Explicit `worldRelated` links, reverse links, and shared arcs qualify; direct outgoing links take priority, then newest first, capped at four. The rail also links applicable dossiers, jurisdictions, and provisions and supplies stream-specific previous/next chronology links. |
 
-For explicit map placement, use a space-separated string such as `worldPlaces: "korda-south"`, after confirming the key exists in `_data/mapdots.js`. This optional field is distinct from jurisdiction tags. A newly named location does not automatically create a dot or profile page.
+Lighting uses the real time a record was published, kept in `_data/worldPublished.json` (worldId to timestamp). After adding or ingesting records, run `npm run world:stamp`: it stamps any record missing from the ledger with the time it was first committed (or the current time for an uncommitted file). `npm run check:world-published`, part of `npm run world:publish-check`, fails when a record has no stamp. Mundane records never light a place, so tag `worldJurisdictions` accurately and keep routine filings `worldMundane`. `worldPlaces` no longer drives anything.
 
 Standalone story pages need `{% include "related-world.njk" %}` where the rail should appear; the authoring helper includes it. Copying an old page without the include will not acquire a rail merely by adding metadata.
 

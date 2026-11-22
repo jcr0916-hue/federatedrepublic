@@ -6,6 +6,7 @@ import { collect } from "./scripts/public-assets.mjs";
 import {loadStateTestIndex, stateTestCitations} from './lib/state-tests.mjs';
 import {renderStateConstitutionBody} from './lib/state-constitution-display.mjs';
 
+import {readLedger, areaActivity, LIT_HOURS} from './lib/world-published.mjs';
 import {validateWorld, chronology, relatedWorld, dossierRecords, validateDossiers, worldNewest, narrativeWorld, nrsRecords, streamRecords} from './lib/world.mjs';
 
 export default function (eleventyConfig) {
@@ -60,13 +61,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("streamRecords", streamRecords);
   eleventyConfig.addFilter("relatedWorld", relatedWorld);
   eleventyConfig.addFilter("dossierRecords", dossierRecords);
-  eleventyConfig.addFilter("mapEntries", (pieces,key,dot)=>[...pieces].reverse().filter(p=>{
-    if(p.data.worldMundane)return false;
-    const places=String(p.data.worldPlaces || '').split(/[ ,]+/);
-    const text=(p.data.worldTitle+' '+p.data.worldBlurb).toLowerCase();
-    return places.includes(key) || dot.aliases.some(alias=>text.includes(alias.toLowerCase()));
-  }).slice(0,3).map(p=>({url:p.url,title:p.data.worldTitle,date:p.data.worldDate})));
 
+  // One entry per State and Territory with its three newest non-routine records and their real
+  // publication times (_data/worldPublished.json). The States map lights a place client-side
+  // while its newest record is under LIT_HOURS old, so the page needs no rebuild to fade.
+  eleventyConfig.addFilter("areaActivity", pieces=>areaActivity(pieces,readLedger('.')));
+  eleventyConfig.addGlobalData("litHours", LIT_HOURS);
+  eleventyConfig.addFilter("jsonForScript", v=>JSON.stringify(v).replace(/</g,"\\u003c"));
   eleventyConfig.addFilter("arcRecords", (pieces,arc)=>pieces.filter(p=>p.data.worldArcs.includes(arc)));
   eleventyConfig.addFilter("jurisdictionRecords", (pieces,name)=>pieces.filter(p=>p.data.worldJurisdictions.includes(name)));
   eleventyConfig.addFilter("take", (items,n)=>items.slice(0,n));
