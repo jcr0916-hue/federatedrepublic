@@ -6,6 +6,7 @@ This is the navigation home for Torenthia material on `main`. **Published record
 
 **Read these first after a chat/session change.** Older pilot and launch files are historical snapshots and may describe agents as unactivated after they completed tests.
 
+- [Newsroom operations](NEWSROOM-OPERATIONS.md) — managed roster, desk workspaces, Cloudflare intake and GitHub editorial ledger.
 - [Current Agent Roster and Editorial Status](EDITORIAL-CURRENT-STATUS.md) — dated qualifications, scope, limits, current coverage and still-unbuilt jurisdictions.
 - [Chat-Independent Handoff](EDITORIAL-HANDOFF-20261103.md) — current frontier, open PRs, accepted/unpublished drafts, source checks, and resume procedure.
 - [Remaining-State Qualification Runbook (2026-11-04)](agents/REMAINING-STATE-QUALIFICATION-RUNBOOK-20261104.md) — Work packet inventory, five unqualified Work-prepared States, separate Kelvant baseline, no retesting Harren, source/continuity and privacy boundaries.
