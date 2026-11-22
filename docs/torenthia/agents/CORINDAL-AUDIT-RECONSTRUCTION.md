@@ -40,4 +40,4 @@ Canon says Corindal failed its biennial Statehood Audits in Years 5, 7 and 9 bec
 - **Round 3:** the editor proposes a reconciled account; John approves; the desks draft the publishable pieces.
 
 ### Round log
-*(none yet)*
+- **Round 1, Monitors desk:** filed 2026-11-22 (inbox `5191ae44`). Its key points will be recorded here together with the Corindal desk's Round 1, so neither side sees the other's account first.
