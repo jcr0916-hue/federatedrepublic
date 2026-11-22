@@ -129,13 +129,15 @@ const VOICE_PATTERNS = [
   [/\bsources?\s+(?:record|do not|don't|state|supply)\b/i, 'talks about sources'],
   [/\b(?:presumably|presumed to be defined|defined (?:somewhere|elsewhere))\b/i, 'presumes a definition elsewhere'],
   [/\bon the (?:text's|record's) own terms\b/i, 'scholarly apparatus'],
+  [/\b(?:lexical relative|structural (?:parent|sibling)|explicit citation|defining provision)\b/i, 'uses packet vocabulary'],
+  [/\bhistory[- ]record|\bthe (?:project's )?history (?:records|shows|notes|states)\b|\b(?:is|was|are|were) (?:also )?recorded(?! (?:to|in|on|by|as)\b)|\bdocumented (?:restructuring|change|history)\b/i, 'talks about the record'],
 ];
 
 function annotationLint(text, validNums = null) {
   const value = String(text || '').trim();
   const issues = annotationContractIssues(value, null).map(x => x.replace(/^the first response /, ''));
   const words = value ? value.split(/\s+/).length : 0;
-  if (words > 525) issues.push(`over the 525-word limit (${words})`);
+  if (words > 575) issues.push(`over the 575-word limit (${words})`);
   for (const [re, label] of VOICE_PATTERNS) if (re.test(value)) issues.push(label);
   if (validNums) {
     const bad = (value.match(/§\d+(?:\.\d+)*(?:\.[a-z])?/gi) || []).filter(r => !validNums.has(r));
