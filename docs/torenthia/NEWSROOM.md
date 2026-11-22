@@ -93,4 +93,4 @@ The inbox (R2 bucket bound as `NEWSROOM` on the Worker) keeps every submission u
 
 ## Run log
 
-Each run logs the desks, their outcomes and their token usage in the Vercel function logs for `/api/newsroom-run`.
+Each run logs the desks, their outcomes and their token usage in the Vercel function logs for `/api/newsroom-run`. Vercel keeps those logs for only an hour, so each run also files a `newsroom-run` report to the inbox with the same outcomes and every skip reason or error (see Run report and edit log above).
