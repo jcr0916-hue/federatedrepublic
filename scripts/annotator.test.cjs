@@ -181,7 +181,7 @@ test('Packet carries recorded change-log history for a provision the log cites, 
   assert.ok(cited, 'expected the log to cite §2.16');
   const withLog = core.buildContextPacket('§2.16');
   assert.match(withLog.packet, /RECORDED DESIGN HISTORY/);
-  assert.match(withLog.packet, /\[LOG 1\]/);
+  assert.match(withLog.packet, /\[HISTORY 1\]/);
   assert.match(withLog.packet, new RegExp(cited.title.slice(0, 20).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
 
   const data = core.getConstitutionData();
@@ -189,8 +189,8 @@ test('Packet carries recorded change-log history for a provision the log cites, 
   const uncited = data.flatMap(a => a.provisions).find(p => !cites.has(p.num));
   if (uncited) {
     const packet = core.buildContextPacket(uncited.num).packet;
-    assert.match(packet, /\(none — the supplied sources record no rationale for this provision\)/);
-    assert.doesNotMatch(packet, /\[LOG 1\]/);
+    assert.match(packet, /RECORDED DESIGN HISTORY[^\n]*\n\(none\)/);
+    assert.doesNotMatch(packet, /\[HISTORY 1\]/);
   }
 });
 
@@ -215,12 +215,15 @@ test('Packet supplies the defining provision of a term used across Articles (Civ
   assert.ok(cross, '§3.6 should pull §2.1 across Articles');
 });
 
-test('System prompt lets the model report recorded history and forbids "defined elsewhere" when the packet supplies the definition', () => {
+test('System prompt uses recorded history and defined terms in plain voice, without narrating sources or absences', () => {
   const { SYSTEM } = require('../api/_annotator-core.js');
   assert.match(SYSTEM, /RECORDED DESIGN HISTORY/);
-  assert.match(SYSTEM, /never say that no explanation exists/i);
   assert.match(SYSTEM, /DEFINED TERMS/);
-  assert.match(SYSTEM, /never describe a definition as merely presumed/i);
+  assert.match(SYSTEM, /VOICE:/);
+  assert.match(SYSTEM, /never refer to the packet, the sources, the change log/i);
+  assert.match(SYSTEM, /do not remark on what the text, the history, or the sources leave unsaid/i);
+  assert.doesNotMatch(SYSTEM, /attributed to the (project's )?change log/i);
+  assert.doesNotMatch(SYSTEM, /record no rationale/i);
 });
 
 function fakeRes() {
@@ -334,7 +337,39 @@ test('Generator endpoint answers only on protected vercel.app hosts and returns 
     assert.equal(first.num, '§2.5');
     assert.match(first.hash, /^[0-9a-f]{16}$/);
     assert.ok(first.issues.includes('mentions the packet'));
+    assert.equal(first.attempts, 3);
   });
+
+  // A model that fixes its output on the second attempt is accepted without further retries.
+  const originalFetch = global.fetch;
+  const originalKey = process.env.ANTHROPIC_API_KEY;
+  const originalGateway = process.env.AI_GATEWAY_API_KEY;
+  const originalOidc = process.env.VERCEL_OIDC_TOKEN;
+  delete process.env.AI_GATEWAY_API_KEY;
+  delete process.env.VERCEL_OIDC_TOKEN;
+  process.env.ANTHROPIC_API_KEY = 'test-only';
+  let n = 0;
+  const bodies = [];
+  global.fetch = async (_url, options) => {
+    bodies.push(JSON.parse(options.body));
+    n++;
+    const text = n === 1 ? 'The packet says so.\n\nTwo.\n\nThree.' : 'The Civic Consul holds residual power.\n\nIt relies on §2.1.\n\nIt prevents gaps.';
+    return { ok: true, status: 200, json: async () => ({ content: [{ type: 'text', text }], stop_reason: 'end_turn' }) };
+  };
+  try {
+    const res = fakeRes();
+    await gen({ method: 'GET', headers: { host: 'x.vercel.app' }, query: { op: 'generate', nums: '2.5' } }, res);
+    const r = res.body.results[0];
+    assert.equal(r.attempts, 2);
+    assert.deepEqual(r.issues, []);
+    assert.match(bodies[1].messages[0].content, /REWRITE REQUIRED: mentions the packet/);
+    assert.ok(bodies[1].max_tokens >= 3000);
+  } finally {
+    global.fetch = originalFetch;
+    if (originalKey === undefined) delete process.env.ANTHROPIC_API_KEY; else process.env.ANTHROPIC_API_KEY = originalKey;
+    if (originalGateway === undefined) delete process.env.AI_GATEWAY_API_KEY; else process.env.AI_GATEWAY_API_KEY = originalGateway;
+    if (originalOidc === undefined) delete process.env.VERCEL_OIDC_TOKEN; else process.env.VERCEL_OIDC_TOKEN = originalOidc;
+  }
 });
 
 test('Annotation lint accepts plain three-paragraph prose and rejects source talk, absences, and unknown section numbers', () => {

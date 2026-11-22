@@ -57,7 +57,7 @@ function textOf(data) {
 }
 
 // One annotation from the model, with the output-contract rewrite pass.
-async function generateAnnotation(context, { model = DEFAULT_MODEL, feature = 'annotate', role = 'primary' } = {}) {
+async function generateAnnotation(context, { model = DEFAULT_MODEL, feature = 'annotate', role = 'primary', retryReason: priorReason = null, maxTokens = 1600 } = {}) {
   const startedAt = Date.now();
   const request = (maxTokens, retryReason = null) => anthropicMessage({
     model,
@@ -68,7 +68,7 @@ async function generateAnnotation(context, { model = DEFAULT_MODEL, feature = 'a
     tags: [`feature:${feature}`, retryReason ? 'role:completion-retry' : `role:${role}`, `env:${process.env.VERCEL_ENV || 'local'}`],
   });
 
-  let { response: upstream, route, model: usedModel } = await request(1600);
+  let { response: upstream, route, model: usedModel } = await request(maxTokens, priorReason);
   console.info('[annotate-ai]', { route, model: usedModel, attempt: 1 });
   let data = await upstream.json();
   const usages = [data.usage || null];
@@ -144,7 +144,30 @@ function annotationLint(text, validNums = null) {
   return { words, issues };
 }
 
+// Stored-annotation generation: regenerate until the output passes the quality gate
+// (up to three attempts, with a larger budget after the first). The last attempt is
+// returned with its remaining issues so the editor can see what is left.
+const VOICE_REWRITE = 'Rewrite from the beginning as plain explanatory prose in exactly three paragraphs of at most 500 words: never mention a packet, supplied material, a change log, log labels or dates, or anything the text or sources do not say or record; use only provision numbers that appear in the packet; finish the final sentence';
+
+async function generateChecked(context, validNums, { model = DEFAULT_MODEL, feature = 'annotate-stored', role = 'stored', attempts = 3 } = {}) {
+  let reason = null;
+  let budget = 1600;
+  let last = null;
+  for (let i = 1; i <= attempts; i++) {
+    const result = await generateAnnotation(context, { model, feature, role, retryReason: reason, maxTokens: budget });
+    if (!result.ok) return { ...result, attempts: i };
+    const lint = annotationLint(result.annotation, validNums);
+    const issues = result.truncated ? [...lint.issues, 'hit the output limit'] : lint.issues;
+    last = { ...result, words: lint.words, issues, attempts: i };
+    if (!issues.length) return last;
+    reason = `${issues.join('; ')}. ${VOICE_REWRITE}`;
+    budget = 3000;
+  }
+  return last;
+}
+
 module.exports = {
+  generateChecked,
   annotationLint,
   DEFAULT_MODEL,
   packetHash,

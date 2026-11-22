@@ -8,7 +8,7 @@
 //   GET ?op=generate&nums=2.5,2.6[&force=1] -> up to 8 annotations, each with its packet hash and lint result
 
 const { buildContextPacket, getConstitutionData } = require('./_annotator-core.js');
-const { packetHash, loadStore, generateAnnotation, annotationLint, DEFAULT_MODEL } = require('./_annotator-run.js');
+const { packetHash, loadStore, generateChecked, DEFAULT_MODEL } = require('./_annotator-run.js');
 
 const MAX_BATCH = 8;
 
@@ -42,17 +42,17 @@ async function generateOne(num, validNums, model) {
   const context = buildContextPacket(num);
   if (!context) return { num, error: 'Unknown provision' };
   try {
-    const result = await generateAnnotation(context, { model, feature: 'annotate-stored', role: 'stored' });
+    const result = await generateChecked(context, validNums, { model });
     if (!result.ok) return { num, error: result.detail };
-    const lint = annotationLint(result.annotation, validNums);
     return {
       num,
       hash: packetHash(context),
       text: result.annotation,
       model: result.model,
       generatedAt: new Date().toISOString(),
-      words: lint.words,
-      issues: lint.issues,
+      words: result.words,
+      issues: result.issues,
+      attempts: result.attempts,
       truncated: result.truncated,
     };
   } catch (err) {
