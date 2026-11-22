@@ -559,7 +559,8 @@
     "model": "anthropic/claude-haiku-5.5",
     "maxOutputTokens": 6000,
     "sources": [
-      "docs/torenthia/STORY-STATUS.md"
+      "docs/torenthia/STORY-STATUS.md",
+      "docs/torenthia/STORY-CLOCK.md"
     ],
     "maxSourceChars": 120000,
     "editorSlots": 3,

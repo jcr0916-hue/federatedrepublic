@@ -82,16 +82,15 @@ function buildTriageMessages({ status, items, slots, now }) {
     '- record: routine records that run in the background.',
     '',
     'Your job:',
-    `1. Rank every canon filing. Send the best ${slots} to the editor ("editor"); route the rest to "bank" (good, can wait) or "return" (not ready: say why in one line). Desks tend to rate their own work high, so judge importance yourself against what is going on now: does it move a live storyline, react to something recent, or bring a new viewpoint? A recap of something already published, with no development, is "return".`,
+    `1. Rank every canon filing. Send the best ${slots} to the editor ("editor"); route the rest to "bank" (good, can wait) or "return" (not ready: say why in one line). Desks tend to rate their own work high, so judge importance yourself against what is going on now: does it move a live storyline, react to something recent, or bring a new viewpoint? A recap of something already published, with no development, is "return". Rank a filing higher when it adds the next ordinary step to a thread the story clock lists (and say which thread in the line); a filing that retells an open question without a new step ranks low.`,
     '2. Check that each filing\'s declared track fits it: an "idea" that states new facts as settled, or a "canon" piece with no notes ledger, gets a flag. (Length and article form of ideas is checked in code; you need not.) You read each canon filing in full: flag what the text actually says, such as an invented office, a new outlet or a person not in the story status, never that the text was cut short.',
     '3. Route each idea to "idea-board" with one plain line on what it proposes.',
     '4. Route records to "records". Flag only what looks wrong at a glance: the wrong level of government filing, anything that decides a vote, finding, certification or appointment, or an invented date.',
     '5. Flag anything that touches reserved continuity (the Rehn and Corindal matters, any national figure\'s future) or an open constitutional clock, whatever its rank.',
-    'You have the story status below for what is going on now. You do not have the full canon and do not need it: do not fact-check details beyond what the story status shows.',
+    'You have the story status and the story clock below for what is going on now. You do not have the full canon and do not need it: do not fact-check details beyond what the story status shows.',
     '',
     'Return only a JSON object: {"summary": "<two or three sentences on the day>", "items": [{"key": "<inbox key>", "desk": "...", "title": "...", "track": "canon|idea|record", "route": "editor|bank|return|idea-board|records", "rank": <1-based rank among canon filings, or null>, "flags": ["..."], "line": "<one line: what it is and why this route>"}]}. Include every filing exactly once.',
     '',
-    '## Source: docs/torenthia/STORY-STATUS.md',
     status,
   ].join('\n');
   const user = [`Today (real-world UTC date): ${now.toISOString().slice(0, 10)}.`, '', `## Filings (${items.length})`];
@@ -169,7 +168,10 @@ async function runTriage({ env = process.env, fetchImpl = fetch, now = new Date(
     }
   }
   let status = '';
-  for (const path of cfg.sources || ['docs/torenthia/STORY-STATUS.md']) status += (await core.loadOptional(fetchImpl, path, undefined, ref)) || '';
+  for (const path of cfg.sources || ['docs/torenthia/STORY-STATUS.md']) {
+    const text = await core.loadOptional(fetchImpl, path, undefined, ref);
+    if (text) status += `${status ? '\n\n' : ''}## Source: ${path}\n${text}`;
+  }
   status = status.slice(0, cfg.maxSourceChars || 120000);
   const messages = buildTriageMessages({ status, items, slots: cfg.editorSlots || 3, now });
   if (dryRun) return { status: 'dry-run', commit: ref, since: new Date(since).toISOString(), filings: items.length, tracker: direct.length, chars: messages.reduce((n, m) => n + m.content.length, 0) };
