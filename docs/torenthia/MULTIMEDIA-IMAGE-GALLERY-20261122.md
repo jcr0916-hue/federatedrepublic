@@ -26,15 +26,15 @@ Repository file: [`images/council-of-ministers-meetingroom.png`](../../images/co
 
 ## Capital and city views
 
-### Verentum civic campus — note capital-I spelling in actual filename
+### Terenne civic campus — legacy filename says Verentum (capital-I spelling in `cIvic`)
 
-[![Verentum civic campus — note capital-I spelling in actual filename](../../images/verentum-cIvic-campus.png)](../../images/verentum-cIvic-campus.png)
+[![Terenne civic campus — legacy filename says Verentum (capital-I spelling in `cIvic`)](../../images/verentum-cIvic-campus.png)](../../images/verentum-cIvic-campus.png)
 
 Repository file: [`images/verentum-cIvic-campus.png`](../../images/verentum-cIvic-campus.png).
 
-### Verentum street-level view
+### Terenne street-level view — legacy filename says Verentum
 
-[![Verentum street-level view](../../images/verentum-street-level.png)](../../images/verentum-street-level.png)
+[![Terenne street-level view — legacy filename says Verentum](../../images/verentum-street-level.png)](../../images/verentum-street-level.png)
 
 Repository file: [`images/verentum-street-level.png`](../../images/verentum-street-level.png).
 
