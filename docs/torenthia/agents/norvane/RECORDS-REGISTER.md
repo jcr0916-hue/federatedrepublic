@@ -10,7 +10,7 @@ Published frontier at last update: nrsSeq **186**, latest reference **NRS-Y14-00
 ## Office of the Secretary of Housing and Reception (State §1.2(b))
 - Cold-season supply delivery for northern arrival corridor reception facilities, second lot scheduled later in the season (NRS-Y14-0093). *No facility, capacity or status change. The desk's "reception depot" name was cut as a new facility.*
 
-## Office of the State Auditor (State §5.6(c))
+## Office of the State Auditor (State constitution Section 5.6(c))
 - Notice of commencement of the periodic review of the local fiscal equalization mechanism; data request and work plan to follow (NRS-Y14-0094).
 
 ## Sponsorship Administration Office (State §9.5(c))
