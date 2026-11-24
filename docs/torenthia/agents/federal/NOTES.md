@@ -29,7 +29,7 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 
 **"Two Audits, One Question" (`c1dff01e`, Nov 16) — DISCARD.**
 - It is a constitutional explainer, which the rules ask desks to avoid, and the Republic has run three fiscal-equalization pieces this month.
-- **Errors to avoid:** it says NRS-Y14-0040 "records the correction of the source data"; that record *invites* corrections from State and Territory administrations and corrects nothing. And the Constitution does not require the Legislature to answer a §12.6 finding at all (the Executive Monitor publishes and submits it to the Speakers and the Civic Consul); the ninety-day *published response* is a duty of the equalization reporting statute, which is narrower than "must respond."
+- **Errors to avoid:** it says NRS-Y14-0040 "records the correction of the source data"; that record *invites* corrections from State and Territory administrations and corrects nothing. And §12.6 itself adds no response duty (the Executive Monitor publishes and submits findings to the Speakers and the Civic Consul); the response comes from §9.5.a, which requires a body or officer subject to a Monitor report to *publish a response* within a statutory period (ninety days here, by the equalization reporting statute) and says it need not agree, which is narrower than "must respond."
 - The §12.1/§12.6 distinction is sound. Use it as background inside a story, not as the story.
 
 ## 2026-11-20 — A Worksheet With Four Names, and No Order (idea; inbox `a7260ccf`): GO, assigned
