@@ -21,7 +21,7 @@ A Git tree reports path, blob size and SHA; **it does not establish visual quali
 | `images/dorven-cityscape.png` (2.49 MiB) | No indexed match | Orath/Dorven civic and regional identity |
 | `images/marisvia-cityscape.png` (2.67 MiB), `images/valedon-cityscape.png` (2.59 MiB) | No indexed matches | Neighboring-country reports, only if readers benefit from geographic distinction |
 | `images/caldris-landscape.png` (2.71 MiB) | No indexed match | Landscape context for Caldris, not generic article decoration |
-| `images/verentum-street-level.png` (2.22 MiB), `images/verentum-cIvic-campus.png` (3.22 MiB) | No indexed matches | Capital institutions and city setting; check whether related small WebP card is already deployed |
+| `images/verentum-street-level.png` (2.22 MiB), `images/verentum-cIvic-campus.png` (3.22 MiB) | No indexed matches | **President's correction:** both images are assigned to **Terenne (Aldenmere State capital)**, NOT Verentum. Keep legacy filenames for now; no reuse as Verentum imagery |
 | `images/torenthia-assembly-chamber.png` (2.21 MiB), `images/senate-chamber.png` (2.06 MiB), `images/council-of-ministers-meetingroom.png` (1.81 MiB) | No indexed matches | Explaining what the distinct national chambers and meeting spaces are; do not invent a new seat or office |
 | `logos/supreme-court-logo.svg` | No indexed match | Institutional identity if there is an appropriate court-information surface |
 | `images/ostara-civic-plan.png`, `images/ostara-civic-proposal.png`, `images/ostara-civic-realized.png` | No indexed matches | **High caution:** distinct hypothetical/proposal/realized stages, which must not be published out of chronological/canonical context |
@@ -120,8 +120,8 @@ Path uses actual Git repository tree; `images/X` normally publishes as `/X` per 
 | `images/varek-mountain-landscape.png` | 2.99 MB | Known reference | Torenthia homepage visual tour |
 | `images/verentum-card.webp` | 0.06 MB | Known reference | Published news 071 inline |
 | `images/verentum-civic-campus-card.webp` | 0.08 MB | Known reference | Reference not confirmed |
-| `images/verentum-cIvic-campus.png` | 3.22 MB | No indexed reference match | Exact-filename GitHub code search returned zero matches; verify dynamic/archival uses |
-| `images/verentum-street-level.png` | 2.22 MB | No indexed reference match | Exact-filename GitHub code search returned zero matches; verify dynamic/archival uses |
+| `images/verentum-cIvic-campus.png` | 3.22 MB | No indexed reference match | **Terenne civic campus** per President; misleading legacy Verentum filename. Do not associate with federal capital. |
+| `images/verentum-street-level.png` | 2.22 MB | No indexed reference match | **Terenne street level** per President; misleading legacy Verentum filename. Do not associate with federal capital. |
 | `images/verentum.png` | 2.53 MB | Reference not assessed | Not assessed in this pass |
 | `images/world-map-card.webp` | 0.07 MB | Known reference | Published news metadata; site updates fallback |
 | `images/world-map-tier1.jpg` | 0.79 MB | Known reference | Atlas JPEG fallback |
