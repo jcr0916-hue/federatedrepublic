@@ -46,6 +46,26 @@ Parents or guardians may direct their children's education within public standar
 - **Open point for review:** Where the State itself is the guardian, the clause protects less, because the State is also the framework-setter. The text does not try to solve this; it ensures only that the child's lawful guardian, whoever that is, is not excluded from the sentence. A court-appointed guardian other than the State is the case it serves best.
 - **Downstream updates at release:** `constitution_data.json`, `annotated.html`, `docs/constitution-current.md`, the print edition and PDF, `search-index.js`, and a Constitutional History entry. The §12.1 annotation that speaks of the "parental direction clause" (`annotations.json`) should be reworded to "parent or guardian direction." The State constitutions are separate texts and are not changed by this proposal.
 
+## Proposed amendment 3 — Sustainability wording in §12.2(2)
+
+**Status (23 November 2026):** Proposed; settled in design discussion, not yet in the Constitution. It enters the adopted text only with a release. This refines the wording adopted under Proposed amendment 1 (PR #241).
+
+**Scope:** Replace the first sentence of §12.2(2) only. Preserve the rest of §12.2(2) (the MA's post-enactment assessment and either chamber's right to request one on pending legislation) and all other provisions of §12.2.
+
+### Proposed §12.2(2), first sentence
+
+The Republic conducts its fiscal affairs to keep its public finances, including public debt, sustainable while fulfilling its constitutional obligations.
+
+*Current text:* The Republic conducts its fiscal affairs to sustain public finances, including public debt, over the long term while fulfilling its constitutional obligations.
+
+### Rationale and testing notes for future Constitutional History entry
+
+- **Design decision:** Two drafting problems, fixed together. First, "sustain public finances, including public debt" can be read as keeping the debt going, when the intent is that the debt stays sustainable. Second, "over the long term" has no anchor: no one can say when the long term arrives, so almost any deficit can be defended as sustainable eventually, and a court has nothing to test.
+- **Wording:** "Sustainable" already looks forward: the question is whether the finances can continue, which needs no stated horizon. "Keep … sustainable" makes the object of the duty the finances and the debt, not the debt itself. The text now uses the same term as §12.1.b and the next sentence of §12.2(2) ("fiscal sustainability").
+- **Alternatives examined and set aside:** (1) Keeping "over the long term" and moving it, which leaves the horizon unanchored; (2) a numeric or dated horizon (for example ten years), the over-specification Proposed amendment 1 rejected; (3) "responsibly," which is vaguer than the current text; (4) a negative duty not to run unsustainable debt, which frames the obligation as a prohibition and invites mechanical tests.
+- **Continuity and rights testing:** Proposed amendment 1's testing notes still hold. Inherited debt and temporary recession deficits do not automatically violate the duty, because the test is whether the finances remain sustainable, not whether any single year balances. The duty remains principles-based, with no automatic ceiling or budget invalidation.
+- **Downstream updates at release:** `constitution_data.json`, `annotated.html`, `docs/constitution-current.md`, `search-index.js`, the print edition and PDF, and a Constitutional History entry. The §12.2 annotation that says subsection (2) "ties fiscal practice to a long-term sustainability obligation" (`annotations.json`) should be reworded to "a sustainability obligation."
+
 ## Future entries
 
 Append new proposals as they are settled, recording their exact proposed wording, affected sections, reasons for change, significant rejected alternatives, and test outcomes. Do not silently modify adopted constitutional text or portray these proposals as enacted.
