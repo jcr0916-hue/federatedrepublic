@@ -18,6 +18,7 @@
     { "name": "The Meridian Standard", "kind": "opinion" },
     { "name": "The Kellor Courant", "kind": "local" },
     { "name": "The Tessom Chronicle", "kind": "territory" },
+    { "name": "The Ostara Register", "kind": "territory" },
     { "name": "Show Your Work", "kind": "feature" },
     { "name": "Dispatch", "kind": "feature" },
     { "name": "National Record System", "kind": "record" },
@@ -46,6 +47,8 @@
     { "id": "ilsa-varn", "name": "Ilsa Varn", "role": "Opinion; The Common Interest", "outlets": ["The Common Interest"] },
     { "id": "selden-marek", "name": "Selden Marek", "role": "Opinion; The Meridian Standard (right of center)", "outlets": ["The Meridian Standard"] },
     { "id": "maren-dael", "name": "Maren Dael", "role": "Byline in The Kellor Courant", "outlets": ["The Kellor Courant"] },
+    { "id": "janna-lorne", "name": "Janna Lorne", "role": "Reporter, The Ostara Register (Solara; news 146)", "outlets": ["The Ostara Register"] },
+    { "id": "reva-hallin", "name": "Reva Hallin", "role": "Freight ledger clerk at an Ostara seafood exporter (news 146)", "tier": "minor", "pronouns": "she" },
     { "id": "nellis-dacre", "name": "Nellis Dacre", "role": "Reporter, The Tessom Chronicle (Morantine)", "outlets": ["The Tessom Chronicle"] },
 
     { "id": "elin-thoss", "name": "Elin Thoss", "aliases": ["Thoss"], "role": "Civic Consul since Year 13 Month 9; LRP affiliation is internal planning", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x42, he x1" },
