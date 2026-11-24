@@ -19,3 +19,10 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 - **NRS-Y14-0063 (bridge follow-ups), edited.** NRS-Y13-0745 describes "follow-up measurement" at two bridge *approaches*, so the return now says that. "Transmitted to the district office" became the Service's engineering review, since no district office is on record.
 - **NRS-Y14-0064 (reading room), edited.** Cut "registration requirements" and "reproduction fees": neither is on record for the reading room. Kept the access-note practice from NRS-Y14-0001.
 - **Next time:** the last two refrigerated-storage units and the award's closing return; the water-laboratory calibration closing return; the Elections Panel Judicial Pool quarterly return when due. The humidity logger's calibration result belongs with the next filter cycle, not sooner.
+
+## 2026-11-24 — Routine administration batch, Year 14 Month 2 (5 of 5 ACCEPTED; NRS 172–176; inbox `9205cacc`)
+
+- **Worked:** each record picks up the series the register pointed to and leaves nothing decided: the last two refrigerated-storage units (NRS-Y14-0084, award DH-13-224 now fully visited, closing return still to come), the Month 2 water-sampling calibration group (0085), the accessibility return (0086), a Council of Ministers session summary (0087) and the Westport marker round, closed with nothing carried over (0088). No quiet thread, as planned.
+- **NRS-Y14-0087 (Council of Ministers), edited.** Title now reads "(Reporting-Calendar Review)": a second summary in the same month would otherwise carry the identical title of NRS-Y14-0046. The text is unchanged and records no decision, in line with §2.14.
+- **Other records:** accepted as filed.
+- **Next time:** the DH-13-224 closing return (once acceptance is recorded), the Elections Panel's next Judicial Pool quarterly return when due, and whatever the humidity-logger check of Archive Room 3 produces. Vary the bodies: this batch used the same five regulars as the last two.
