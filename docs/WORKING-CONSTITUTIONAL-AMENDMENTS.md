@@ -1,6 +1,6 @@
 # Working Constitutional Amendments — Unadopted
 
-**Updated:** 20 October 2026  
+**Updated:** 23 November 2026  
 **Status:** Working draft; agreement in design discussion, **not enacted or merged into the Constitution**.  
 **Authority:** The adopted Constitution remains the sole authoritative text. This file collects proposals between review and formal amendment. Add future settled proposals here at reasonable intervals, preserving concise rationale notes for the Constitutional History page.
 
@@ -25,6 +25,26 @@ The Republic conducts its fiscal affairs to sustain public finances, including p
 - **Independent accountability:** Require a substantive MA report on fiscal sustainability and areas for improvement without freezing a list of economic indicators. The MA continues to possess independent monetary authority, but does not acquire power to make fiscal policy.
 - **Continuity and rights testing:** Inherited public debt and temporary recession deficits do not automatically violate the proposed duty. Existing budget-continuity, Social State, and National Endowment rules remain operative. Persistent unsustainable policy is reported and remains principally subject to democratic and ordinary constitutional accountability; the text supplies no automatic ceiling or budget invalidation.
 - **Tradeoff acknowledged:** This is a principles-based obligation rather than a binding mechanical debt brake. It improves constitutional clarity and public assessment but cannot guarantee prudent elected fiscal decisions.
+
+## Proposed amendment 2 — Guardians in the education clause
+
+**Status (23 November 2026):** Proposed; settled in design discussion, not yet in the Constitution. It enters the adopted text only with a release.
+
+**Scope:** Replace the last sentence of §12.1 (The Social State) only. Preserve the rest of §12.1, including the three mandatory guarantees, the Legislature's framework and adequacy standards, and the Executive Monitor's annual assessment.
+
+### Proposed §12.1, final sentence
+
+Parents or guardians may direct their children's education within public standards.
+
+*Current text:* Parents may direct their children's education within public standards.
+
+### Rationale and testing notes for future Constitutional History entry
+
+- **Design decision:** The clause protects the person who stands in the parental role from being displaced by the State's educational framework. A child may have no living or available parent: a ward of the State, a child in foster or kin care, or one under a court-appointed guardian. "Parents" alone left that child's caregiver outside the sentence.
+- **Wording:** "Parents or guardians" keeps parents first, since they are the common case, and matches the existing phrase "parent or guardian" in §5.3. The change is two words and leaves the clause's limit ("within public standards") and its relation to the Legislature's framework power untouched.
+- **Alternatives examined and set aside:** (1) "A child's guardian" alone, which can be read as removing parents' standing; (2) "legal custodian," which turns on custody law and is narrower than the intent; (3) "caregiver," which reaches people with no legal standing. "Guardian" is left as the ordinary legal term, with its content set by statute and by the courts, as elsewhere in the Constitution.
+- **Open point for review:** Where the State itself is the guardian, the clause protects less, because the State is also the framework-setter. The text does not try to solve this; it ensures only that the child's lawful guardian, whoever that is, is not excluded from the sentence. A court-appointed guardian other than the State is the case it serves best.
+- **Downstream updates at release:** `constitution_data.json`, `annotated.html`, `docs/constitution-current.md`, the print edition and PDF, `search-index.js`, and a Constitutional History entry. The §12.1 annotation that speaks of the "parental direction clause" (`annotations.json`) should be reworded to "parent or guardian direction." The State constitutions are separate texts and are not changed by this proposal.
 
 ## Future entries
 
