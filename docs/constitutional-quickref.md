@@ -829,7 +829,7 @@ No State or Territory may impose requirements on goods, services, or economic ac
 
 ### §12.6 — Fiscal Equalization
 
-The Legislature must establish by statute a fiscal equalization mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I. The Executive Monitor must audit and review the mechanism's compliance with constitutional requirements and publish its findings to the NRS.
+The Legislature must establish by statute a fiscal equalization mechanism ensuring that every State and Territory has fiscal capacity reasonably sufficient to fulfill the Social State obligations under §12.1 and the rights guaranteed under Article I. The Executive Monitor must audit and review the mechanism's compliance with constitutional requirements, publish its findings to the NRS, and submit them to the…
 
 - **Cross-refs:** §12.1
 

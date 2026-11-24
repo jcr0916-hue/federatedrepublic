@@ -1,7 +1,7 @@
 # Working Constitutional Amendments — Unadopted
 
 **Updated:** 23 November 2026  
-**Status:** Working draft; agreement in design discussion, **not enacted or merged into the Constitution**.  
+**Status:** Amendments 1–4 are adopted into the Constitution. This file keeps their rationale for the Constitutional History page and collects future proposals between review and formal amendment.  
 **Authority:** The adopted Constitution remains the sole authoritative text. This file collects proposals between review and formal amendment. Add future settled proposals here at reasonable intervals, preserving concise rationale notes for the Constitutional History page.
 
 ## Proposed amendment 1 — Fiscal sustainability and independent reporting
@@ -28,7 +28,7 @@ The Republic conducts its fiscal affairs to sustain public finances, including p
 
 ## Proposed amendment 2 — Guardians in the education clause
 
-**Status (23 November 2026):** Proposed; settled in design discussion, not yet in the Constitution. It enters the adopted text only with a release.
+**Status (23 November 2026):** Adopted. Applied to the Constitution by the 23 November 2026 release (PR #384); Constitutional History entry `guardians-sustainability-monitor-submission-261123`. Retained here for its rationale notes.
 
 **Scope:** Replace the last sentence of §12.1 (The Social State) only. Preserve the rest of §12.1, including the three mandatory guarantees, the Legislature's framework and adequacy standards, and the Executive Monitor's annual assessment.
 
@@ -48,7 +48,7 @@ Parents or guardians may direct their children's education within public standar
 
 ## Proposed amendment 3 — Sustainability wording in §12.2(2)
 
-**Status (23 November 2026):** Proposed; settled in design discussion, not yet in the Constitution. It enters the adopted text only with a release. This refines the wording adopted under Proposed amendment 1 (PR #241).
+**Status (23 November 2026):** Adopted. Applied to the Constitution by the 23 November 2026 release (PR #384); Constitutional History entry `guardians-sustainability-monitor-submission-261123`. This refined the wording adopted under Proposed amendment 1 (PR #241). Retained here for its rationale notes.
 
 **Scope:** Replace the first sentence of §12.2(2) only. Preserve the rest of §12.2(2) (the MA's post-enactment assessment and either chamber's right to request one on pending legislation) and all other provisions of §12.2.
 
@@ -68,7 +68,7 @@ The Republic conducts its fiscal affairs to keep its public finances, including 
 
 ## Proposed amendment 4 — Monitor findings under §12.6: submission, not compelled response
 
-**Status (23 November 2026):** Proposed; settled in design discussion, not yet in the Constitution. It enters the adopted text only with a release.
+**Status (23 November 2026):** Adopted. Applied to the Constitution by the 23 November 2026 release (PR #384); Constitutional History entry `guardians-sustainability-monitor-submission-261123`. Retained here for its rationale notes.
 
 **Scope:** Replace the second paragraph of §12.6 (Fiscal Equalization) only. Preserve the first paragraph (the Legislature's duty to establish an equalization mechanism by statute, with its "reasonably sufficient" standard tied to §12.1 and Article I).
 
