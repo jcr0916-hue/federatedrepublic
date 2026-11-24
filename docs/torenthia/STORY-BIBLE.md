@@ -304,9 +304,11 @@ merely records it. This is the slowest burn in the World and should remain mostl
   diplomatic non-response, and the emerging regional conference are distinct but interacting layers.
 - **Toren River:** the Year 4 framework and unresolved dispute-resolution gap remain a separate
   Caldris relationship from Lake Varda diplomacy.
-- **Fiscal Equalization (§12.6):** the constitutional mechanism can compel the Legislature to
-  answer an EM failure finding; it cannot compel a meaningful policy response. Do not describe
-  the system as requiring silence or automatic reform.
+- **Fiscal Equalization (§12.6):** the Constitution requires the EM to publish its findings to the
+  NRS and submit them to the Speakers of both chambers and the Civic Consul; the equalization
+  reporting statute, not the Constitution, compels the Legislature to answer an EM failure finding
+  within ninety days, and nothing can compel a meaningful policy response. Do not describe the
+  system as requiring silence or automatic reform.
 - **Civic Consul Elin Thoss:** Assembly accountability and working-majority erosion are live;
   her substantive preferred Korda outcome is not established.
 - **Maren Sollis:** may continue irregularly in Dispatch and separately in *Show Your Work*.
