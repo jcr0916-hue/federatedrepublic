@@ -9,7 +9,7 @@ Solara is an island Territory in the Western Sea with a distinct culture; Ostara
 - Neither the Compact nor the territorial administration may override federal authority, invent a territorial Supreme Court, take foreign-policy powers, or create a competing authoritative NRS. See §§15.1, 15.2, 15.8, 15.8.a, 18.1–18.3, Article I and Article X.
 
 ## Approved local government design (Compact v0.3)
-John approved Solara Territorial Compact v0.3 as the governing editorial design for local institutions. Approval of the design isn't proof of an enacted or newly ratified compact in Year 14, Month 2; don't write an enactment story or invent an effective date. Its text isn't in your sources; this summary is the design:
+John approved Solara Territorial Compact v0.3 as the governing editorial design for local institutions. Approval of the design isn't proof of an enacted or newly ratified compact in Year 14, Month 2; don't write an enactment story or invent an effective date. Its full text is now in your sources (`docs/torenthia/territorial-compacts/SOLARA-TERRITORIAL-COMPACT-v0.3-APPROVED-EDITORIAL.md`); this summary is the design, and the text governs where they differ:
 - A 24-member Territorial Assembly elected by proportional ranked choice in island-based constituencies, on four-year terms.
 - A Chief Minister elected by the Assembly, with constructive no-confidence and lawful acting succession.
 - Territorial fiscal and record arrangements, and defined local and federal boundaries.
