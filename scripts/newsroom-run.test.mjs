@@ -304,3 +304,30 @@ test('a desk with an open assignment may skip only for a named blocker; others m
   const writer = core.buildMessages({ ...base, plan: null, assignments: '## Open\n- **Work.**\n' })[1].content;
   assert.match(writer, /name the source, rule or missing fact that blocks it/);
 });
+
+test('a desk may ask for a longer writer timeout, within what the run can afford', () => {
+  assert.equal(core.writerTimeoutMs({}, false), 105000, 'default is unchanged');
+  assert.equal(core.writerTimeoutMs({ timeoutMs: 'soon' }, false), 105000, 'junk falls back to the default');
+  assert.equal(core.writerTimeoutMs({ timeoutMs: 200000 }, false), 200000);
+  assert.equal(core.writerTimeoutMs({ timeoutMs: 9999999 }, false), 270000, 'no planner: capped under the 300 s function limit');
+  assert.equal(core.writerTimeoutMs({ timeoutMs: 9999999 }, true), 110000, 'a planner takes 175 s of the run first');
+  assert.equal(core.writerTimeoutMs({ timeoutMs: 1000 }, false), 30000, 'floor');
+});
+
+test('the writer call uses the desk timeout, and a slow model fails the desk with that time named', async () => {
+  const roster = JSON.parse(fs.readFileSync(core.ROSTER_PATH, 'utf8'));
+  const tracker = roster.desks.find((d) => d.id === 'election-tracker');
+  assert.equal(tracker.planner, null);
+  assert.ok(tracker.timeoutMs > 105000 && tracker.timeoutMs <= 270000, 'the Election Tracker gets longer than the default');
+  const seen = [];
+  const realSetTimeout = globalThis.setTimeout;
+  globalThis.setTimeout = (fn, ms, ...a) => { seen.push(ms); return realSetTimeout(fn, 1, ...a); };
+  try {
+    const slow = async (url, init) => {
+      if (String(url).includes('ai-gateway')) return new Promise((_, rej) => init.signal.addEventListener('abort', () => rej(Object.assign(new Error('aborted'), { name: 'AbortError' }))));
+      throw new Error('unexpected ' + url);
+    };
+    await assert.rejects(core.callModel(slow, { token: 't', model: 'm', messages: [], maxTokens: 10, deskId: 'x', timeoutMs: core.writerTimeoutMs(tracker, false) }), new RegExp(`did not finish within ${Math.round(tracker.timeoutMs / 1000)}s`));
+  } finally { globalThis.setTimeout = realSetTimeout; }
+  assert.ok(seen.includes(tracker.timeoutMs));
+});
