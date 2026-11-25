@@ -11,7 +11,7 @@
 
 ## Article 1 — Status and Governing Law
 
-1. Morantine is a Territory of the Federated Republic. The Constitution, applicable federal law made within federal competence, and this Compact govern its institutions and territorial authority.
+1. Morantine is a Territory of the Federated Republic. The Constitution, applicable federal law made within federal competence, and this Compact govern its institutions and territorial authority. In this Compact, "this Compact" means the standard statutory framework established under §15.1, not a separately ratified founding instrument.
 2. The Republic holds the governing authority over Morantine. This Compact establishes an elected, accountable territorial government over matters of local concern, consistently with §15.1 and the principles of local capacity and subsidiarity in §§15.8–15.8.a.
 3. Territorial authority is neither the sovereignty of a State nor an independent power to alter the Republic's external boundaries. Territorial law may not displace the Constitution or valid controlling federal law.
 4. All rights in Article I apply throughout Morantine. No provision creates an exception to non-derogable rights or to the lawful jurisdiction of the courts and independent constitutional institutions.
