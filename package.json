@@ -11,7 +11,7 @@
     "stats:assets": "node scripts/asset-stats.mjs",
     "test:crossroads": "node --test scripts/crossroads.test.cjs",
     "test:world": "node --test scripts/world.test.mjs",
-    "test:newsroom-run": "node --test scripts/newsroom-run.test.mjs scripts/newsroom-ask.test.mjs scripts/newsroom-triage.test.mjs scripts/newsroom-edits.test.mjs",
+    "test:newsroom-run": "node --test scripts/newsroom-run.test.mjs scripts/newsroom-ask.test.mjs scripts/newsroom-triage.test.mjs scripts/newsroom-edits.test.mjs scripts/newsroom-compact-background.test.mjs",
     "test:newsroom-inbox": "node --test workers/newsroom-inbox/worker.test.mjs scripts/newsroom-inbox-relay.test.mjs scripts/newsroom-read.test.mjs scripts/newsroom-fetch.test.mjs",
     "check:discovery": "node scripts/check-discovery.mjs",
     "test:scenarios": "node --test scripts/scenarios.test.mjs",

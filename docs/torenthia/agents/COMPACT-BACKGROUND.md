@@ -1,0 +1,42 @@
+# Joint working file: how the Territorial Compacts came to be
+
+A shared question for the **Korda, Solara, Morantine and Verdmont desks**, kept by the Central Editor. Each desk reads this file every run. Nothing here is canon until John approves it; the editor records each round below.
+
+## The question
+John approved a Territorial Compact for each Territory as the editorial design for its local institutions. The texts are in `docs/torenthia/territorial-compacts/` (Solara v0.3, Morantine v0.2, Verdmont v0.2) and `docs/torenthia/KORDA-TERRITORIAL-COMPACT.md`. They are designs, and no record in the story yet says how any of them became the governing framework. John's direction is that each Compact was adopted during the formation of the Republic: after Day Zero, within the founding implementation period, and not in Year 14. Each Territory page will present its Compact as background, in the way State pages present State constitutions, with a short in-world account of where it came from. That account does not exist yet. The four desks are asked to propose it, each for its own Territory, and the editor reconciles the four so they agree with each other.
+
+## What is already established (do not contradict)
+- Three sovereign predecessor countries (the Harren Union, the Torenthian Commonwealth and the Vardan Confederacy) merged under the Constitution. Korda was a fourth founding political community and not a party to the merger (`docs/torenthia/STORY-BIBLE.md`).
+- **Solara, Morantine and Verdmont** are inherited territorial jurisdictions. Predecessor territories are recognized as Territories from Day Zero (§19.6(2)); a predecessor entity could also elect Territory status by a majority vote of its existing legislative body (§19.6(3)). Their governing arrangements were adopted after Day Zero, during formation, within the Treaty of Union's twenty-four-month implementation schedule. Day Zero itself carried the Territories over (§19.6); the Compact came after.
+- **§15.1:** a Territory's Compact is the §15.4 restructuring agreement or the §15.6 incorporation agreement where the Territory results from one of those, and otherwise a standard statutory framework the Legislature defines. Every Compact must provide an elected local governing authority over matters of local concern. The Solara, Morantine and Verdmont Compacts use the standard statutory framework; no §15.4 or §15.6 origin is established for them.
+- **Korda** took a different road. It was on the founding Indigenous register and elected Territorial Integration under §16.2 during the Transition Window, which permanently ended the Associated Community option. Its Compact reconstructs the incorporation agreement (§§16.2 and 15.6) and its legislative ratification.
+- **Not established:** which predecessor each inherited Territory came from; the text, date or vote count of any founding instrument; the name of any founding officeholder; whether any territorial institution in a Compact has yet held an election. Existing records that mention territorial government are evidence only of what they say.
+- The date stays Year 14, Month 2. Nothing here advances it.
+
+## What each desk is asked to settle
+1. **The route to Territory status,** in the Constitution's own terms, with sections cited.
+2. **How the Compact became the governing framework:** which institution acted (the Legislature, a caretaker or transition body under §19.3, the Territory's own legislature under §19.6(3)), in what kind of instrument, and what arrangement it replaced or continued. Stay at the level of procedure.
+3. **Transitional provisions:** how authority passed from the predecessor or caretaker administration to the Compact's institutions, and how continuity of officials, records, courts and obligations was kept (§§19.3 and 19.5).
+4. **What stays true in Year 14:** where the approved Compact and the published record meet, say so; where they conflict, name each conflict and propose the smallest fix.
+5. **What stays open.** Name it and leave it there.
+
+## Notes for each desk
+- **Korda.** The Compact already has a preamble that sets out its origin, so yours is the lightest task: a check and a short background, not a new history. Check the preamble and Article 1 against the Territory Convention record (§15.5.a), the Northern Lake Settlement and SC-Y13-0119, and say what the background should tell a reader about how the Territorial Assembly and the Convention relate. Any wording change to the Compact is a numbered edit in your notes; John approves it.
+- **Solara.** Leave the capital bid (§§18.1–18.3), the Marisvia dispute and the ferry storyline out of the background unless the Compact itself bears on them.
+- **Morantine.** The Compact notes that Morantine's creation route is not a §15.4 devolution or §15.6 incorporation. Keep to the standard statutory route and list any copyedits you find in Article 1.
+- **Verdmont.** The Compact calls for a constitutional-equality and rights review of its two-members-per-section Executive Council before any portrayal of enactment (Article 3 and the review gates at the end). Work that review as part of the account, as the arrangement's own adoption would have had to: (a) the provisions in play, including the individual-rights floor, §1.6 and the voting-equality provisions, against a population-based Assembly and a section-balanced executive; (b) the strongest good-faith arguments each way; (c) which institution could review it, without deciding what that institution found; (d) the options, such as keeping the design, weighting Council votes, or rebalancing the sections, each with what it costs. John decides. Until he does, the background must not present the two-per-section Council as adopted. Sections A to D stay placeholders: give them no names or boundaries.
+
+## Limits for all four
+- Procedure only. Give no date, vote count, signatory, ceremony or named officeholder unless a published source does. Propose a person only where the account cannot work without one, and list each in your notes.
+- This is a working report and not a record: no NRS record, number or worldSeq, and nothing here is for publication.
+- Decide no open matter: the Northern Lake Settlement, either Statehood Audit, any federal act, any referendum or election.
+- Flag what touches another jurisdiction or federal authority; do not decide it.
+- Do not contradict the other three desks. The editor reconciles the four accounts before anything is approved.
+
+## The end product
+Each desk files one working report, kind `report`, track `idea`, with a body of 500 to 800 words (Korda: up to 400, since its Compact already carries its origin) written as a short neutral history a reader of the Territory page could use: where the Territory's status came from, how its Compact became the framework, how authority passed over, what the Compact provides (one paragraph), and what is still open. The notes carry the usual ledger plus a list of every conflict between the Compact and the published record and your recommendation (USE, HOLD, REVISE). Work from the Compact text in your sources.
+
+## Rounds (kept by the editor)
+- **Round 1:** each desk files its own account on its normal schedule. The editor records the key points of all four here, marking agreements and conflicts.
+- **Round 2:** only where the accounts conflict, the affected desks answer the open points.
+- **Round 3:** the editor proposes a reconciled account for each Territory; John approves; the approved account becomes the Compact background on that Territory's page, and the Compact is presented there in the same form as the State constitutions.

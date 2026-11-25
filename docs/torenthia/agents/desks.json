@@ -71,7 +71,8 @@
       "sources": [
         "docs/torenthia/KORDA-TERRITORIAL-COMPACT.md",
         "docs/torenthia/agents/korda/setup/05-KORDA-EDITORIAL-CONTEXT.md",
-        "docs/torenthia/agents/korda/setup/04-KORDA-PUBLISHED-REFERENCES.md"
+        "docs/torenthia/agents/korda/setup/04-KORDA-PUBLISHED-REFERENCES.md",
+        "docs/torenthia/agents/COMPACT-BACKGROUND.md"
       ],
       "everyWeeks": 1,
       "records": {
@@ -387,7 +388,9 @@
         "torenthia/nrs/torenthia-nrs-109.html",
         "torenthia/nrs/torenthia-nrs-110.html",
         "torenthia/nrs/torenthia-nrs-130.html",
-        "torenthia/news/torenthia-news-134.html"
+        "torenthia/news/torenthia-news-134.html",
+        "docs/torenthia/agents/COMPACT-BACKGROUND.md",
+        "docs/torenthia/territorial-compacts/SOLARA-TERRITORIAL-COMPACT-v0.3-APPROVED-EDITORIAL.md"
       ],
       "records": {
         "days": [
@@ -414,7 +417,9 @@
         "torenthia/dispatches/torenthia-dispatch-sarn.html",
         "torenthia/nrs/torenthia-nrs-048.html",
         "torenthia/nrs/torenthia-nrs-120.html",
-        "torenthia/nrs/torenthia-nrs-133.html"
+        "torenthia/nrs/torenthia-nrs-133.html",
+        "docs/torenthia/agents/COMPACT-BACKGROUND.md",
+        "docs/torenthia/territorial-compacts/MORANTINE-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md"
       ],
       "records": {
         "days": [
@@ -437,7 +442,9 @@
       "assignmentsPath": "docs/torenthia/agents/verdmont/ASSIGNMENTS.md",
       "notesPath": "docs/torenthia/agents/verdmont/NOTES.md",
       "sources": [
-        "torenthia/nrs/torenthia-nrs-117.html"
+        "torenthia/nrs/torenthia-nrs-117.html",
+        "docs/torenthia/agents/COMPACT-BACKGROUND.md",
+        "docs/torenthia/territorial-compacts/VERDMONT-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md"
       ],
       "records": {
         "days": [
@@ -564,7 +571,7 @@
     ],
     "maxSourceChars": 120000,
     "editorSlots": 3,
-    "passThroughReports": ["monitors", "corindal"],
+    "passThroughReports": ["monitors", "corindal", "korda", "solara", "morantine", "verdmont"],
     "passThroughDesks": [
       "election-tracker",
       "fiscal-tracker",
