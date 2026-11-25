@@ -1,0 +1,27 @@
+# Branch history — claude/newsroom-notes-20261125
+
+**Original branch:** `claude/newsroom-notes-20261125`
+**PR:** *not established at time of writing* (see the PR for this branch)
+**Status:** proposed (draft; awaiting John)
+
+## Purpose
+Record the Central Editor's 2026-11-25 notes-only outcomes: one tracker correction, two assignment suggestions and the first Round 1 entry of the Territorial Compact background.
+
+## Shipped in this PR (on merge)
+- `FISCAL-TRACKER.md`: corrected the NRS 018 request-to-funding figures (2.1 to 4.4 years is the Territory median, not the gap; the gap widened from 0.3 to 2.4 years). Fiscal tracker `NOTES.md` records the update.
+- Open suggestions (desks may judge): Morantine named-person delay story; Federal pitch on the NRS 128 window.
+- Morantine `NOTES.md` and `COMPACT-BACKGROUND.md` Round 1 entry.
+
+## Decisions
+- Not assigned: staff publishing the NRS 127 illustrations (rung 2), pending John's direction on pace.
+- Pending for John: Article 1 copyedit proposal in the Morantine Compact.
+- No new GO ideas on the board; the Aldenmere pitch waits for the Monday board.
+
+## Results and verification
+Figures checked directly against `torenthia/nrs/torenthia-nrs-018.html` and `-128.html`. No site build was run for a docs-only change.
+
+## Known limitations
+Only Morantine has filed a Compact account; Round 1 conflicts cannot be marked yet.
+
+## Preservation and branch disposition
+Results live on `main` once merged. Branch disposition is pending (the three-branch rolling buffer applies). **Deletion approval:** not granted by this note.

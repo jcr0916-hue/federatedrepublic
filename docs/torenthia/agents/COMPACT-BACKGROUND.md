@@ -38,5 +38,6 @@ Each desk files one working report, kind `report`, track `idea`, with a body of 
 
 ## Rounds (kept by the editor)
 - **Round 1:** each desk files its own account on its normal schedule. The editor records the key points of all four here, marking agreements and conflicts.
+  - *Morantine (filed 2026-11-25; USE as working account):* creation by §19.6(2) carryover, no §19.6(3) election established; Compact is the §15.1 standard statutory framework, supplied after Day Zero within the Treaty of Union's 24-month schedule; continuity via §§19.3 and 19.5; no statute, date, vote count, signatory or first election named; open: second Statehood Audit, §12.6, Kessel survey. Proposed Article 1 copyedit ("this Compact" = the §15.1 framework) awaits John. Solara, Verdmont and Korda have not yet filed; conflicts cannot be marked until they do.
 - **Round 2:** only where the accounts conflict, the affected desks answer the open points.
 - **Round 3:** the editor proposes a reconciled account for each Territory; John approves; the approved account becomes the Compact background on that Territory's page, and the Compact is presented there in the same form as the State constitutions.
