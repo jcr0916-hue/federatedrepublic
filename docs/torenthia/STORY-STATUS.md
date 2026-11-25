@@ -56,7 +56,7 @@ The October 18 Year 14 Month 1 election-season batch adds NRS 102–106, news 11
 
 The October 16 Year 14 Month 1 batch adds NRS 099–101 and news 115. Routine records from Merath (industrial inspection scheduling), Solara (port-register reconciliation), and Varek (county Toren River submissions) diversify the administrative register. Aleth Fenn reports the Varek river and county-government question against the approaching spring Legat Consul election, without adding candidate pledges, polling, a treaty change or an election date. No constitutional clock has changed.
 
-**Current published frontier:** Year 14, Month 2 · worldSeq through **193** · nrsSeq through **186**.
+**Current published frontier:** Year 14, Month 2 · worldSeq through **193** · nrsSeq through **197**.
 
 The October 14 Year 14 Month 1 batch adds NRS 093–095 and news 112. Two ordinary records cover public-counter equipment renewal and laboratory sample-log reconciliation. The Elections Panel opens a verification docket for Korda's affected electorate after the fixed district schedule authentication; Mara Iset examines why the voter list is the next necessary step. No final electorate, ballot language or referendum date has been certified; Korda and Kelvant's boundaries and constitutional positions do not change.
 

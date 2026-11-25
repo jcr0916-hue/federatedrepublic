@@ -26,3 +26,11 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 - **NRS-Y14-0087 (Council of Ministers), edited.** Title now reads "(Reporting-Calendar Review)": a second summary in the same month would otherwise carry the identical title of NRS-Y14-0046. The text is unchanged and records no decision, in line with §2.14.
 - **Other records:** accepted as filed.
 - **Next time:** the DH-13-224 closing return (once acceptance is recorded), the Elections Panel's next Judicial Pool quarterly return when due, and whatever the humidity-logger check of Archive Room 3 produces. Vary the bodies: this batch used the same five regulars as the last two.
+
+## 2026-11-25 — Routine NRS returns, Year 14 Month 2 (2 of 4 ACCEPTED, 2 BANKED; NRS 187–188; inbox `7f684299`)
+
+- **NRS-Y14-0099 (DH-13-224 closing return), edited.** The desk's basis cited the Civic Consul's authority under §2.5(3); a closing return needs only the award, so the basis is gone. The text now says final payment "follows under the award's terms" rather than that the Department authorizes it, and adds that the award's work items are all complete. It closes a series; it decides no award and funds nothing new.
+- **NRS-Y14-0100 (NRS Panel imaging return), edited.** Cut the counts (312 records, 14,860 pages): NRS-Y13-0731 gave none, and a figure here would become canon no other return can match. Filing body "NRS Panel — Records Administration," as in 0731. Added that source documents stay retained under the records schedule.
+- **Banked: Public Record Access Service reading-room catalogue sweep.** NRS-Y14-0064 was published five days ago; a second sweep in the same month reads as a repeat. Hold for Month 3.
+- **Banked: Federal Environmental Laboratory Service next calibration group.** NRS-Y14-0085 (this month's group) was published yesterday; the next group belongs to the next round.
+- **Next time:** Vary the bodies: this batch leaned on the same regulars again. Try the Transport Maintenance Service (its review of the two bridge approaches is outstanding), the water-laboratory calibration award's closing return, or the Elections Panel Judicial Pool quarterly return when due. No quiet thread today.

@@ -2,12 +2,12 @@
 
 Federal bodies that have filed routine NRS records, and their series. The Central Editor updates this when records are published. Desks: continue open series in order, and prefer these bodies.
 
-Published frontier at last update: nrsSeq **186**, latest reference **NRS-Y14-0098** (Year 14, Month 2).
+Published frontier at last update: nrsSeq **197**, latest reference **NRS-Y14-0109** (Year 14, Month 2).
 
 ## NRS Panel
 - **Administration / Records Administration.** Records-storage cabinet order **RP-13-118** (24 cabinets): contract modification (NRS-Y13-0707), first consignment of 12 accepted (0715), final 12 accepted (0722), final payment authorized with warranty in force (0728), placement and inventory tagging (0735). *Series complete; warranty open.*
 - Archive scanner maintenance, quarterly (0719; Y14 M2 service NRS-Y14-0050). *Next quarterly service due in a later quarter.*
-- Quarterly records imaging return, administrative archive series (0731). *Recurring quarterly.*
+- Quarterly records imaging return, administrative archive series (0731; Y14 M2 return NRS-Y14-0100, nothing carried over). *Recurring quarterly; next return a quarter later.*
 - Archive environmental-control filter replacement, four archive rooms (0739; Y14 M2 cycle NRS-Y14-0061, Archive Room 3 humidity logger to be calibration-checked). *Recurring.*
 
 ## Public Record Access Service
@@ -15,7 +15,7 @@ Published frontier at last update: nrsSeq **186**, latest reference **NRS-Y14-00
 
 ## Department of Health
 - Minister **Tomas Verel**. Departmental records officer **Nera Pell**, appointed from the civil service (NRS-Y13-0708).
-- **Procurement Office.** Preventive maintenance award **DH-13-224** for six regional refrigerated-storage units (0713). First visits, two of six units (NRS-Y14-0051); third and fourth units (NRS-Y14-0062); fifth and sixth units (NRS-Y14-0084). *All six visits are complete; the award's closing return remains to be filed after acceptance.*
+- **Procurement Office.** Preventive maintenance award **DH-13-224** for six regional refrigerated-storage units (0713). First visits, two of six units (NRS-Y14-0051); third and fourth units (NRS-Y14-0062); fifth and sixth units (NRS-Y14-0084). Closing return: award accepted and closed, no work items outstanding (NRS-Y14-0099). *Award series complete.*
 - Regional drinking-water laboratory calibration: service award (0718), staggered work schedule (0723), first, second and third group completion returns (0726, 0730, 0734). *Whether a further group remains is not established; a closing return for the award is a natural next step.*
 - Regional water laboratory sample-chain review (NRS-Y14-0006).
 
