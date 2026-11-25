@@ -58,7 +58,9 @@ test('the desk editor ranks only new, non-test filings and files its triage', as
   const filed = calls.submit[0];
   assert.equal(filed.headers['x-newsroom-desk'], 'desk-editor');
   assert.match(filed.body.body, /## editor\n- #1 \*\*korda\*\*: Ferry reply/);
-  assert.match(filed.body.body, /## unsorted\n- \*\*varek-records\*\*: Culvert return/, 'filings the model skipped are listed, not lost');
+  assert.match(filed.body.body, /## records\n- \*\*varek-records\*\*: Culvert return — Routine\. ⚑ desk editor did not sort this filing; routed by the track its desk declared/, 'a record the model skipped follows its declared track and is not lost');
+  assert.match(filed.body.body, /Note: the desk editor sorted 1 of 2 filings/, 'the report says how many the model sorted');
+  assert.equal(calls.gateway.length, 2, 'a reply that leaves a filing out is retried once');
 });
 
 test('nothing new means no model call', async () => {
@@ -156,4 +158,94 @@ test('assigned working reports from the Monitors and Corindal desks go straight 
   assert.ok(!calls.gateway[0].messages[1].content.includes('Round 1 account'), 'the report never reaches the model');
   assert.ok(calls.gateway[0].messages[1].content.includes('A Monitors column'), 'other Monitors filings are still sorted');
   assert.match(calls.submit[0].body.body, /## tracker\n- \*\*monitors\*\*: Corindal audit record, Round 1/);
+});
+
+
+// A model whose per-filing list is shaped differently from what the code expects must not leave the day unsorted.
+function replying(replies, items) {
+  const base = inbox(items);
+  const calls = { ...base.calls, gateway: [] };
+  let n = 0;
+  const impl = async (url, init = {}) => {
+    if (String(url).includes('ai-gateway')) {
+      calls.gateway.push(JSON.parse(init.body));
+      const reply = replies[Math.min(n++, replies.length - 1)];
+      return { ok: true, status: 200, json: async () => ({ choices: [{ message: { content: typeof reply === 'string' ? reply : JSON.stringify(reply) } }], usage: {} }) };
+    }
+    return base.impl(url, init);
+  };
+  return { impl, calls: { ...calls, submit: base.calls.submit } };
+}
+const ENV = { NEWSROOM_EDITOR_KEY: 'ed', NEWSROOM_RUNNER_KEY: 'run', AI_GATEWAY_API_KEY: 'gw' };
+const DAY = [
+  { key: 'submissions/korda/2026-11-24/3e7fd659-580e-4796-a87a-eda31b36c3b1.json', desk: 'korda', kind: 'article', title: 'The Written Criteria', summary: '[canon · high] A written reply.', submittedAt: '2026-11-24T16:10:00Z', status: 'PROPOSED' },
+  { key: 'submissions/selvane-records/2026-11-24/5b6b0a51-0281-4e5e-9499-b3e2d152f9ad.json', desk: 'selvane-records', kind: 'nrs-proposal', title: 'Selvane batch', summary: '[record · low] Routine.', submittedAt: '2026-11-24T16:11:00Z', status: 'PROPOSED' },
+  { key: 'submissions/kelvant/2026-11-24/b3fe57fc-d895-44f1-a9fd-77fcbf42b76d.json', desk: 'kelvant', kind: 'pitch', title: 'Who Speaks for Kelvant', summary: '[idea · normal] Pitch.', submittedAt: '2026-11-24T16:12:00Z', status: 'PROPOSED' },
+];
+const NOW2 = new Date('2026-11-24T16:37:00Z');
+const row = (it, route, extra = {}) => ({ key: it.key, desk: it.desk, title: it.title, track: 'x', route, rank: null, flags: [], line: 'Because.', ...extra });
+
+test('keys shortened to the filing id, a list under another name, and route spelling all still match', async () => {
+  const reply = { summary: 'Fine day.', filings: [
+    { ...row(DAY[0], 'Editor', { rank: 1 }), key: '3e7fd659-580e-4796-a87a-eda31b36c3b1' },
+    { ...row(DAY[1], 'records'), key: '`5b6b0a51`' },
+    { ...row(DAY[2], 'idea board'), key: 'b3fe57fc-d895-44f1-a9fd-77fcbf42b76d.json' },
+  ] };
+  const { impl, calls } = replying([reply], DAY);
+  const out = await tri.runTriage({ env: ENV, fetchImpl: impl, now: NOW2 });
+  assert.equal(out.status, 'submitted');
+  assert.equal(calls.gateway.length, 1, 'no retry when everything matched');
+  const body = calls.submit[0].body.body;
+  assert.match(body, /## editor\n- #1 \*\*korda\*\*: The Written Criteria/);
+  assert.match(body, /## idea-board\n- \*\*kelvant\*\*/);
+  assert.match(body, /## records\n- \*\*selvane-records\*\*/);
+  assert.ok(!/## unsorted|Note: the desk editor sorted/.test(body));
+});
+
+test('a title match rescues a key the model garbled; a duplicate title is not guessed', () => {
+  const items = [DAY[0], { ...DAY[2], title: 'The Written Criteria' }];
+  const { rows, missing } = tri.matchRows({ items: [{ key: 'nonsense', title: 'the written criteria', route: 'editor' }] }, [DAY[0], DAY[1]]);
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0].key, DAY[0].key);
+  assert.deepEqual(missing.map((m) => m.desk), ['selvane-records']);
+  assert.equal(tri.matchRows({ items: [{ key: 'nonsense', title: 'The Written Criteria', route: 'editor' }] }, items).rows.length, 0);
+});
+
+test('an empty list is retried once; the second reply is used', async () => {
+  const good = { summary: 'Sorted.', items: [row(DAY[0], 'editor', { rank: 1 }), row(DAY[1], 'records'), row(DAY[2], 'idea-board')] };
+  const { impl, calls } = replying([{ summary: 'Prose only.', items: [] }, good], DAY);
+  const out = await tri.runTriage({ env: ENV, fetchImpl: impl, now: NOW2 });
+  assert.equal(out.status, 'submitted');
+  assert.equal(calls.gateway.length, 2);
+  const retry = calls.gateway[1].messages;
+  assert.equal(retry[retry.length - 1].role, 'user');
+  assert.match(retry[retry.length - 1].content, /did not sort 3 of the 3 filings/);
+  const body = calls.submit[0].body.body;
+  assert.match(body, /## editor\n- #1 \*\*korda\*\*/);
+  assert.ok(!/## unsorted/.test(body));
+});
+
+test('if both replies fail, records and ideas follow their declared track and only canon stays unsorted, with the stray keys named', async () => {
+  const bad = { summary: 'Prose only.', items: [{ key: 'who-knows', route: 'editor' }] };
+  const { impl, calls } = replying([bad, bad], DAY);
+  const out = await tri.runTriage({ env: ENV, fetchImpl: impl, now: NOW2 });
+  assert.equal(out.status, 'submitted');
+  assert.equal(calls.gateway.length, 2, 'one retry, no more');
+  const body = calls.submit[0].body.body;
+  assert.match(body, /## idea-board\n- \*\*kelvant\*\*: Who Speaks for Kelvant — Pitch\./);
+  assert.match(body, /## records\n- \*\*selvane-records\*\*: Selvane batch — Routine\./);
+  assert.match(body, /## unsorted\n- \*\*korda\*\*: The Written Criteria — A written reply\. ⚑ desk editor did not rank this canon filing/);
+  assert.match(body, /Note: the desk editor sorted 0 of 3 filings.*Keys it returned that matched no filing: who-knows\./);
+});
+
+test('a reply that is not JSON gets one retry, and a retry that throws keeps the first reply', async () => {
+  const items = DAY;
+  const base = replying(['not json at all'], items);
+  let first = true;
+  const impl = async (url, init) => { if (String(url).includes('ai-gateway') && !first) throw new Error('gateway down'); if (String(url).includes('ai-gateway')) first = false; return base.impl(url, init); };
+  const out = await tri.runTriage({ env: ENV, fetchImpl: impl, now: NOW2 });
+  assert.equal(out.status, 'submitted');
+  const body = base.calls.submit[0].body.body;
+  assert.match(body, /not JSON; filings follow the track their desk declared/);
+  assert.match(body, /## records\n- \*\*selvane-records\*\*/);
 });

@@ -101,22 +101,93 @@ function buildTriageMessages({ status, items, slots, now }) {
   return [{ role: 'system', content: system }, { role: 'user', content: user.join('\n') }];
 }
 
+// The model's list comes back keyed by inbox key, but a model may shorten or reformat a key, wrap the
+// list under another name, or capitalize a route. Match leniently so one slip doesn't sink the day's
+// sort: by exact key, then by the filing's id (the last path segment, or any uuid or 8-hex prefix in
+// the key), then by an unambiguous title. A row that matches nothing is ignored.
+const ROUTES = ['editor', 'bank', 'return', 'idea-board', 'records'];
+const idOf = (key) => String(key || '').split('/').pop().replace(/\.json$/i, '').toLowerCase();
+const normTitle = (t) => String(t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const normRoute = (r) => String(r || '').toLowerCase().trim().replace(/[\s_]+/g, '-');
+
+function listOf(result) {
+  if (Array.isArray(result)) return result;
+  for (const name of ['items', 'filings', 'sorted', 'results', 'routes']) if (Array.isArray(result && result[name])) return result[name];
+  return [];
+}
+
+function makeResolver(items) {
+  const byKey = new Map(items.map((i) => [i.key, i]));
+  const byId = new Map(), byTitle = new Map();
+  for (const it of items) {
+    byId.set(idOf(it.key), it);
+    const t = normTitle(it.title);
+    byTitle.set(t, byTitle.has(t) ? null : it);
+  }
+  return (row) => {
+    const raw = String((row && row.key) || '').trim().replace(/^[`'"]+|[`'"]+$/g, '');
+    if (byKey.has(raw)) return byKey.get(raw);
+    const id = idOf(raw);
+    if (id && byId.has(id)) return byId.get(id);
+    const uuid = raw.match(/[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}/i);
+    if (uuid && byId.has(uuid[0].toLowerCase())) return byId.get(uuid[0].toLowerCase());
+    if (/^[0-9a-f]{8}$/i.test(id)) {
+      const hits = items.filter((it) => idOf(it.key).startsWith(id));
+      if (hits.length === 1) return hits[0];
+    }
+    const t = normTitle(row && row.title);
+    return (t && byTitle.get(t)) || null;
+  };
+}
+
+// Sort the model's reply against the filings it was given. Returns the matched rows (keys corrected,
+// first row for a filing wins), the filings it didn't sort, and any keys it returned that matched nothing.
+function matchRows(result, items) {
+  const resolve = makeResolver(items);
+  const rows = [], seen = new Set(), stray = [];
+  for (const r of listOf(result)) {
+    if (!r || typeof r !== 'object') continue;
+    const it = resolve(r);
+    const route = normRoute(r.route);
+    if (!it) { if (r.key) stray.push(String(r.key).slice(0, 120)); continue; }
+    if (seen.has(it.key) || !ROUTES.includes(route)) continue;
+    seen.add(it.key);
+    rows.push({ ...r, key: it.key, desk: it.desk, title: it.title, track: trackOf(it), route });
+  }
+  return { rows, missing: items.filter((it) => !seen.has(it.key)), stray };
+}
+
+// A filing the model didn't sort still has the track its desk declared. Records and ideas go where
+// that track sends them: nothing is decided, only the desk's own declaration is followed. A canon
+// filing needs a ranking, which only the model or the Central Editor can give, so it stays unsorted.
+const FALLBACK_ROUTE = { record: 'records', idea: 'idea-board', canon: 'unsorted' };
+function declaredRoute(it) {
+  const track = trackOf(it);
+  const line = String(it.summary || '').replace(/^\[[^\]]*\]\s*/, '').slice(0, 200);
+  return {
+    key: it.key, desk: it.desk, title: it.title, track, route: FALLBACK_ROUTE[track] || 'unsorted', rank: null,
+    flags: [...(it.formFlag ? [it.formFlag] : []), track === 'canon' ? 'desk editor did not rank this canon filing' : 'desk editor did not sort this filing; routed by the track its desk declared'],
+    line,
+  };
+}
+
 // Filings from "pass-through" desks (the election tracker and any later thread trackers) are
 // reports for the Central Editor to read, not competing stories. They skip the model and
 // appear first in the triage as route "tracker".
-function renderTriage(result, items, now, direct = [], since = null) {
-  const byKey = new Map(items.map((i) => [i.key, i]));
-  const rows = (Array.isArray(result.items) ? result.items : []).filter((r) => byKey.has(r.key));
+function renderTriage(result, items, now, direct = [], since = null, meta = {}) {
+  const { rows, missing, stray } = matchRows(result, items);
   for (const r of rows) {
-    const it = byKey.get(r.key);
-    if (it && it.formFlag) r.flags = [it.formFlag, ...(Array.isArray(r.flags) ? r.flags : [])];
+    const it = items.find((i) => i.key === r.key);
+    r.flags = [...(it && it.formFlag ? [it.formFlag] : []), ...(Array.isArray(r.flags) ? r.flags : [])];
   }
-  const seen = new Set(rows.map((r) => r.key));
-  for (const it of items) if (!seen.has(it.key)) rows.push({ key: it.key, desk: it.desk, title: it.title, track: trackOf(it), route: 'unsorted', flags: [...(it.formFlag ? [it.formFlag] : []), 'desk editor did not sort this filing'], line: '' });
+  for (const it of missing) rows.push(declaredRoute(it));
   for (const it of direct) rows.push({ key: it.key, desk: it.desk, title: it.title, track: trackOf(it), route: 'tracker', flags: [], line: String(it.summary || '').slice(0, 200) });
   const order = { tracker: -1, editor: 0, bank: 1, return: 2, 'idea-board': 3, records: 4, unsorted: 5 };
   rows.sort((a, b) => (order[a.route] ?? 9) - (order[b.route] ?? 9) || (a.rank ?? 99) - (b.rank ?? 99));
-  const out = [`Desk editor triage for ${now.toISOString().slice(0, 10)}: ${items.length + direct.length} new filings${since ? ` since ${new Date(since).toISOString().slice(0, 16)}Z` : ''}.`, '', String(result.summary || '').trim(), ''];
+  const out = [`Desk editor triage for ${now.toISOString().slice(0, 10)}: ${items.length + direct.length} new filings${since ? ` since ${new Date(since).toISOString().slice(0, 16)}Z` : ''}.`, '', String(result && result.summary || '').trim(), ''];
+  if (missing.length) {
+    out.push(`Note: the desk editor sorted ${items.length - missing.length} of ${items.length} filings${meta.retried ? ' (after a second try)' : ''}; the other ${missing.length} follow the track their desk declared${missing.some((i) => trackOf(i) === 'canon') ? ', and canon filings stay unsorted for the Central Editor to rank' : ''}.${stray.length ? ` Keys it returned that matched no filing: ${stray.slice(0, 3).join(', ')}.` : ''}`, '');
+  }
   for (const route of ['tracker', 'editor', 'bank', 'return', 'idea-board', 'records', 'unsorted']) {
     const group = rows.filter((r) => r.route === route);
     if (!group.length) continue;
@@ -177,12 +248,26 @@ async function runTriage({ env = process.env, fetchImpl = fetch, now = new Date(
   if (dryRun) return { status: 'dry-run', commit: ref, since: new Date(since).toISOString(), filings: items.length, tracker: direct.length, chars: messages.reduce((n, m) => n + m.content.length, 0) };
 
   let r = { usage: null };
+  let retried = false;
   let result = { summary: '', items: [] };
   if (items.length) {
-    r = await core.callModel(fetchImpl, { token, model: cfg.model || 'anthropic/claude-haiku-5.5', messages, maxTokens: cfg.maxOutputTokens || 6000, timeoutMs: 120000, deskId: TRIAGE_DESK, json: false });
-    try { result = core.extractJson(r.text); } catch { result = { summary: 'The desk editor reply was not JSON; every filing is unsorted.', items: [] }; }
+    const ask = (msgs) => core.callModel(fetchImpl, { token, model: cfg.model || 'anthropic/claude-haiku-5.5', messages: msgs, maxTokens: cfg.maxOutputTokens || 6000, timeoutMs: 120000, deskId: TRIAGE_DESK, json: false });
+    const parse = (text) => { try { return core.extractJson(text); } catch { return { summary: 'The desk editor reply was not JSON; filings follow the track their desk declared.', items: [] }; } };
+    r = await ask(messages);
+    result = parse(r.text);
+    // If the reply left filings out (or its keys matched none), ask once more for the whole set, naming
+    // the keys exactly. Keep whichever reply sorted more. A failed retry never loses the first reply.
+    const gaps = matchRows(result, items).missing;
+    if (gaps.length) {
+      const again = [...messages, { role: 'assistant', content: r.text.slice(0, 20000) }, { role: 'user', content: `Your reply did not sort ${gaps.length} of the ${items.length} filings (${gaps.map((g) => g.desk).join(', ')}). Return the complete JSON object again with every filing exactly once, copying each "key" exactly as it appears after "###".` }];
+      try {
+        const r2 = await ask(again);
+        const result2 = parse(r2.text);
+        if (matchRows(result2, items).missing.length < gaps.length) { r = r2; result = result2; retried = true; }
+      } catch { /* keep the first reply */ }
+    }
   }
-  const body = renderTriage(result, items, now, direct, since);
+  const body = renderTriage(result, items, now, direct, since, { retried });
   const proposal = {
     kind: 'report',
     title: `Desk editor triage — ${now.toISOString().slice(0, 10)}`,
@@ -194,4 +279,4 @@ async function runTriage({ env = process.env, fetchImpl = fetch, now = new Date(
   return { status: 'submitted', commit: ref, since: new Date(since).toISOString(), filings: items.length + direct.length, id: filed.id, key: filed.key, usage: r.usage || null };
 }
 
-module.exports = { runTriage, buildTriageMessages, renderTriage, listInbox, windowStart, newFilings, trackOf, isTest, TRIAGE_DESK };
+module.exports = { runTriage, matchRows, declaredRoute, buildTriageMessages, renderTriage, listInbox, windowStart, newFilings, trackOf, isTest, TRIAGE_DESK };
