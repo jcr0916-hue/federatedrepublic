@@ -472,6 +472,7 @@
       "jurisdiction": "Federal elections (continuity)",
       "inboxDesk": "election-tracker",
       "enabled": true,
+      "timeoutMs": 200000,
       "days": [
         "mon"
       ],

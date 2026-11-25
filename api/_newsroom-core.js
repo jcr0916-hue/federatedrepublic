@@ -213,6 +213,20 @@ async function callModel(fetchImpl, { token, model, messages, maxTokens, timeout
   }
 }
 
+// The writer call's time limit. Default 105 s. A desk may ask for longer with `timeoutMs` in
+// desks.json. The cap keeps the whole run inside the function's 300 s limit: a planner takes up to
+// 175 s, so a desk with one can't stretch past what is left; a desk with no planner may use up to 270 s.
+const WRITER_TIMEOUT_DEFAULT_MS = 105000;
+const WRITER_TIMEOUT_MIN_MS = 30000;
+const PLANNER_TIMEOUT_MS = 175000;
+const RUN_BUDGET_MS = 285000;
+function writerTimeoutMs(desk, hasPlanner) {
+  const asked = Number(desk && desk.timeoutMs);
+  if (!Number.isFinite(asked) || asked <= 0) return WRITER_TIMEOUT_DEFAULT_MS;
+  const cap = hasPlanner ? RUN_BUDGET_MS - PLANNER_TIMEOUT_MS : 270000;
+  return Math.max(WRITER_TIMEOUT_MIN_MS, Math.min(Math.round(asked), Math.max(cap, WRITER_TIMEOUT_DEFAULT_MS)));
+}
+
 async function submitProposal(fetchImpl, { inboxUrl, key, proposal, authHeaders }) {
   const res = await fetchImpl(inboxUrl.replace(/\/$/, '') + '/v1/submit', {
     method: 'POST',
@@ -313,7 +327,7 @@ async function runDesk(desk, { roster, env, fetchImpl, now, dryRun, ref = 'main'
   const model = desk.model || roster.defaultModel;
   const maxTokens = desk.maxOutputTokens || roster.maxOutputTokens || 8000;
   const w = await callModel(fetchImpl, {
-    token, model, messages: buildMessages({ ...base, sharedSources: writerSources, plan }), maxTokens, deskId: desk.id, timeoutMs: 105000,
+    token, model, messages: buildMessages({ ...base, sharedSources: writerSources, plan }), maxTokens, deskId: desk.id, timeoutMs: writerTimeoutMs(desk, !!planner),
   });
   usage.writer = { model, ...(w.usage || {}) };
   let proposal;
@@ -402,4 +416,4 @@ async function fileRunReport(fetchImpl, { env = process.env, result, now = new D
   return submitProposal(fetchImpl, { inboxUrl: env.NEWSROOM_URL || DEFAULT_INBOX, proposal, authHeaders: { Authorization: `Bearer ${runnerKey}`, 'x-newsroom-desk': RUN_DESK } });
 }
 
-module.exports = { RUN_DESK, renderRunReport, fileRunReport, TRACKS, attentionTag, filedRecently, submitProposal, DEFAULT_INBOX, RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, resolveCommit, loadText, loadOptional, callModel, systemPrompt, contextParts, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
+module.exports = { writerTimeoutMs, RUN_DESK, renderRunReport, fileRunReport, TRACKS, attentionTag, filedRecently, submitProposal, DEFAULT_INBOX, RAW_BASE, dueDesks, offWeekDesks, hasOpenAssignment, withRecordDesks, resolveCommit, loadText, loadOptional, callModel, systemPrompt, contextParts, buildMessages, buildPlanMessages, parseProposal, extractJson, runDesk, runNewsroom, REPO_RAW, ROSTER_PATH };
