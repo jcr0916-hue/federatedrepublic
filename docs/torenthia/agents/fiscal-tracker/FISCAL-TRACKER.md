@@ -8,7 +8,7 @@ The living file for the §12.6 fiscal equalization review. It records **only wha
 
 - **Fictional date:** Year 14, Month 2. It does not advance until a published record advances it.
 - **Estimates, formula, weights, bill, markup date:** none published. NRS 128 (NRS-Y14-0040) says so directly: it opens a source-table correction and submission window and gives no estimates, formula, weights, bill or markup date.
-- **Executive Monitor, Year 13 certification (NRS 018, NRS-Y13-0402):** no noncompliance found, so no ninety-day legislative response clock is running under the reporting statute implementing §12.6. The certification did publish the widening gap between Territory and disadvantaged-State request-to-funding times, 2.1 years to 4.4 years since Year 10.
+- **Executive Monitor, Year 13 certification (NRS 018, NRS-Y13-0402):** no noncompliance found, so no ninety-day legislative response clock is running under the reporting statute implementing §12.6. The certification did publish the widening gap between Territory and disadvantaged-State request-to-funding times: the Territory median rose from 2.1 years (Year 10) to 4.4 years (Year 13), while the disadvantaged-State median went from 1.8 to 2.0 years, so the gap widened from 0.3 to 2.4 years. It is context for the Legislature, not a failure finding.
 - **Joint Committee on Fiscal Equalization:** nine members across both chambers; chair Assemblymember Renata Kell of Orath. Senator Aldous Fenn of Caldenmere is a Senate appointee (news 046). It reconvened in Year 13, Month 12 (NRS 046, NRS-Y13-0710).
 - **Outcome:** none. No desk proposes or implies a result; the Central Editor and John decide.
 
