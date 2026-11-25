@@ -1,0 +1,19 @@
+---
+layout: editorial.njk
+title: "Verdmont Territory"
+description: "Verdmont's northwest coast and mountain communities, territorial status and federal constitutional relationship."
+eyebrow: "Torenthia · Territory profile"
+---
+{% for s in stats.territories %}{% if s.name == 'Verdmont' %}
+<p>Verdmont lies in the northwest of the Republic, extending from the Northern Alps toward the coast. Its published economy includes resource extraction, while local public services and transport must contend with changing conditions across mountain passes and coastal communities.</p>
+<dl class="territory-facts"><dt>Population</dt><dd>{{ s.pop }} million</dd><dt>Federal Assembly</dt><dd>{{ s.assembly }} voting seats</dd><dt>Federal Senate</dt><dd>No representation while a Territory</dd><dt>Statehood process</dt><dd>{{ s.audit }}</dd></dl>
+<section class="status-panel"><h2>Territory Now</h2><p>{{ s.summary }}</p></section>
+{% endif %}{% endfor %}
+<h2>Territorial Compact — editorial reference</h2>
+<p>The <strong>Verdmont Territorial Compact v0.2</strong> is the approved <em>editorial design</em> for a 24-member population-based People's Assembly and a separate eight-member Territorial Executive Council elected across four geographic sections. <strong>It is not enacted or ratified law, and no new Year 14 event or election is established by this reference.</strong> The exact sections and their populations are not fixed; the proposed equal two-per-section executive representation expressly requires further constitutional-equality review before any portrayal of enactment.</p>
+<p><a href="https://github.com/jcr0916-hue/federatedrepublic/blob/main/docs/torenthia/territorial-compacts/VERDMONT-TERRITORIAL-COMPACT-v0.2-APPROVED-EDITORIAL.md">Read the full Verdmont Territorial Compact on GitHub</a></p>
+<h2>Territory and Statehood</h2>
+<p>Verdmont remains a Territory and has not begun a Statehood Audit. Federal territorial government, local capacity and the possible future Statehood process remain subject to the Constitution, particularly <a href="annotated.html#s15-1">§15.1</a> and <a href="annotated.html#s15-2">§15.2</a>.</p>
+<div class="link-row"><a href="republic-at-a-glance.html#verdmont">Locate Verdmont on the map</a><a href="torenthia-record.html?place=Verdmont">Related public records</a><a href="quicksheet-states.html">States and Territories Quick Sheet</a></div>
+<h2>Related public records</h2>
+<div class="record-grid">{% for p in collections.world | jurisdictionRecords('Verdmont') | reverse | take(4) %}{% include "record-card.njk" %}{% endfor %}</div>
