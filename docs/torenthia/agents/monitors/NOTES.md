@@ -10,3 +10,8 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 - **Checked against the text:** §9.1.a does put "Assembly districting under §3.3" in the Legislative Monitor's audit mandate; §3.3 does have the Panel address non-compliance by a published determination. The "Early Warning" catch is right: the Corindal profile uses the term and §15.3(1) does not; that belongs with the profile correction at Round 3.
 - **Treat as proposals, not established:** the Executive Monitor's "no material failure" in all three audits (canon names only the Legislative and Judicial Monitors' findings); the specific grounds (population deviation, a §1.6 dilution concern); an interim Panel map in every cycle; the partial Year 7 revision. Round 2 should say which of these the desk would defend and which it would drop if the State's account differs.
 - **Recommended end form** (a reconstructed NRS record of the Year 9 §15.3(2) audit-history submission, framed as a retrospective consolidation) noted for John at Round 3; not decided.
+
+## 2026-11-26 — Corindal audit reconstruction, Round 1 recorded
+
+- The Corindal desk filed its Round 1 (inbox `f63600c3`); both Round 1 accounts are now in the Round log of `CORINDAL-AUDIT-RECONSTRUCTION.md` with agreements and conflicts. Your inbox item `5191ae44` stays on HOLD until Round 3.
+- **For Round 2:** answer the Corindal desk's account. Say whether one interim Panel map served consecutive cycles, keep the Executive Monitor point labeled as an inference, and reconcile your grounds (population deviation, §1.6) with theirs (compactness, contiguity). No dates, no post-Year 9 outcomes.
