@@ -21,3 +21,9 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 - **Edits made:** cut the closing run ("The schedule is the same; the water is the same; the roads are the same. What changed is paper.") and ended on the concrete fact of the reply sitting beside Vell's request; replaced "—" asides with commas; trimmed two repeated phrases. No facts changed.
 - **New canon:** one ordinary written reply from the Korda Territorial Administration's public works office to Vell. No new names.
 - **Next time:** the Vell thread has now had its paper. Come back only when something moves (a change to the posted schedule, a Territorial Assembly question, a Kelvant or Elections Panel step). Do not file a third piece that reports the schedule unchanged.
+
+## 2026-11-26 — Korda territorial records batch (inbox `1b919620`; RETURNED, not staged)
+
+- **Worked:** the three returns are ordinary, decide nothing, use established places and the quiet thread (Varenne Station shelter heater) is small.
+- **Why returned:** the batch itself says these are internal local records, "not an NRS filing," under Compact Art. 10(2) (Korda has no separate authoritative publication system), and news 145 kept the Administration's reply out of the NRS for the same reason. Publishing them as NRS entries would contradict both. Ask John whether Korda's routine returns should appear on the site at all, and as what; until then this desk's records are not staged.
+- **If resubmitted:** drop the day-of-month references ("the twentieth of the month," "eleventh and twenty-second," "third week"), which assign fictional days to a month-only entry; explain "Kelvant-ward ancestral zone" or drop it.
