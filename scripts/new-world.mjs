@@ -18,14 +18,14 @@ function argsOf(argv){
 const split=v=>v?String(v).split(",").map(x=>x.trim()).filter(Boolean):[];
 const a=argsOf(process.argv.slice(2));
 if(!a.kind||!a.date||!a.title||!a.blurb){
-  console.error("Usage: npm run world:new -- --kind news|nrs|sc|dispatch --date 13.12 --title \"...\" --blurb \"...\" [--nrs-id NRS-Y13-0706] [--outlet \"...\"] [--author \"...\"] [--slug name] [--arcs korda] [--jurisdictions Korda] [--provisions §15.5.a] [--dossiers korda] [--related torenthia-news-001.html] [--mundane] [--write]");
+  console.error("Usage: npm run world:new -- --kind news|nrs|sc|dispatch --date 13.12 --title \"...\" --blurb \"...\" [--nrs-id NRS-Y13-0706] [--outlet \"...\"] [--author \"...\"] [--slug name] [--arcs korda] [--jurisdictions Korda] [--provisions §15.5.a] [--dossiers korda] [--related torenthia-news-001.html] [--mundane] [--record-system Aldenmere] [--write]");
   process.exit(2);
 }
 const inventory=readWorldInventory(".");
 const draft=buildWorldDraft({
   nrsId:a["nrs-id"],kind:a.kind,date:a.date,title:a.title,blurb:a.blurb,outlet:a.outlet,author:a.author,slug:a.slug,
   arcs:split(a.arcs),jurisdictions:split(a.jurisdictions),provisions:split(a.provisions),
-  dossiers:split(a.dossiers),related:split(a.related),mundane:Boolean(a.mundane)
+  dossiers:split(a.dossiers),related:split(a.related),mundane:Boolean(a.mundane),recordSystem:a["record-system"]
 },inventory);
 
 for(const warning of clockWarnings(a.date,loadWorldRegistries().clocks))console.warn(`[world clock warning] ${warning}`);
