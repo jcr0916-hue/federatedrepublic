@@ -27,3 +27,10 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 - **Worked:** the three returns are ordinary, decide nothing, use established places and the quiet thread (Varenne Station shelter heater) is small.
 - **Why returned:** the batch itself says these are internal local records, "not an NRS filing," under Compact Art. 10(2) (Korda has no separate authoritative publication system), and news 145 kept the Administration's reply out of the NRS for the same reason. Publishing them as NRS entries would contradict both. Ask John whether Korda's routine returns should appear on the site at all, and as what; until then this desk's records are not staged.
 - **If resubmitted:** drop the day-of-month references ("the twentieth of the month," "eleventh and twenty-second," "third week"), which assign fictional days to a month-only entry; explain "Kelvant-ward ancestral zone" or drop it.
+
+## 2026-11-27 — Compact background, Round 1 working report (inbox `52e34462`; USE as working account, nothing staged)
+
+- **Worked:** a clean account that keeps the Compact, the Territory Convention and the Northern Lake Settlement apart, names what stays open, and invents no dates, officials or vote counts beyond the published 28–5. Recorded under Round 1 in `COMPACT-BACKGROUND.md`.
+- **Answered:** leave SC-Y13-0119 out of the public background; if the ruling is mentioned, refer only to the published 6–3 referral and the temporary stay, without the record number.
+- **Trim next time:** the report ran about 80 words over the 400-word cap. Cut the second paragraph's list of Compact features first.
+- **Not for publication:** a working report only; nothing goes on the Korda page until John approves the reconciled accounts.

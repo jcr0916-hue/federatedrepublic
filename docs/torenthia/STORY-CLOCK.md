@@ -2,7 +2,7 @@
 
 The Central Editor owns this page. It puts every storyline's in-world due date and the real-world calendar in one place, so John does not have to track them. `STORY-STATUS.md` and the structured dashboard in `_data/worldClocks.json` remain the source for published facts; this page adds sequencing and decisions. Everything marked **proposed** is a plan, not canon. A step has happened only when a published record says so.
 
-**Updated:** November 21, 2026 (published frontier: Year 14, Month 2).
+**Updated:** November 27, 2026 (published frontier: Year 14, Month 2 · worldSeq through 194 · nrsSeq through 209).
 
 ## Frame
 
@@ -16,7 +16,7 @@ The Central Editor owns this page. It puts every storyline's in-world due date a
 | # | Thread | Where it stands | Next published step | Owner |
 |---|---|---|---|---|
 | 1 | **Fiscal equalization (§12.6)** | Correction window open (NRS 128); no estimates, formula, weights or bill. EM Year 13 certification found no failure; no ninety-day clock. | Window closes, staff estimates, committee recommendation, bill, votes. Passes as a qualified success before the vote; the EM audit is left for after. | Fiscal Tracker, Federal, Assembly and Senate desks |
-| 2 | **Election package** | Four Legat Consul candidates qualified. Spring Year 14 window; no date. Ballot-order lot unscheduled; no formal notice. | Elections Panel formal notice (moves the date to Month 3), ballot-order lot, practice ballots, date. | Election Tracker, Federal |
+| 2 | **Election package** | Four Legat Consul candidates qualified. Spring Year 14 window; no date. Ballot-order lot unscheduled; no formal notice. | Elections Panel formal notice (moves the date to Month 3), ballot-order lot, date. Practice-ballot materials are already published (NRS 132). | Election Tracker, Federal |
 | 3 | **Executive Monitor succession** | Seven pool members eligible; Speakers' consultation notice (NRS 123); no nominee. Solt's term-end date is unpublished. | Establish the term-end date and the confirmation trigger, then nomination (or the 60-day fallback) and JM disclosure findings. | Federal, Monitors |
 | 4 | **Lake Varda / Valedon accord** | Conference opened in Month 1; no agreed text; Sunderland silent. | Text agreed ad referendum, then Senate ratification (two-thirds). Planned for Month 3, with Carrow's record in the campaign. | Federal, Foreign |
 | 5 | **Argent Ridge** | Housing bill NRS 088 in committee, no disposition (latest action NRS 118). Norvane refused Trust consent; a Norvane citizen initiative is an open idea for its desk. Repeal signature period runs up to eight months from Month 9, Day 12; the calendar convention is unresolved. | Bill outcome and Thoss's reconsideration notice. Keep repeal and Trust protection separate. Background beats only. | Federal, Norvane, Varek |
