@@ -243,6 +243,21 @@ worldJurisdictions: ["Korda", "Kelvant"]
 
 These tags feed record filtering, jurisdiction-related discovery and the States map: a place lights for 72 hours after a non-mundane record tags it. Use the exact case-sensitive names in `_data/stats.json` (for example, `Korda`, not `korda`). Do not tag incidental mentions.
 
+### worldRecordSystem
+
+Set only on a **State's own routine record entry**: the ordinary returns, schedules and notices a State's records desk files. The value is the State's record system exactly as `_data/recordSystems.json` names it (for example `"Aldenmere State Record"`, `"Caldenmere Registry"`, `"Varek Record System"`).
+
+```yaml
+worldOutlet: "Aldenmere State Record"
+worldJurisdictions: ["Aldenmere"]
+worldRecordSystem: "Aldenmere State Record"
+worldMundane: true
+```
+
+The publishing check requires, for any record that sets it: `worldKind: nrs`; a system listed in `_data/recordSystems.json`; `worldOutlet` equal to the system; `worldJurisdictions` holding that State and no other place; and `worldMundane: true`. The page header line reads `<Record system> · Year N, Month M · NRS-Y..`; the entry keeps its shared NRS number. Each State profile shows its newest six entries in a section named for its record system, and the Record page's Source filter lists every system. These entries are kept out of the profile's "In the public record" story list. Territories file to the National Record System under their Compacts, so they do not use this field.
+
+Create a draft with `npm run world:new -- --kind nrs --record-system Aldenmere ...`; it sets the outlet, jurisdiction, system and routine flag.
+
 ### worldProvisions
 
 Constitutional provisions materially involved in the piece.

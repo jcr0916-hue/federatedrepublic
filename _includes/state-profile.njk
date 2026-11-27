@@ -139,6 +139,24 @@
     <p class="state-history-more"><a href="/state-tests.html#{{ stateSlug }}-constitution">Browse {{ stateName }} provisions and historical tests →</a></p>
   </section>
   {% endif %}
+  {% set stateRecordSystem = recordSystems[stateName] %}
+  {% if stateRecordSystem %}
+  {% set stateRecordEntries = collections.world | stateRecords(stateName) %}
+  <section class="state-record" aria-labelledby="{{ stateSlug }}-record-title">
+    <h2 id="{{ stateSlug }}-record-title">{{ stateRecordSystem }}</h2>
+    <p>The State's own record of ordinary administration: returns, schedules, notices and reconciliations filed by {{ stateName }} and its counties and municipalities. Entries decide nothing and are shown newest first.</p>
+    {% if stateRecordEntries.length %}
+    <ul class="state-coverage">
+    {% for piece in stateRecordEntries | take(6) %}
+      <li><a href="{{ piece.url }}">{{ piece.data.worldTitle }}</a><small>{{ piece.data.worldDate | worldDateLabel }}</small></li>
+    {% endfor %}
+    </ul>
+    <p><a href="torenthia-record.html?source={{ stateRecordSystem | urlencode }}&amp;routine=1">All {{ stateRecordSystem }} entries ({{ stateRecordEntries.length }}) →</a></p>
+    {% else %}
+    <p>No entries have been published to the {{ stateRecordSystem }} yet.</p>
+    {% endif %}
+  </section>
+  {% endif %}
   <h2>In the public record</h2>
   <ul class="state-coverage">
   {% for piece in collections.world | stateCoverage(stateName) | take(6) %}

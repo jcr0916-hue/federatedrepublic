@@ -127,3 +127,33 @@ test('homepage consistency accepts categorized dispatches and still rejects miss
  assert.notEqual(missing.status,0);
  assert.match(missing.stdout,/links to torenthia-dispatch-example.html, which does not exist/);
 });
+
+const stateRecord=()=>{const r=record();Object.assign(r.data,{worldKind:'nrs',worldId:'torenthia-nrs-001',nrsSeq:1,nrsId:'NRS-Y14-0001',worldOutlet:'Aldenmere State Record',worldRecordSystem:'Aldenmere State Record',worldJurisdictions:['Aldenmere'],worldMundane:true});delete r.data.worldSeq;r.inputPath='torenthia-nrs-001.html';return r;};
+test('State record entries must name their own record system, one jurisdiction, and stay routine',()=>{
+ assert.deepEqual(check(stateRecord()).errors,[]);
+ const mutate=fn=>{const r=stateRecord();fn(r.data);return check(r).errors.join('\n');};
+ assert.match(mutate(d=>{d.worldRecordSystem='Aldenmere Gazette';}),/not a State record system/);
+ assert.match(mutate(d=>{d.worldOutlet='National Record System';}),/worldOutlet must equal/);
+ assert.match(mutate(d=>{d.worldJurisdictions=[];}),/must tag worldJurisdictions/);
+ assert.match(mutate(d=>{d.worldJurisdictions=['Harren'];}),/must tag worldJurisdictions/);
+ assert.match(mutate(d=>{d.worldJurisdictions=['Aldenmere','Harren'];}),/no other place/);
+ assert.match(mutate(d=>{d.worldMundane=false;}),/routine records/);
+ assert.match(mutate(d=>{d.worldKind='news';d.worldSeq=1;}),/only to NRS/);
+});
+test('draft builder with --record-system sets outlet, jurisdiction, system and routine flag',()=>{
+ const draft=buildWorldDraft({kind:'nrs',nrsId:'NRS-Y14-0900',date:'14.02',title:'Terenne County — Test',blurb:'A routine return.',recordSystem:'Caldenmere'},[]);
+ assert.match(draft.content,/worldOutlet: "Caldenmere Registry"/);
+ assert.match(draft.content,/worldRecordSystem: "Caldenmere Registry"/);
+ assert.match(draft.content,/worldJurisdictions: \["Caldenmere"\]/);
+ assert.match(draft.content,/worldMundane: true/);
+ assert.throws(()=>buildWorldDraft({kind:'nrs',nrsId:'NRS-Y14-0901',date:'14.02',title:'x',blurb:'x',recordSystem:'Korda'},[]),/must name a State/);
+ assert.throws(()=>buildWorldDraft({kind:'news',date:'14.02',title:'x',blurb:'x',outlet:'The Torenthian',recordSystem:'Harren'},[]),/only to NRS/);
+});
+test('every State has a record system and every tagged published record agrees with it',()=>{
+ const systems=JSON.parse(fs.readFileSync('_data/recordSystems.json','utf8'));
+ assert.equal(Object.keys(systems).length,12);
+ const records=readPublishingRecords('.');
+ const tagged=records.filter(r=>r.data.worldRecordSystem);
+ assert.ok(tagged.length>=40);
+ assert.deepEqual(checkWorldPublishing(tagged,{...options,status:null}).errors.filter(e=>/worldRecordSystem|State record|worldOutlet must equal|must tag worldJurisdictions|routine records/.test(e)),[]);
+});
