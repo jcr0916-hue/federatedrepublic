@@ -12,3 +12,11 @@ Editorial notes for the Aldenmere records desk. The Central Editor records what 
 - **Format:** the publish check reads a bare "§5.4" as a federal section. The Auditor entry now cites Article V of the State constitution. Write State sections as "State constitution §x.y" and avoid numbers with no federal counterpart.
 - **Quiet thread accepted:** the km 5.6 culvert re-inspection (see the register).
 - **Next time:** vary the bodies (Environmental Protection, Education, a municipality) and keep one quiet thread at most.
+
+## 2026-11-27 — Y14 M2 routine batch (inbox `beef8384`): 2 of 4 accepted (NRS 205–206)
+
+- **Accepted:** Terenne County Public Works counter calibration (NRS-Y14-0117), the natural follow-up to the counter line in NRS-Y14-0067; State Auditor re-review (0118), which clears the six items as the register said it should, with no finding.
+- **Edited:** the desk spelled "Terrene" in two filing bodies; the county and regional office are **Terenne**. Fixed in the published text; check the spelling against the register each time, since Terrene/Terenne is a one-letter cousin. Auditor entry now cites "Article V of the State constitution" (the publish check reads a bare §5.4 as federal) and drops the "not a finding of non-compliance under §5.4" clause.
+- **Returned (culvert maintenance completion):** NRS-Y14-0065 already reported the cleaning and the headwall spot repair as done, with the km 5.6 re-inspection entered for Month 4; this return repeats both. The next step on the culvert is the Month 4 re-inspection, not another completion.
+- **Returned (Month 3 outreach schedule):** NRS-Y14-0066 already covers the quarter's outreach and intake schedule and the two temporary staff through Month 4; a Month 3 posting restates it. File a new schedule only when the quarterly one changes.
+- **Next time:** vary the bodies (Environmental Protection, Education, a municipality). The culvert quiet thread stays as is until the Month 4 re-inspection is a story.
