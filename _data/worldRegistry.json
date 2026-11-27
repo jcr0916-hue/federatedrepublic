@@ -19,6 +19,7 @@
     { "name": "The Kellor Courant", "kind": "local" },
     { "name": "The Tessom Chronicle", "kind": "territory" },
     { "name": "The Ostara Register", "kind": "territory" },
+    { "name": "The Rhovane Post", "kind": "state" },
     { "name": "Show Your Work", "kind": "feature" },
     { "name": "Dispatch", "kind": "feature" },
     { "name": "National Record System", "kind": "record" },
@@ -87,7 +88,10 @@
     { "id": "edric-marn", "name": "Edric Marn", "role": "Sellen County councillor, Varek (news 140)", "tier": "minor" },
     { "id": "talia-serr", "name": "Talia Serr", "role": "Sellen County road-maintenance supervisor, Varek (news 140)", "tier": "minor" },
     { "id": "adel-weyland", "name": "Adel Weyland", "role": "Career civil servant in the civic-domain budget work; no title or office established (news 141)", "tier": "minor" },
-    { "id": "tova-ferrin", "name": "Tova Ferrin", "role": "Survey coordinator, Morantine territorial works office (news 142)", "tier": "minor", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x1" }
+    { "id": "tova-ferrin", "name": "Tova Ferrin", "role": "Survey coordinator, Morantine territorial works office (news 142)", "tier": "minor", "pronouns": "she", "pronounsLocked": true, "pronounEvidence": "scan: she x1" },
+    { "id": "bren-aldane", "name": "Bren Aldane", "role": "Reporter, The Rhovane Post (Rhovane; news 147)", "outlets": ["The Rhovane Post"] },
+    { "id": "tove-merral", "name": "Tove Merral", "role": "Lendower resident, plaintiff in a public-trust action over a shoreline fence (news 147)", "tier": "minor" },
+    { "id": "hesper-dunmore", "name": "Hesper Dunmore", "role": "Lendower resident (news 147)", "tier": "minor" }
   ],
   "avoid": [
     { "pattern": "Jorin Sandris", "reason": "Corrected continuity slip: the candidate is Pell Sandris." },
