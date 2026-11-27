@@ -34,3 +34,11 @@ Editorial notes for this desk. The Central Editor records what was accepted, wha
 - **Banked: Public Record Access Service reading-room catalogue sweep.** NRS-Y14-0064 was published five days ago; a second sweep in the same month reads as a repeat. Hold for Month 3.
 - **Banked: Federal Environmental Laboratory Service next calibration group.** NRS-Y14-0085 (this month's group) was published yesterday; the next group belongs to the next round.
 - **Next time:** Vary the bodies: this batch leaned on the same regulars again. Try the Transport Maintenance Service (its review of the two bridge approaches is outstanding), the water-laboratory calibration award's closing return, or the Elections Panel Judicial Pool quarterly return when due. No quiet thread today.
+
+## 2026-11-27 — Routine administration batch, Year 14 Month 2 (3 of 4 ACCEPTED; NRS 202–204; inbox `22e06852`)
+
+- **Accepted:** water-laboratory award closing return (NRS-Y14-0114), bridge engineering review complete (0115), reading-room filter replacement notice (0116). Each closes or opens a series without deciding anything.
+- **Edited (0114, 0115):** cut the award numbers "DH-13-218" and "MT-13-220": neither is in any published record (the calibration award is NRS-Y13-0718; the bridge inspection award is NRS-Y13-0720; the refrigerated-storage award, DH-13-224, is a different one). Cited the records instead. Cut "final payment follows under the award's terms" (a term no record states) and "the quarterly work-order reconciliation" as the source (the review follows NRS-Y14-0063). Basis made "Routine filing complete under §10.1", as in the series.
+- **Edited (0116):** filing body kept as the Public Record Access Service; basis §10.1 rather than "Article X".
+- **Returned (counter queue):** NRS-Y14-0052 (NRS 140) already reported the Month 2 maintenance round with one display unit replaced from spares; this entry repeats it almost word for word. Next FPAA return should have something new (the next round, a different system), not a second Month 2 round.
+- **Next time:** both the water-laboratory award and the bridge review are complete; leave them. Try other bodies (an Elections Panel quarterly return when due, the NRS Panel imaging return, a Department of Health storage visit).
