@@ -4,6 +4,8 @@ The Central Editor and John add assignments here. Work on the first open one. Wh
 
 ## Open
 
+- **Suggestion: react to the Ostel Bay ledger story (optional).** The Norvane desk has an approved story on Ostel Bay's equalization ledger and whether to name Argent Ridge. Once it is published you may judge whether a Varek response is warranted; decide nothing for Norvane. (Suggested by the Central Editor, 2026-11-28; yours to judge.)
+
 - **State test pitch round (kind `pitch`, track `idea`).** John wants each State to show three to five constitutional tests across the Republic's first twelve years: the State wrote its constitution, and the record shows it meeting pressure over time. Varek has 1 published; pitch **2** more (they would be tests 02, 03). Pitches only: draft no article.
   - **Already published (do not repeat these provisions or cases):** test 01 "The 72-Hour Flood" (Year 6, Month 09; §§3.5, 12.1, 12.2, 12.3, 12.10, 12.11).
   - **For each pitch give:** a working title; a date as Year and Month between Year 1 and Year 12 (a backdated historical test, not a Year 14 event); the Varek constitution sections it puts under strain, checked against the full text; and two sentences on what happened and how the provision settled it.

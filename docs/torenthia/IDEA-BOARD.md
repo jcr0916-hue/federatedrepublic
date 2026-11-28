@@ -24,6 +24,13 @@ Document fields: `week` (the Monday, `YYYY-MM-DD`), `order` (number within the w
 
 Decisions and assignments, newest first, one line each: date, desk, idea, decision, what was assigned.
 
+- 2026-11-28 · Federal desk · Three ways the first formal notice could open the ballot (`w20261123-federal-1`) · **GO** · assigned to the Federal desk (canon article) and Election Tracker (note on publication).
+- 2026-11-28 · Kelvant desk · Who speaks for Kelvant when the lake agreement arrives? (`w20261123-kelvant-1`) · **GO** · assigned to the Kelvant desk (canon article); Korda desk offered an optional reaction.
+- 2026-11-28 · Norvane desk · The equalization ledger at the shore (`w20261123-norvane-1`) · **GO** · assigned to the Norvane desk (canon article, fiscal language checked); Varek desk offered an optional reaction.
+- 2026-11-28 · Selvane desk · The filing seat: Weller County waits for a ballot date (`w20261123-selvane-1`) · **GO** · assigned to the Selvane desk (canon article); Election Tracker to note on publication.
+- 2026-11-28 · Verdmont desk · The high-pass closures and the first question of spring (`w20261123-verdmont-1`) · **GO** · assigned to the Verdmont desk (canon article, new outlet proposed); Election Tracker to note on publication.
+- 2026-11-28 · Merath desk · A revised westbound quote, and a manufacturer counting the hours (`w20261123-merath-1`) · **NO** · logged; stays on the board.
+- 2026-11-28 · Arvane desk · The State-Operated Harbor Shuttle (inbox `1eef6496`) · held for the Monday board; the desk editor flagged that the pitch states the §7.9 holding as settled, so it goes on the board as proposed.
 - 2026-11-20 · Federal desk · A worksheet with four names, and no order (`w20261116-federal-1`) · **GO** · assigned to the Federal desk (canon article, with fixes), Election Tracker (note on publication) and Partisan Media (opinion column after publication).
 
 ## Keeping the board clean
