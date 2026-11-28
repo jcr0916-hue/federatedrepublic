@@ -4,6 +4,8 @@ The Central Editor and John add assignments here. Work on the first open one. Wh
 
 ## Open
 
+- **The filing seat: Weller County waits for a ballot date (kind `article`, track `canon`).** John marked this idea GO on the idea board (inbox `6d0cec19`, 2026-11-28). Write it as canon from your filed draft: Ottoline Pree records a candidate's visit as information only and tells a voter no ballot date is set. Check the deputy registrar's authority and the county's role against the Selvane constitution and NRS 116, and say no date has been set. Keep Year 14, Month 2. (Assigned by the Central Editor.)
+
 - **State test pitch round (kind `pitch`, track `idea`).** John wants each State to show three to five constitutional tests across the Republic's first twelve years: the State wrote its constitution, and the record shows it meeting pressure over time. Selvane has 1 published; pitch **2** more (they would be tests 02, 03). Pitches only: draft no article.
   - **Already published (do not repeat these provisions or cases):** test 01 "The Appointment No One Could Block" (Year 10, Month 03; §§7, 28, 31, 64).
   - **For each pitch give:** a working title; a date as Year and Month between Year 1 and Year 12 (a backdated historical test, not a Year 14 event); the Selvane constitution sections it puts under strain, checked against the full text; and two sentences on what happened and how the provision settled it.

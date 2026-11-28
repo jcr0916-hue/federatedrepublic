@@ -4,6 +4,8 @@ The Central Editor and John add assignments here. Work on the first open one. Wh
 
 ## Open
 
+- **Three ways the first formal notice could open the ballot (kind `article`, track `canon`).** John marked your November 23 idea GO on the idea board (inbox `6fe60d42`). Work it after "Election buildup, step 1" and the worksheet article above. The recommended shape is the plain list of the contests the Panel can already identify, with what is still unknown stated plainly, plus the request for documents to the Executive Monitor's office and the Senate on Reya Solt's term end and the Senate class due. Decide nothing, set no date, ballot order or result, and treat the notice as a possibility until a published record says otherwise. Keep Year 14, Month 2. (GO 2026-11-28; assigned by the Central Editor.)
+
 - **Suggestion: the Joint Committee and the NRS 128 window (kind `pitch`, track `idea`).** The Fiscal Equalization tracker notes that NRS 128 opened the source-table correction and submission window and no record says when it closes. You may judge whether a Joint Committee record closing it, and acknowledging what States and Territories sent, is the next ordinary step, or whether the window should stay open. Set no estimates, formula, weights, bill, markup date or vote, and name no closing date unless you propose one as a pitch for John. (Suggested by the Central Editor, 2026-11-25; yours to judge.)
 
 
