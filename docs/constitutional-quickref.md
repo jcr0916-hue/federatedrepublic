@@ -16,14 +16,14 @@
 - **Article I — Individual Sovereignty and Rights**  ·  §1.1–§1.18  (20 provisions)
 - **Article II — The Dual Executive**  ·  §2.1–§2.18  (23 provisions)
 - **Article III — The Legislature**  ·  §3.1–§3.11  (12 provisions)
-- **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (9 provisions)
+- **Article IV — The Judicial Architecture**  ·  §4.1–§4.6  (10 provisions)
 - **Article V — Citizenship and National Identity**  ·  §5.1–§5.3  (5 provisions)
 - **Article VI — Immigration and Residency**  ·  §6.1–§6.3.a  (4 provisions)
 - **Article VII — Elections and Federal Office**  ·  §7.1–§7.15  (15 provisions)
 - **Article VIII — Electoral Finance and Campaign Conduct**  ·  §8.1–§8.4  (4 provisions)
-- **Article IX — The Monitors**  ·  §9.1–§9.9.a  (18 provisions)
+- **Article IX — The Monitors**  ·  §9.1–§9.9.a  (16 provisions)
 - **Article X — The National Record System**  ·  §10.1–§10.2  (2 provisions)
-- **Article XI — NRS Panel and Elections Panel**  ·  §11.1–§11.3  (3 provisions)
+- **Article XI — NRS Panel and Elections Panel**  ·  §11.1–§11.3  (4 provisions)
 - **Article XII — Social State and Economic Rights**  ·  §12.1–§12.6  (9 provisions)
 - **Article XIII — Direct Democracy**  ·  §13.1–§13.2  (2 provisions)
 - **Article XIV — Military Authorization and Accountability**  ·  §14.1–§14.5  (4 provisions)
@@ -401,11 +401,17 @@ The Republic's judiciary consists of district courts, appellate courts, and the 
 
 ### §4.2 — Judicial Appointments and Independence
 
-(1) The Civic Consul must nominate inferior court judges from the Judicial Pool under §9.8 without undue delay following a vacancy. The Senate confirms by a majority of its full seated membership.
+(1) The Civic Consul must nominate inferior court judges from the Judicial Pool under §11.1.a without undue delay following a vacancy. The Senate confirms by a majority of its full seated membership.
 
 - **Thresholds:**
   - (3) The Legislature may remove an inferior court judge by 2/3 of both chambers for serious misconduct, abuse of office, or permanent incapacity
-- **Cross-refs:** §9.8
+- **Cross-refs:** §11.1.a
+
+### §4.2.a — Judicial Pool — Eligibility Criteria
+
+Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no disqualifying financial interest as defined in §7.10. A person who has served as a Supreme Court justice may not subsequently re-enter the Judicial Pool.
+
+- **Cross-refs:** §7.10
 
 ### §4.3 — The Supreme Court
 
@@ -423,12 +429,12 @@ A Supreme Court justice may be removed by 2/3 of both chambers for serious misco
 
 ### §4.4 — Supreme Court Selection
 
-(1) The Civic Consul nominates SC justices from the Judicial Pool under §9.8. Any pool member meeting the statutory qualifications for the Supreme Court is eligible.
+(1) The Civic Consul nominates SC justices from the Judicial Pool under §11.1.a. Any pool member meeting the statutory qualifications for the Supreme Court is eligible.
 
 - **Time limits:**
   - (2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days
   - (3) The Senate must vote within the period defined by statute following nomination, not to exceed 120 days
-- **Cross-refs:** §9.8
+- **Cross-refs:** §11.1.a
 
 ### §4.4.a — Public Confirmation
 
@@ -672,18 +678,12 @@ All Monitor General confirmations follow the same process: the nominated or lott
   - Where the SC fails to nominate an LM Monitor General within 60 days of a vacancy, the JMC must select a nominee by public lottery from the eligible LM candidate pool
   - where the Speakers fail to jointly nominate within 60 days of a vacancy, the JMC must select a nominee by public lottery from the eligible EM candidate pool
   - No two Monitor General full terms may be scheduled to begin within 18 months of each other
-- **Cross-refs:** §9.1.d, §9.4, §9.8
+- **Cross-refs:** §11.1.a, §9.1.d, §9.4
 
 ### §9.4 — Judicial Monitor Candidate Pool
 
 (1) Eligibility for the Judicial Monitor Candidate Pool is limited to former State or Republic judges who have served on a court of record at the trial court level or above and have been out of judicial office for at least one year. Former Supreme Court justices must have been out of Supreme Court service for at least five years.
 
-
-### §9.4.a — Judicial Pool — Eligibility Criteria
-
-Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no disqualifying financial interest as defined in §7.10. A person who has served as a Supreme Court justice may not subsequently re-enter the Judicial Pool.
-
-- **Cross-refs:** §7.10
 
 ### §9.5 — Monitor Operations
 
@@ -712,12 +712,6 @@ Where two Monitor Generals find evidence that the third has engaged in serious m
 - **Time limits:**
   - A suspension may continue for no more than 90 days unless removal proceedings have been initiated under §9
 - **Cross-refs:** §9.1.d, §9.9
-
-### §9.8 — Constitutional Pool Framework
-
-(1) The Elections Panel maintains constitutional candidate pools and registries and administers constitutional selection lotteries under applicable constitutional and statutory requirements. The Joint Monitor Council audits compliance with those requirements.
-
-- **Cross-refs:** §7.10
 
 ### §9.9 — Constitutional Officer Removal
 
@@ -765,6 +759,12 @@ Government records may be classified only where required to protect national sec
 - **Time limits:**
   - Such measures may not change electoral rules, timelines, or NRS record permanence, and expire after 72 hours
 - **Cross-refs:** §3.9, §3.9.a
+
+### §11.1.a — Constitutional Pool Framework
+
+(1) The Elections Panel maintains constitutional candidate pools and registries and administers constitutional selection lotteries under applicable constitutional and statutory requirements. The Joint Monitor Council audits compliance with those requirements.
+
+- **Cross-refs:** §7.10
 
 ### §11.2 — NVS Properties and Voting Rights
 

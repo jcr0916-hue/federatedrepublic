@@ -103,7 +103,7 @@ const GLOSSARY_BY_SECTION = {
   '§6.1': ['Legal Resident', 'glossary.html#term-legal-resident-two-stage-immigration'],
   '§6.2': ['Non-Refoulement', 'glossary.html#term-non-refoulement'],
   '§7.4': ['Disqualifying Offense', 'glossary.html#term-disqualifying-offense-federal-felony'],
-  '§9.8': ['Constitutional Pool Framework', 'glossary.html#term-constitutional-pool-framework'],
+  '§11.1.a': ['Constitutional Pool Framework', 'glossary.html#term-constitutional-pool-framework'],
   '§10.1': ['National Record System', 'glossary.html#term-national-record-system-nrs'],
   '§10.2': ['Classification Ceiling', 'glossary.html#term-classification-ceiling-classified-records-sunlight'],
   '§11.1': ['NRS Panel and Elections Panel', 'glossary.html#term-nrs-panel-elections-panel-panels'],
@@ -144,7 +144,7 @@ function relatedDiagrams(provisions) {
   if (articles.has(2)) out.push(DIAGRAMS.dual);
   if (articles.has(3) || nums.has('§2.3.a') || nums.has('§2.7')) out.push(DIAGRAMS.lifecycle);
   if (nums.has('§4.4') || nums.has('§4.4.a')) out.push(DIAGRAMS.scAppointment);
-  if (nums.has('§4.2') || nums.has('§9.3') || nums.has('§9.8')) out.push(DIAGRAMS.pool);
+  if (nums.has('§4.2') || nums.has('§9.3') || nums.has('§11.1.a')) out.push(DIAGRAMS.pool);
   if (articles.has(14)) out.push(DIAGRAMS.tiers);
   if (articles.has(15) || articles.has(16) || articles.has(20)) out.push(DIAGRAMS.states);
   if (!out.length && [...articles].some(a => [2,3,4,9,11].includes(a))) out.push(DIAGRAMS.structure);

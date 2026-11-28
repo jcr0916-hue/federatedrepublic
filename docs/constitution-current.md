@@ -363,7 +363,7 @@ The Republic's judiciary consists of district courts, appellate courts, and the 
 
 ### §4.2 — Judicial Appointments and Independence
 
-(1) The Civic Consul must nominate inferior court judges from the Judicial Pool under §9.8 without undue delay following a vacancy. The Senate confirms by a majority of its full seated membership.
+(1) The Civic Consul must nominate inferior court judges from the Judicial Pool under §11.1.a without undue delay following a vacancy. The Senate confirms by a majority of its full seated membership.
 
 (2) Inferior court judges serve a single non-renewable 12-year term and may be removed only under paragraph (3). Disagreement with a decision is not grounds for removal.
 
@@ -372,6 +372,10 @@ The Republic's judiciary consists of district courts, appellate courts, and the 
 (4) No public official may direct or threaten a judge, or attempt to influence a judge's decision in a pending matter other than through the proceeding itself. Judicial compensation may not be reduced during the judge's term.
 
 (5) The Supreme Court may reassign cases among inferior federal courts or qualified judges as necessary to prevent judicial vacancies from delaying proceedings.
+
+### §4.2.a — Judicial Pool — Eligibility Criteria
+
+Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no disqualifying financial interest as defined in §7.10. A person who has served as a Supreme Court justice may not subsequently re-enter the Judicial Pool. A person who has served in any other federal judicial appointment may not be nominated again to the same court, but remains eligible for nomination to a different federal court. Temporary or acting judicial service does not constitute service for purposes of this provision.
 
 ### §4.3 — The Supreme Court
 
@@ -385,7 +389,7 @@ A Supreme Court justice may be removed by 2/3 of both chambers for serious misco
 
 ### §4.4 — Supreme Court Selection
 
-(1) The Civic Consul nominates SC justices from the Judicial Pool under §9.8. Any pool member meeting the statutory qualifications for the Supreme Court is eligible.
+(1) The Civic Consul nominates SC justices from the Judicial Pool under §11.1.a. Any pool member meeting the statutory qualifications for the Supreme Court is eligible.
 
 (2) The Civic Consul nominates within the period defined by statute following a vacancy, not to exceed 90 days.
 
@@ -683,17 +687,13 @@ Each Monitor General must be selected through a process that excludes the instit
 
 ### §9.3 — Monitor General Selection
 
-All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority; timing is defined by statute to ensure seamless succession; if the confirmation vote fails, the §9.1.d acting mechanism activates and a new selection must begin within 60 days. The Elections Panel administers all confirmation votes. The LM Monitor General is nominated by the SC from the LM candidate pool, which is audited jointly by the EM and JM. Where the SC fails to nominate an LM Monitor General within 60 days of a vacancy, the JMC must select a nominee by public lottery from the eligible LM candidate pool. The EM Monitor General is nominated jointly by the Assembly Speaker and Senate Speaker from the EM candidate pool, which is audited jointly by the LM and JM, with JM audit findings on the nominee’s disclosure record published to the NRS before the vote; where the Speakers fail to jointly nominate within 60 days of a vacancy, the JMC must select a nominee by public lottery from the eligible EM candidate pool. The JM Monitor General is selected by public lottery under §9.8 from the JM Candidate Pool under §9.4. No two Monitor General full terms may be scheduled to begin within 18 months of each other; service for the remainder of a predecessor's term does not commence a new term for the purposes of this spacing requirement. For a scheduled succession, the confirmed successor assumes full authority at the precise moment the incumbent's term concludes. A successor confirmed following an unscheduled vacancy assumes full authority immediately upon certification of the confirmation result and serves the remainder of the original term. Any person confirmed by the public to serve a full term as a Monitor General is not subsequently eligible to enter any Monitor General pool. A person confirmed by national popular vote to serve the remainder of a predecessor's term following an unscheduled vacancy under this section may not subsequently enter the Monitor General pool for that same capacity, but remains eligible for the pools of the other two capacities if otherwise qualified. Acting service under §9.1.d does not constitute confirmation for purposes of this provision.
+All Monitor General confirmations follow the same process: the nominated or lottery-selected candidate is confirmed by national popular vote at the next federal electoral period by simple majority; timing is defined by statute to ensure seamless succession; if the confirmation vote fails, the §9.1.d acting mechanism activates and a new selection must begin within 60 days. The Elections Panel administers all confirmation votes. The LM Monitor General is nominated by the SC from the LM candidate pool, which is audited jointly by the EM and JM. Where the SC fails to nominate an LM Monitor General within 60 days of a vacancy, the JMC must select a nominee by public lottery from the eligible LM candidate pool. The EM Monitor General is nominated jointly by the Assembly Speaker and Senate Speaker from the EM candidate pool, which is audited jointly by the LM and JM, with JM audit findings on the nominee’s disclosure record published to the NRS before the vote; where the Speakers fail to jointly nominate within 60 days of a vacancy, the JMC must select a nominee by public lottery from the eligible EM candidate pool. The JM Monitor General is selected by public lottery under §11.1.a from the JM Candidate Pool under §9.4. No two Monitor General full terms may be scheduled to begin within 18 months of each other; service for the remainder of a predecessor's term does not commence a new term for the purposes of this spacing requirement. For a scheduled succession, the confirmed successor assumes full authority at the precise moment the incumbent's term concludes. A successor confirmed following an unscheduled vacancy assumes full authority immediately upon certification of the confirmation result and serves the remainder of the original term. Any person confirmed by the public to serve a full term as a Monitor General is not subsequently eligible to enter any Monitor General pool. A person confirmed by national popular vote to serve the remainder of a predecessor's term following an unscheduled vacancy under this section may not subsequently enter the Monitor General pool for that same capacity, but remains eligible for the pools of the other two capacities if otherwise qualified. Acting service under §9.1.d does not constitute confirmation for purposes of this provision.
 
 ### §9.4 — Judicial Monitor Candidate Pool
 
 (1) Eligibility for the Judicial Monitor Candidate Pool is limited to former State or Republic judges who have served on a court of record at the trial court level or above and have been out of judicial office for at least one year. Former Supreme Court justices must have been out of Supreme Court service for at least five years.
 
 (2) The Judicial Monitor Candidate Pool is audited jointly by the Legislative and Executive Monitors.
-
-### §9.4.a — Judicial Pool — Eligibility Criteria
-
-Any citizen meeting the following eligibility criteria may apply directly to the Elections Panel for entry into the Judicial Pool, from which all federal judicial appointments are drawn: at least 15 years of legal practice or 10 years of judicial service; no disqualifying financial interest as defined in §7.10. A person who has served as a Supreme Court justice may not subsequently re-enter the Judicial Pool. A person who has served in any other federal judicial appointment may not be nominated again to the same court, but remains eligible for nomination to a different federal court. Temporary or acting judicial service does not constitute service for purposes of this provision.
 
 ### §9.5 — Monitor Operations
 
@@ -736,18 +736,6 @@ Suspension requires approval by a majority of the Supreme Court for the Legislat
 A suspension may continue for no more than 90 days unless removal proceedings have been initiated under §9.9. Upon initiation of removal proceedings, a valid suspension may continue until their conclusion, subject to expedited independent judicial review of its continuing necessity. A court may terminate a suspension whose continuing necessity is not established. Suspension ends immediately if removal is rejected or the proceeding concludes without removal. Initiation of removal alone does not suspend the Monitor General.
 
 Suspension does not constitute removal and may not be used as a substitute for permanent removal. During suspension, acting authority operates under §9.1.d.
-
-### §9.8 — Constitutional Pool Framework
-
-(1) The Elections Panel maintains constitutional candidate pools and registries and administers constitutional selection lotteries under applicable constitutional and statutory requirements. The Joint Monitor Council audits compliance with those requirements. Pool records are publicly accessible through the NRS.
-
-(2) Each constitutional candidate pool must contain at least five eligible members. A deficiency must be published to the NRS, and the Elections Panel must take action to restore the pool under procedures established by statute.
-
-(3) Eligibility for constitutional candidate pools is determined solely by objective criteria established by this Constitution. No applicant may be excluded on grounds of legal philosophy, judicial temperament, ideological orientation, or political association.
-
-(4) An applicant excluded or removed from a constitutional candidate pool is entitled to a published statement of reasons and timely judicial review under procedures established by statute.
-
-(5) Changes to eligibility criteria apply prospectively only and do not affect persons already entered in a constitutional pool or registry under the criteria applicable at the time of their entry. This protection does not exempt a member from continuing constitutional eligibility requirements, including the prohibition on disqualifying financial interests under §7.10.
 
 ### §9.9 — Constitutional Officer Removal
 
@@ -810,6 +798,18 @@ Government records may be classified only where required to protect national sec
 (5) Each panel may adopt temporary technical measures in response to imminent security threats or system failures within its domain, under any procedure statute establishes or, absent statute, by majority vote of its seated members. Such measures may not change electoral rules, timelines, or NRS record permanence, and expire after 72 hours. A panel may adopt a further measure only on a fresh published determination of an imminent threat.
 
 (6) Where either Panel falls below the five-member floor, the remaining members may by majority vote designate qualified civil servants employed by that Panel as Acting members for the period defined by statute, not to exceed 180 days. Where the remaining members are unable to designate, the Civic Consul designates from the same group. Acting members designated by the Civic Consul may not at any time constitute a majority of the Panel's seated membership. An Acting member exercises all authorities of a full member during the designation.
+
+### §11.1.a — Constitutional Pool Framework
+
+(1) The Elections Panel maintains constitutional candidate pools and registries and administers constitutional selection lotteries under applicable constitutional and statutory requirements. The Joint Monitor Council audits compliance with those requirements. Pool records are publicly accessible through the NRS.
+
+(2) Each constitutional candidate pool must contain at least five eligible members. A deficiency must be published to the NRS, and the Elections Panel must take action to restore the pool under procedures established by statute.
+
+(3) Eligibility for constitutional candidate pools is determined solely by objective criteria established by this Constitution. No applicant may be excluded on grounds of legal philosophy, judicial temperament, ideological orientation, or political association.
+
+(4) An applicant excluded or removed from a constitutional candidate pool is entitled to a published statement of reasons and timely judicial review under procedures established by statute.
+
+(5) Changes to eligibility criteria apply prospectively only and do not affect persons already entered in a constitutional pool or registry under the criteria applicable at the time of their entry. This protection does not exempt a member from continuing constitutional eligibility requirements, including the prohibition on disqualifying financial interests under §7.10.
 
 ### §11.2 — NVS Properties and Voting Rights
 
