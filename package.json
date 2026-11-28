@@ -2,11 +2,12 @@
   "name": "federatedrepublic",
   "private": true,
   "scripts": {
-    "build": "npm run check:state-tests && node scripts/check-world-publishing.mjs && node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy",
+    "build": "npm run check:state-tests && node scripts/check-world-publishing.mjs && node scripts/check-world-metadata.mjs && node scripts/public-assets.mjs --clean && eleventy && node scripts/optimize-site-images.mjs",
     "annotations:status": "node scripts/annotations-status.cjs",
     "annotation-history": "node scripts/build-annotation-history.cjs",
     "sync": "npm run constitution:archive && python3 scripts/sync-annotated.py && python3 scripts/build-constitution-md.py constitution_data.json docs/constitution-current.md && python3 scripts/build-quickref.py constitution_data.json docs/constitutional-quickref.md && python3 scripts/build-search-index.py",
     "check:assets": "node scripts/public-assets.mjs",
+    "test:optimize-images": "node --test scripts/optimize-site-images.test.mjs",
     "test:assets": "node --test scripts/public-assets.test.mjs",
     "stats:assets": "node scripts/asset-stats.mjs",
     "test:crossroads": "node --test scripts/crossroads.test.cjs",
@@ -33,7 +34,7 @@
     "test:world-published": "node --test scripts/world-published.test.mjs",
     "check:world-published": "node scripts/world-stamp.mjs --check",
     "world:stamp": "node scripts/world-stamp.mjs",
-    "world:publish-check": "npm run test:constitution-archive && npm run check:constitution-archive && npm run test:state-tests && npm run test:state-constitutions && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world-published && npm run check:world-published && npm run test:world && npm run test:world-meta && npm run test:world-registry && npm run check:world-registry && npm run test:world-authoring && npm run test:world-packet && npm run test:world-draft-validation && npm run test:assets && npm run test:crossroads && npm run test:crossroads-ai-benchmark && npm run test:ai-transport && npm run test:ai-efficiency && npm run test:annotator-ai-benchmark && npm run test:annotator && npm run test:navigator-gate && npm run test:navigator-haiku-direct && npm run test:navigator-shadow && npm run test:navigator-routing-report && npm run test:navigator-deterministic && npm run test:navigator-natural-language && npm run test:navigator-fallback && npm run test:navigator-fallback-api && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py && npm run check:compatibility",
+    "world:publish-check": "npm run test:constitution-archive && npm run check:constitution-archive && npm run test:state-tests && npm run test:state-constitutions && npm run test:chronology && npm run test:rail && npm run test:ingest && npm run test:world-publish && npm run test:world-published && npm run check:world-published && npm run test:world && npm run test:world-meta && npm run test:world-registry && npm run check:world-registry && npm run test:world-authoring && npm run test:world-packet && npm run test:world-draft-validation && npm run test:assets && npm run test:optimize-images && npm run test:crossroads && npm run test:crossroads-ai-benchmark && npm run test:ai-transport && npm run test:ai-efficiency && npm run test:annotator-ai-benchmark && npm run test:annotator && npm run test:navigator-gate && npm run test:navigator-haiku-direct && npm run test:navigator-shadow && npm run test:navigator-routing-report && npm run test:navigator-deterministic && npm run test:navigator-natural-language && npm run test:navigator-fallback && npm run test:navigator-fallback-api && npm run test:scenarios && npm run build && npm run check:discovery && python3 scripts/check-consistency.py && python3 scripts/check-constitutional-site.py && python3 scripts/check-scenarios.py && npm run check:compatibility",
     "republic:ingest": "node scripts/republic-ingest.mjs",
     "test:ingest": "node --test scripts/republic-ingest.test.mjs",
     "test:chronology": "node --test scripts/world-chronology.test.mjs",
@@ -69,7 +70,8 @@
     "@11ty/eleventy": "^3.1.6",
     "acorn": "^8.18.0",
     "acorn-walk": "^8.3.5",
+    "gray-matter": "^4.0.3",
     "htmlparser2": "^9.1.0",
-    "gray-matter": "^4.0.3"
+    "sharp": "^0.35.5"
   }
 }
